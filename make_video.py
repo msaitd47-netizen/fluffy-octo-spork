@@ -37,6 +37,7 @@ Transcript format:
         ...
 """
 import argparse
+import bisect
 import glob
 import json
 import os
@@ -122,6 +123,62 @@ def compute_durations(sections, total_duration, equal=False, min_seconds=2.0):
         return [base] * n
     weights = [len(s) for s in sections]
     return distribute(weights, total_duration, min_seconds)
+
+
+def detect_silences(audio_path, noise_db=-30, min_duration=0.4):
+    """Find natural pauses in the narration via ffmpeg's silencedetect filter.
+    Returns a list of (start, end) times in seconds."""
+    proc = subprocess.run(
+        ["ffmpeg", "-i", audio_path, "-af",
+         f"silencedetect=noise={noise_db}dB:d={min_duration}", "-f", "null", "-"],
+        capture_output=True, text=True,
+    )
+    starts = [float(m) for m in re.findall(r"silence_start:\s*([\d.]+)", proc.stderr)]
+    ends = [float(m) for m in re.findall(r"silence_end:\s*([\d.]+)", proc.stderr)]
+    return list(zip(starts, ends))
+
+
+def snap_boundaries_to_silence(durations, silences, max_window=5.0, min_window=0.75):
+    """Nudge each caption's cumulative end time onto the nearest detected
+    pause in the audio, so captions change where the narrator actually
+    pauses instead of at a length-estimated instant. The very last boundary
+    (end of the whole track) is left untouched."""
+    if not silences:
+        return durations
+    silence_mids = sorted((s + e) / 2 for s, e in silences)
+
+    cum = []
+    total = 0.0
+    for d in durations:
+        total += d
+        cum.append(total)
+
+    snapped = 0
+    adjusted = list(cum)
+    for i in range(len(adjusted) - 1):
+        naive = cum[i]
+        window = min(max_window, max(min_window, 0.5 * min(durations[i], durations[i + 1])))
+        lo = bisect.bisect_left(silence_mids, naive - window)
+        hi = bisect.bisect_right(silence_mids, naive + window)
+        candidates = silence_mids[lo:hi]
+        if candidates:
+            adjusted[i] = min(candidates, key=lambda m: abs(m - naive))
+            snapped += 1
+
+    for i in range(1, len(adjusted)):
+        if adjusted[i] < adjusted[i - 1]:
+            adjusted[i] = adjusted[i - 1]
+    adjusted[-1] = cum[-1]
+
+    print(f"Silence alignment: snapped {snapped}/{len(adjusted) - 1} caption boundaries "
+          f"to a detected pause (of {len(silences)} pauses found).")
+
+    new_durations = []
+    prev = 0.0
+    for b in adjusted:
+        new_durations.append(max(0.05, b - prev))
+        prev = b
+    return new_durations
 
 
 SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?…])\s+(?=[A-ZÇĞİÖŞÜ0-9])")
@@ -260,6 +317,13 @@ def main():
                           "when the section has more than one paragraph/sentence")
     ap.add_argument("--page-min-seconds", type=float, default=1.8,
                      help="Minimum time each caption page stays on screen within its image's duration")
+    ap.add_argument("--no-silence-align", action="store_true",
+                     help="Don't nudge caption timing onto detected pauses in the audio; "
+                          "use pure text-length-proportional timing")
+    ap.add_argument("--silence-noise-db", type=float, default=-30,
+                     help="Threshold (dB) below which audio is considered silent, for pause detection")
+    ap.add_argument("--silence-min-duration", type=float, default=0.4,
+                     help="Minimum length (seconds) of a gap to count as a pause")
     ap.add_argument("--keep-temp", action="store_true", help="Keep the rendered frame images for inspection")
     args = ap.parse_args()
 
@@ -274,31 +338,36 @@ def main():
     section_durations = compute_durations(sections, total_duration, equal=args.equal_duration)
     text_color = tuple(int(c) for c in args.text_color.split(","))
 
+    # Build the full flat sequence of (image, caption page) pairs with their
+    # text-length-proportional durations first, then optionally correct that
+    # timing against real pauses in the audio before rendering anything.
+    frame_specs = []  # (image_path, page_text)
+    durations = []
+    for image_path, text, section_duration in zip(images, sections, section_durations):
+        pages = split_pages(text, mode=args.split_mode)
+        page_weights = [len(p) for p in pages]
+        page_durations = distribute(page_weights, section_duration, args.page_min_seconds)
+        for page_text, page_duration in zip(pages, page_durations):
+            frame_specs.append((image_path, page_text))
+            durations.append(page_duration)
+
+    if args.audio and not args.no_silence_align:
+        silences = detect_silences(args.audio, args.silence_noise_db, args.silence_min_duration)
+        durations = snap_boundaries_to_silence(durations, silences)
+
     temp_dir = tempfile.mkdtemp(prefix="make_video_")
     frame_paths = []
-    durations = []
     try:
-        frame_idx = 0
-        for i, (image_path, text, section_duration) in enumerate(
-                zip(images, sections, section_durations)):
-            pages = split_pages(text, mode=args.split_mode)
-            page_weights = [len(p) for p in pages]
-            page_durations = distribute(page_weights, section_duration, args.page_min_seconds)
-
-            for page_text, page_duration in zip(pages, page_durations):
-                out_path = os.path.join(temp_dir, f"frame_{frame_idx:04d}.jpg")
-                render_caption_frame(
-                    image_path, page_text, out_path, args.width, args.height,
-                    args.font, args.font_size, args.margin, text_color,
-                    args.gradient_height,
-                )
-                frame_paths.append(out_path)
-                durations.append(page_duration)
-                frame_idx += 1
-
-            page_note = f" ({len(pages)} page(s))" if len(pages) > 1 else ""
-            print(f"[{i + 1}/{len(images)}] {os.path.basename(image_path)} -> "
-                  f"{section_duration:.1f}s{page_note}: {pages[0][:60]}...")
+        for idx, ((image_path, page_text), duration) in enumerate(zip(frame_specs, durations)):
+            out_path = os.path.join(temp_dir, f"frame_{idx:04d}.jpg")
+            render_caption_frame(
+                image_path, page_text, out_path, args.width, args.height,
+                args.font, args.font_size, args.margin, text_color,
+                args.gradient_height,
+            )
+            frame_paths.append(out_path)
+            print(f"[{idx + 1}/{len(frame_specs)}] {os.path.basename(image_path)} -> "
+                  f"{duration:.1f}s: {page_text.splitlines()[0][:60]}...")
 
         build_video(frame_paths, durations, args.audio, args.output,
                     args.fps, args.width, args.height)
