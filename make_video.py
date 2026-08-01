@@ -11,9 +11,12 @@ a dark gradient, similar to a narrated history/explainer video.
 A section can contain much more text than fits in one caption (e.g. a whole
 chapter of narration for a single image, when you don't have an image per
 sentence). In that case the image stays on screen for the whole section,
-but the caption text is split into pages (by paragraph by default, or by
-sentence with --split-mode sentence) that advance every few seconds in sync
-with the section's runtime, like subtitles over a still photo.
+but the caption text is split into pages (by sentence by default, or by
+paragraph with --split-mode paragraph) that advance every few seconds in
+sync with the section's runtime, like subtitles over a still photo. Sentence
+mode gives silence alignment a real pause at every page boundary; paragraph
+mode groups multiple sentences per page, so alignment can lock onto a pause
+*inside* a paragraph and cut the last sentence off early.
 
 Usage:
     python3 make_video.py \
@@ -312,10 +315,13 @@ def main():
                      help="Fraction of frame height covered by the readability gradient")
     ap.add_argument("--equal-duration", action="store_true",
                      help="Give every image the same on-screen time instead of weighting by caption length")
-    ap.add_argument("--split-mode", choices=["paragraph", "sentence"], default="paragraph",
+    ap.add_argument("--split-mode", choices=["paragraph", "sentence"], default="sentence",
                      help="How to page a section's text across its image's on-screen time "
-                          "when the section has more than one paragraph/sentence")
-    ap.add_argument("--page-min-seconds", type=float, default=1.8,
+                          "when the section has more than one paragraph/sentence. Sentence mode "
+                          "gives silence-alignment a real pause to snap to at every boundary; "
+                          "paragraph mode groups multiple sentences per page, so alignment can "
+                          "snap to a pause *inside* a paragraph and cut it off early.")
+    ap.add_argument("--page-min-seconds", type=float, default=1.2,
                      help="Minimum time each caption page stays on screen within its image's duration")
     ap.add_argument("--no-silence-align", action="store_true",
                      help="Don't nudge caption timing onto detected pauses in the audio; "

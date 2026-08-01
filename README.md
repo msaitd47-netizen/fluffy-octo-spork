@@ -8,9 +8,19 @@ over a dark gradient (see example below).
 If you have fewer images than sentences/paragraphs (one image per chapter
 instead of per sentence), that's the normal case: give each image a whole
 section of text, and the image stays on screen for the section's full
-duration while the caption advances page by page (paragraph by paragraph
+duration while the caption advances page by page (sentence by sentence
 by default) in sync with that duration — the image itself doesn't change,
 only the caption underneath it.
+
+Timing starts from a text-length estimate, then (when `--audio` is given)
+gets corrected against real pauses detected in the audio, so captions
+change where the narrator actually pauses instead of at a guessed instant.
+This works far better in `--split-mode sentence` (the default) than in
+`paragraph` mode: with several sentences grouped into one page, the pause
+detector can lock onto a pause *inside* the paragraph and cut its last
+sentence off before it's spoken. Only use `paragraph` mode if your caption
+style needs multiple sentences on screen at once and you're not relying on
+audio-synced timing.
 
 ## Requirements
 
@@ -79,8 +89,11 @@ also weighted by its length, and every page is held for at least
 | `--text-color` | `255,255,255` | Caption color as `R,G,B` |
 | `--gradient-height` | `0.55` | Fraction of frame height covered by the readability gradient |
 | `--equal-duration` | off | Split audio evenly instead of by caption length |
-| `--split-mode` | `paragraph` | Page a section's captions by `paragraph` or by `sentence` |
-| `--page-min-seconds` | `1.8` | Minimum time each caption page stays on screen |
+| `--split-mode` | `sentence` | Page a section's captions by `sentence` or by `paragraph` |
+| `--page-min-seconds` | `1.2` | Minimum time each caption page stays on screen |
+| `--no-silence-align` | off | Disable snapping caption boundaries onto detected pauses in the audio |
+| `--silence-noise-db` | `-30` | Threshold (dB) below which audio counts as silent, for pause detection |
+| `--silence-min-duration` | `0.4` | Minimum gap length (seconds) to count as a pause |
 | `--keep-temp` | off | Keep rendered frame images for inspection |
 
 No audio file? Omit `--audio` and every image gets a flat 4 seconds
