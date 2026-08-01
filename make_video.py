@@ -40,7 +40,6 @@ Transcript format:
         ...
 """
 import argparse
-import bisect
 import glob
 import json
 import os
@@ -141,7 +140,65 @@ def detect_silences(audio_path, noise_db=-30, min_duration=0.4):
     return list(zip(starts, ends))
 
 
-def snap_boundaries_to_silence(durations, silences, max_window=5.0, min_window=0.75):
+def align_boundaries_dp(naive_boundaries, silence_mids, max_match_dist=6.0, skip_cost=3.0):
+    """Match each naive boundary to a detected pause using global sequence
+    alignment (like Needleman-Wunsch) instead of a per-boundary nearest
+    search. A greedy nearest-pause search makes locally-reasonable choices
+    that can still be globally wrong when several boundaries in a row have
+    drifted from their true position by a similar amount — the optimum
+    match for one of them isn't independent of its neighbors. The DP finds
+    the assignment that minimizes total drift across all boundaries at
+    once, matching them to pauses in order (each pause used at most once,
+    a pause can be skipped for free, a boundary can go unmatched for
+    `skip_cost`). Returns a list the same length as naive_boundaries, each
+    entry either a matched pause time or None.
+    """
+    n, m = len(naive_boundaries), len(silence_mids)
+    if m == 0 or n == 0:
+        return [None] * n
+
+    dp = [[0.0] * (m + 1) for _ in range(n + 1)]
+    parent = [[0] * (m + 1) for _ in range(n + 1)]  # 0=skip boundary, 1=skip pause, 2=match
+    for i in range(1, n + 1):
+        dp[i][0] = dp[i - 1][0] + skip_cost
+
+    for i in range(1, n + 1):
+        ni = naive_boundaries[i - 1]
+        row, prev_row = dp[i], dp[i - 1]
+        for j in range(1, m + 1):
+            best, best_p = row[j - 1], 1  # skip this pause
+            skip_b = prev_row[j] + skip_cost
+            if skip_b < best:
+                best, best_p = skip_b, 0
+            dist = abs(ni - silence_mids[j - 1])
+            if dist <= max_match_dist:
+                matched = prev_row[j - 1] + dist
+                if matched < best:
+                    best, best_p = matched, 2
+            row[j] = best
+            parent[i][j] = best_p
+
+    assigned = [None] * n
+    i, j = n, m
+    while i > 0 or j > 0:
+        if i == 0:
+            j -= 1
+        elif j == 0:
+            i -= 1
+        else:
+            p = parent[i][j]
+            if p == 0:
+                i -= 1
+            elif p == 1:
+                j -= 1
+            else:
+                assigned[i - 1] = silence_mids[j - 1]
+                i -= 1
+                j -= 1
+    return assigned
+
+
+def snap_boundaries_to_silence(durations, silences):
     """Nudge each caption's cumulative end time onto the nearest detected
     pause in the audio, so captions change where the narrator actually
     pauses instead of at a length-estimated instant. The very last boundary
@@ -156,35 +213,17 @@ def snap_boundaries_to_silence(durations, silences, max_window=5.0, min_window=0
         total += d
         cum.append(total)
 
-    # Walk boundaries in order and only ever look forward through the
-    # silence list, so two boundaries can never both claim the same pause
-    # (or a pause that temporally belongs to a neighboring boundary) —
-    # the previous version searched the full list independently each time,
-    # which let a boundary "steal" a pause meant for the one next to it.
-    snapped = 0
-    adjusted = list(cum)
-    next_idx = 0
-    for i in range(len(adjusted) - 1):
-        naive = cum[i]
-        window = min(max_window, max(min_window, 0.5 * min(durations[i], durations[i + 1])))
-        lo = bisect.bisect_left(silence_mids, naive - window, next_idx)
-        hi = bisect.bisect_right(silence_mids, naive + window, next_idx)
-        best_j, best_dist = None, None
-        for j in range(lo, hi):
-            d = abs(silence_mids[j] - naive)
-            if best_dist is None or d < best_dist:
-                best_j, best_dist = j, d
-        if best_j is not None:
-            adjusted[i] = silence_mids[best_j]
-            next_idx = best_j + 1
-            snapped += 1
+    naive_boundaries = cum[:-1]
+    assigned = align_boundaries_dp(naive_boundaries, silence_mids)
+    adjusted = [a if a is not None else n for a, n in zip(assigned, naive_boundaries)]
+    adjusted.append(cum[-1])
 
     for i in range(1, len(adjusted)):
         if adjusted[i] < adjusted[i - 1]:
             adjusted[i] = adjusted[i - 1]
-    adjusted[-1] = cum[-1]
 
-    print(f"Silence alignment: snapped {snapped}/{len(adjusted) - 1} caption boundaries "
+    snapped = sum(1 for a in assigned if a is not None)
+    print(f"Silence alignment: snapped {snapped}/{len(naive_boundaries)} caption boundaries "
           f"to a detected pause (of {len(silences)} pauses found).")
 
     new_durations = []
