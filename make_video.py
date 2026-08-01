@@ -156,16 +156,27 @@ def snap_boundaries_to_silence(durations, silences, max_window=5.0, min_window=0
         total += d
         cum.append(total)
 
+    # Walk boundaries in order and only ever look forward through the
+    # silence list, so two boundaries can never both claim the same pause
+    # (or a pause that temporally belongs to a neighboring boundary) —
+    # the previous version searched the full list independently each time,
+    # which let a boundary "steal" a pause meant for the one next to it.
     snapped = 0
     adjusted = list(cum)
+    next_idx = 0
     for i in range(len(adjusted) - 1):
         naive = cum[i]
         window = min(max_window, max(min_window, 0.5 * min(durations[i], durations[i + 1])))
-        lo = bisect.bisect_left(silence_mids, naive - window)
-        hi = bisect.bisect_right(silence_mids, naive + window)
-        candidates = silence_mids[lo:hi]
-        if candidates:
-            adjusted[i] = min(candidates, key=lambda m: abs(m - naive))
+        lo = bisect.bisect_left(silence_mids, naive - window, next_idx)
+        hi = bisect.bisect_right(silence_mids, naive + window, next_idx)
+        best_j, best_dist = None, None
+        for j in range(lo, hi):
+            d = abs(silence_mids[j] - naive)
+            if best_dist is None or d < best_dist:
+                best_j, best_dist = j, d
+        if best_j is not None:
+            adjusted[i] = silence_mids[best_j]
+            next_idx = best_j + 1
             snapped += 1
 
     for i in range(1, len(adjusted)):
