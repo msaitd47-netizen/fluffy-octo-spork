@@ -1,0 +1,265 @@
+#!/usr/bin/env python3
+"""
+Assemble a narrated slideshow video from a voice track, a folder of images,
+and a transcript file.
+
+Each image is shown for a portion of the audio's runtime (weighted by how
+much transcript text belongs to it, so longer lines stay on screen longer),
+with the matching transcript text burned in as bold captions over a dark
+gradient, similar to a narrated history/explainer video.
+
+Usage:
+    python3 make_video.py \
+        --images ./images \
+        --audio ./voice.mp3 \
+        --transcript ./transcript.txt \
+        --output ./output.mp4
+
+Transcript format:
+    One section per image, in the same order as the sorted image files,
+    separated by a line containing only "---". Blank lines inside a
+    section become paragraph breaks on screen.
+
+        He migrated with his wife Ruqayyah, the daughter of the
+        Prophet Muhammad.
+
+        Their migration showed the cost of faith.
+        ---
+        Next image's caption text...
+        ---
+        ...
+"""
+import argparse
+import glob
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
+
+DEFAULT_FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tif", ".tiff")
+
+
+def natural_key(path):
+    name = os.path.basename(path)
+    return [int(t) if t.isdigit() else t.lower() for t in re.split(r"(\d+)", name)]
+
+
+def find_images(images_dir):
+    files = [
+        p for p in glob.glob(os.path.join(images_dir, "*"))
+        if os.path.splitext(p)[1].lower() in IMAGE_EXTS
+    ]
+    if not files:
+        sys.exit(f"No images found in {images_dir}")
+    return sorted(files, key=natural_key)
+
+
+def parse_transcript(path, expected_count):
+    with open(path, "r", encoding="utf-8") as f:
+        raw = f.read()
+    sections = [s.strip() for s in re.split(r"\n\s*---\s*\n", raw.strip())]
+    sections = [s for s in sections if s]
+    if len(sections) != expected_count:
+        sys.exit(
+            f"Transcript has {len(sections)} section(s) separated by '---' "
+            f"but there are {expected_count} image(s). Each image needs exactly "
+            f"one transcript section, separated by a line containing only '---'."
+        )
+    return sections
+
+
+def ffprobe_duration(path):
+    out = subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+         "-of", "json", path],
+        capture_output=True, text=True, check=True,
+    )
+    return float(json.loads(out.stdout)["format"]["duration"])
+
+
+def compute_durations(sections, total_duration, equal=False, min_seconds=2.0):
+    n = len(sections)
+    if equal or total_duration is None:
+        base = (total_duration / n) if total_duration else 4.0
+        return [base] * n
+    weights = [max(len(s), 1) for s in sections]
+    total_weight = sum(weights)
+    durations = [total_duration * w / total_weight for w in weights]
+    # Enforce a minimum so very short captions don't flash by unreadably,
+    # then rescale the rest to still sum to total_duration.
+    deficits = [max(0.0, min_seconds - d) for d in durations]
+    if any(deficits):
+        extra_needed = sum(deficits)
+        flexible = [max(0.0, d - min_seconds) for d in durations]
+        flexible_total = sum(flexible) or 1.0
+        durations = [
+            min_seconds + d if def_ > 0
+            else max(min_seconds, d - extra_needed * (d / flexible_total))
+            for d, def_ in zip(durations, deficits)
+        ]
+    return durations
+
+
+def wrap_text(draw, text, font, max_width):
+    lines = []
+    for paragraph in text.split("\n\n"):
+        words = paragraph.split()
+        if not words:
+            lines.append("")
+            continue
+        current = words[0]
+        for word in words[1:]:
+            candidate = f"{current} {word}"
+            if draw.textbbox((0, 0), candidate, font=font)[2] <= max_width:
+                current = candidate
+            else:
+                lines.append(current)
+                current = word
+        lines.append(current)
+        lines.append("")  # paragraph gap
+    while lines and lines[-1] == "":
+        lines.pop()
+    return lines
+
+
+def render_caption_frame(image_path, text, out_path, width, height, font_path,
+                          font_size, margin, text_color, gradient_height_frac):
+    img = Image.open(image_path).convert("RGB")
+
+    # Cover-fit crop to target aspect ratio.
+    src_w, src_h = img.size
+    target_ratio = width / height
+    src_ratio = src_w / src_h
+    if src_ratio > target_ratio:
+        new_w = int(src_h * target_ratio)
+        x0 = (src_w - new_w) // 2
+        img = img.crop((x0, 0, x0 + new_w, src_h))
+    else:
+        new_h = int(src_w / target_ratio)
+        y0 = (src_h - new_h) // 2
+        img = img.crop((0, y0, src_w, y0 + new_h))
+    img = img.resize((width, height), Image.LANCZOS)
+
+    # Dark gradient at the top so white text stays readable on any photo.
+    gradient_h = int(height * gradient_height_frac)
+    gradient = Image.new("L", (1, gradient_h), color=0)
+    for y in range(gradient_h):
+        alpha = int(200 * (1 - y / gradient_h))
+        gradient.putpixel((0, y), alpha)
+    gradient = gradient.resize((width, gradient_h))
+    overlay = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    black = Image.new("RGBA", (width, gradient_h), (0, 0, 0, 255))
+    black.putalpha(gradient)
+    overlay.paste(black, (0, 0), black)
+    img = Image.alpha_composite(img.convert("RGBA"), overlay)
+
+    draw = ImageDraw.Draw(img)
+    font = ImageFont.truetype(font_path, font_size)
+    max_width = width - 2 * margin
+    lines = wrap_text(draw, text, font, max_width)
+
+    line_height = int(font_size * 1.25)
+    y = margin
+    for line in lines:
+        if line:
+            # Soft shadow for extra contrast.
+            draw.text((margin + 2, y + 2), line, font=font, fill=(0, 0, 0, 160))
+            draw.text((margin, y), line, font=font, fill=text_color)
+        y += line_height
+
+    img.convert("RGB").save(out_path, quality=95)
+
+
+def build_video(frame_paths, durations, audio_path, output_path, fps, width, height):
+    work_dir = os.path.dirname(frame_paths[0])
+    concat_list = os.path.join(work_dir, "concat.txt")
+    with open(concat_list, "w") as f:
+        for path, dur in zip(frame_paths, durations):
+            f.write(f"file '{os.path.abspath(path)}'\n")
+            f.write(f"duration {dur:.3f}\n")
+        # ffmpeg's concat demuxer ignores the duration of the final entry
+        # unless the file is listed once more without a duration.
+        f.write(f"file '{os.path.abspath(frame_paths[-1])}'\n")
+
+    silent_video = os.path.join(work_dir, "silent.mp4")
+    subprocess.run(
+        ["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", concat_list,
+         "-vsync", "vfr", "-pix_fmt", "yuv420p",
+         "-vf", f"scale={width}:{height},fps={fps}",
+         silent_video],
+        check=True,
+    )
+
+    cmd = ["ffmpeg", "-y", "-i", silent_video]
+    if audio_path:
+        cmd += ["-i", audio_path, "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+                "-shortest", output_path]
+    else:
+        cmd += ["-c:v", "copy", output_path]
+    subprocess.run(cmd, check=True)
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__,
+                                  formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--images", required=True, help="Folder of images (one per transcript section)")
+    ap.add_argument("--audio", help="Voice/narration audio file (mp3, wav, m4a, ...)")
+    ap.add_argument("--transcript", required=True, help="Transcript text file, sections separated by '---'")
+    ap.add_argument("--output", default="output.mp4", help="Output video path")
+    ap.add_argument("--width", type=int, default=1920)
+    ap.add_argument("--height", type=int, default=1080)
+    ap.add_argument("--fps", type=int, default=25)
+    ap.add_argument("--font", default=DEFAULT_FONT)
+    ap.add_argument("--font-size", type=int, default=48)
+    ap.add_argument("--margin", type=int, default=70)
+    ap.add_argument("--text-color", default="255,255,255", help="R,G,B")
+    ap.add_argument("--gradient-height", type=float, default=0.55,
+                     help="Fraction of frame height covered by the readability gradient")
+    ap.add_argument("--equal-duration", action="store_true",
+                     help="Give every image the same on-screen time instead of weighting by caption length")
+    ap.add_argument("--keep-temp", action="store_true", help="Keep the rendered frame images for inspection")
+    args = ap.parse_args()
+
+    if not shutil.which("ffmpeg") or not shutil.which("ffprobe"):
+        sys.exit("ffmpeg/ffprobe not found on PATH. Install ffmpeg first.")
+    if not os.path.exists(args.font):
+        sys.exit(f"Font not found: {args.font}. Pass --font with a path to a .ttf file.")
+
+    images = find_images(args.images)
+    sections = parse_transcript(args.transcript, len(images))
+    total_duration = ffprobe_duration(args.audio) if args.audio else None
+    durations = compute_durations(sections, total_duration, equal=args.equal_duration)
+    text_color = tuple(int(c) for c in args.text_color.split(","))
+
+    temp_dir = tempfile.mkdtemp(prefix="make_video_")
+    frame_paths = []
+    try:
+        for i, (image_path, text) in enumerate(zip(images, sections)):
+            out_path = os.path.join(temp_dir, f"frame_{i:04d}.jpg")
+            render_caption_frame(
+                image_path, text, out_path, args.width, args.height,
+                args.font, args.font_size, args.margin, text_color,
+                args.gradient_height,
+            )
+            frame_paths.append(out_path)
+            print(f"[{i + 1}/{len(images)}] {os.path.basename(image_path)} -> "
+                  f"{durations[i]:.1f}s: {text.splitlines()[0][:60]}...")
+
+        build_video(frame_paths, durations, args.audio, args.output,
+                    args.fps, args.width, args.height)
+        print(f"\nDone: {args.output}")
+    finally:
+        if args.keep_temp:
+            print(f"Frames kept at: {temp_dir}")
+        else:
+            shutil.rmtree(temp_dir, ignore_errors=True)
+
+
+if __name__ == "__main__":
+    main()
