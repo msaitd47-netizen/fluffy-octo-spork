@@ -198,6 +198,46 @@ def split_pages(text, mode="paragraph"):
     return pages or [text.strip()]
 
 
+def group_pages_for_display(frame_specs, durations, section_page_counts, group_size):
+    """Merge consecutive body sentences (everything after each section's
+    first/heading page) into groups of up to `group_size` for display,
+    while keeping each merged group's duration equal to the sum of its
+    member sentences' individually silence-snapped durations. This changes
+    what's shown on screen (bigger blocks of text) without changing when
+    any single sentence's timing was decided, so the one boundary that's
+    still visible per group (its end) is exactly as accurate as full
+    per-sentence paging.
+    """
+    if group_size <= 1:
+        return frame_specs, durations
+
+    new_specs = []
+    new_durations = []
+    pos = 0
+    for count in section_page_counts:
+        section_specs = frame_specs[pos:pos + count]
+        section_durations = durations[pos:pos + count]
+        pos += count
+        if not section_specs:
+            continue
+
+        # First page of the section is the heading; keep it standalone.
+        new_specs.append(section_specs[0])
+        new_durations.append(section_durations[0])
+
+        body_specs = section_specs[1:]
+        body_durations = section_durations[1:]
+        for i in range(0, len(body_specs), group_size):
+            chunk_specs = body_specs[i:i + group_size]
+            chunk_durations = body_durations[i:i + group_size]
+            image_path = chunk_specs[0][0]
+            merged_text = " ".join(text for _, text in chunk_specs)
+            new_specs.append((image_path, merged_text))
+            new_durations.append(sum(chunk_durations))
+
+    return new_specs, new_durations
+
+
 def wrap_text(draw, text, font, max_width):
     lines = []
     for paragraph in text.split("\n\n"):
@@ -323,6 +363,11 @@ def main():
                           "snap to a pause *inside* a paragraph and cut it off early.")
     ap.add_argument("--page-min-seconds", type=float, default=1.2,
                      help="Minimum time each caption page stays on screen within its image's duration")
+    ap.add_argument("--caption-group-size", type=int, default=4,
+                     help="Merge this many consecutive sentences into one displayed caption block "
+                          "(each section's first/heading page is always kept standalone). Timing is "
+                          "still decided per sentence and snapped to real pauses; only the display is "
+                          "grouped, so accuracy isn't lost. Set to 1 to show one sentence per caption.")
     ap.add_argument("--no-silence-align", action="store_true",
                      help="Don't nudge caption timing onto detected pauses in the audio; "
                           "use pure text-length-proportional timing")
@@ -349,6 +394,7 @@ def main():
     # timing against real pauses in the audio before rendering anything.
     frame_specs = []  # (image_path, page_text)
     durations = []
+    section_page_counts = []
     for image_path, text, section_duration in zip(images, sections, section_durations):
         pages = split_pages(text, mode=args.split_mode)
         page_weights = [len(p) for p in pages]
@@ -356,10 +402,15 @@ def main():
         for page_text, page_duration in zip(pages, page_durations):
             frame_specs.append((image_path, page_text))
             durations.append(page_duration)
+        section_page_counts.append(len(pages))
 
     if args.audio and not args.no_silence_align:
         silences = detect_silences(args.audio, args.silence_noise_db, args.silence_min_duration)
         durations = snap_boundaries_to_silence(durations, silences)
+
+    if args.split_mode == "sentence" and args.caption_group_size > 1:
+        frame_specs, durations = group_pages_for_display(
+            frame_specs, durations, section_page_counts, args.caption_group_size)
 
     temp_dir = tempfile.mkdtemp(prefix="make_video_")
     frame_paths = []
