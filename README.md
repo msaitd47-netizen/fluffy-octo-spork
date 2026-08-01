@@ -5,6 +5,13 @@ narrated video: each image is shown on screen for a share of the audio's
 runtime, with the matching transcript text burned in as bold white captions
 over a dark gradient (see example below).
 
+If you have fewer images than sentences/paragraphs (one image per chapter
+instead of per sentence), that's the normal case: give each image a whole
+section of text, and the image stays on screen for the section's full
+duration while the caption advances page by page (paragraph by paragraph
+by default) in sync with that duration — the image itself doesn't change,
+only the caption underneath it.
+
 ## Requirements
 
 - [ffmpeg](https://ffmpeg.org/) on your `PATH` (`ffmpeg -version` to check)
@@ -54,6 +61,12 @@ section with more text stays up longer), so pacing loosely follows the
 narration without needing word-level timestamps. Pass `--equal-duration` to
 split the audio evenly across images instead.
 
+Within a single image's on-screen time, if its transcript section has more
+than one paragraph (or sentence, with `--split-mode sentence`), the caption
+advances through it page by page — each page's share of that image's time is
+also weighted by its length, and every page is held for at least
+`--page-min-seconds`.
+
 ## Useful flags
 
 | Flag | Default | Purpose |
@@ -66,6 +79,8 @@ split the audio evenly across images instead.
 | `--text-color` | `255,255,255` | Caption color as `R,G,B` |
 | `--gradient-height` | `0.55` | Fraction of frame height covered by the readability gradient |
 | `--equal-duration` | off | Split audio evenly instead of by caption length |
+| `--split-mode` | `paragraph` | Page a section's captions by `paragraph` or by `sentence` |
+| `--page-min-seconds` | `1.8` | Minimum time each caption page stays on screen |
 | `--keep-temp` | off | Keep rendered frame images for inspection |
 
 No audio file? Omit `--audio` and every image gets a flat 4 seconds

@@ -4,9 +4,16 @@ Assemble a narrated slideshow video from a voice track, a folder of images,
 and a transcript file.
 
 Each image is shown for a portion of the audio's runtime (weighted by how
-much transcript text belongs to it, so longer lines stay on screen longer),
-with the matching transcript text burned in as bold captions over a dark
-gradient, similar to a narrated history/explainer video.
+much transcript text belongs to it, so longer sections stay on screen
+longer), with the matching transcript text burned in as bold captions over
+a dark gradient, similar to a narrated history/explainer video.
+
+A section can contain much more text than fits in one caption (e.g. a whole
+chapter of narration for a single image, when you don't have an image per
+sentence). In that case the image stays on screen for the whole section,
+but the caption text is split into pages (by paragraph by default, or by
+sentence with --split-mode sentence) that advance every few seconds in sync
+with the section's runtime, like subtitles over a still photo.
 
 Usage:
     python3 make_video.py \
@@ -83,27 +90,52 @@ def ffprobe_duration(path):
     return float(json.loads(out.stdout)["format"]["duration"])
 
 
+def distribute(weights, total, min_each):
+    """Split `total` seconds across items proportional to `weights`, while
+    keeping every item at least `min_each` seconds (falls back to an even
+    split if there isn't enough total time to honor the minimum)."""
+    n = len(weights)
+    if total is None:
+        return [4.0] * n
+    if n * min_each >= total:
+        return [total / n] * n
+    weights = [max(w, 1) for w in weights]
+    total_weight = sum(weights)
+    durations = [total * w / total_weight for w in weights]
+    deficits = [max(0.0, min_each - d) for d in durations]
+    if any(deficits):
+        extra_needed = sum(deficits)
+        flexible = [max(0.0, d - min_each) for d in durations]
+        flexible_total = sum(flexible) or 1.0
+        durations = [
+            min_each + d if deficit > 0
+            else max(min_each, d - extra_needed * (d / flexible_total))
+            for d, deficit in zip(durations, deficits)
+        ]
+    return durations
+
+
 def compute_durations(sections, total_duration, equal=False, min_seconds=2.0):
     n = len(sections)
     if equal or total_duration is None:
         base = (total_duration / n) if total_duration else 4.0
         return [base] * n
-    weights = [max(len(s), 1) for s in sections]
-    total_weight = sum(weights)
-    durations = [total_duration * w / total_weight for w in weights]
-    # Enforce a minimum so very short captions don't flash by unreadably,
-    # then rescale the rest to still sum to total_duration.
-    deficits = [max(0.0, min_seconds - d) for d in durations]
-    if any(deficits):
-        extra_needed = sum(deficits)
-        flexible = [max(0.0, d - min_seconds) for d in durations]
-        flexible_total = sum(flexible) or 1.0
-        durations = [
-            min_seconds + d if def_ > 0
-            else max(min_seconds, d - extra_needed * (d / flexible_total))
-            for d, def_ in zip(durations, deficits)
-        ]
-    return durations
+    weights = [len(s) for s in sections]
+    return distribute(weights, total_duration, min_seconds)
+
+
+SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?…])\s+(?=[A-ZÇĞİÖŞÜ0-9])")
+
+
+def split_pages(text, mode="paragraph"):
+    """Split one section's text into on-screen caption pages."""
+    if mode == "sentence":
+        pages = []
+        for paragraph in text.split("\n\n"):
+            pages.extend(s.strip() for s in SENTENCE_SPLIT_RE.split(paragraph.strip()) if s.strip())
+        return pages or [text.strip()]
+    pages = [p.strip() for p in text.split("\n\n") if p.strip()]
+    return pages or [text.strip()]
 
 
 def wrap_text(draw, text, font, max_width):
@@ -223,6 +255,11 @@ def main():
                      help="Fraction of frame height covered by the readability gradient")
     ap.add_argument("--equal-duration", action="store_true",
                      help="Give every image the same on-screen time instead of weighting by caption length")
+    ap.add_argument("--split-mode", choices=["paragraph", "sentence"], default="paragraph",
+                     help="How to page a section's text across its image's on-screen time "
+                          "when the section has more than one paragraph/sentence")
+    ap.add_argument("--page-min-seconds", type=float, default=1.8,
+                     help="Minimum time each caption page stays on screen within its image's duration")
     ap.add_argument("--keep-temp", action="store_true", help="Keep the rendered frame images for inspection")
     args = ap.parse_args()
 
@@ -234,22 +271,34 @@ def main():
     images = find_images(args.images)
     sections = parse_transcript(args.transcript, len(images))
     total_duration = ffprobe_duration(args.audio) if args.audio else None
-    durations = compute_durations(sections, total_duration, equal=args.equal_duration)
+    section_durations = compute_durations(sections, total_duration, equal=args.equal_duration)
     text_color = tuple(int(c) for c in args.text_color.split(","))
 
     temp_dir = tempfile.mkdtemp(prefix="make_video_")
     frame_paths = []
+    durations = []
     try:
-        for i, (image_path, text) in enumerate(zip(images, sections)):
-            out_path = os.path.join(temp_dir, f"frame_{i:04d}.jpg")
-            render_caption_frame(
-                image_path, text, out_path, args.width, args.height,
-                args.font, args.font_size, args.margin, text_color,
-                args.gradient_height,
-            )
-            frame_paths.append(out_path)
+        frame_idx = 0
+        for i, (image_path, text, section_duration) in enumerate(
+                zip(images, sections, section_durations)):
+            pages = split_pages(text, mode=args.split_mode)
+            page_weights = [len(p) for p in pages]
+            page_durations = distribute(page_weights, section_duration, args.page_min_seconds)
+
+            for page_text, page_duration in zip(pages, page_durations):
+                out_path = os.path.join(temp_dir, f"frame_{frame_idx:04d}.jpg")
+                render_caption_frame(
+                    image_path, page_text, out_path, args.width, args.height,
+                    args.font, args.font_size, args.margin, text_color,
+                    args.gradient_height,
+                )
+                frame_paths.append(out_path)
+                durations.append(page_duration)
+                frame_idx += 1
+
+            page_note = f" ({len(pages)} page(s))" if len(pages) > 1 else ""
             print(f"[{i + 1}/{len(images)}] {os.path.basename(image_path)} -> "
-                  f"{durations[i]:.1f}s: {text.splitlines()[0][:60]}...")
+                  f"{section_duration:.1f}s{page_note}: {pages[0][:60]}...")
 
         build_video(frame_paths, durations, args.audio, args.output,
                     args.fps, args.width, args.height)
