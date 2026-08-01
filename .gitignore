@@ -3,3 +3,4 @@ part_*.mp4
 render*.log
 __pycache__/
 *.pyc
+captions.srt
