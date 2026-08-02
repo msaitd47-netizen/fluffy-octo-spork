@@ -248,6 +248,56 @@ def split_pages(text, mode="paragraph"):
     return pages or [text.strip()]
 
 
+def load_alignment_words(path):
+    """Load word-level timestamps produced by elevenlabs_align.py (ElevenLabs
+    forced-alignment output). Whitespace tokens are dropped, leaving one
+    entry per real word with its {'text', 'start', 'end'}."""
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return [w for w in data["words"] if w["text"].strip()]
+
+
+def durations_from_alignment(sections, alignment_words, total_duration, split_mode="sentence"):
+    """Build exact page timing from real TTS word timestamps instead of
+    estimating it from text length: every page (heading or sentence) is
+    matched to its word span in the alignment by position (the reference
+    text elevenlabs_align.py sent for alignment is built from these same
+    sections, in the same order, so word position lines up 1:1). Each
+    page's duration runs until the *next* page's first word starts, so the
+    caption holds through any pause between them instead of disappearing
+    the instant its own last word ends."""
+    section_page_counts = []
+    pages_text = []
+    page_starts = []
+    cursor = 0
+    for text in sections:
+        pages = split_pages(text, mode=split_mode)
+        section_page_counts.append(len(pages))
+        for page in pages:
+            n = len(page.split())
+            if cursor + n > len(alignment_words):
+                sys.exit(
+                    "alignment.json doesn't have enough words to cover the transcript "
+                    "— was it generated from this exact transcript.txt?"
+                )
+            page_starts.append(alignment_words[cursor]["start"])
+            pages_text.append(page)
+            cursor += n
+
+    if cursor != len(alignment_words):
+        print(f"Warning: {len(alignment_words) - cursor} word(s) in alignment.json were "
+              f"never matched to the transcript — transcript.txt may have been edited "
+              f"since alignment.json was generated.")
+
+    boundaries = page_starts[1:] + [total_duration]
+    durations = []
+    prev = 0.0
+    for b in boundaries:
+        durations.append(max(0.05, b - prev))
+        prev = b
+    return pages_text, durations, section_page_counts
+
+
 def group_pages_for_display(frame_specs, durations, section_page_counts, group_size):
     """Merge consecutive body sentences (everything after each section's
     first/heading page) into groups of up to `group_size` for display,
@@ -425,6 +475,8 @@ def main():
                      help="Threshold (dB) below which audio is considered silent, for pause detection")
     ap.add_argument("--silence-min-duration", type=float, default=0.4,
                      help="Minimum length (seconds) of a gap to count as a pause")
+    ap.add_argument("--alignment", help="alignment.json from elevenlabs_align.py — use exact "
+                                         "TTS word timestamps instead of estimated/silence-snapped timing")
     ap.add_argument("--keep-temp", action="store_true", help="Keep the rendered frame images for inspection")
     args = ap.parse_args()
 
@@ -432,6 +484,8 @@ def main():
         sys.exit("ffmpeg/ffprobe not found on PATH. Install ffmpeg first.")
     if not os.path.exists(args.font):
         sys.exit(f"Font not found: {args.font}. Pass --font with a path to a .ttf file.")
+    if args.alignment and not args.audio:
+        sys.exit("--alignment requires --audio (its timing needs the real audio duration).")
 
     images = find_images(args.images)
     sections = parse_transcript(args.transcript, len(images))
@@ -440,23 +494,35 @@ def main():
     text_color = tuple(int(c) for c in args.text_color.split(","))
 
     # Build the full flat sequence of (image, caption page) pairs with their
-    # text-length-proportional durations first, then optionally correct that
-    # timing against real pauses in the audio before rendering anything.
-    frame_specs = []  # (image_path, page_text)
-    durations = []
-    section_page_counts = []
-    for image_path, text, section_duration in zip(images, sections, section_durations):
-        pages = split_pages(text, mode=args.split_mode)
-        page_weights = [len(p) for p in pages]
-        page_durations = distribute(page_weights, section_duration, args.page_min_seconds)
-        for page_text, page_duration in zip(pages, page_durations):
-            frame_specs.append((image_path, page_text))
-            durations.append(page_duration)
-        section_page_counts.append(len(pages))
+    # timing. With --alignment, timing comes straight from real TTS word
+    # timestamps; otherwise it's a text-length-proportional estimate,
+    # optionally corrected against real pauses in the audio.
+    if args.alignment:
+        alignment_words = load_alignment_words(args.alignment)
+        pages_text, durations, section_page_counts = durations_from_alignment(
+            sections, alignment_words, total_duration, split_mode=args.split_mode)
+        frame_specs = []
+        pos = 0
+        for image_path, count in zip(images, section_page_counts):
+            for page_text in pages_text[pos:pos + count]:
+                frame_specs.append((image_path, page_text))
+            pos += count
+    else:
+        frame_specs = []  # (image_path, page_text)
+        durations = []
+        section_page_counts = []
+        for image_path, text, section_duration in zip(images, sections, section_durations):
+            pages = split_pages(text, mode=args.split_mode)
+            page_weights = [len(p) for p in pages]
+            page_durations = distribute(page_weights, section_duration, args.page_min_seconds)
+            for page_text, page_duration in zip(pages, page_durations):
+                frame_specs.append((image_path, page_text))
+                durations.append(page_duration)
+            section_page_counts.append(len(pages))
 
-    if args.audio and not args.no_silence_align:
-        silences = detect_silences(args.audio, args.silence_noise_db, args.silence_min_duration)
-        durations = snap_boundaries_to_silence(durations, silences)
+        if args.audio and not args.no_silence_align:
+            silences = detect_silences(args.audio, args.silence_noise_db, args.silence_min_duration)
+            durations = snap_boundaries_to_silence(durations, silences)
 
     if args.split_mode == "sentence" and args.caption_group_size > 1:
         frame_specs, durations = group_pages_for_display(
