@@ -24,6 +24,19 @@ Dördü de direkt, ikisi Dublin bacağı:
 | 26 Eyl Cmt | **Kayseri → İzmir direkt** | [SunExpress/Pegasus, her gün](https://www.flightsfrom.com/ASR-ADB), ~1,5 saat; sabah seferi |
 | 27 Eyl Paz | **İzmir → Dublin direkt** | [SunExpress, haftada ~9 sefer](https://www.flightsfrom.com/DUB-ADB), ~4,5 saat |
 
+### En ucuz bilet stratejisi 💸
+Erken alınırsa (el bagajı tarifesiyle) beklenen dip fiyatlar: DUB→AYT **~€50-80**, AYT→ASR **~€40-50**, ASR→ADB **~€45-55**, ADB→DUB **~€90-150** /kişi. İki kişi toplam **~€450-650** — bagajla ~€550-750.
+
+Tarihi hazır arama linkleri:
+- [DUB→AYT 19.09](https://www.skyscanner.ie/transport/flights/dub/ayt/260919/) · [AYT→ASR 24.09](https://www.skyscanner.ie/transport/flights/ayt/asr/260924/) · [ASR→ADB 26.09](https://www.skyscanner.ie/transport/flights/asr/adb/260926/) · [ADB→DUB 27.09](https://www.skyscanner.ie/transport/flights/adb/dub/260927/)
+
+Taktikler:
+1. **Dublin bacaklarını doğrudan [sunexpress.com](https://www.sunexpress.com)'dan al** — aracı komisyonu yok; en ucuzu "Light" tarife (sadece el çantası), kabin bagajı istiyorsan bir üst paket.
+2. **İç hatları TL üzerinden al** ([enuygun](https://www.enuygun.com/ucak-bileti/), biletall ya da Pegasus/SunExpress'in TR sitesi) — euro fiyatlandırmasından genelde daha ucuz. Kayseri-İzmir erken alana ~₺1.900'den başlıyor.
+3. **Google Flights'ta fiyat takibi aç** her bacak için — düşünce mail atar.
+4. **Bagajı paylaşın:** 4 uçuşlu rotada her uçuşa ayrı bagaj ücreti ödenir; tek orta boy valiz + iki el çantası ciddi tasarruf.
+5. **Hemen al:** Eylül zaten bu rotaların en ucuz ayı ama sezon sonu uçuşlarında koltuk azaldıkça fiyat tırmanır, beklemek kazandırmaz.
+
 > ⚠️ **Rezervasyondan önce tek kontrol:** SunExpress sezonluk uçar ve Eylül ortasında bazı rotalarda sefer azaltır — **27 Eylül Pazar ADB→DUB seferinin satışta olduğunu** görmeden diğer biletleri kesme. O gün sefer yoksa B planı hazır: THY/Pegasus ile İzmir→İstanbul→Dublin aktarmalı dönersin, rota değişmez.
 
 ### 🇨🇳 Kız arkadaşın için vize — ÖNEMLİ, İLK İŞ BU
