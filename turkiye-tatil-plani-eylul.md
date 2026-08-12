@@ -92,6 +92,27 @@ Uzun ama planın en "vay be" günü:
 6. 🚗 Araba: Antalya havalimanı alış (21.09) → İzmir havalimanı bırakış (27.09), one-way
 7. 🚤 Kekova tekne turu (23.09) — Kaş'tan ya da Üçağız'dan
 
+## Kabaca Bütçe (2 kişi, toplam)
+
+Orta segment konfor + iki büyük keyif kalemi (mağara otel, balon) üzerinden. Eylül sonu düşük sezon başı olduğu için fiyatlar yazın tepe noktasından belirgin ucuzdur.
+
+| Kalem | Tahmin (€) | Not |
+|---|---|---|
+| ✈️ THY multi-city (DUB→ASR + ADB→DUB) ×2 | 700 – 900 | Erken alana daha ucuz; [Eylül bu rotada en ucuz aylardan](https://www.skyscanner.ie/routes/dub/tr/dublin-to-turkiye-turkey.html) |
+| ✈️ İç hat ASR→AYT ×2 | 80 – 120 | SunExpress, erken alınırsa alt banttan |
+| 🏨 Oteller, 8 gece (çift kişilik) | 700 – 1.000 | Göreme mağara otel €120–180/gece; Kaş, Fethiye, Kaleiçi, Alsancak €70–120/gece |
+| 🚗 Araba, 6 gün + one-way + benzin | 350 – 450 | Ekonomik sınıf ~€35–45/gün; ~900 km yakıt ~€80; one-way ücreti €50–100 |
+| 🎈 Balon ×2 | 400 – 500 | Köklü firma, standart sepet |
+| 🚤 Kekova teknesi ×2 | 50 – 80 | Kaş/Üçağız çıkışlı günlük tur |
+| 🏛️ Müze girişleri | 150 – 250 | Sen **Müzekart** al (TL, komik para); yabancı tarifesi sadece kız arkadaşına işler (Efes ~€40, Pamukkale ~€30 vb.) |
+| 🍽️ Yeme-içme, 9 gün | 650 – 900 | Kahvaltılar çoğu otelde dahil; iyi restoranlarda akşam yemeği ~€35–50/çift |
+| 🚕 Transferler + şehir içi | 80 – 120 | Kayseri↔Göreme transferi, taksiler |
+| 🛂 e-Vize (kız arkadaş) | ~55 | Sen Türk vatandaşısın, sana gerek yok |
+| 📱 eSIM ×2 | 20 – 30 | Airalo vb. |
+| **Toplam** | **≈ 3.300 – 4.400** | Rahat bir orta bant: **~€3.800** |
+
+İsteğe bağlı ekstralar: Babadağ yamaç paraşütü ~€120–140/kişi, teleferik ~€35/kişi, hediyelik/alışveriş sana kalmış. Tasarruf etmek istersen en büyük kaldıraç otel segmenti ve uçakları erken almak — balondan kısma, ona değer.
+
 ## Ufak Gezgin Notları
 - **Para:** Nakit TL biraz bulundurun (pazar, dolmuş, bahşiş); geri kalan her yerde kart geçer. WeChat Pay / Alipay geçmez — kız arkadaşını önceden uyar.
 - **İnternet:** İkiniz için Türkiye eSIM'i Dublin'den halledin (Airalo vb.) — havalimanı SIM'leri pahalı.
