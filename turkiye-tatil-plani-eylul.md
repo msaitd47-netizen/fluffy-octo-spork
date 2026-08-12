@@ -145,14 +145,14 @@ Orta segment konfor + iki büyük keyif kalemi (mağara otel, balon) üzerinden.
 | 🍽️ Yeme-içme, 9 gün | 650 – 900 | Kahvaltılar çoğu otelde dahil; iyi restoranlarda akşam yemeği ~€35–50/çift |
 | 🚕 Transferler + taksi + dolmuş + tren | 100 – 150 | Kayseri↔Göreme shuttle, havalimanı transferleri, Selçuk treni |
 | 🛂 Vize | 0 | Çin vatandaşlarına muafiyet var — e-vizeye bile gerek yok ✅ |
-| 📱 eSIM ×2 | 20 – 30 | Airalo vb. |
+| 📱 eSIM ×1 (kız arkadaş) | 10 – 15 | Senin Türk hattın var — sadece ona Airalo vb. |
 | **Toplam** | **≈ 2.250 – 3.350** | Rahat bir orta bant: **~€2.800** |
 
 **Torpilli senaryo:** İzmir gecesi abiden, Antalya'nın 3 gecesi kardeşlerin çevresinden hallolursa otel kalemi ~€400-600'e iner ve toplam **≈ €1.950 – 3.150 (orta bant ~€2.550)** olur. Bu durumda cepten çıkan en büyük üç kalem: yeme-içme, uçaklar ve Göreme+Kaş otelleri — Göreme mağara otelinden yine kısmayın, o deneyim tatilin bel kemiği.
 
 ## Ufak Gezgin Notları
 - **Para:** Nakit TL biraz bulundurun (dolmuş, pazar, bahşiş); geri kalan her yerde kart geçer. WeChat Pay / Alipay geçmez — kız arkadaşını önceden uyar.
-- **İnternet:** İkiniz için Türkiye eSIM'i Dublin'den halledin (Airalo vb.) — havalimanı SIM'leri pahalı.
+- **İnternet:** Senin Türk hattın hazır; kız arkadaşına Dublin'den Türkiye eSIM'i al (Airalo vb., ~€10-15) — havalimanı SIM'leri pahalı. Türk hattının faturalı/açık olduğunu bir kontrol et.
 - **Otobüs kültürü:** Türkiye'de şehirlerarası otobüsler konforludur (ikram, koltuk ekranı) — Çinli bir misafire bile "vay be" dedirtir. Biletleri obilet.com'dan koltuk seçerek alın.
 - **Balon iptali:** %15-20 ihtimalle rüzgârdan iptal olur; üzülmeyin, 26 sabahı yedektir (uçak öğleden sonra olsun).
 - **Eylül sonu güneşi** hâlâ ciddidir — Kekova teknesi, Pamukkale (beyaz zemin yansıtır!) ve Efes için şapka + krem.
