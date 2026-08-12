@@ -39,8 +39,8 @@ Taktikler:
 
 > ⚠️ **Rezervasyondan önce tek kontrol:** SunExpress sezonluk uçar ve Eylül ortasında bazı rotalarda sefer azaltır — **27 Eylül Pazar ADB→DUB seferinin satışta olduğunu** görmeden diğer biletleri kesme. O gün sefer yoksa B planı hazır: THY/Pegasus ile İzmir→İstanbul→Dublin aktarmalı dönersin, rota değişmez.
 
-### 🇨🇳 Kız arkadaşın için vize — ÖNEMLİ, İLK İŞ BU
-Çin pasaportu sahipleri Türkiye'ye **e-Vize** ile girebiliyor: şart, geçerli bir **İrlanda / İngiltere / Schengen / ABD vizesi veya oturum izni** olması — Dublin IRP kartı bu şartı karşılar. Tek giriş, 30 gün, ~60 USD, 5 dakikada çıkıyor: **[evisa.gov.tr](https://www.evisa.gov.tr)** (sadece resmi site). 2026'da Çin vatandaşlarına vize muafiyeti getirildiğine dair haberler de dolaşıyor — bilet almadan önce oradan teyit edin. Pasaport, dönüşten itibaren en az 6 ay geçerli olsun.
+### 🇨🇳 Kız arkadaşın için vize — HALLOLDU ✅
+Çin vatandaşlarına **vize muafiyeti** var: e-vizeye bile gerek yok, pasaportla direkt giriş. Tek dikkat: pasaport dönüş tarihinden itibaren **en az 6 ay geçerli** olsun ve yıpranmamış olsun. (Kurallar değişebildiği için uçuştan bir hafta önce bir kez daha göz atmak bedava sigortadır.)
 
 ---
 
@@ -118,16 +118,15 @@ Taktikler:
 **8 gece toplamı:** önerilen karışımla ~€700-950; bütçe seçenekleriyle ~€600-750. 💡 Genel taktik: booking.com'da iptal edilebilir tarifeyle tutun, sonra otelin kendi sitesinden/telefonundan fiyat isteyin — direkt rezervasyon çoğu zaman ~%10 daha ucuz ya da oda upgrade'i getirir.
 
 ## Yapılacaklar Listesi (şimdi, sırayla)
-1. ✅ **e-Vize** — evisa.gov.tr (kız arkadaşın için, İrlanda oturum kartıyla)
-2. ⚠️ **Önce kontrol:** SunExpress 27.09 Paz ADB→DUB seferi satışta mı? (Yoksa dönüş THY/Pegasus IST aktarmalı olur, rota değişmez)
-3. ✈️ SunExpress: DUB→AYT (19.09 Cmt) + ADB→DUB (27.09 Paz)
-4. ✈️ İç hat 1: AYT→ASR (24.09 sabah)
-5. ✈️ İç hat 2: ASR→ADB (26.09 sabah)
-6. 🎈 Kapadokya balon rezervasyonu (25.09 sabahı; 26.09 yedek)
-7. 🏨 Oteller: Antalya Kaleiçi (1), Kaş (2), Antalya Kaleiçi (2 — aynı otel), Göreme mağara otel (2), İzmir Alsancak (1)
-8. 🚌 Otobüs: Antalya→Kaş (20.09) + Kaş→Antalya (22.09) — obilet.com
-9. ⚪ Pamukkale günübirlik turu (23.09) — Antalya'dan, otel de satar
-10. 🚤 Kekova tekne turu (21.09) — Kaş limanından
+1. ⚠️ **Önce kontrol:** SunExpress 27.09 Paz ADB→DUB seferi satışta mı? (Yoksa dönüş THY/Pegasus IST aktarmalı olur, rota değişmez)
+2. ✈️ SunExpress: DUB→AYT (19.09 Cmt) + ADB→DUB (27.09 Paz)
+3. ✈️ İç hat 1: AYT→ASR (24.09 sabah)
+4. ✈️ İç hat 2: ASR→ADB (26.09 sabah)
+5. 🎈 Balon: arkadaşa 25.09 asıl / 26.09 rüzgâr yedeği tarihlerini ver
+6. 🏨 Oteller: Göreme mağara otel (2) + Kaş (2) — Antalya kardeşlerin çevresinden, İzmir abiden
+7. 🚌 Otobüs: Antalya→Kaş (20.09) + Kaş→Antalya (22.09) — obilet.com
+8. ⚪ Pamukkale günübirlik turu (23.09) — Antalya'dan, otel de satar
+9. 🚤 Kekova tekne turu (21.09) — Kaş limanından
 
 ## Kabaca Bütçe (2 kişi, toplam)
 
@@ -145,11 +144,11 @@ Orta segment konfor + iki büyük keyif kalemi (mağara otel, balon) üzerinden.
 | 🏛️ Müze girişleri (Efes, Göreme OAM vb.) | 100 – 170 | Sen **Müzekart** al (TL, komik para); yabancı tarifesi sadece kız arkadaşına işler (Efes ~€40) |
 | 🍽️ Yeme-içme, 9 gün | 650 – 900 | Kahvaltılar çoğu otelde dahil; iyi restoranlarda akşam yemeği ~€35–50/çift |
 | 🚕 Transferler + taksi + dolmuş + tren | 100 – 150 | Kayseri↔Göreme shuttle, havalimanı transferleri, Selçuk treni |
-| 🛂 e-Vize (kız arkadaş) | ~55 | Sen Türk vatandaşısın, sana gerek yok |
+| 🛂 Vize | 0 | Çin vatandaşlarına muafiyet var — e-vizeye bile gerek yok ✅ |
 | 📱 eSIM ×2 | 20 – 30 | Airalo vb. |
-| **Toplam** | **≈ 2.300 – 3.400** | Rahat bir orta bant: **~€2.850** |
+| **Toplam** | **≈ 2.250 – 3.350** | Rahat bir orta bant: **~€2.800** |
 
-**Torpilli senaryo:** İzmir gecesi abiden, Antalya'nın 3 gecesi kardeşlerin çevresinden hallolursa otel kalemi ~€400-600'e iner ve toplam **≈ €2.000 – 3.200 (orta bant ~€2.600)** olur. Bu durumda cepten çıkan en büyük üç kalem: yeme-içme, uçaklar ve Göreme+Kaş otelleri — Göreme mağara otelinden yine kısmayın, o deneyim tatilin bel kemiği.
+**Torpilli senaryo:** İzmir gecesi abiden, Antalya'nın 3 gecesi kardeşlerin çevresinden hallolursa otel kalemi ~€400-600'e iner ve toplam **≈ €1.950 – 3.150 (orta bant ~€2.550)** olur. Bu durumda cepten çıkan en büyük üç kalem: yeme-içme, uçaklar ve Göreme+Kaş otelleri — Göreme mağara otelinden yine kısmayın, o deneyim tatilin bel kemiği.
 
 ## Ufak Gezgin Notları
 - **Para:** Nakit TL biraz bulundurun (dolmuş, pazar, bahşiş); geri kalan her yerde kart geçer. WeChat Pay / Alipay geçmez — kız arkadaşını önceden uyar.
