@@ -138,7 +138,7 @@ Orta segment konfor + iki büyük keyif kalemi (mağara otel, balon) üzerinden.
 | ✈️ SunExpress DUB→AYT + ADB→DUB ×2 | 350 – 600 | [Eylül bu rotalarda en ucuz aylardan](https://www.kayak.ie/flight-routes/Dublin-DUB/Antalya-AYT); erken alana alt bant |
 | ✈️ İç hatlar AYT→ASR + ASR→ADB ×2 | 120 – 200 | İkisi de direkt, erken alınırsa €30-50/kişi/bacak |
 | 🏨 Oteller, 8 gece (çift kişilik) | 650 – 950 | Göreme mağara otel €120–180/gece; Kaleiçi, Kaş, Alsancak €70–120/gece |
-| 🎈 Balon ×2 | 400 – 500 | Köklü firma, standart sepet; otel transferi dahil |
+| 🎈 Balon ×2 | 0 — bütçe dışı | Arkadaş ayarlıyor (piyasa değeri €400-500 — iyi torpil!) |
 | ⚪ Pamukkale turu ×2 | 120 – 180 | Girişler + öğle yemeği genelde dahil |
 | 🚤 Kekova teknesi ×2 | 50 – 80 | Kaş limanından günlük tur |
 | 🚌 Otobüs Antalya↔Kaş ×2 kişi | 40 – 60 | obilet.com'dan önceden |
@@ -147,9 +147,9 @@ Orta segment konfor + iki büyük keyif kalemi (mağara otel, balon) üzerinden.
 | 🚕 Transferler + taksi + dolmuş + tren | 100 – 150 | Kayseri↔Göreme shuttle, havalimanı transferleri, Selçuk treni |
 | 🛂 e-Vize (kız arkadaş) | ~55 | Sen Türk vatandaşısın, sana gerek yok |
 | 📱 eSIM ×2 | 20 – 30 | Airalo vb. |
-| **Toplam** | **≈ 2.700 – 3.900** | Rahat bir orta bant: **~€3.300** |
+| **Toplam** | **≈ 2.300 – 3.400** | Rahat bir orta bant: **~€2.850** |
 
-Direkt uçuşlar sayesinde önceki plandan ~€300 daha ucuz, üstelik İzmir ve Efes de geri geldi. Tasarrufun en büyük kaldıracı yine otel segmenti ve biletleri erken almak — balondan kısma, ona değer.
+**Torpilli senaryo:** İzmir gecesi abiden, Antalya'nın 3 gecesi kardeşlerin çevresinden hallolursa otel kalemi ~€400-600'e iner ve toplam **≈ €2.000 – 3.200 (orta bant ~€2.600)** olur. Bu durumda cepten çıkan en büyük üç kalem: yeme-içme, uçaklar ve Göreme+Kaş otelleri — Göreme mağara otelinden yine kısmayın, o deneyim tatilin bel kemiği.
 
 ## Ufak Gezgin Notları
 - **Para:** Nakit TL biraz bulundurun (dolmuş, pazar, bahşiş); geri kalan her yerde kart geçer. WeChat Pay / Alipay geçmez — kız arkadaşını önceden uyar.
