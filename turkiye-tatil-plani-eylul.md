@@ -91,6 +91,32 @@ Taktikler:
 
 ---
 
+## Otel Önerileri 🏨
+
+**Göreme — mağara otel, 2 gece (24-25):** Buranın parası buraya harcanır.
+- **Kelebek Special Cave Hotel** (~€90-150) — Göreme'nin klasiği: efsane serpme kahvaltı ve balonların tam karşınızdan kalktığı teras. Uçmadığınız sabah balonları buradan izlersiniz.
+- **Koza Cave Hotel** (~€100-200) — ödüllü, çevre dostu, zevkle restore edilmiş; daha sakin.
+- Bütçe dostu: **Henna Cave** (~€70) ya da **Cave Hotel Saksağan** — mağara deneyiminin %80'i, fiyatın yarısı.
+- 💡 Rezervasyonda "balloon view terrace" olduğunu teyit edin; kahvaltı dahil tarife alın.
+
+**Antalya Kaleiçi — restore Osmanlı konağı, 1+2 gece (19, 22-23) aynı otel:**
+- **Tuvana Hotel** (~€90-130) — birkaç konaktan oluşan, bahçeli-havuzlu, romantik; Kaleiçi'nin en sevileni.
+- **Alp Paşa** (~€70-100) — avlulu, tarihi karakteri yoğun.
+- Bütçe dostu: **Dogan Hotel** (~€60-90) — geleneksel, sıcak, marina tarafında.
+- 💡 Aynı oteli iki konaklama için de alın — 20-21'de (Kaş'tayken) büyük valizi emanet bırakabilirsiniz, Kaş'a hafif gidersiniz.
+
+**Kaş — merkez, 2 gece (20-21):**
+- **DuruPduru Hotel** (~€90-120) — +12 yetişkin konsepti, meyve bahçesi, serpme kahvaltı; çiftler için biçilmiş kaftan.
+- **Kaşköy Hotel** (~€80-110) — deniz manzaralı verandada kahvaltı.
+- **Un Amor** (~€120-160) — biraz üst segment, manzara + tasarım isteyene.
+- 💡 Merkezde (Andifli) kalın: meydan, liman ve Kekova teknesi hepsi yürüme mesafesinde.
+
+**İzmir Alsancak/Kordon — 1 gece (26):**
+- **İzmir Palas** (~€90-120) — 1927'den beri Kordon'un üzerinde; deniz manzaralı oda alın, son gün batımı pencereden.
+- **Kordon Otel Pasaport** (~€80-110) — körfeze bakan, Konak'a yürüme mesafesi.
+
+**8 gece toplamı:** önerilen karışımla ~€700-950; bütçe seçenekleriyle ~€600-750. 💡 Genel taktik: booking.com'da iptal edilebilir tarifeyle tutun, sonra otelin kendi sitesinden/telefonundan fiyat isteyin — direkt rezervasyon çoğu zaman ~%10 daha ucuz ya da oda upgrade'i getirir.
+
 ## Yapılacaklar Listesi (şimdi, sırayla)
 1. ✅ **e-Vize** — evisa.gov.tr (kız arkadaşın için, İrlanda oturum kartıyla)
 2. ⚠️ **Önce kontrol:** SunExpress 27.09 Paz ADB→DUB seferi satışta mı? (Yoksa dönüş THY/Pegasus IST aktarmalı olur, rota değişmez)
