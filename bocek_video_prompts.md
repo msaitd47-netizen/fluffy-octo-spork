@@ -38,7 +38,7 @@ kontrol edin.
 
 | Ayar | Değer | Neden |
 |---|---|---|
-| En-boy oranı | **9:16 dikey** | Reels/TikTok/X mobil akışı |
+| En-boy oranı | **16:9 yatay** | Geniş kadroda altı karakter rahat sığıyor |
 | Süre | **8 saniye** | Veo/Flow klip başına üst sınır; akımın standardı |
 | Ses | **native audio açık** | Böceğin konuşması modelden gelmeli, sonradan bindirilmemeli |
 | Çözünürlük | 1080p+ | Yeniden yüklemede sıkışmaya karşı pay |
@@ -51,8 +51,8 @@ sağlıyor:
 > Ultra-realistic cinematic 3D animation, photoreal cockroach with detailed
 > chitin texture and translucent wings, Pixar-level facial expression and lip
 > sync, expressive eyes, smooth character motion, shallow depth of field,
-> subtle handheld camera, realistic practical lighting, HDR, 4K, vertical
-> 9:16, 8 seconds.
+> subtle handheld camera, realistic practical lighting, HDR, 4K, horizontal
+> 16:9 widescreen, 8 seconds.
 
 Negatif prompt (destekleyen araçlarda):
 
@@ -170,7 +170,7 @@ kodlayın:
 
 ```bash
 ffmpeg -f concat -safe 0 -i clips.txt \
-  -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:-1:-1" \
+  -vf "scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:-1:-1" \
   -r 30 -c:v libx264 -crf 18 -c:a aac bocek_video.mp4
 ```
 

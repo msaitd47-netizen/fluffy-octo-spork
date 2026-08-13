@@ -59,10 +59,10 @@ Bölüm 1 ile birlikte toplam **5 klip / ~40 saniye**.
 - **Kameraya dönmek** kapanışın can alıcı kısmı. Video birine hediye olduğu
   için son replik izleyiciye, yani doğum günü sahibine söyleniyor. Prompttaki
   `directly into the camera` ifadesini silmeyin.
-- **Altı karakter tek karede** modelin sınırını zorluyor. Klip 5'te bazıları
-  bulanık veya arkada kalırsa sorun değil; net olması gereken tek karakter
-  Mustafa. Tutmazsa kahkahayı geniş planda, Mustafa'nın repliğini ayrı bir
-  yakın planda çekip ikisini birleştirin (o durumda 6 klip olur).
+- **Altı karakter tek karede** 16:9 yatay kadroda rahat sığıyor, hepsini yan
+  yana dizin. Yine de net olması gereken tek karakter Mustafa; diğerleri
+  hafif bulanık kalabilir. Kahkaha ve replik 8 saniyeye sıkışık gelirse
+  ikisini ayrı kliplere bölün (o durumda 6 klip olur).
 - **Vlahovic / Trossard** replikte sadece isim olarak geçiyor. Model kareye
   gerçek futbolcu koymaya kalkarsa prompta `no human characters, no real
   people shown` ekleyin.

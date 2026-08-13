@@ -60,5 +60,6 @@ karakterin cümlesini o prompta **kelimesi kelimesine** aynı yapıştırın.
 
 Hepsi aynı karede olacaksa isimleri değil, kadrodaki yerlerini tarif edin —
 "five cockroaches on a worn living-room couch: (Sait bloğu), next to him
-(Mustafa bloğu), ..." şeklinde soldan sağa sırayla. Altı karakteri tek karede
-tutmak zor; 5 kişilik kadro üst sınır, Tuna'yı ayrı bir girişte kullanın.
+(Mustafa bloğu), ..." şeklinde soldan sağa sırayla. 16:9 yatay kadroda altı
+karakter yan yana rahat sığıyor; dikeyde zorlanan bu düzen yatayda sorun
+çıkarmıyor.

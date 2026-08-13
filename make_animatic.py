@@ -2,7 +2,7 @@
 """
 Render a timing animatic for the cockroach birthday video.
 
-This is not the finished video — it is a 9:16 previz pass that plays the
+This is not the finished video — it is a 16:9 previz pass that plays the
 script at its real length (5 clips x 8 seconds) with the dialogue on screen
 and a progress bar per clip, so the pacing can be judged before spending
 generation credits in Flow/Veo.
@@ -18,7 +18,7 @@ import tempfile
 
 from PIL import Image, ImageDraw, ImageFont
 
-WIDTH, HEIGHT = 1080, 1920
+WIDTH, HEIGHT = 1920, 1080
 FPS = 25
 CLIP_SECONDS = 8
 
@@ -95,36 +95,37 @@ def render_card(clip, index, total):
     img = Image.new("RGB", (WIDTH, HEIGHT), BG)
     d = ImageDraw.Draw(img)
 
-    f_label = ImageFont.truetype(FONT_BOLD, 34)
-    f_shot = ImageFont.truetype(FONT_REG, 38)
-    f_name = ImageFont.truetype(FONT_BOLD, 44)
-    f_line = ImageFont.truetype(FONT_BOLD, 66)
+    f_label = ImageFont.truetype(FONT_BOLD, 30)
+    f_shot = ImageFont.truetype(FONT_REG, 34)
+    f_name = ImageFont.truetype(FONT_BOLD, 40)
+    f_line = ImageFont.truetype(FONT_BOLD, 62)
 
-    margin = 90
+    margin = 120
     max_w = WIDTH - 2 * margin
+    line_h, name_h, block_gap = 80, 54, 56
 
-    d.text((margin, 130), f"KLİP {index + 1} / {total}", font=f_label, fill=MUTED)
-    d.text((margin, 190), clip["shot"], font=f_shot, fill=(90, 98, 116))
+    d.text((margin, 70), f"KLİP {index + 1} / {total}", font=f_label, fill=MUTED)
+    d.text((margin, 118), clip["shot"], font=f_shot, fill=(90, 98, 116))
 
     # Dialogue block, vertically centred as a whole.
     blocks = []
     for name, color, text in clip["lines"]:
         lines = wrap(d, text, f_line, max_w)
-        height = len(lines) * 84 + (58 if name else 0)
+        height = len(lines) * line_h + (name_h if name else 0)
         blocks.append((name, color, lines, height))
 
-    total_h = sum(b[3] for b in blocks) + 70 * (len(blocks) - 1)
-    y = (HEIGHT - total_h) // 2
+    total_h = sum(b[3] for b in blocks) + block_gap * (len(blocks) - 1)
+    y = (HEIGHT - total_h) // 2 + 30
 
     for name, color, lines, height in blocks:
         if name:
             d.text((margin, y), name.upper(), font=f_name, fill=color)
-            y += 58
+            y += name_h
         for line in lines:
             d.text((margin, y), line, font=f_line,
                    fill=WHITE if name else MUTED)
-            y += 84
-        y += 70
+            y += line_h
+        y += block_gap
 
     return img
 
@@ -140,7 +141,7 @@ def main():
 
     tmp = tempfile.mkdtemp(prefix="animatic_")
     frames_per_clip = int(round(args.seconds * FPS))
-    bar_y, bar_h = HEIGHT - 150, 10
+    bar_y, bar_h = HEIGHT - 90, 10
     frame_no = 0
 
     try:
@@ -149,9 +150,9 @@ def main():
             for f in range(frames_per_clip):
                 frame = card.copy()
                 d = ImageDraw.Draw(frame)
-                d.rectangle([90, bar_y, WIDTH - 90, bar_y + bar_h], fill=BAR_BG)
-                filled = (WIDTH - 180) * (f + 1) / frames_per_clip
-                d.rectangle([90, bar_y, 90 + filled, bar_y + bar_h], fill=WHITE)
+                d.rectangle([120, bar_y, WIDTH - 120, bar_y + bar_h], fill=BAR_BG)
+                filled = (WIDTH - 240) * (f + 1) / frames_per_clip
+                d.rectangle([120, bar_y, 120 + filled, bar_y + bar_h], fill=WHITE)
                 frame.save(os.path.join(tmp, f"{frame_no:06d}.png"))
                 frame_no += 1
 
