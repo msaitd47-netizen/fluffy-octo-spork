@@ -1,8 +1,8 @@
 # Hamam Böceği Videoları — Text-to-Video Prompt Seti
 
 Türk X/TikTok tarafında viral olan "konuşan hamam böceği" akımı için hazır
-prompt seti. Buradaki promptlar **text-to-video** modelleri içindir (Google
-Flow / Veo, Sora, Kling, Runway) — bu depodaki `make_video.py` hattından
+prompt seti. Buradaki promptlar **text-to-video** modelleri içindir (bkz.
+"Nerede üretilir?") — bu depodaki `make_video.py` hattından
 farklı bir iş: `make_video.py` sabit görsel + seslendirme + altyazı
 birleştirir, buradaki promptlar ise konuşan karakterli hareketli klip üretir.
 İkisini birlikte de kullanabilirsiniz (en altta "Klipleri birleştirme").
@@ -15,6 +15,24 @@ promptlar da o çizgide: mizah **kendine dönük** — maç izleme hâlleri, ev
 ekonomisi, anne telefonu, komşuluk. Hiçbir etnik grubu, milleti veya
 topluluğu hedef alan versiyonunu yazmayın; akımın esprisi zaten karşı tarafın
 söylemini etkisiz bırakmak, aynısını üretmek değil.
+
+## Nerede üretilir?
+
+Bu videonun belirleyici ihtiyacı **native audio**: böceğin Türkçe repliği
+görüntüyle aynı anda, aynı üretimde çıkmalı. Sonradan ses bindirmek dudak
+senkronunu bozuyor ve akımın havasını kaçırıyor. Bu şartla eleyince:
+
+| Araç | Durum |
+|---|---|
+| **Google Flow (Veo 3.1)** | Birinci tercih. Native diyalog + foley tek geçişte, alanın en iyisi. `labs.google/flow` |
+| **Kling 3.0 Omni** | Ucuz alternatif (~$0.10/sn), çok sahneli ortak ses zaman çizelgesi. Ama native diyalogu sınırlı sayıda dili destekliyor — Türkçe listede mi, üretmeden önce doğrulayın. |
+| **Sora 2** | ❌ Kullanmayın. Uygulama ve web ürünü Nisan 2026'da kapatıldı, API de Eylül 2026'da tamamen kapanıyor. |
+| **Runway** | Görüntü iyi, diyalog tarafı zayıf. Bu iş için uygun değil. |
+
+Flow erişimi **Google AI Pro** ($19.99/ay) veya **Ultra** ($249.99/ay)
+aboneliğiyle geliyor; Pro'da günlük sınırlı sayıda Veo Fast üretimi var.
+Ülke kullanılabilirliği değişiyor, Türkiye'den erişimi abonelik almadan önce
+kontrol edin.
 
 ## Ayarlar
 
