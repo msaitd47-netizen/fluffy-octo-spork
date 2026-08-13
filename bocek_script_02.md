@@ -41,16 +41,22 @@ Bölüm 1 ile birlikte toplam **5 klip / ~40 saniye**.
 
 ## Klip 5 — Kahkaha ve kapanış
 
-> Wide shot, night [ORTAM BLOĞU]. All six cockroaches burst into loud
-> laughter at once, rocking backwards, front legs slapping the counter, tea
-> glasses trembling on their saucers. The laughter gradually settles.
+> Wide symmetrical group shot, night [ORTAM BLOĞU]. All six cockroaches stand
+> side by side in a single straight row, evenly spaced, all facing the camera,
+> every one fully visible and none hidden behind another — left to right:
+> Tuna, Sait, Mustafa, Afsan, Özcan, Mete (karakter blokları için
+> `bocek_karakterler.md`). A tiny tea glass in front of each.
+> All six burst into loud laughter at once, the whole row rocking backwards
+> together, front legs slapping the counter, tea glasses trembling on their
+> saucers. The laughter gradually settles.
 > Then the chubby round cockroach in a navy blue and bright yellow vertically
 > striped football jersey, thick bristly moustache-like hairs above his mouth,
-> cloth headband, turns to look directly into the camera, lifts his tiny tulip
-> tea glass toward the lens and says warmly with a wide grin: "Doğum günün
+> cloth headband, lifts his tiny tulip tea glass toward the lens and says
+> warmly with a wide grin, looking directly into the camera: "Doğum günün
 > kutlu olsun Arap!"
-> The other five turn to the camera and raise their glasses too. Hold on the
-> toast as the shot ends. [STİL BLOĞU]
+> The other five raise their glasses at the same time, the whole row toasting
+> the camera together. Hold on the six-way toast as the shot ends.
+> [STİL BLOĞU]
 
 ---
 

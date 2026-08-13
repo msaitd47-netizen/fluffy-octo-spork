@@ -105,23 +105,32 @@ kurup birleştireyim.
 > Night. A kitchen counter turned into a miniature Turkish tea house: tiny
 > tulip-shaped tea glasses on small saucers, a stovetop double teapot gently
 > steaming in the background, warm overhead light pooling on the counter, the
-> rest of the kitchen dark. Six cartoon cockroaches sit side by side in a wide
-> shot: SAIT (large, older, navy and yellow striped jersey, chipped left
-> antenna, captain's armband), MUSTAFA (chubby, navy and yellow striped
-> jersey, bristly moustache hairs, cloth headband), AFSAN (small, skinny, navy
-> and yellow striped jersey, very long antennae, backwards cap), ÖZCAN (tall,
-> lean, black and white striped jersey, healed scratch on his shell), METE
-> (short, stocky, burgundy and blue jersey, sunglasses on his forehead) and
-> TUNA (young, black and white striped jersey, glossy new shell).
+> rest of the kitchen dark.
 >
-> All six burst into loud genuine belly laughter at once, rocking backwards,
-> front legs slapping the counter, tea glasses trembling on their saucers,
-> overlapping voices. The laughter gradually settles.
+> Wide symmetrical group shot. All six cockroaches stand **side by side in a
+> single straight row, evenly spaced, all facing the camera**, every one of
+> them fully visible from head to legs, none behind another. From left to
+> right: TUNA (young, black and white vertically striped jersey, glossy
+> spotless new shell), SAIT (large, older, navy blue and bright yellow
+> vertically striped jersey, chipped left antenna, captain's armband),
+> MUSTAFA (chubby and round, navy blue and bright yellow vertically striped
+> jersey, thick bristly moustache-like hairs, cloth headband), AFSAN (small
+> and skinny, navy blue and bright yellow vertically striped jersey, very long
+> antennae, tiny backwards baseball cap), ÖZCAN (tall and lean, black and
+> white vertically striped jersey, old healed scratch across his shell), METE
+> (short and stocky, burgundy and blue jersey, sunglasses pushed onto his
+> forehead). A tiny tea glass stands on the counter in front of each of them.
 >
-> Then MUSTAFA turns to look directly into the camera, lifts his tiny tulip
-> tea glass toward the lens and says warmly with a wide grin: "Doğum günün
-> kutlu olsun Arap!" The other five turn to the camera and raise their glasses
-> too. Hold on the toast as the shot ends.
+> All six burst into loud genuine belly laughter at once, the whole row
+> rocking backwards together, front legs slapping the counter, tea glasses
+> trembling on their saucers, overlapping voices. The laughter gradually
+> settles.
+>
+> Then MUSTAFA, still in his place in the row, lifts his tiny tulip tea glass
+> toward the lens and says warmly with a wide grin, looking directly into the
+> camera: "Doğum günün kutlu olsun Arap!" The other five raise their glasses
+> at the same time, the entire row toasting the camera together. Hold on the
+> six-way toast as the shot ends.
 >
 > Ultra-realistic cinematic 3D animation, photoreal cockroaches with detailed
 > chitin texture, Pixar-level facial expression and lip sync, expressive eyes,
@@ -140,6 +149,10 @@ kurup birleştireyim.
   dosya gönderin, ben yine birleştiririm.
 - **Kapanışta kameraya dönüş** şart. Video birine hediye, son cümle sahnedeki
   böceklere değil izleyene söyleniyor.
+- **Son sahnede altısı da yan yana** tek sıra hâlinde olmalı. Model bazılarını
+  arkaya atıyorsa `single straight row`, `evenly spaced`, `none behind
+  another` ifadelerini koruyun ve gerekirse `full body visible, camera pulled
+  back` ekleyin. 16:9 kadroda altı karakter yan yana rahat sığıyor.
 - **Yazı istemeyin.** Model Türkçe yazıyı bozuk üretiyor; altyazı gerekiyorsa
   birleştirirken ben gömerim.
 - **Ses seviyeleri** bölümden bölüme farklı çıkabilir. Birleştirirken
