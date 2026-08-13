@@ -49,20 +49,23 @@ F_BOLD = os.path.join(FONT_DIR, "DejaVuSans-Bold.ttf")
 
 # ------------------------------------------------------------- characters
 # x is the standing position; entrance characters get theirs from the scene.
+# voice = (espeak variant, words-per-minute, pitch) — each character gets a
+# distinguishable one so the six are told apart by ear, not just on screen.
 CHARS = {
     "Sait":    dict(x=470, scale=1.18, wide=1.05, team=FB,  phase=0.0,
-                    chipped=True, armband=True),
+                    chipped=True, armband=True, voice=("m3", 138, 32)),
     "Mustafa": dict(x=750, scale=1.02, wide=1.30, team=FB,  phase=1.1,
-                    headband=True, moustache=True),
+                    headband=True, moustache=True, voice=("m1", 146, 42)),
     "Afsan":   dict(x=1020, scale=0.82, wide=0.95, team=FB, phase=2.2,
-                    long_antennae=True, cap=True),
+                    long_antennae=True, cap=True, voice=("m5", 168, 72)),
     "Özcan":   dict(x=1300, scale=1.10, wide=0.82, team=BJK, phase=3.0,
-                    scar=True),
+                    scar=True, voice=("m2", 148, 46)),
     "Mete":    dict(x=1580, scale=0.92, wide=1.25, team=TS, phase=4.1,
-                    shades=True),
+                    shades=True, voice=("m4", 172, 62)),
     "Tuna":    dict(x=185, scale=0.86, wide=0.98, team=BJK, phase=5.2,
-                    glossy=True),
+                    glossy=True, voice=("m6", 178, 78)),
 }
+CHORUS_VOICE = ("m3", 160, 74)      # the shared laugh
 
 # ------------------------------------------------------------------ script
 # (start_second, speaker, text). Durations come from the synthesised audio.
@@ -252,6 +255,17 @@ def draw_char(img, ch, name, t, state, x_override=None, alpha_fade=1.0):
                             radius=int(4 * s), fill=(240, 208, 48))
 
 
+def camera(img, t, focus_x):
+    """Slow push-in across each 8-second clip, drifting toward the speaker."""
+    local = (t % 8.0) / 8.0
+    zoom = 1.0 + 0.055 * local
+    cw, chh = WIDTH / zoom, HEIGHT / zoom
+    cx = lerp(WIDTH / 2, focus_x, 0.35)
+    cx = max(cw / 2, min(WIDTH - cw / 2, cx))
+    box = (cx - cw / 2, HEIGHT / 2 - chh / 2, cx + cw / 2, HEIGHT / 2 + chh / 2)
+    return img.resize((WIDTH, HEIGHT), Image.LANCZOS, box=box)
+
+
 def caption(img, speaker, text):
     d = ImageDraw.Draw(img)
     f_name = ImageFont.truetype(F_BOLD, 34)
@@ -285,9 +299,11 @@ def synthesise(tmp):
     out = []
     for i, (start, speaker, text) in enumerate(SCRIPT):
         path = os.path.join(tmp, f"line{i}.wav")
-        pitch = "70" if speaker == "HERKES" else "45"
-        subprocess.run(["espeak-ng", "-v", "tr", "-s", "148", "-p", pitch,
-                        "-w", path, text], check=True, capture_output=True)
+        variant, speed, pitch = (CHARS[speaker]["voice"]
+                                 if speaker in CHARS else CHORUS_VOICE)
+        subprocess.run(["espeak-ng", "-v", f"tr+{variant}", "-s", str(speed),
+                        "-p", str(pitch), "-w", path, text],
+                       check=True, capture_output=True)
         dur = float(subprocess.run(
             ["ffprobe", "-v", "error", "-show_entries", "format=duration",
              "-of", "csv=p=0", path],
@@ -344,6 +360,10 @@ def main():
                     continue
                 tea_glass(d, ch["x"] + 74 * ch["scale"], GROUND_Y + 26,
                           ch["scale"])
+
+            focus = (CHARS[active[2]]["x"]
+                     if active and active[2] in CHARS else WIDTH / 2)
+            img = camera(img, t, focus)
 
             if active:
                 caption(img, active[2], active[3])
