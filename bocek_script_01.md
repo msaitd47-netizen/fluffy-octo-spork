@@ -2,6 +2,11 @@
 
 Kadro ve karakter blokları: `bocek_karakterler.md`
 Stil bloğu, ayarlar ve birleştirme komutları: `bocek_video_prompts.md`
+Devamı: `bocek_script_02.md`
+
+**Videonun amacı:** doğum günü videosu. Sohbet baştan sona bir bahane; asıl
+mesaj bölüm 2'nin son repliğinde kameraya dönülerek veriliyor. Bölüm 1'i tek
+başına değerlendirmeyin, kurulum kısmı.
 
 ## Ham senaryo
 
@@ -12,7 +17,7 @@ Stil bloğu, ayarlar ve birleştirme komutları: `bocek_video_prompts.md`
 | 3 | Afsan | Sweetie ile date vardı, oradan geliyorum. |
 | 4 | Özcan | Biz de hafta sonu konserdeydik ya, iyi dağıttık kafayı. |
 | 5 | Mete | Kankaaaa aynen, Salah gelince biz de kutlamaya çıktık. |
-| 6 | Tuna | *(bölüm 2 — sonradan sahneye girer)* |
+| 6 | Tuna | *(bölüm 2'de sahneye girer — `bocek_script_02.md`)* |
 
 Yapı: Sait soruyu açıyor, herkes sırayla giderek daha alakasız bir cevap
 veriyor. Espri cevapların tırmanmasında, o yüzden sıra bozulmamalı.
@@ -96,5 +101,5 @@ için açık bırakılmış slot.
 - **Ses tonu** replikten replige değişmeli: Mustafa yorgun, Afsan neşeli ve
   kendini beğenmiş, Özcan sakin, Mete bağıra çağıra. Bunlar promptta yazılı,
   çıkmazsa tonu tarif eden sıfatı güçlendirin.
-- **Klip 3'ün sonundaki sessizlik** bölüm 2'ye bağlanıyor. Bölüm 1'i tek
-  başına paylaşacaksanız o beat'i kısaltın, yarım kalmış hissi veriyor.
+- **Klip 3'ün sonundaki sessizlik** bölüm 2'ye bağlanıyor ve kısaltılmamalı:
+  Tuna tam o sessizliğin üstüne dalarak giriyor, espri oradan çıkıyor.
