@@ -11,6 +11,7 @@ Ayarlar ve stil bloğu: `bocek_video_prompts.md`
 |---|---|---|
 | 1 | Mustafa | Abi tıraş var, nerdesin? |
 | 2 | Uğur abi | *(ağzı dolu)* Beş dakikaya oradayım. |
+| 3 | Uğur abi | *(telefonu kapatıp kendi kendine söylenir)* Bi bitmediniz amk. |
 
 **Karakterler:** **Mustafa** — sarı saçlı, tombul, bıyıklı, Fenerbahçe
 formalı. **Uğur abi** — iri, yaşlıca, evde beyaz atletle, sofranın başında.
@@ -42,9 +43,13 @@ kadro anlatıyor — o yüzden split screen.
 > bread in one front leg and a spoon in another. Without stopping chewing he
 > answers casually and completely sincerely: "Beş dakikaya oradayım."
 >
-> He then calmly ladles more soup into his bowl and tears off another piece of
-> bread. On the left half Mustafa slowly lowers the phone and stares into the
-> mirror. Hold on both halves for a short beat as the shot ends.
+> He drops the phone onto the table without waiting for an answer, calmly
+> ladles more soup into his bowl and tears off another piece of bread, and
+> grumbles to himself under his breath, annoyed and with his mouth still full:
+> "Bi bitmediniz amk."
+>
+> On the left half Mustafa slowly lowers the phone and stares into the mirror.
+> Hold on both halves for a short beat as the shot ends.
 >
 > Ultra-realistic cinematic 3D animation, photoreal cockroaches with detailed
 > chitin texture, Pixar-level facial expression and lip sync, expressive eyes,
@@ -65,4 +70,7 @@ kadro anlatıyor — o yüzden split screen.
   espri kaçıyor; adam gerçekten beş dakikaya çıkacağına inanıyor.
 - **Çorbayı tazelemesi** repliğin hemen ardından gelmeli, esprinin noktası
   orası — kısaltmayın.
-- Küfür yok, olduğu gibi üretilir.
+- **Son replik kendi kendine söylenme.** Telefona değil, kapattıktan sonra
+  kendine söylüyor; bağırırsa espri kaçıyor. Prompttaki `under his breath`
+  ve `with his mouth still full` ifadelerini bırakın.
+- **Küfür reddedilirse:** `Bi bitmediniz ya!` — aynı bıkkınlık, aynı uzunluk.
