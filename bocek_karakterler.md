@@ -10,6 +10,7 @@
 | 4 | Özcan | Beşiktaş | Uzun boylu, ince, kabuğunda eski bir çizik |
 | 5 | Mete | Trabzonspor | Bodur ve geniş, güneş gözlüğü alnına takılı |
 | 6 | Tuna | Beşiktaş | En genç, kabuğu pırıl pırıl yeni — sonradan gelir |
+| 7 | Uğur abi | — | İri, yaşlıca, evde beyaz atletle; forma giymiyor |
 
 Üçü aynı formayı (Fenerbahçe) giydiği için ayırt edici fiziksel özellik şart:
 model sadece formaya bakarsa Sait, Mustafa ve Afsan'ı birbirine karıştırıyor.
@@ -55,6 +56,10 @@ karakterin cümlesini o prompta **kelimesi kelimesine** aynı yapıştırın.
 **Tuna**
 > a young cockroach in a black and white vertically striped football jersey,
 > glossy spotless new shell, eager nervous energy
+
+**Uğur abi**
+> a big heavyset older cockroach in a white sleeveless undershirt, relaxed
+> unhurried manner, at home rather than in a football jersey
 
 ## Grup çekimi için
 
