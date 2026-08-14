@@ -16,13 +16,12 @@ Ayarlar ve stil bloğu: `bocek_video_prompts.md`
 çizik. **Mete** — bodur, geniş, bordo-mavi formalı, güneş gözlüğü alnında.
 İkisi de baretli ve alçı tozuna bulanmış.
 
-İki replik toplam ~4 saniye. Kalan süreyi doldurmak için sonuna görsel bir
-espri koydum: Mete cevabı verir vermez tavandan üstüne bir parça ıslak alçı
-düşüyor, Özcan kahkahayı basıyor. Bu olmadan klip yarım kalıyor.
+Toplam ~4-5 saniye. Süre önemli değil, o yüzden dolgu yok: iki replik, sonda
+kısa bir sessizlik, biter.
 
 ---
 
-# TEK BÖLÜM — 10 saniye
+# TEK BÖLÜM
 
 > Interior of an apartment stairwell under renovation at night, built at
 > cockroach scale: bare plastered walls, a wooden trestle and scaffolding
@@ -46,10 +45,9 @@ düşüyor, Özcan kahkahayı basıyor. Bu olmadan klip yarım kalıyor.
 > exactly one beat, and answers completely deadpan, flat and unbothered:
 > "Sikerim Özcan seni."
 >
-> The instant he finishes the line, a wet lump of plaster drops from the
-> ceiling straight onto his hard hat with a splat. Mete freezes, slowly closes
-> his eyes. Up on the scaffolding Özcan doubles over laughing, nearly dropping
-> his roller. Hold on the two of them as the shot ends.
+> He carries on stirring as if nothing happened. Özcan just grins and goes
+> back to his roller. Hold on the two of them for a short beat as the shot
+> ends.
 >
 > Ultra-realistic cinematic 3D animation, photoreal cockroaches with detailed
 > chitin texture, Pixar-level facial expression and lip sync, expressive eyes,
@@ -68,7 +66,7 @@ düşüyor, Özcan kahkahayı basıyor. Bu olmadan klip yarım kalıyor.
 - **Mete'nin tepkisizliği** esprinin taşıyıcısı. Prompttaki `does not even
   look up`, `completely deadpan`, `flat and unbothered` ifadelerini silmeyin;
   Mete kızgın oynarsa şaka kayboluyor.
-- **Alçının düşme anı** repliğin hemen ardına gelmeli. Model araya boşluk
-  koyarsa `the instant he finishes the line` ifadesini güçlendirin.
+- **Süre serbest.** 4-5 saniyelik bir klip bu sketch için yeterli; uzatmak
+  için dolgu eklemeyin, espri kısa olduğu için işliyor.
 - **Formalar baret altında** kalmasın; iki karakteri ayırt eden ana işaret
   onlar. Baret tarifini silmeden formaların görünür olduğundan emin olun.
