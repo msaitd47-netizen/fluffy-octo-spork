@@ -5,7 +5,7 @@
 | # | İsim | Takım | Ayırt edici özellik |
 |---|---|---|---|
 | 1 | Sait | Fenerbahçe | En iri ve en yaşlı, sol anteni kırık, kaptan bandı |
-| 2 | Mustafa | Fenerbahçe | Tombul, kalın bıyık kılları, alın bandı |
+| 2 | Mustafa | Fenerbahçe | Tombul, sarı saçlı, kalın bıyık kılları, alın bandı |
 | 3 | Afsan | Fenerbahçe | En ufak ve sıska, upuzun antenler, şapkası ters |
 | 4 | Özcan | Beşiktaş | Uzun boylu, ince, kabuğunda eski bir çizik |
 | 5 | Mete | Trabzonspor | Bodur ve geniş, güneş gözlüğü alnına takılı |
@@ -36,9 +36,9 @@ karakterin cümlesini o prompta **kelimesi kelimesine** aynı yapıştırın.
 > leg, authoritative posture
 
 **Mustafa**
-> a chubby round cockroach in a navy blue and bright yellow vertically striped
-> football jersey, thick bristly moustache-like hairs above his mouth, cloth
-> headband
+> a chubby round cockroach with a tuft of blond hair, in a navy blue and
+> bright yellow vertically striped football jersey, thick bristly
+> moustache-like hairs above his mouth, cloth headband
 
 **Afsan**
 > a small skinny cockroach in a navy blue and bright yellow vertically striped
