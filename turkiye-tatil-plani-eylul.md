@@ -67,7 +67,7 @@ Taktikler:
 
 ### 📍 21 Eylül Pzt — İzmir → Pamukkale ⚪
 - Sabah acele yok: Kordon'da **boyoz + çay** kahvaltısı, son bir körfez yürüyüşü.
-- Öğlen: **İzmir → Denizli** otobüs ya da tren (~3-3,5 saat, obilet.com), oradan Pamukkale köyüne dolmuş/taksi (20 dk).
+- Öğlen: **İzmir → Denizli otobüsü** — [Pamukkale Turizm, ~3 saat 15 dk](https://www.pamukkale.com.tr/bilet/izmir-denizli-otobus-bileti/), ~450-680 TL/kişi. Oradan Pamukkale köyüne dolmuş (20 dk, sık sefer). *(Tren de var ama 4 saat 45 dk sürüyor — sadece €3 ucuz, değmez.)*
 - **~17:00-18:00 Pamukkale köyünde.** Otele bırak, doğruca travertenlere: **güneş batarken beyaz teraslar turuncuya ve altına dönüyor**, tur otobüsleri çoktan gitmiş. Sıcak termal suda çıplak ayak yürüyün.
 - Akşam: köyde sakin yemek. Gece Pamukkale'de (çoğu otelde termal havuz var — yol yorgunluğuna birebir).
 
@@ -144,7 +144,7 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 | 🎈 Balon ×2 | 0 — bütçe dışı | Arkadaş ayarlıyor (piyasa değeri €400-500) |
 | 🔴 Kızıl Tur ×2 | 90 – 150 | Öğle yemeği + girişler dahil |
 | 🚆 Efes günübirlik ulaşım ×2 | 20 – 120 | Tren ucuz, rehberli tur konforlu |
-| 🚌 İzmir → Denizli ×2 kişi | 25 – 40 | Otobüs ya da tren |
+| 🚌 İzmir → Denizli ×2 kişi | 25 – 40 | Pamukkale Turizm, ~3 sa 15 dk (tren 4 sa 45 dk — değmez) |
 | 🚌 Denizli → Antalya ×2 kişi | 25 – 40 | Pamukkale Turizm, ~3,5 saat |
 | 🏛️ Müze girişleri | 110 – 190 | Efes ~€40, Pamukkale ~€30, Kleopatra Havuzu ekstra — sen **Müzekart** al, yabancı tarifesi sadece kız arkadaşına işler |
 | 🍽️ Yeme-içme, 8 gün | 580 – 800 | Kahvaltılar çoğu otelde dahil; Antalya'da aile sofraları bunu da düşürür |
