@@ -31,9 +31,11 @@ Dördü de direkt, hiçbiri şafak vakti değil:
 | 25 Eyl Cum | **Kayseri → Antalya direkt** | SunExpress/Pegasus, ~1s 20dk — **öğlen seferini alın** |
 | 26 Eyl Cmt | **Antalya → Dublin direkt** | [SunExpress XQ533 dönüşü](https://www.flightsfrom.com/AYT-DUB), ~5 saat |
 
-> ⚠️ **Rezervasyondan önce iki kontrol:** SunExpress sezonluk uçar ve Eylül ortasında bazı rotalarda sefer azaltır. **19 Eylül Cmt DUB→ADB** ve **26 Eylül Cmt AYT→DUB** seferlerinin ikisinin de satışta olduğunu gör, sonra iç hatları kes. Biri yoksa o bacağı THY/Pegasus ile İstanbul aktarmalı yaparsın, rota değişmez.
-
-> 💡 **Fiyat taktiği:** Bu bir "açık çene" (open-jaw) bilet — dört bacağın da ters yönü mümkün. Almadan önce **iki kombinasyonu da fiyatla**: (a) DUB→ADB + AYT→DUB *(bu plan)* ve (b) DUB→AYT + ADB→DUB *(ters rota)*. Hangisi ucuzsa onu al; plan iki yönde de çalışır, sadece günleri ters çevirirsin.
+> ✅ **Yön kararı verildi — fiyatlar kontrol edildi:**
+> - **DUB→ADB + AYT→DUB = €310** ← *bu plan, İzmir giriş / Antalya çıkış*
+> - DUB→AYT + ADB→DUB = €331 *(ters rota)*
+>
+> Fark küçük (€21), ama ucuz olan aynı zamanda **daha iyi kurgu**: tatil ailenin yanında bitiyor, valiz Kapadokya'da taşınmıyor, coğrafya batıdan güneye düz akıyor. Yani tereddüde gerek yok — €310'luk kombinasyon. Bonus: bu fiyatı görebilmiş olman, her iki SunExpress bacağının da o tarihlerde uçtuğunu zaten doğruluyor.
 
 ### En ucuz bilet stratejisi 💸
 Tarihi hazır arama linkleri:
@@ -122,22 +124,21 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 💡 Genel taktik: booking.com'da iptal edilebilir tarifeyle tutun, sonra otelin kendi sitesinden fiyat isteyin — direkt rezervasyon çoğu zaman ~%10 daha ucuz ya da oda upgrade'i getirir.
 
 ## Yapılacaklar Listesi (şimdi, sırayla)
-1. ⚠️ **Önce kontrol:** SunExpress 19.09 Cmt DUB→ADB **ve** 26.09 Cmt AYT→DUB seferleri satışta mı?
-2. 💸 İki kombinasyonu da fiyatla (İzmir giriş / Antalya giriş), ucuz olanı al
-3. ✈️ SunExpress: DUB→ADB (19.09) + AYT→DUB (26.09)
-4. ✈️ İç hat 1: AYT→ASR (23.09 **öğlen** seferi)
-5. ✈️ İç hat 2: ASR→AYT (25.09 **öğlen** seferi)
-6. 🎈 Balon: arkadaşa **24.09 asıl, 25.09 sabahı yedek** tarihlerini ver
-7. 🏨 Oteller: İzmir Alsancak (2), Pamukkale köyü (1), Göreme mağara otel (2) — Antalya'nın 2 gecesi kardeşlerden
-8. 🚌 İzmir → Denizli otobüs/tren (21.09 öğlen) — obilet.com
-9. 🚌 Denizli → Antalya otobüs (22.09 öğleden sonra) — Pamukkale Turizm
-10. 🔴 Kapadokya Kızıl Tur (24.09) — otelden alınır
+1. ✅ ~~Yön ve fiyat karşılaştırması~~ — **halloldu:** €310'luk İzmir giriş / Antalya çıkış
+2. ✈️ **SunExpress'i şimdi kes:** DUB→ADB (19.09) + AYT→DUB (26.09) — sezon sonu koltuk azaldıkça fiyat tırmanır
+3. ✈️ İç hat 1: AYT→ASR (23.09 **öğlen** seferi)
+4. ✈️ İç hat 2: ASR→AYT (25.09 **öğlen** seferi)
+5. 🎈 Balon: arkadaşa **24.09 asıl, 25.09 sabahı yedek** tarihlerini ver
+6. 🏨 Oteller: İzmir Alsancak (2), Pamukkale köyü (1), Göreme mağara otel (2) — Antalya'nın 2 gecesi kardeşlerden
+7. 🚌 İzmir → Denizli otobüs/tren (21.09 öğlen) — obilet.com
+8. 🚌 Denizli → Antalya otobüs (22.09 öğleden sonra) — Pamukkale Turizm
+9. 🔴 Kapadokya Kızıl Tur (24.09) — otelden alınır
 
 ## Kabaca Bütçe (2 kişi, toplam)
 
 | Kalem | Tahmin (€) | Not |
 |---|---|---|
-| ✈️ SunExpress DUB→ADB + AYT→DUB ×2 | 300 – 550 | İzmir girişi senin baktığın fiyatlarla daha uygun |
+| ✈️ SunExpress DUB→ADB + AYT→DUB | 310 – 620 | **Bulduğun fiyat: €310** — kişi başıysa iki kişi €620 |
 | ✈️ İç hatlar AYT→ASR + ASR→AYT ×2 | 120 – 200 | İkisi de direkt; el bagajıyla uçuyorsunuz |
 | 🏨 Oteller, 7 gece (çift kişilik) | 450 – 900 | İzmir 2×€95; Pamukkale ~€60; Göreme 2×€120-180. Antalya 2 gece kardeşlerden ise alt banttan |
 | 🎈 Balon ×2 | 0 — bütçe dışı | Arkadaş ayarlıyor (piyasa değeri €400-500) |
@@ -150,9 +151,9 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 | 🚕 Transferler + taksi + dolmuş | 90 – 140 | İZBAN, Kayseri↔Göreme shuttle, Şirince dolmuşu |
 | 🛂 Vize | 0 | Muafiyet var ✅ |
 | 📱 eSIM ×1 (kız arkadaş) | 10 – 15 | Senin Türk hattın var |
-| **Toplam** | **≈ 1.820 – 3.145** | Rahat bir orta bant: **~€2.450** |
+| **Toplam** | **≈ 1.830 – 3.215** | Rahat bir orta bant: **~€2.500** |
 
-Antalya'nın 2 gecesi kardeşlerden hallolursa toplam **≈ €1.680 – 2.900** bandına iner.
+Antalya'nın 2 gecesi kardeşlerden hallolursa toplam **≈ €1.690 – 2.970** bandına iner.
 
 ## Ufak Gezgin Notları
 - **Tek erken kalkış:** 24 Eylül, balon. Onun dışında her sabah 08:00-09:00 uyanmayla çalışıyor — plan bilerek böyle kuruldu.
