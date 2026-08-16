@@ -34,7 +34,7 @@ Dördü de direkt, hiçbiri şafak vakti değil:
 
 | Tarih | Rota | Not |
 |---|---|---|
-| 19 Eyl Cmt | **Dublin → İzmir direkt** | [SunExpress, haftada ~9 sefer](https://www.flightsfrom.com/DUB-ADB), ~4,5 saat, akşam varış |
+| 19 Eyl Cmt | **Dublin → İzmir direkt** | [XQ887, 18:40 → 01:05 (+1 gün)](https://www.flightsfrom.com/DUB-ADB), ~4,5 saat — 11:20 seferi de var mı, kontrol et |
 | 23 Eyl Çar | **Antalya → Kayseri direkt** | [Gün boyu sefer var, sonuncusu 23:30](https://tr.omio.com/ucak-seferleri/antalya/kayseri-fhchf) — **öğlen seferini alın** |
 | 25 Eyl Cum | **Kayseri → Antalya direkt** | SunExpress/Pegasus, ~1s 20dk — **öğlen seferini alın** |
 | 26 Eyl Cmt | **Antalya → Dublin direkt** | [SunExpress XQ533 dönüşü](https://www.flightsfrom.com/AYT-DUB), ~5 saat |
@@ -63,16 +63,21 @@ Taktikler:
 
 ## Gün Gün Plan
 
-### 📍 19 Eylül Cmt — Dublin → Selçuk (direkt uçuş!)
-Öğlen Dublin'den kalk, akşamüstü İzmir'desin — aktarma yok. **Abinin arkadaşı havalimanından alıp Selçuk'a bırakıyor (€50, ~1 saat)** — akşam varışında bavullarla uğraşmadan, kapıdan kapıya. Otel: **Selçuk merkez**, 2 gece.
-- Akşam: Selçuk'ta sakin bir açılış yemeği — kasabanın kendi hâli zaten dinlendirici. Abin de gelirse tatil aile sofrasıyla başlamış olur.
+### 📍 19 Eylül Cmt — Dublin → Selçuk (gece varışı)
+**Uçuş: [XQ887, Dublin 18:40 → İzmir 01:05](https://www.flightsfrom.com/DUB-ADB)** (+1 gün). Gündüz Dublin'de serbestsin — bu gün için izin almana gerek yok, rahat rahat toplanıp akşam çıkıyorsun.
+- 01:05 iniş → **abinin arkadaşının transferi** (~1 saat) → **~02:30 Selçuk**. Otel: **Selçuk merkez**, 2 gece (oda 19 Eylül gecesinden tutulacak).
+- ⚠️ **İki teyit şart:** (1) transfer gece 02:00'de mümkün mü, €50 aynı mı? (2) Otel 02:30 check-in kabul ediyor mu, gece resepsiyonu var mı? Rezervasyona "01:05 uçuşuyla geliyoruz" notunu düş.
+- 💡 **Önce şuna bak:** SunExpress bu hatta Sal/Per/Cmt/Paz uçuyor ve kalkışlar 11:20–18:40 arasında değişiyor. 19 Eylül'de **11:20 seferi varsa** ve fark €50-60'ı geçmiyorsa onu al — hem o yarım geceyi hem aşağıdaki 08:00 Efes'ini geri kazanırsın.
 
-### 📍 20 Eylül Paz — Efes 🏛️ (bomboş!) + Şirince
-Selçuk'ta kalmanın büyük ödülü bugün:
-- **08:00'de Efes kapısında ol** — otelden 3 km, 5 dakika. Kruvaziyer kalabalığı 10:00'da basana kadar **Celsus Kütüphanesi'ni, antik tiyatroyu ve mermer caddeyi neredeyse yalnız gezersiniz.** Sabah ışığı fotoğraf için de en iyisi.
-- Sonra yürüme/kısa dolmuş mesafesinde: **Artemis Tapınağı** kalıntısı (dünyanın yedi harikasından biriydi), **Efes Müzesi**, **Meryem Ana Evi**.
-- Öğleden sonra: **Şirince** köyü (8 km, dolmuş var) — meyve şarabı tadımı, taş sokaklar, uzun bir köy öğle yemeği. Acele yok, çünkü İzmir'e dönme derdiniz yok.
-- Akşam: Selçuk'ta yemek; isterseniz kale/Ayasuluk tepesinde gün batımı.
+### 📍 20 Eylül Paz — Şirince + Efes 🏛️ (altın saat)
+Gece geldiğiniz için sabah serbest; günü tersine çeviriyoruz.
+- **Geç uyan.** Kasabada acelesiz kahvaltı, Selçuk sokaklarında kısa tur.
+- Öğlen: **Şirince** köyü (8 km, dolmuş var) — meyve şarabı tadımı, taş sokaklar, uzun bir köy öğle yemeği.
+- **15:00'te Efes'te ol.** [Yaz sezonunda 08:00-19:00 açık, son giriş 17:00](https://www.bestephesustours.com/ephesus-opening-hours.html) — yani 4 saatiniz var. Kuşadası'ndan gelen kruvaziyer grupları öğleden sonra gemilerine döndüğü için ortalık boşalır, üstelik **altın saat ışığı Celsus Kütüphanesi için sabahtan bile iyi.** Otelden 3 km, 5 dakika.
+- Aynı bölgede: **Artemis Tapınağı** kalıntısı (dünyanın yedi harikasından biriydi), **Efes Müzesi**, **Meryem Ana Evi** — hangisine vakit kalırsa.
+- Akşam: Selçuk'ta yemek, Ayasuluk tepesinde gün batımı.
+
+> **Erken uçuşu bulursan** bu gün klasik hâline döner: 08:00'de Efes bomboş, öğleden sonra Şirince.
 
 ### 📍 21 Eylül Pzt — Selçuk → Pamukkale ⚪
 - Sabah acele yok, kasabada rahat bir kahvaltı.
@@ -140,11 +145,12 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 3. ✈️ İç hat 1: AYT→ASR (23.09 **öğlen** seferi)
 4. ✈️ İç hat 2: ASR→AYT (25.09 **öğlen** seferi)
 5. 🎈 Balon: arkadaşa **24.09 asıl, 25.09 sabahı yedek** tarihlerini ver
-6. 🚐 **Abine haber ver:** 19.09 akşamı havalimanı → Selçuk transferi (€50) ayarlansın — uçuş saatini ilet
-7. 🏨 Oteller: Selçuk (2), Pamukkale köyü (1), Göreme mağara otel (2) — Antalya'nın 2 gecesi kardeşlerden
-8. 🚌 Selçuk → Denizli otobüs/tren (21.09 öğlen)
-9. 🚌 Denizli → Antalya otobüs (22.09 öğleden sonra) — Pamukkale Turizm
-10. 🔴 Kapadokya Kızıl Tur (24.09) — otelden alınır
+6. 🚐 **Abine haber ver:** 19.09 **gece 01:05 varışı** için havalimanı → Selçuk transferi — gece 02:00 mümkün mü, €50 aynı mı?
+7. 🌙 **Otele not düş:** 02:30 check-in, gece resepsiyonu var mı?
+8. 🏨 Oteller: Selçuk (2), Pamukkale köyü (1), Göreme mağara otel (2) — Antalya'nın 2 gecesi kardeşlerden
+9. 🚌 Selçuk → Denizli otobüs/tren (21.09 öğlen)
+10. 🚌 Denizli → Antalya otobüs (22.09 öğleden sonra) — Pamukkale Turizm
+11. 🔴 Kapadokya Kızıl Tur (24.09) — otelden alınır
 
 ## Kabaca Bütçe (2 kişi, toplam)
 
@@ -169,7 +175,8 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 Antalya'nın 2 gecesi kardeşlerden hallolursa üst bant **≈ €2.865**'e iner. Selçuk kararı hem €40 otel hem de ~€60 Efes ulaşımı tasarrufu getirdi — üstelik daha iyi bir Efes deneyimiyle.
 
 ## Ufak Gezgin Notları
-- **Tek erken kalkış:** 24 Eylül, balon. Onun dışında her sabah 08:00-09:00 uyanmayla çalışıyor — plan bilerek böyle kuruldu.
+- **Tek erken kalkış:** 24 Eylül, balon. Onun dışında her sabah 08:00-09:00 uyanmayla çalışıyor — 20 Eylül'de ise gece varışı yüzünden istediğin kadar uyu.
+- **Gece varışı:** 19-20 Eylül gecesi otele 02:30'da gireceksiniz; odayı 19'undan tutun ve otele önceden haber verin.
 - **Balon iptali:** %15-20 ihtimalle rüzgârdan iptal olur; 25 sabahı yedek, uçak öğlen olduğu için rahat yetişir.
 - **Pamukkale ayakkabısı:** Travertenlere **çıplak ayak** girilir (zorunlu), yanınıza ıslak ayak için ince havlu + terlik alın.
 - **Para:** Nakit TL biraz bulundurun (dolmuş, pazar, bahşiş); geri kalan her yerde kart geçer. WeChat Pay / Alipay geçmez — kız arkadaşını önceden uyar.
