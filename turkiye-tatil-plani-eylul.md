@@ -6,7 +6,7 @@ Eylül sonu, Türkiye gezmek için yılın **en iyi zamanı**dır: yaz kalabalı
 
 ## Rota Mantığı
 
-**İzmir (2) → Pamukkale (1) → Antalya (1) → Kapadokya (2) → Antalya (1)** → 26'sında evde
+**Selçuk (2) → Pamukkale (1) → Antalya (1) → Kapadokya (2) → Antalya (1)** → 26'sında evde
 
 İzmir'den gir, Antalya'dan çık. Bunun üç güzel sonucu var:
 1. **Daha ucuz uçuş** — Dublin–İzmir bacağı senin baktığın fiyatlarla daha uygun.
@@ -14,6 +14,14 @@ Eylül sonu, Türkiye gezmek için yılın **en iyi zamanı**dır: yaz kalabalı
 3. **Coğrafya tam sırayla akıyor** — İzmir → Pamukkale → Antalya batıdan güneye düz bir çizgi; Pamukkale yol üstünde kalıyor, hiçbir yere iki kere gitmiyorsunuz.
 
 Bir bonus daha: Kapadokya'ya giderken **büyük valizi Antalya'da bırakıyorsunuz** — iki gecelik küçük çantayla uçuyorsunuz.
+
+### Neden İzmir'de değil Selçuk'ta kalıyoruz? (abinin tavsiyesi ✅)
+İzmir'deki abin haklı, hem de iki koldan:
+- **Efes'e 3 km.** Sabah 08:00'de kapıda olup antik kenti **bomboş** geziyorsunuz; Kuşadası kruvaziyer kalabalığı 10:00'da bastığında siz en iyi yerleri çoktan görmüş oluyorsunuz. İzmir'den gitseydiniz ancak 10:00'da varırdınız.
+- **Zikzak bitiyor.** İzmir havalimanı zaten şehrin *güneyinde*, Selçuk yolunun üstünde. İzmir merkezde kalmak "kuzeye çık, ertesi gün güneye in, sonra doğuya git" demekti. Selçuk'ta kalınca rota düz akıyor: havalimanı → Selçuk → Denizli → Antalya.
+- Üstüne Şirince 8 km, Selçuk otelleri Kordon'dan ucuz, ve [€50'lik transfer piyasa fiyatının (€45-60) tam ortasında](https://www.mytransfers.com/en/destination/turkey/izmir-airport-adb/selcuk/) — akşam varışında bavullarla toplu taşımayla uğraşmaya bin kat yeğ.
+
+**Bedeli:** İzmir'i görmüyorsunuz (Kordon gün batımı, Alsancak mezesi, Kemeraltı). Üç olmazsa olmazın hiçbiri değil — ama abinle vakit geçirmek istiyorsan onu havalimanında karşılamaya ya da akşam Selçuk/Şirince'ye çağır.
 
 ### Pamukkale'de neden geceliyoruz?
 Tek gece, ama planın en akıllı gecesi. Günübirlik turlar tam öğlen, kalabalık zirvedeyken varır; iki saat travertende koşturur, günün kalanı otobüste geçer. Oysa [güney kapı 06:00–23:00 açık](https://myturkeyadventure.com/blog/pamukkale-opening-hours-night-visit-2026-sunset-evening-guide) ve **kapanmadan önceki son 90 dakikada bembeyaz travertenler turuncuya ve altına dönüyor.** Köyde kalınca akşamüstü gün batımına girer, ertesi sabah kapı açılırken bir daha bomboş gezersiniz. Üstelik o 06:00 tur kalkışı da hiç olmuyor.
@@ -55,19 +63,20 @@ Taktikler:
 
 ## Gün Gün Plan
 
-### 📍 19 Eylül Cmt — Dublin → İzmir (direkt!)
-Öğlen Dublin'den kalk, akşamüstü İzmir'desin — aktarma yok. Havalimanından **Alsancak'a İZBAN treni** (~25 dk, çok ucuz) ya da taksi. Otel: **Kordon/Alsancak**, 2 gece.
-- Akşam: **Kordon'da yürüyüş** — körfezde gün batımı, atlı arabalar, Alsancak'ta ilk meze masası. Yumuşak bir açılış.
+### 📍 19 Eylül Cmt — Dublin → Selçuk (direkt uçuş!)
+Öğlen Dublin'den kalk, akşamüstü İzmir'desin — aktarma yok. **Abinin arkadaşı havalimanından alıp Selçuk'a bırakıyor (€50, ~1 saat)** — akşam varışında bavullarla uğraşmadan, kapıdan kapıya. Otel: **Selçuk merkez**, 2 gece.
+- Akşam: Selçuk'ta sakin bir açılış yemeği — kasabanın kendi hâli zaten dinlendirici. Abin de gelirse tatil aile sofrasıyla başlamış olur.
 
-### 📍 20 Eylül Paz — Efes 🏛️ + Şirince
-- Sabah **Selçuk'a tren/otobüs** (~1-1,5 saat) ya da rehberli İzmir çıkışlı tur. Erken çık: **10:00'dan önce kapıda ol**, Kuşadası kruvaziyer kalabalığı ondan sonra basıyor.
-- **Efes:** Celsus Kütüphanesi, antik tiyatro, mermer cadde — Akdeniz'in en iyi korunmuş antik kenti. Yakında **Artemis Tapınağı** kalıntısı (dünyanın yedi harikasından biriydi) ve **Meryem Ana Evi**.
-- Öğleden sonra: **Şirince** köyü (Selçuk'a 8 km, dolmuş var) — meyve şarabı tadımı, taş sokaklar.
-- Akşamüstü İzmir'e dönüş; **Kemeraltı Çarşısı**'nda gezinti, akşam Alsancak'ta yemek.
+### 📍 20 Eylül Paz — Efes 🏛️ (bomboş!) + Şirince
+Selçuk'ta kalmanın büyük ödülü bugün:
+- **08:00'de Efes kapısında ol** — otelden 3 km, 5 dakika. Kruvaziyer kalabalığı 10:00'da basana kadar **Celsus Kütüphanesi'ni, antik tiyatroyu ve mermer caddeyi neredeyse yalnız gezersiniz.** Sabah ışığı fotoğraf için de en iyisi.
+- Sonra yürüme/kısa dolmuş mesafesinde: **Artemis Tapınağı** kalıntısı (dünyanın yedi harikasından biriydi), **Efes Müzesi**, **Meryem Ana Evi**.
+- Öğleden sonra: **Şirince** köyü (8 km, dolmuş var) — meyve şarabı tadımı, taş sokaklar, uzun bir köy öğle yemeği. Acele yok, çünkü İzmir'e dönme derdiniz yok.
+- Akşam: Selçuk'ta yemek; isterseniz kale/Ayasuluk tepesinde gün batımı.
 
-### 📍 21 Eylül Pzt — İzmir → Pamukkale ⚪
-- Sabah acele yok: Kordon'da **boyoz + çay** kahvaltısı, son bir körfez yürüyüşü.
-- Öğlen: **İzmir → Denizli otobüsü** — [Pamukkale Turizm, ~3 saat 15 dk](https://www.pamukkale.com.tr/bilet/izmir-denizli-otobus-bileti/), ~450-680 TL/kişi. Oradan Pamukkale köyüne dolmuş (20 dk, sık sefer). *(Tren de var ama 4 saat 45 dk sürüyor — sadece €3 ucuz, değmez.)*
+### 📍 21 Eylül Pzt — Selçuk → Pamukkale ⚪
+- Sabah acele yok, kasabada rahat bir kahvaltı.
+- Öğlen: **Selçuk → Denizli** — [otobüs ~3 saat 20 dk (Pamukkale Turizm)](https://www.pamukkale.com.tr/otobus-bileti/selcuk-denizli/) ya da **tren ~3,5 saat** (bu hatta tren daha ucuz ve konforlu, Menderes ovasını geçer). Denizli'den Pamukkale köyüne **minibüs 20 dk**, 20 dakikada bir kalkıyor.
 - **~17:00-18:00 Pamukkale köyünde.** Otele bırak, doğruca travertenlere: **güneş batarken beyaz teraslar turuncuya ve altına dönüyor**, tur otobüsleri çoktan gitmiş. Sıcak termal suda çıplak ayak yürüyün.
 - Akşam: köyde sakin yemek. Gece Pamukkale'de (çoğu otelde termal havuz var — yol yorgunluğuna birebir).
 
@@ -103,13 +112,15 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 
 ## Bu Kurgunun Bilerek Feda Ettiği İki Şey
 1. **Derinkuyu Yeraltı Şehri ve Ihlara Vadisi** — Kapadokya 2 gece olunca sığmıyor. Kızıl Tur bölgenin en meşhur noktalarını zaten topluyor.
-2. **Efes'e ilk giren olmak** — Selçuk'ta kalsaydınız 08:30'da bomboş gezerdiniz; İzmir'den gidince ~10:00 oluyor. Eylül sonunda kruvaziyer trafiği azaldığı için katlanılır, ama erken çıkmakta fayda var.
+2. **İzmir şehri** — Kordon gün batımı, Alsancak mezesi, Kemeraltı. Selçuk'ta kalma kararının bedeli bu; karşılığında Efes'i bomboş geziyorsunuz ve bir zikzaktan kurtuluyorsunuz. İyi takas.
+
+*(Not: "Efes'e ilk giren olmak" eskiden bu listedeydi — abinin Selçuk tavsiyesiyle geri kazanıldı. ✅)*
 
 ---
 
 ## Otel Önerileri 🏨
 
-**İzmir Kordon/Alsancak — 2 gece (19-20):** **İzmir Palas** (~€90-120) — 1927'den beri Kordon'un üzerinde, deniz manzaralı oda alın. Alternatif **Kordon Otel Pasaport** (~€80-110).
+**Selçuk — 2 gece (19-20):** Sakin pansiyon/butik oteller, ~€60-90 — Kordon'dan ucuz. Merkezde, **Efes'e ve otogara yakın** bir yer seçin (kasaba küçük, her yer yürüme mesafesi). Bahçeli, kahvaltısı ev usulü yerler burada bol; abinin arkadaşlarına da sorabilirsin, yerel tavsiye altın değerinde.
 
 **Pamukkale köyü — 1 gece (21):** Küçük aile otelleri, çoğunda termal havuz; ~€50-80. Travertenlere yürüme mesafesindeki köy içi tesisleri seçin.
 
@@ -129,10 +140,11 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 3. ✈️ İç hat 1: AYT→ASR (23.09 **öğlen** seferi)
 4. ✈️ İç hat 2: ASR→AYT (25.09 **öğlen** seferi)
 5. 🎈 Balon: arkadaşa **24.09 asıl, 25.09 sabahı yedek** tarihlerini ver
-6. 🏨 Oteller: İzmir Alsancak (2), Pamukkale köyü (1), Göreme mağara otel (2) — Antalya'nın 2 gecesi kardeşlerden
-7. 🚌 İzmir → Denizli otobüs/tren (21.09 öğlen) — obilet.com
-8. 🚌 Denizli → Antalya otobüs (22.09 öğleden sonra) — Pamukkale Turizm
-9. 🔴 Kapadokya Kızıl Tur (24.09) — otelden alınır
+6. 🚐 **Abine haber ver:** 19.09 akşamı havalimanı → Selçuk transferi (€50) ayarlansın — uçuş saatini ilet
+7. 🏨 Oteller: Selçuk (2), Pamukkale köyü (1), Göreme mağara otel (2) — Antalya'nın 2 gecesi kardeşlerden
+8. 🚌 Selçuk → Denizli otobüs/tren (21.09 öğlen)
+9. 🚌 Denizli → Antalya otobüs (22.09 öğleden sonra) — Pamukkale Turizm
+10. 🔴 Kapadokya Kızıl Tur (24.09) — otelden alınır
 
 ## Kabaca Bütçe (2 kişi, toplam)
 
@@ -140,20 +152,21 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 |---|---|---|
 | ✈️ SunExpress DUB→ADB + AYT→DUB | 310 – 620 | **Bulduğun fiyat: €310** — kişi başıysa iki kişi €620 |
 | ✈️ İç hatlar AYT→ASR + ASR→AYT ×2 | 120 – 200 | İkisi de direkt; el bagajıyla uçuyorsunuz |
-| 🏨 Oteller, 7 gece (çift kişilik) | 450 – 900 | İzmir 2×€95; Pamukkale ~€60; Göreme 2×€120-180. Antalya 2 gece kardeşlerden ise alt banttan |
+| 🏨 Oteller, 7 gece (çift kişilik) | 410 – 880 | Selçuk 2×€60-90; Pamukkale ~€60; Göreme 2×€120-180. Antalya 2 gece kardeşlerden ise 0 |
 | 🎈 Balon ×2 | 0 — bütçe dışı | Arkadaş ayarlıyor (piyasa değeri €400-500) |
 | 🔴 Kızıl Tur ×2 | 90 – 150 | Öğle yemeği + girişler dahil |
-| 🚆 Efes günübirlik ulaşım ×2 | 20 – 120 | Tren ucuz, rehberli tur konforlu |
-| 🚌 İzmir → Denizli ×2 kişi | 25 – 40 | Pamukkale Turizm, ~3 sa 15 dk (tren 4 sa 45 dk — değmez) |
+| 🚐 Havalimanı → Selçuk transferi | 50 | **Sabit** — abinin arkadaşı; piyasa €45-60 |
+| 🚕 Efes + Şirince dolmuş/taksi ×2 | 15 – 30 | Efes 3 km, Şirince 8 km — hepsi kısa mesafe |
+| 🚌 Selçuk → Denizli ×2 kişi | 25 – 40 | Otobüs ~3 sa 20 dk ya da tren ~3,5 sa |
 | 🚌 Denizli → Antalya ×2 kişi | 25 – 40 | Pamukkale Turizm, ~3,5 saat |
 | 🏛️ Müze girişleri | 110 – 190 | Efes ~€40, Pamukkale ~€30, Kleopatra Havuzu ekstra — sen **Müzekart** al, yabancı tarifesi sadece kız arkadaşına işler |
 | 🍽️ Yeme-içme, 8 gün | 580 – 800 | Kahvaltılar çoğu otelde dahil; Antalya'da aile sofraları bunu da düşürür |
-| 🚕 Transferler + taksi + dolmuş | 90 – 140 | İZBAN, Kayseri↔Göreme shuttle, Şirince dolmuşu |
+| 🚕 Diğer transfer + taksi | 70 – 110 | Kayseri↔Göreme shuttle, Denizli↔Pamukkale minibüsü, şehir içi |
 | 🛂 Vize | 0 | Muafiyet var ✅ |
 | 📱 eSIM ×1 (kız arkadaş) | 10 – 15 | Senin Türk hattın var |
-| **Toplam** | **≈ 1.830 – 3.215** | Rahat bir orta bant: **~€2.500** |
+| **Toplam** | **≈ 1.815 – 3.125** | Rahat bir orta bant: **~€2.450** |
 
-Antalya'nın 2 gecesi kardeşlerden hallolursa toplam **≈ €1.690 – 2.970** bandına iner.
+Antalya'nın 2 gecesi kardeşlerden hallolursa üst bant **≈ €2.865**'e iner. Selçuk kararı hem €40 otel hem de ~€60 Efes ulaşımı tasarrufu getirdi — üstelik daha iyi bir Efes deneyimiyle.
 
 ## Ufak Gezgin Notları
 - **Tek erken kalkış:** 24 Eylül, balon. Onun dışında her sabah 08:00-09:00 uyanmayla çalışıyor — plan bilerek böyle kuruldu.
@@ -163,7 +176,7 @@ Antalya'nın 2 gecesi kardeşlerden hallolursa toplam **≈ €1.690 – 2.970**
 - **İnternet:** Senin Türk hattın hazır (faturalı/açık olduğunu kontrol et); kız arkadaşına Dublin'den Türkiye eSIM'i al (Airalo vb., ~€10-15).
 - **Otobüs kültürü:** Türkiye'de şehirlerarası otobüsler konforludur (ikram, koltuk ekranı) — misafire bile "vay be" dedirtir. Biletleri obilet.com'dan koltuk seçerek alın.
 - **Güneş:** Eylül sonu güneşi hâlâ ciddi — Pamukkale'nin yansıtan beyaz zemini ve gölgesiz Efes için şapka + krem şart.
-- **Yemek görevleri:** İzmir'de boyoz + kumru + söğüş, Kapadokya'da testi kebabı, Antalya'da piyaz + şiş köfte + künefe.
+- **Yemek görevleri:** Selçuk/Şirince'de köy kahvaltısı + meyve şarabı, Kapadokya'da testi kebabı, Antalya'da piyaz + şiş köfte + künefe.
 - Çinli misafir bonusu: Türk kahvesi falı baktırın, nazar boncuğu hediye edin — ikisi de "sadece Türkiye'de" hikâyesi.
 
 İyi yolculuklar! 🧿
