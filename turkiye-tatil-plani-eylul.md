@@ -39,11 +39,12 @@ Dördü de direkt, hiçbiri şafak vakti değil:
 | 25 Eyl Cum | **Kayseri → Antalya direkt** | SunExpress/Pegasus, ~1s 20dk — **öğlen seferini alın** |
 | 26 Eyl Cmt | **Antalya → Dublin direkt** | [SunExpress XQ533 dönüşü](https://www.flightsfrom.com/AYT-DUB), ~5 saat |
 
-> ✅ **Yön kararı verildi — fiyatlar kontrol edildi:**
-> - **DUB→ADB + AYT→DUB = €310** ← *bu plan, İzmir giriş / Antalya çıkış*
-> - DUB→AYT + ADB→DUB = €331 *(ters rota)*
+> ✅ **Yön kararı verildi — dört seçenek de fiyatlandı (kişi başı):**
+> - **DUB→ADB + AYT→DUB = €310** ← *bu plan, İzmir giriş / Antalya çıkış* ✅
+> - DUB→AYT + ADB→DUB = €331 *(ters yön)*
+> - Gidiş-dönüş İzmir = €539 · Gidiş-dönüş Antalya = €600+
 >
-> Fark küçük (€21), ama ucuz olan aynı zamanda **daha iyi kurgu**: tatil ailenin yanında bitiyor, valiz Kapadokya'da taşınmıyor, coğrafya batıdan güneye düz akıyor. Yani tereddüde gerek yok — €310'luk kombinasyon. Bonus: bu fiyatı görebilmiş olman, her iki SunExpress bacağının da o tarihlerde uçtuğunu zaten doğruluyor.
+> Açık çene bilet hem en ucuzu hem **daha iyi kurgu**: tatil ailenin yanında bitiyor, valiz Kapadokya'da taşınmıyor, coğrafya batıdan güneye düz akıyor. Gidiş-dönüş seçenekleri hem €200+ pahalı hem Antalya'yı bir geceye düşürüyordu — kolay karar. Bonus: bu fiyatları görebilmiş olman, her iki SunExpress bacağının da o tarihlerde uçtuğunu doğruluyor.
 
 ### En ucuz bilet stratejisi 💸
 Tarihi hazır arama linkleri:
@@ -156,7 +157,7 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 
 | Kalem | Tahmin (€) | Not |
 |---|---|---|
-| ✈️ SunExpress DUB→ADB + AYT→DUB | 310 – 620 | **Bulduğun fiyat: €310** — kişi başıysa iki kişi €620 |
+| ✈️ SunExpress DUB→ADB + AYT→DUB | **620** | Kesinleşti: €310/kişi × 2 |
 | ✈️ İç hatlar AYT→ASR + ASR→AYT ×2 | 120 – 200 | İkisi de direkt; el bagajıyla uçuyorsunuz |
 | 🏨 Oteller, 7 gece (çift kişilik) | 410 – 880 | Selçuk 2×€60-90; Pamukkale ~€60; Göreme 2×€120-180. Antalya 2 gece kardeşlerden ise 0 |
 | 🎈 Balon ×2 | 0 — bütçe dışı | Arkadaş ayarlıyor (piyasa değeri €400-500) |
@@ -170,9 +171,11 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 | 🚕 Diğer transfer + taksi | 70 – 110 | Kayseri↔Göreme shuttle, Denizli↔Pamukkale minibüsü, şehir içi |
 | 🛂 Vize | 0 | Muafiyet var ✅ |
 | 📱 eSIM ×1 (kız arkadaş) | 10 – 15 | Senin Türk hattın var |
-| **Toplam** | **≈ 1.815 – 3.125** | Rahat bir orta bant: **~€2.450** |
+| **Toplam** | **≈ 2.125 – 3.125** | Rahat bir orta bant: **~€2.600** |
 
-Antalya'nın 2 gecesi kardeşlerden hallolursa üst bant **≈ €2.865**'e iner. Selçuk kararı hem €40 otel hem de ~€60 Efes ulaşımı tasarrufu getirdi — üstelik daha iyi bir Efes deneyimiyle.
+Antalya'nın 2 gecesi kardeşlerden hallolursa üst bant **≈ €2.865**'e iner. Selçuk kararı hem ~€40 otel hem de ~€60 Efes ulaşımı tasarrufu getirdi — üstelik daha iyi bir Efes deneyimiyle.
+
+**Uçuş fiyatı karşılaştırması (kişi başı):** açık çene İzmir giriş/Antalya çıkış **€310** ✅ · açık çene ters yön €331 · gidiş-dönüş İzmir €539 · gidiş-dönüş Antalya €600+. Açık çene kazandı, karar bu.
 
 ## Ufak Gezgin Notları
 - **Tek erken kalkış:** 24 Eylül, balon. Onun dışında her sabah 08:00-09:00 uyanmayla çalışıyor — 20 Eylül'de ise gece varışı yüzünden istediğin kadar uyu.
