@@ -43,6 +43,8 @@ Coğrafya batıdan güneye, sonra doğuya akıyor; tek "geri dönüş" Kapadokya
 ### Pamukkale'de neden geceliyoruz?
 Tek gece, ama planın en akıllı gecesi. Günübirlik turlar tam öğlen, kalabalık zirvedeyken varır; iki saat travertende koşturur, günün kalanı otobüste geçer. Oysa [güney kapı 06:00–23:00 açık](https://myturkeyadventure.com/blog/pamukkale-opening-hours-night-visit-2026-sunset-evening-guide) ve **kapanmadan önceki son 90 dakikada bembeyaz travertenler turuncuya ve altına dönüyor.** Köyde kalınca akşamüstü gün batımına girer, ertesi sabah kapı açılırken bir daha bomboş gezersiniz. Üstelik o 06:00 tur kalkışı hiç olmuyor.
 
+> ❌ **İzmir ya da Antalya çıkışlı Pamukkale turu ALMAYIN.** Hepsi gidiş-dönüş çalışıyor: akşam seni kalktığın şehre geri bırakıyorlar. Senin rotan ise Selçuk → Pamukkale → **Antalya** diye ileri akıyor; turla gitsen aynı yolu iki kez katetmen gerekirdi. Ayrıca turun verdiği (öğlen kalabalığında 2 saat) planın aldığının (gün batımı + bomboş sabah) tam tersi. Fiyat olarak da tur ikinize ~€120-180; otobüs + bir gece otel ~€85-100.
+
 ---
 
 ## Gün Gün Plan
