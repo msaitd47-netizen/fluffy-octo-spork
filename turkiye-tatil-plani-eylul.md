@@ -111,7 +111,7 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 
 **Pamukkale köyü — 1 gece (21):** Küçük aile otelleri, çoğunda termal havuz; ~€50-80. Travertenlere yürüme mesafesindeki köy içi tesisleri seçin.
 
-**Antalya — 1 gece (22):** Kardeşlerin ayarlamazsa **Kaleiçi'nde** butik konak: **Tuvana Hotel** (~€90-130, bahçeli-havuzlu), **Alp Paşa** (~€70-100, avlulu) ya da **Dogan Hotel** (~€60-90). Kaleiçi civarı olsun — plan yürüme mesafesi üzerine kurulu.
+**Antalya — 1 gece (22):** **Kaleiçi'nde** butik konak: **Dogan Hotel** (~€60-90, geleneksel ve uygun), **Alp Paşa** (~€70-100, avlulu) ya da **Tuvana Hotel** (~€90-130, bahçeli-havuzlu). Kaleiçi civarı olsun — plan yürüme mesafesi üzerine kurulu, kardeşlerle buluşmak da kolay olur.
 
 **Göreme — mağara otel, 2 gece (23-24):** Buranın parası buraya harcanır.
 - **Kelebek Special Cave Hotel** (~€90-150) — efsane serpme kahvaltı, balonların tam karşınızdan kalktığı teras.
@@ -130,7 +130,7 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 4. 🎈 Balon: arkadaşa **24.09 asıl, 25.09 sabahı yedek** tarihlerini ver
 5. 🚐 **Abine haber ver:** 19.09 **gece 01:05 varışı** için havalimanı → Selçuk transferi — gece 02:00 mümkün mü, €50 aynı mı?
 6. 🌙 **Otele not düş:** Selçuk, 02:30 check-in, gece resepsiyonu var mı?
-7. 🏨 Oteller: Selçuk (2), Pamukkale köyü (1), Göreme mağara otel (2), İzmir (1) — Antalya'nın 1 gecesi kardeşlerden
+7. 🏨 Oteller: Selçuk (2), Pamukkale köyü (1), **Antalya Kaleiçi (1)**, Göreme mağara otel (2), İzmir (1)
 8. 🚌 Selçuk → Denizli otobüs/tren (21.09 öğlen)
 9. 🚌 Denizli → Antalya otobüs (22.09 öğleden sonra) — Pamukkale Turizm
 10. 🔴 Kapadokya Kızıl Tur (24.09) — otelden alınır
@@ -141,7 +141,7 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 |---|---|---|
 | ✈️ Dublin uçuşları (XQ887 + XQ886) | **529** | ✅ Kesin — kişi başı ~€265 g-d |
 | ✈️ İç hatlar AYT→ASR + ASR→ADB ×2 | 120 – 200 | İkisi de direkt, TL üzerinden al |
-| 🏨 Oteller, 7 gece (çift kişilik) | 490 – 860 | Selçuk 2×€60-90; Pamukkale ~€60; Göreme 2×€120-180; İzmir ~€95; Antalya kardeşlerden ise 0 |
+| 🏨 Oteller, 7 gece (çift kişilik) | 550 – 860 | Selçuk 2×€60-90; Pamukkale ~€60; **Antalya ~€60-130**; Göreme 2×€120-180; İzmir ~€95 |
 | 🎈 Balon ×2 | 0 — bütçe dışı | Arkadaş ayarlıyor (piyasa değeri €400-500) |
 | 🔴 Kızıl Tur ×2 | 90 – 150 | Öğle yemeği + girişler dahil |
 | 🚐 Havalimanı → Selçuk transferi | 50 | **Sabit** — abinin arkadaşı |
@@ -153,9 +153,9 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 | 🚕 Diğer transfer + taksi | 70 – 110 | Kayseri↔Göreme shuttle, Denizli↔Pamukkale minibüsü, İZBAN |
 | 🛂 Vize | 0 | Muafiyet var ✅ |
 | 📱 eSIM ×1 (kız arkadaş) | 10 – 15 | Senin Türk hattın var |
-| **Toplam** | **≈ 2.115 – 3.015** | Rahat bir orta bant: **~€2.550** |
+| **Toplam** | **≈ 2.175 – 3.015** | Rahat bir orta bant: **~€2.600** |
 
-Uçak bileti beklediğimizin çok altında çıktı — bütçe tekrar rahat bir yere oturdu. Antalya gecesi kardeşlerden hallolursa üst bant **~€2.885**'e iner. Balonun bedava gelmesi de ayrı bir kâr: piyasada €400-500.
+Uçak bileti beklediğimizin çok altında çıktı — bütçe rahat bir yere oturdu. Balonun bedava gelmesi de ayrı bir kâr: piyasada €400-500, yani cepten çıkmayan en büyük kalem o.
 
 ## Ufak Gezgin Notları
 - **Tek erken kalkış:** 24 Eylül, balon. Onun dışında her sabah 08:00-09:00 uyanmayla çalışıyor; 20 Eylül'de ise gece varışı yüzünden istediğin kadar uyu.
