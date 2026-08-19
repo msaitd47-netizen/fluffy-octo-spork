@@ -123,11 +123,31 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 
 **Antalya — 1 gece (22):** **Kaleiçi'nde** butik konak: **Dogan Hotel** (~€60-90, geleneksel ve uygun), **Alp Paşa** (~€70-100, avlulu) ya da **Tuvana Hotel** (~€90-130, bahçeli-havuzlu). Kaleiçi civarı olsun — plan yürüme mesafesi üzerine kurulu, kardeşlerle buluşmak da kolay olur.
 
-**Göreme — mağara otel, 2 gece (23-24):** Buranın parası buraya harcanır.
-- **Kelebek Special Cave Hotel** (~€90-150) — efsane serpme kahvaltı, balonların tam karşınızdan kalktığı teras.
-- **Koza Cave Hotel** (~€100-200) — ödüllü, çevre dostu, daha sakin.
-- Bütçe dostu: **Henna Cave** (~€70) ya da **Cave Hotel Saksağan**.
-- 💡 "Balloon view terrace" olduğunu teyit edin.
+### 🏔️ Göreme — mağara otel, 2 gece (23-24) — EN ÖNEMLİ REZERVASYON
+
+Burada teras normalden çok daha kritik: **kız arkadaşın balona binmezse terasta izleyecek**, yani orası onun balon deneyimi olacak. Terası zayıf bir otel bu tatilin en önemli sabahını yarım bırakır.
+
+**⭐ Önerim: Kelebek Special Cave Hotel** (~€90-150)
+[Sultan'ın verdiği hissi daha uygun fiyata veriyor](https://charlieswanderings.com/accommodation/the-10-very-best-cave-hotels-in-cappadocia/): **iki ayrı teras** (biri vadiye, biri Göreme'ye bakıyor), havuz, hamam ve Michelin'in tanıdığı bir restoran. Kalite/fiyat dengesi en iyi olan bu, üstelik kahvaltısı efsane.
+
+**Alternatifler:**
+
+| Otel | Fiyat/gece | Neden |
+|---|---|---|
+| **Sultan Cave Suites** | €150-350 | [Kapadokya'nın en meşhur terası](https://abovecappadocia.com/blog/best-hotels-cappadocia-balloon-view-terrace) — Göreme'nin en tepesinde, 180° kesintisiz balon manzarası, balon sezonunda terasta erken kahvaltı. ⚠️ *Ama tam da bu yüzden gün doğumunda teras fotoğraf çekimi yapanlarla dolu oluyor; sakinlik arıyorsan tercih etme.* |
+| **Mithra Cave Hotel** | ~€100-180 | Bölgenin en iyi teraslarından, gün doğumu için minderler ve halılarla döşenmiş. Sultan kadar kalabalık değil — **sessizlik isteyenin seçimi.** |
+| **Koza Cave Hotel** | ~€100-200 | Kapadokya'nın **en yüksek çatı terası**; ödüllü, çevre dostu, sakin. |
+| **Terra Cave Hotel** | ~€90-160 | Göreme'nin göbeğinde, panoramik vadi terası. |
+| **Traveler's Cave** | €60-120 | Bütçe dostu ama terası çok katlı ve iyi — ucuzdan da iyi manzara olur. |
+
+**📞 Rezervasyondan önce mutlaka sor:**
+1. **"Balon manzaralı teras var mı, odadan mı ortak alandan mı?"** — bazı oteller "cave hotel" diyor ama vadiye bakmıyor.
+2. **"Oda penceresiz mi?"** — gerçek mağara odaları bazen tamamen kapalı ve rutubetli olabiliyor. Kız arkadaşın kapalı alandan tedirginse **pencereli ya da kemerli bir oda** iste; balondan çekindiğine göre bu detay önemli.
+3. **"24 Eylül sabahı 04:45 balon transferi için erken çıkış sorun olur mu, kahvaltı paketi verebilir misiniz?"**
+4. **"23 Eylül akşamüstü varıyoruz, geç check-in olur mu?"**
+5. Balona binmeyen için: **"Gün doğumunda teras misafirlere açık mı, çay/kahve servisi var mı?"**
+
+⏰ **Aciliyet:** Eylül sonu için [2-3 ay önceden rezervasyon öneriliyor](https://abovecappadocia.com/blog/best-hotels-cappadocia-balloon-view-terrace); sen ~5 hafta kala bakıyorsun. İyi teraslı odalar ilk gidenler — **bu haftayı geçirme.** Booking.com'da iptal edilebilir tarifeyle hemen tut, sonra otelin kendi sitesinden fiyat sor.
 
 **İzmir Alsancak/Kordon — 1 gece (25):** **İzmir Palas** (~€90-120) — 1927'den beri Kordon'un üzerinde, deniz manzaralı oda alın. Alternatif **Kordon Otel Pasaport** (~€80-110).
 
