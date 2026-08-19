@@ -182,6 +182,54 @@ Uçak bileti beklediğimizin çok altında çıktı — bütçe rahat bir yere o
 
 **Üç ilke:** hiçbir yolculuk 4 saati geçmiyor · hiçbir ağır gün üst üste gelmiyor · her yol bacağının sonunda bir ödül var (gün batımı, aile sofrası, Kızılçukur). Tek kırmızı gün balon sabahı ve o günün öğleden sonrası bilerek boş bırakıldı.
 
+## 🧳 Valiz Listesi
+
+**Strateji: tek orta boy valiz + iki el çantası.** 7 gecede 5 otel değişiyor, otobüs ve dolmuş kullanıyorsunuz — hafiflik burada konfor demek. Aldığın SunExpress tarifesinin bagaj hakkını bir kontrol et ("Light" ise sadece el çantası olabilir.)
+
+### ⚡ Bu rotaya özel — en çok unutulanlar
+| | Neden |
+|---|---|
+| **Priz adaptörü (İrlanda → Avrupa)** | Dublin'de Type G (3 pinli İngiliz), Türkiye'de Type F (2 pinli). **Bu listenin en kritik maddesi** — unutursan telefon şarj edemezsin. 2 tane al. |
+| **İnce havlu + terlik** | Pamukkale'ye **çıplak ayak** giriliyor (zorunlu). Ayaklar ıslak çıkıyor, sonra köye yürüyorsunuz. |
+| **Katmanlı giysi (balon için)** | 04:45'te sepette 10-12°C. Üstünde brülör sıcak, altta ayaz — hırka/ince mont şart. |
+| **Yol tutması hapı** | Denizli→Antalya 3,5 saat **Toros virajları**. Hassas biri varsa hayat kurtarır. |
+| **Blister (su toplaması) bandı** | Efes + Hierapolis + Kapadokya vadileri = çok yürüyüş, hepsi düzensiz taş. |
+| **Küçük sırt çantası** | Günübirlik gezilerde su, kamera, hırka taşımak için. |
+| **Powerbank** | Telefon aynı anda kamera + harita + bilet; 10 saatlik günlerde bitiyor. |
+
+### 👕 Giysi (7 gece, tekrar giyilebilir mantığıyla)
+- 4-5 tişört/bluz · 2 pantolon · 1 şort ya da etek · **1 ince hırka veya mont**
+- **1 şık kıyafet** — Antalya'da aile yemeği ve İzmir'de Kordon akşamı için
+- İç çamaşırı ve çorap: 8'er (yıkamaya güvenme, 5 otel değişiyor)
+- **Mayo** — Pamukkale'de termal havuz + Kleopatra Antik Havuzu
+- **Eşarp** (kız arkadaşın için) — cami ziyaretlerinde ve serin sabahlarda
+
+### 👟 Ayakkabı — sadece iki çift, ikisi de doğru olsun
+- **Kırılmış rahat yürüyüş ayakkabısı** — *yeni ayakkabıyla gelmeyin*, bu tatilin en büyük hatası olur
+- Terlik/sandalet — travertenler, otel, akşam yemeği
+
+### ☀️ Güneş & sağlık
+- Şapka, güneş gözlüğü, **yüksek faktör güneş kremi** (Pamukkale'nin beyaz zemini güneşi çift taraflı yansıtıyor)
+- Ağrı kesici, mide ilacı, yara bandı, kişisel ilaçlar
+- Islak mendil / el dezenfektanı
+
+### 📄 Belge & teknoloji
+- **Pasaportlar** (dönüşten sonra 6 ay geçerli) — kız arkadaşına vize gerekmiyor ✅
+- Biniş kartları, otel onayları, otobüs biletleri — **hepsini offline indir** (telefonun internetsiz kaldığı anlar oluyor)
+- **eSIM** kız arkadaşın için (Airalo vb., Dublin'den kur) · senin Türk hattının açık olduğunu kontrol et
+- Kablolar, powerbank, adaptör
+- **Nakit TL** biraz (dolmuş, pazar, bahşiş) + kart
+
+### 🇹🇷 Türkiye'de al, yanında taşıma
+- **Müzekart** — sadece sen alabilirsin, TL ile komik bir para, Efes/Hierapolis/Göreme girişlerini karşılıyor
+- Su — her yerde ucuz; yine de **yeniden doldurulabilir şişe** getir
+- Güneş kremi, şampuan gibi şeyler (yer kaplamasın)
+
+### 🎁 Küçük ama fark yaratanlar
+- **Kardeşlerine Dublin'e özgü küçük bir hediye** — İrlanda viskisi, Butlers çikolatası tarzı bir şey
+- Kirli çamaşır için birkaç poşet (5 otel değişiminde işe yarar)
+- Kız arkadaşın için: Türkiye'de **WeChat Pay / Alipay geçmez** — kartını ve biraz nakdini önceden hazırlasın
+
 ## Ufak Gezgin Notları
 - **Tek erken kalkış:** 24 Eylül, balon. Onun dışında her sabah 08:00-09:00 uyanmayla çalışıyor; 20 Eylül'de ise gece varışı yüzünden istediğin kadar uyu.
 - **Hafif seyahat et:** 7 gecede 5 otel değişiyor — yorgunluğun en sessiz kaynağı bavul taşımak. **Tek orta boy valiz + iki el çantası** ideal; otobüs ve dolmuşlarda da hayat kurtarır.
