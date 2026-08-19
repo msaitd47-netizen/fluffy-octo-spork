@@ -70,6 +70,7 @@ Gece geldiğiniz için sabah serbest; günü tersine çeviriyoruz.
 
 ### 📍 22 Eylül Sal — Hierapolis Sabahı → Antalya
 - Sabah kapı açılırken tekrar içeri: bu sefer **Hierapolis** — antik kent, dev nekropol, tiyatro ve isterseniz **Kleopatra Antik Havuzu** (antik sütun parçalarının arasında yüzülüyor, ekstra ücretli ama efsane). Sabah ışığı fotoğraf için en iyisi, ortalık bomboş.
+- 💡 **Yorgunsanız bu ziyaret zorunlu değil:** travertenleri dün akşam zaten gördünüz. Otelin termal havuzunda geç bir kahvaltı edip doğrudan otobüse binmek de tamamen meşru bir seçim.
 - Öğleden sonra: **Denizli → Antalya** otobüsü ([Pamukkale Turizm, ~3,5 saat](https://www.pamukkale.com.tr/otobus-bileti/denizli-antalya/)). Toros geçişi manzaralı.
 - Akşam: **Antalya** — kardeşlerle buluşma, marina kenarında Akdeniz yemeği. Gece Kaleiçi'nde (ya da kardeşlerin yerinde).
 
@@ -79,11 +80,16 @@ Gece geldiğiniz için sabah serbest; günü tersine çeviriyoruz.
 - Akşamüstü: **Uçhisar Kalesi** (bölgeye kuşbakışı), gün batımı **Kızılçukur (Red Valley)** — kayalar kelimenin tam anlamıyla kızıla döner.
 - Akşam: **Testi kebabı** — masada çekiçle kırılan çömlek, Çinli bir misafir için müthiş şov. Erken yat: yarın büyük gün.
 
-### 📍 24 Eylül Per — Balon Sabahı + Kızıl Tur 🎈
-Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
+### 📍 24 Eylül Per — Balon Sabahı 🎈 + Serbest Gezi
+Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 - **04:45 kalk — tatilin tek erken sabahı, ona da değer.** Balon firması otelden alır, ~1 saat uçuş, iniş sonrası şampanya, 08:00'de kahvaltıdasınız.
-- Kahvaltı sonrası **Kızıl Tur** (rehberli, her otel satar, öğle yemeği dahil): **Göreme Açık Hava Müzesi** (fresk dolu kaya kiliseleri, UNESCO), **Paşabağ** peri bacaları, **Devrent (Hayal) Vadisi**, **Avanos**'ta çömlek atölyesi — çarkta kendi çömleğinizi yapın; Çin'in porselen kültürüyle tatlı bir paralellik.
+- **Kahvaltıdan sonra odaya dön ve uyu.** Ciddiyim — 2-3 saatlik sabah uykusu bu tatilin en iyi yatırımlarından biri. Kapadokya öğleden sonra da orada duruyor.
+- Öğleden sonra, kendi hızınızda (hepsi Göreme'den yürüme ya da dolmuş mesafesi):
+  - **Göreme Açık Hava Müzesi** — fresk dolu kaya kiliseleri, UNESCO listesinde. Otele 15 dk yürüme, 2 saat yeter.
+  - **Avanos**'ta çömlek atölyesi (dolmuşla 20 dk) — çarkta kendi çömleğinizi yapın; Çin'in porselen kültürüyle tatlı bir paralellik, sohbeti kendi açar.
 - Akşam: şarap terasında gün batımı; Kapadokya Türkiye'nin en eski şarap coğrafyası.
+
+> 🔴 **Kızıl Tur — isteğe bağlı, önceden almayın.** Enerjiniz yerindeyse rehberli Kızıl Tur (~09:30-17:30, öğle yemeği dahil, ~€45-75/kişi) Açık Hava Müzesi + **Paşabağ** peri bacaları + **Devrent (Hayal) Vadisi** + Avanos'u tek pakette veriyor; daha çok yer görürsünüz. Ama balonun üstüne tam gün tur yorucudur. **Kararı 23 akşamı, Göreme'ye vardığınızda verin** — oteller son dakika satıyor, rezervasyona gerek yok.
 
 ### 📍 25 Eylül Cum — Uçak → İzmir (Kordon akşamı)
 - **Balon yedek sabahı:** dün rüzgârdan iptal olduysa bu sabah uçarsınız — balon 07:30'da iner, 08:30'da oteldesiniz, 12:20 ya da 15:10 uçağına rahat yetişirsiniz.
@@ -133,7 +139,7 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 7. 🏨 Oteller: Selçuk (2), Pamukkale köyü (1), **Antalya Kaleiçi (1)**, Göreme mağara otel (2), İzmir (1)
 8. 🚌 Selçuk → Denizli otobüs/tren (21.09 öğlen)
 9. 🚌 Denizli → Antalya otobüs (22.09 öğleden sonra) — Pamukkale Turizm
-10. 🔴 Kapadokya Kızıl Tur (24.09) — otelden alınır
+10. 🔴 Kızıl Tur — **önceden alma**, 23 akşamı Göreme'de karar ver (isteğe bağlı)
 
 ## Kabaca Bütçe (2 kişi, toplam)
 
@@ -143,7 +149,7 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 | ✈️ İç hatlar AYT→ASR + ASR→ADB ×2 | 120 – 200 | İkisi de direkt, TL üzerinden al |
 | 🏨 Oteller, 7 gece (çift kişilik) | 550 – 860 | Selçuk 2×€60-90; Pamukkale ~€60; **Antalya ~€60-130**; Göreme 2×€120-180; İzmir ~€95 |
 | 🎈 Balon ×2 | 0 — bütçe dışı | Arkadaş ayarlıyor (piyasa değeri €400-500) |
-| 🔴 Kızıl Tur ×2 | 90 – 150 | Öğle yemeği + girişler dahil |
+| 🔴 Kızıl Tur ×2 | **0 – 150** | İsteğe bağlı — 23 akşamı karar ver; almazsanız girişleri ayrı ödersiniz |
 | 🚐 Havalimanı → Selçuk transferi | 50 | **Sabit** — abinin arkadaşı |
 | 🚕 Efes + Şirince dolmuş/taksi ×2 | 15 – 30 | Efes 3 km, Şirince 8 km |
 | 🚌 Selçuk → Denizli ×2 kişi | 25 – 40 | Otobüs ~3 sa 20 dk ya da tren |
@@ -153,12 +159,28 @@ Kapadokya'nın özü tek güne sığıyor; sıkı ama unutulmaz bir gün.
 | 🚕 Diğer transfer + taksi | 70 – 110 | Kayseri↔Göreme shuttle, Denizli↔Pamukkale minibüsü, İZBAN |
 | 🛂 Vize | 0 | Muafiyet var ✅ |
 | 📱 eSIM ×1 (kız arkadaş) | 10 – 15 | Senin Türk hattın var |
-| **Toplam** | **≈ 2.175 – 3.015** | Rahat bir orta bant: **~€2.600** |
+| **Toplam** | **≈ 2.085 – 3.015** | Rahat bir orta bant: **~€2.550** |
 
 Uçak bileti beklediğimizin çok altında çıktı — bütçe rahat bir yere oturdu. Balonun bedava gelmesi de ayrı bir kâr: piyasada €400-500, yani cepten çıkmayan en büyük kalem o.
 
+## Yorgunluk Profili (bilerek böyle kuruldu)
+
+| Gün | Tempo | Ne var |
+|---|---|---|
+| 19 Cmt | 🟡 | Gündüz Dublin'de serbest, akşam uçuş, gece varış |
+| 20 Paz | 🟢 | Geç uyanma, Şirince, öğleden sonra Efes |
+| 21 Pzt | 🟡 | Öğlen 3,5 sa otobüs → akşam gün batımı travertende |
+| 22 Sal | 🟡 | Sabah Hierapolis *(opsiyonel)* → 3,5 sa otobüs → aile yemeği |
+| 23 Çar | 🟡 | Sabah Kaleiçi → öğlen 1,5 sa uçuş → akşamüstü Kızılçukur |
+| 24 Per | 🔴 | **04:45 balon** — sonrası serbest, öğlen uyku |
+| 25 Cum | 🟢 | Geç uyanma, öğlen uçuş, Kordon akşamı |
+| 26 Cmt | 🟢 | İzmir sabahı, 15:05 uçuş |
+
+**Üç ilke:** hiçbir yolculuk 4 saati geçmiyor · hiçbir ağır gün üst üste gelmiyor · her yol bacağının sonunda bir ödül var (gün batımı, aile sofrası, Kızılçukur). Tek kırmızı gün balon sabahı ve o günün öğleden sonrası bilerek boş bırakıldı.
+
 ## Ufak Gezgin Notları
 - **Tek erken kalkış:** 24 Eylül, balon. Onun dışında her sabah 08:00-09:00 uyanmayla çalışıyor; 20 Eylül'de ise gece varışı yüzünden istediğin kadar uyu.
+- **Hafif seyahat et:** 7 gecede 5 otel değişiyor — yorgunluğun en sessiz kaynağı bavul taşımak. **Tek orta boy valiz + iki el çantası** ideal; otobüs ve dolmuşlarda da hayat kurtarır.
 - **Gece varışı:** 19-20 Eylül gecesi otele 02:30'da gireceksiniz; odayı 19'undan tutun ve otele önceden haber verin.
 - **Balon iptali:** %15-20 ihtimalle rüzgârdan iptal olur; 25 sabahı yedek, uçak öğlen olduğu için rahat yetişir. O sabah bavulu akşamdan hazırla.
 - **Pamukkale ayakkabısı:** Travertenlere **çıplak ayak** girilir (zorunlu), yanınıza ıslak ayak için ince havlu + terlik alın.
