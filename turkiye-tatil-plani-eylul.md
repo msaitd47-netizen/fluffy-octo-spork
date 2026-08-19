@@ -4,15 +4,15 @@
 
 Eylül sonu, Türkiye gezmek için yılın **en iyi zamanı**dır: yaz kalabalığı çekilmiş, fiyatlar inmiş, hava hâlâ tatlı sıcak (sahilde 28–30°C, Kapadokya'da 22–25°C).
 
-## ✈️ Uçuşlar — BİLETLER BULUNDU
+## ✈️ Uçuşlar — ✅ BİLETLER ALINDI
 
 | | |
 |---|---|
 | **Gidiş** | 19 Eylül Cmt · **XQ887** · Dublin **18:40** → İzmir **01:05** (+1 gün) |
 | **Dönüş** | 26 Eylül Cmt · **XQ886** · İzmir **15:05** → Dublin **17:50** |
-| **Fiyat** | **€529 — iki kişi, iki uçuş toplam** ✅ |
+| **Ödenen** | **€529 — iki kişi, iki uçuş toplam** |
 
-Bu fiyat harika: kişi başı ~€265 gidiş-dönüş. Diğer seçenekler kişi başı €539 (İzmir g-d), €600+ (Antalya g-d) idi — yani bu bilet onların yarısı. **Hemen kes.**
+Kişi başı ~€265 gidiş-dönüş — diğer seçenekler €539 (İzmir g-d) ve €600+ (Antalya g-d) idi, yani yarı fiyatına bağlandı. **Tarihler artık sabit; kalan her şey bu iki uçuşun etrafına kuruluyor.**
 
 İki güzel yan etki:
 - **Dönüş 15:05** — son sabah acelesiz İzmir'de geçiyor, gece yarısı uçuşu ya da şafak kalkışı yok. Alsancak'tan havalimanına İZBAN'la 25 dakika.
@@ -134,15 +134,15 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 💡 Genel taktik: booking.com'da iptal edilebilir tarifeyle tutun, sonra otelin kendi sitesinden fiyat isteyin — direkt rezervasyon çoğu zaman ~%10 daha ucuz ya da oda upgrade'i getirir.
 
 ## Yapılacaklar Listesi (şimdi, sırayla)
-1. ✅ ~~Dublin uçuşları~~ — **€529 bulundu, hemen kes** (XQ887 / XQ886)
-2. ✈️ İç hat 1: AYT→ASR (23.09 **öğlen** seferi) — TL üzerinden
-3. ✈️ İç hat 2: ASR→ADB (25.09 **12:20 ya da 15:10**) — TL üzerinden
-4. 🎈 Balon: arkadaşa **24.09 asıl, 25.09 sabahı yedek** tarihlerini ver
-5. 🚐 **Abine haber ver:** 19.09 **gece 01:05 varışı** için havalimanı → Selçuk transferi — gece 02:00 mümkün mü, €50 aynı mı?
-6. 🌙 **Otele not düş:** Selçuk, 02:30 check-in, gece resepsiyonu var mı?
-7. 🏨 Oteller: Selçuk (2), Pamukkale köyü (1), **Antalya Kaleiçi (1)**, Göreme mağara otel (2), İzmir (1)
-8. 🚌 Selçuk → Denizli otobüs/tren (21.09 öğlen)
-9. 🚌 Denizli → Antalya otobüs (22.09 öğleden sonra) — Pamukkale Turizm
+1. ✅ ~~Dublin uçuşları — XQ887 / XQ886, €529~~ **ALINDI**
+2. 🏨 **Göreme mağara oteli** — en acil olan bu, eylül sonu için hızla doluyor. **"Balloon view terrace" teyidi al.**
+3. 🎈 Balon: arkadaşa **24.09 asıl, 25.09 sabahı yedek** tarihlerini ver + *"biri uçup biri yerden izleyebilir mi?"* diye sor
+4. ✈️ İç hat 1: AYT→ASR (23.09 **öğlen** seferi) — TL üzerinden
+5. ✈️ İç hat 2: ASR→ADB (25.09 **12:20 ya da 15:10**) — TL üzerinden
+6. 🚐 **Abine haber ver:** 19.09 **gece 01:05 varışı** için havalimanı → Selçuk transferi — gece 02:00 mümkün mü, €50 aynı mı?
+7. 🌙 **Selçuk oteli** + rezervasyona "01:05 uçuşuyla geliyoruz, 02:30 check-in" notu
+8. 🏨 Kalan oteller: Pamukkale köyü (1), Antalya Kaleiçi (1), İzmir (1) — acelesi yok
+9. 🚌 Otobüsler: Selçuk→Denizli (21.09), Denizli→Antalya (22.09) — obilet.com, birkaç gün önceden yeter
 10. 🔴 Kızıl Tur — **önceden alma**, 23 akşamı Göreme'de karar ver (isteğe bağlı)
 
 ## Kabaca Bütçe (2 kişi, toplam)
