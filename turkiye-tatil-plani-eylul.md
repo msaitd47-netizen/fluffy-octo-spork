@@ -89,6 +89,10 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
   - **Avanos**'ta çömlek atölyesi (dolmuşla 20 dk) — çarkta kendi çömleğinizi yapın; Çin'in porselen kültürüyle tatlı bir paralellik, sohbeti kendi açar.
 - Akşam: şarap terasında gün batımı; Kapadokya Türkiye'nin en eski şarap coğrafyası.
 
+> 🎈 **Balondan çekinene not (çok normal bir korku):** Sepet büyük, kenarları omuz hizasında — açıkta değil, kapalı bir yerde gibi hissedersiniz. **Rüzgârla birlikte hareket ettiğiniz için rüzgâr hissi yok**; ne motor, ne titreşim, ne ani hareket, sadece arada brülör sesi. Yükseklik korkusu olanlar çoğu zaman cam asansörden rahat buluyor; tek sarsıntılı an iniş, onu da pilot önceden söylüyor. Kapadokya balonculuğu sıkı denetimli ve sadece sakin havada uçuluyor — o iptal oranı güvenlik sisteminin çalıştığının kanıtı.
+>
+> **Karar için acele yok:** 23 akşamı, hatta 04:45'te bile vazgeçilebilir. Arkadaşına sor: *biri uçup biri yerden izleyebilir mi?* Yerden izlemek teselli ödülü değil — meşhur fotoğrafların çoğu zaten otel terasından ya da Kızılçukur'dan, yüzlerce balon aynı anda kalkarken çekiliyor. Biri yukarıdan, biri aşağıdan çeker. **Bu yüzden otelde "balloon view terrace" şart.**
+
 > 🔴 **Kızıl Tur — isteğe bağlı, önceden almayın.** Enerjiniz yerindeyse rehberli Kızıl Tur (~09:30-17:30, öğle yemeği dahil, ~€45-75/kişi) Açık Hava Müzesi + **Paşabağ** peri bacaları + **Devrent (Hayal) Vadisi** + Avanos'u tek pakette veriyor; daha çok yer görürsünüz. Ama balonun üstüne tam gün tur yorucudur. **Kararı 23 akşamı, Göreme'ye vardığınızda verin** — oteller son dakika satıyor, rezervasyona gerek yok.
 
 ### 📍 25 Eylül Cum — Uçak → İzmir (Kordon akşamı)
