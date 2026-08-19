@@ -119,7 +119,33 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 
 **Selçuk — 2 gece (19-20):** Sakin pansiyon/butik oteller, ~€60-90. Merkezde, **Efes'e ve otogara yakın** bir yer seçin (kasaba küçük, her yer yürüme mesafesi). Bahçeli, ev usulü kahvaltı veren yerler bol; abinin arkadaşlarına da sor — yerel tavsiye altın değerinde. ⚠️ **02:30 check-in teyidi al.**
 
-**Pamukkale köyü — 1 gece (21):** Küçük aile otelleri, çoğunda termal havuz; ~€50-80. Travertenlere yürüme mesafesindeki köy içi tesisleri seçin.
+### ⚪ Pamukkale — 1 gece (21)
+
+**⚠️ Önce en kritik şey: PAMUKKALE KÖYÜ'nde kal.** Rezervasyon yaparken karşına üç yer çıkacak, ikisi yanlış:
+- ✅ **Pamukkale köyü** — travertenlerin dibinde, **güney kapıya yürüme mesafesi.** Doğru cevap bu.
+- ❌ **Karahayıt** — 5 km kuzeyde, büyük termal resortlar var ama travertenlere yürüyemezsin. Akşam gün batımına yetişmek için araç gerekir; bütün planın mantığı çöker.
+- ❌ **Denizli** — 20 km, şehir merkezi. Sadece otogar için uğrayacağın yer.
+
+**⭐ Önerim: Melrose Viewpoint Hotel** (~€50-80)
+[Traverten caddesine 3 dakika, Hierapolis girişine 5 dakika yürüme](https://www.booking.com/landmark/tr/pamukkale-travertines.html); adının hakkını veren teras ve bahçe manzarası, mevsimlik açık havuz. Konum + manzara dengesi en iyi olan bu — akşam gün batımından dönüp terasa oturursun.
+
+**Alternatifler:**
+
+| Otel | Fiyat/gece | Neden |
+|---|---|---|
+| **Bellamaritimo Hotel** | ~€50-75 | Travertenlere **5 dakika yürüme**, köyün en bilinen otellerinden, misafirperverliğiyle ün yapmış |
+| **Venus Suite Hotel** | ~€45-70 | Köy merkezinde, havuzlu, uygun fiyatlı klasik seçenek |
+| **Aspawa Hotel** | ~€45-70 | **Havuzunda gerçek Pamukkale kaynak suyu var** — termal deneyimi otelde de yaşamak istersen |
+| **Naturalis Pamukkale** | ~€60-90 | Tam donanımlı spa + açık havuz; girişe 10 dk (biraz uzak ama en konforlusu) |
+
+**📞 Rezervasyondan önce sor:**
+1. **"Güney kapıya (köy tarafı) kaç dakika yürüme?"** — 10 dakikayı geçmesin.
+2. **"22 Eylül sabahı check-out sonrası bagajımızı emanet bırakabilir miyiz?"** — ⚠️ **Bu şart.** Çıkış yaptıktan sonra Hierapolis'e gidip öğleden sonra otobüse bineceksiniz; valizle gezemezsiniz.
+3. **"Havuz gerçek termal su mu?"** — bazı oteller "termal" yazıp normal havuz koyuyor.
+4. "21 Eylül akşamüstü ~18:00 varıyoruz" — sorun olmaz ama haber verin.
+5. Mümkünse **traverten manzaralı oda** iste; beyaz duvar akşam ışıklandırılıyor.
+
+💡 Bu geceye çok para harcamana gerek yok — köy otelleri sade ve ucuz, siz zaten akşamı travertende, sabahı Hierapolis'te geçireceksiniz. **€60 civarı bir yer fazlasıyla yeter.**
 
 **Antalya — 1 gece (22):** **Kaleiçi'nde** butik konak: **Dogan Hotel** (~€60-90, geleneksel ve uygun), **Alp Paşa** (~€70-100, avlulu) ya da **Tuvana Hotel** (~€90-130, bahçeli-havuzlu). Kaleiçi civarı olsun — plan yürüme mesafesi üzerine kurulu, kardeşlerle buluşmak da kolay olur.
 
