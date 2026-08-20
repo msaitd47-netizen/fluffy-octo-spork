@@ -41,7 +41,7 @@ Coğrafya batıdan güneye, sonra doğuya akıyor; tek "geri dönüş" Kapadokya
 - Şirince 8 km, Selçuk otelleri Kordon'dan ucuz, ve [€50'lik transfer piyasa fiyatının (€45-60) tam ortasında](https://www.mytransfers.com/en/destination/turkey/izmir-airport-adb/selcuk/) — gece 01:05'te bavullarla toplu taşımayla uğraşmaya bin kat yeğ.
 
 ### Pamukkale'de neden geceliyoruz?
-Tek gece, ama planın en akıllı gecesi. Günübirlik turlar tam öğlen, kalabalık zirvedeyken varır; iki saat travertende koşturur, günün kalanı otobüste geçer. Oysa [güney kapı 06:00–23:00 açık](https://myturkeyadventure.com/blog/pamukkale-opening-hours-night-visit-2026-sunset-evening-guide) ve **kapanmadan önceki son 90 dakikada bembeyaz travertenler turuncuya ve altına dönüyor.** Köyde kalınca akşamüstü gün batımına girer, ertesi sabah kapı açılırken bir daha bomboş gezersiniz. Üstelik o 06:00 tur kalkışı hiç olmuyor.
+Tek gece, ama planın en akıllı gecesi. Günübirlik turlar tam öğlen, kalabalık zirvedeyken varır; iki saat travertende koşturur, günün kalanı otobüste geçer. Oysa [güney kapı 06:00–23:00 açık](https://myturkeyadventure.com/blog/pamukkale-opening-hours-night-visit-2026-sunset-evening-guide) ve **kapanmadan önceki son 90 dakikada bembeyaz travertenler turuncuya ve altına dönüyor.** Köyde kalınca tam o saatte, kalabalık dağılmışken içeride olursunuz — üstelik o 06:00 tur kalkışı hiç olmuyor ve ertesi sabahınız da serbest kalıyor.
 
 > ❌ **İzmir ya da Antalya çıkışlı Pamukkale turu ALMAYIN.** Hepsi gidiş-dönüş çalışıyor: akşam seni kalktığın şehre geri bırakıyorlar. Senin rotan ise Selçuk → Pamukkale → **Antalya** diye ileri akıyor; turla gitsen aynı yolu iki kez katetmen gerekirdi. Ayrıca turun verdiği (öğlen kalabalığında 2 saat) planın aldığının (gün batımı + bomboş sabah) tam tersi. Fiyat olarak da tur ikinize ~€120-180; otobüs + bir gece otel ~€85-100.
 
@@ -65,14 +65,21 @@ Gece geldiğiniz için sabah serbest; günü tersine çeviriyoruz.
 ### 📍 21 Eylül Pzt — Selçuk → Pamukkale ⚪
 - Sabah acele yok, kasabada rahat bir kahvaltı.
 - Öğlen: **Selçuk → Denizli** — [otobüs ~3 saat 20 dk (Pamukkale Turizm)](https://www.pamukkale.com.tr/otobus-bileti/selcuk-denizli/) ya da **tren ~3,5 saat** (bu hatta tren daha ucuz ve konforlu, Menderes ovasını geçer). Denizli'den Pamukkale köyüne **minibüs 20 dk**, 20 dakikada bir kalkıyor.
-- **~17:00-18:00 Pamukkale köyünde.** Otele bırak, doğruca travertenlere: **güneş batarken beyaz teraslar turuncuya ve altına dönüyor**, tur otobüsleri çoktan gitmiş. Sıcak termal suda çıplak ayak yürüyün.
+- **~17:00-18:00 Pamukkale köyünde.** Otele bırak, doğruca travertenlere: **güneş batarken beyaz teraslar turuncuya ve altına dönüyor**, tur otobüsleri çoktan gitmiş. Sıcak termal suda çıplak ayak yukarı doğru yürüyün — tepeye vardığınızda zaten **Hierapolis'in kenarına** değmiş olursunuz, isteyen oradan biraz dolaşır.
+- İsteğe bağlı: **Kleopatra Antik Havuzu** (aynı alanda, ekstra ücretli) — antik sütun parçalarının arasında yüzülüyor. Girecekseniz gün batımından önce girin, akşam erken kapanıyor.
 - Akşam: köyde sakin yemek. Çoğu otelde termal havuz var — yol yorgunluğuna birebir.
 
-### 📍 22 Eylül Sal — Hierapolis Sabahı → Antalya
-- Sabah kapı açılırken tekrar içeri: bu sefer **Hierapolis** — antik kent, dev nekropol, tiyatro ve isterseniz **Kleopatra Antik Havuzu** (antik sütun parçalarının arasında yüzülüyor, ekstra ücretli ama efsane). Sabah ışığı fotoğraf için en iyisi, ortalık bomboş.
-- 💡 **Yorgunsanız bu ziyaret zorunlu değil:** travertenleri dün akşam zaten gördünüz. Otelin termal havuzunda geç bir kahvaltı edip doğrudan otobüse binmek de tamamen meşru bir seçim.
-- Öğleden sonra: **Denizli → Antalya** otobüsü ([Pamukkale Turizm, ~3,5 saat](https://www.pamukkale.com.tr/otobus-bileti/denizli-antalya/)). Toros geçişi manzaralı.
-- Akşam: **Antalya** — kardeşlerle buluşma, marina kenarında Akdeniz yemeği. Gece Kaleiçi'nde (ya da kardeşlerin yerinde).
+### 📍 22 Eylül Sal — Pamukkale → Antalya, deniz günü 🌊
+Hierapolis'i çıkardık; sabah tembellik, öğleden sonra deniz.
+- Sabah: acelesiz kahvaltı, **otelin termal havuzunda** son bir tembellik, bagajı topla.
+- **~09:00-10:00 Denizli otobüsü** ([Pamukkale Turizm, ~3,5 saat](https://www.pamukkale.com.tr/otobus-bileti/denizli-antalya/)) → **~13:00 Antalya.** Toros geçişi manzaralı.
+- Öğleden sonra: Kaleiçi'ne yerleş, **yat limanı** ve dar sokaklarda kısa tur.
+- **Akşamüstü — günün asıl olayı: Konyaaltı sahili.** Kaleiçi'nden **nostaljik tramvayla** gidilir (kendi başına küçük bir keyif). Uzun çakıl sahil, arkanızda **Beydağları**, önünüzde açık Akdeniz — ve **güneş tam denizin üstüne batıyor.** Sahil boyunca yürüyün, ayaklarınızı suya sokun.
+  - 💡 **Eylül sonu denizi ~26-27°C** — yani bütün yazın ısıttığı su. Yüzmeyi düşünmeseniz bile ayak sokmaya değer; Dublin'in havasından sıcak.
+- Alternatif/ek: **Kaleiçi marinasından tekne turu** (~1-1,5 saat) — falezler boyunca gidip **Aşağı Düden Şelalesi'nin denize döküldüğü** yeri görürsünüz. Türkiye'de başka örneği yok, çok da fotojenik.
+- Akşam: kardeşlerle Akdeniz sofrası — piyaz, şiş köfte, künefe. Gece Kaleiçi'nde.
+
+> 🏖️ **Hızlı seçenek:** Konyaaltı'na gitmek istemezseniz, **Mermerli Plajı** doğrudan Kaleiçi'nin içinde — surların dibinde küçük bir koy, restorandan iniliyor. "Akdeniz'e ayak bastık" faslını 10 dakikada halleder.
 
 ### 📍 23 Eylül Çar — Antalya Sabahı → Kapadokya
 - Sabah: **Kaleiçi** — Hadrian Kapısı, Yivli Minare, yat limanı, surlardan Akdeniz manzarası. Kardeşlerle kahvaltı.
@@ -140,12 +147,12 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 
 **📞 Rezervasyondan önce sor:**
 1. **"Güney kapıya (köy tarafı) kaç dakika yürüme?"** — 10 dakikayı geçmesin.
-2. **"22 Eylül sabahı check-out sonrası bagajımızı emanet bırakabilir miyiz?"** — ⚠️ **Bu şart.** Çıkış yaptıktan sonra Hierapolis'e gidip öğleden sonra otobüse bineceksiniz; valizle gezemezsiniz.
-3. **"Havuz gerçek termal su mu?"** — bazı oteller "termal" yazıp normal havuz koyuyor.
+2. **"Havuz gerçek termal su mu?"** — bazı oteller "termal" yazıp normal havuz koyuyor. 22 Eylül sabahını orada geçireceksiniz, önemli.
+3. **"Geç check-out mümkün mü?"** — sabah acele etmeden havuzda oyalanmak istersiniz; değilse bagaj emaneti yeter.
 4. "21 Eylül akşamüstü ~18:00 varıyoruz" — sorun olmaz ama haber verin.
 5. Mümkünse **traverten manzaralı oda** iste; beyaz duvar akşam ışıklandırılıyor.
 
-💡 Bu geceye çok para harcamana gerek yok — köy otelleri sade ve ucuz, siz zaten akşamı travertende, sabahı Hierapolis'te geçireceksiniz. **€60 civarı bir yer fazlasıyla yeter.**
+💡 Bu geceye çok para harcamana gerek yok — köy otelleri sade ve ucuz. **Ama havuzuna bak:** akşamı travertende, ertesi sabahı otelin termal havuzunda geçireceksiniz, yani havuz burada odadan önemli. €60 civarı, havuzu iyi bir yer fazlasıyla yeter.
 
 **Antalya — 1 gece (22):** **Kaleiçi'nde** butik konak: **Dogan Hotel** (~€60-90, geleneksel ve uygun), **Alp Paşa** (~€70-100, avlulu) ya da **Tuvana Hotel** (~€90-130, bahçeli-havuzlu). Kaleiçi civarı olsun — plan yürüme mesafesi üzerine kurulu, kardeşlerle buluşmak da kolay olur.
 
@@ -188,7 +195,7 @@ Burada teras normalden çok daha kritik: **kız arkadaşın balona binmezse tera
 6. 🚐 **Abine haber ver:** 19.09 **gece 01:05 varışı** için havalimanı → Selçuk transferi — gece 02:00 mümkün mü, €50 aynı mı?
 7. 🌙 **Selçuk oteli** + rezervasyona "01:05 uçuşuyla geliyoruz, 02:30 check-in" notu
 8. 🏨 Kalan oteller: Pamukkale köyü (1), Antalya Kaleiçi (1), İzmir (1) — acelesi yok
-9. 🚌 Otobüsler: Selçuk→Denizli (21.09), Denizli→Antalya (22.09) — obilet.com, birkaç gün önceden yeter
+9. 🚌 Otobüsler: Selçuk→Denizli (21.09 öğlen), **Denizli→Antalya (22.09 sabah ~09:00-10:00)** — obilet.com
 10. 🔴 Kızıl Tur — **önceden alma**, 23 akşamı Göreme'de karar ver (isteğe bağlı)
 
 ## Kabaca Bütçe (2 kişi, toplam)
@@ -220,7 +227,7 @@ Uçak bileti beklediğimizin çok altında çıktı — bütçe rahat bir yere o
 | 19 Cmt | 🟡 | Gündüz Dublin'de serbest, akşam uçuş, gece varış |
 | 20 Paz | 🟢 | Geç uyanma, Şirince, öğleden sonra Efes |
 | 21 Pzt | 🟡 | Öğlen 3,5 sa otobüs → akşam gün batımı travertende |
-| 22 Sal | 🟡 | Sabah Hierapolis *(opsiyonel)* → 3,5 sa otobüs → aile yemeği |
+| 22 Sal | 🟡 | Tembel sabah → 3,5 sa otobüs → **Konyaaltı'nda deniz + gün batımı** → aile yemeği |
 | 23 Çar | 🟡 | Sabah Kaleiçi → öğlen 1,5 sa uçuş → akşamüstü Kızılçukur |
 | 24 Per | 🔴 | **04:45 balon** — sonrası serbest, öğlen uyku |
 | 25 Cum | 🟢 | Geç uyanma, öğlen uçuş, Kordon akşamı |
@@ -239,7 +246,7 @@ Uçak bileti beklediğimizin çok altında çıktı — bütçe rahat bir yere o
 | **İnce havlu + terlik** | Pamukkale'ye **çıplak ayak** giriliyor (zorunlu). Ayaklar ıslak çıkıyor, sonra köye yürüyorsunuz. |
 | **Katmanlı giysi (balon için)** | 04:45'te sepette 10-12°C. Üstünde brülör sıcak, altta ayaz — hırka/ince mont şart. |
 | **Yol tutması hapı** | Denizli→Antalya 3,5 saat **Toros virajları**. Hassas biri varsa hayat kurtarır. |
-| **Blister (su toplaması) bandı** | Efes + Hierapolis + Kapadokya vadileri = çok yürüyüş, hepsi düzensiz taş. |
+| **Blister (su toplaması) bandı** | Efes + travertenler + Kapadokya vadileri = çok yürüyüş, hepsi düzensiz zemin. |
 | **Küçük sırt çantası** | Günübirlik gezilerde su, kamera, hırka taşımak için. |
 | **Powerbank** | Telefon aynı anda kamera + harita + bilet; 10 saatlik günlerde bitiyor. |
 
