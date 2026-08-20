@@ -76,7 +76,9 @@ Hierapolis'i çıkardık; sabah tembellik, öğleden sonra deniz.
 - Öğleden sonra: Kaleiçi'ne yerleş, **yat limanı** ve dar sokaklarda kısa tur.
 - **Akşamüstü — günün asıl olayı: Konyaaltı sahili.** Kaleiçi'nden **nostaljik tramvayla** gidilir (kendi başına küçük bir keyif). Uzun çakıl sahil, arkanızda **Beydağları**, önünüzde açık Akdeniz — ve **güneş tam denizin üstüne batıyor.** Sahil boyunca yürüyün, ayaklarınızı suya sokun.
   - 💡 **Eylül sonu denizi ~26-27°C** — yani bütün yazın ısıttığı su. Yüzmeyi düşünmeseniz bile ayak sokmaya değer; Dublin'in havasından sıcak.
-- Alternatif/ek: **Kaleiçi marinasından tekne turu** (~1-1,5 saat) — falezler boyunca gidip **Aşağı Düden Şelalesi'nin denize döküldüğü** yeri görürsünüz. Türkiye'de başka örneği yok, çok da fotojenik.
+- **~15:00-17:00: Kaleiçi marinasından tekne turu** — falezler, mağaralar ve **Aşağı Düden Şelalesi'nin denize döküldüğü** yer; Türkiye'de başka örneği yok, çok da fotojenik.
+  - **2 saatlik turu alın** (Düden'e ancak o gidiyor): [TC vatandaşı 300 TL, yabancı 550 TL](https://www.turizm365.com/antalya-kaleici-tekne-turu-fiyatlari-2024/79/) → ikinize ~850 TL (**~€23**). 45 dakikalık kısa tur ~500 TL ama şelaleye çıkmıyor.
+  - Marinada birkaç tekneye sorun; boş kalmak istemeyen kaptan indirim yapar.
 - Akşam: kardeşlerle Akdeniz sofrası — piyaz, şiş köfte, künefe. Gece Kaleiçi'nde.
 
 > 🏖️ **Hızlı seçenek:** Konyaaltı'na gitmek istemezseniz, **Mermerli Plajı** doğrudan Kaleiçi'nin içinde — surların dibinde küçük bir koy, restorandan iniliyor. "Akdeniz'e ayak bastık" faslını 10 dakikada halleder.
@@ -207,6 +209,7 @@ Burada teras normalden çok daha kritik: **kız arkadaşın balona binmezse tera
 | 🏨 Oteller, 7 gece (çift kişilik) | 550 – 860 | Selçuk 2×€60-90; Pamukkale ~€60; **Antalya ~€60-130**; Göreme 2×€120-180; İzmir ~€95 |
 | 🎈 Balon ×2 | 0 — bütçe dışı | Arkadaş ayarlıyor (piyasa değeri €400-500) |
 | 🔴 Kızıl Tur ×2 | **0 – 150** | İsteğe bağlı — 23 akşamı karar ver; almazsanız girişleri ayrı ödersiniz |
+| ⛵ Antalya tekne turu ×2 | 15 – 25 | 2 saatlik Düden turu (~850 TL); TC tarifesi sana ucuz |
 | 🚐 Havalimanı → Selçuk transferi | 50 | **Sabit** — abinin arkadaşı |
 | 🚕 Efes + Şirince dolmuş/taksi ×2 | 15 – 30 | Efes 3 km, Şirince 8 km |
 | 🚌 Selçuk → Denizli ×2 kişi | 25 – 40 | Otobüs ~3 sa 20 dk ya da tren |
