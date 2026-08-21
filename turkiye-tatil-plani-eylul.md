@@ -66,16 +66,16 @@ Gece geldiğiniz için sabah serbest; günü tersine çeviriyoruz.
 - Sabah acele yok, kasabada rahat bir kahvaltı.
 - Öğlen: **Selçuk → Denizli** — [otobüs ~3 saat 20 dk (Pamukkale Turizm)](https://www.pamukkale.com.tr/otobus-bileti/selcuk-denizli/) ya da **tren ~3,5 saat** (bu hatta tren daha ucuz ve konforlu, Menderes ovasını geçer). Denizli'den Pamukkale köyüne **minibüs 20 dk**, 20 dakikada bir kalkıyor.
 - **~17:00-18:00 Pamukkale köyünde.** Otele bırak, doğruca travertenlere: **güneş batarken beyaz teraslar turuncuya ve altına dönüyor**, tur otobüsleri çoktan gitmiş. Sıcak termal suda çıplak ayak yukarı doğru yürüyün — tepeye vardığınızda zaten **Hierapolis'in kenarına** değmiş olursunuz, isteyen oradan biraz dolaşır.
-- İsteğe bağlı: **Kleopatra Antik Havuzu** (aynı alanda, ekstra ücretli) — antik sütun parçalarının arasında yüzülüyor. Girecekseniz gün batımından önce girin, akşam erken kapanıyor.
-- Akşam: köyde sakin yemek. Çoğu otelde termal havuz var — yol yorgunluğuna birebir.
+- 🏊 **Kleopatra Antik Havuzu — bunu atlamayın.** Aynı alanın içinde: [yıl boyu 36°C, 08:00-20:00 açık, site girişine ek €6](https://www.pamukkale-turkey.com/cleopatras-pool). 7. yüzyıldaki depremde devrilmiş **Roma sütunlarının arasında yüzüyorsunuz** — havuzun dibi antik mermer. Soyunma odası ve dolap var. **Önce havuz (~17:30), sonra gün batımı için travertenlere çıkın.**
+- Akşam: köyde sakin yemek, sonra otelin termal havuzunda gece keyfi.
 
-### 📍 22 Eylül Sal — Pamukkale → Antalya, deniz günü 🌊
-Hierapolis'i çıkardık; sabah tembellik, öğleden sonra deniz.
-- Sabah: acelesiz kahvaltı, **otelin termal havuzunda** son bir tembellik, bagajı topla.
+### 📍 22 Eylül Sal — Havuz sabahı → Antalya, deniz akşamı 🌊
+Hierapolis'i çıkardık; sabah tamamen suya ayrıldı.
+- Sabah: acelesiz kahvaltı, sonra **otelin termal havuzunda uzun bir tembellik.** Aceleniz yok, bagajı öğlene kadar toplayın.
 - **~09:00-10:00 Denizli otobüsü** ([Pamukkale Turizm, ~3,5 saat](https://www.pamukkale.com.tr/otobus-bileti/denizli-antalya/)) → **~13:00 Antalya.** Toros geçişi manzaralı.
 - Öğleden sonra: Kaleiçi'ne yerleş, **yat limanı** ve dar sokaklarda kısa tur.
 - **Akşamüstü — günün asıl olayı: Konyaaltı sahili.** Kaleiçi'nden **nostaljik tramvayla** gidilir (kendi başına küçük bir keyif). Uzun çakıl sahil, arkanızda **Beydağları**, önünüzde açık Akdeniz — ve **güneş tam denizin üstüne batıyor.** Sahil boyunca yürüyün, ayaklarınızı suya sokun.
-  - 💡 **Eylül sonu denizi ~26-27°C** — yani bütün yazın ısıttığı su. Yüzmeyi düşünmeseniz bile ayak sokmaya değer; Dublin'in havasından sıcak.
+  - 🏊 **Eylül sonu denizi ~26-27°C** — bütün yazın ısıttığı su, Dublin'in havasından sıcak. **Mayoyu yanınıza alın**, bu gerçek bir yüzme fırsatı; sahilde duş ve soyunma kabini var.
 - **~15:00-17:00: Kaleiçi marinasından tekne turu** — falezler, mağaralar ve **Aşağı Düden Şelalesi'nin denize döküldüğü** yer; Türkiye'de başka örneği yok, çok da fotojenik.
   - **2 saatlik turu alın** (Düden'e ancak o gidiyor): [TC vatandaşı 300 TL, yabancı 550 TL](https://www.turizm365.com/antalya-kaleici-tekne-turu-fiyatlari-2024/79/) → ikinize ~850 TL (**~€23**). 45 dakikalık kısa tur ~500 TL ama şelaleye çıkmıyor.
   - Marinada birkaç tekneye sorun; boş kalmak istemeyen kaptan indirim yapar.
@@ -85,6 +85,7 @@ Hierapolis'i çıkardık; sabah tembellik, öğleden sonra deniz.
 
 ### 📍 23 Eylül Çar — Antalya Sabahı → Kapadokya
 - Sabah: **Kaleiçi** — Hadrian Kapısı, Yivli Minare, yat limanı, surlardan Akdeniz manzarası. Kardeşlerle kahvaltı.
+- 🏊 İsteğe bağlı hızlı dalış: **Mermerli Plajı** doğrudan Kaleiçi'nin içinde, surların dibinde küçük bir koy (restorandan iniliyor). Uçaktan önce son bir Akdeniz banyosu isterseniz 45 dakikada halledersiniz.
 - Öğlen: **AYT→Kayseri uçağı**, **havalimanı shuttle'ı** ile ~1 saatte Göreme. Otel: **mağara otel, 2 gece** — kaya içine oyulmuş oda tek başına bir deneyim, burada cimrilik yok.
 - Akşamüstü: **Uçhisar Kalesi** (bölgeye kuşbakışı), gün batımı **Kızılçukur (Red Valley)** — kayalar kelimenin tam anlamıyla kızıla döner.
 - Akşam: **Testi kebabı** — masada çekiçle kırılan çömlek, Çinli bir misafir için müthiş şov. Erken yat: yarın büyük gün.
@@ -93,6 +94,7 @@ Hierapolis'i çıkardık; sabah tembellik, öğleden sonra deniz.
 Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 - **04:45 kalk — tatilin tek erken sabahı, ona da değer.** Balon firması otelden alır, ~1 saat uçuş, iniş sonrası şampanya, 08:00'de kahvaltıdasınız.
 - **Kahvaltıdan sonra odaya dön ve uyu.** Ciddiyim — 2-3 saatlik sabah uykusu bu tatilin en iyi yatırımlarından biri. Kapadokya öğleden sonra da orada duruyor.
+- 🏊 Kelebek gibi havuzlu bir otel seçtiyseniz, öğleden sonranın bir kısmını havuzda geçirin — bu gün zaten bilerek boş bırakıldı.
 - Öğleden sonra, kendi hızınızda (hepsi Göreme'den yürüme ya da dolmuş mesafesi):
   - **Göreme Açık Hava Müzesi** — fresk dolu kaya kiliseleri, UNESCO listesinde. Otele 15 dk yürüme, 2 saat yeter.
   - **Avanos**'ta çömlek atölyesi (dolmuşla 20 dk) — çarkta kendi çömleğinizi yapın; Çin'in porselen kültürüyle tatlı bir paralellik, sohbeti kendi açar.
@@ -156,7 +158,7 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 
 💡 Bu geceye çok para harcamana gerek yok — köy otelleri sade ve ucuz. **Ama havuzuna bak:** akşamı travertende, ertesi sabahı otelin termal havuzunda geçireceksiniz, yani havuz burada odadan önemli. €60 civarı, havuzu iyi bir yer fazlasıyla yeter.
 
-**Antalya — 1 gece (22):** **Kaleiçi'nde** butik konak: **Dogan Hotel** (~€60-90, geleneksel ve uygun), **Alp Paşa** (~€70-100, avlulu) ya da **Tuvana Hotel** (~€90-130, bahçeli-havuzlu). Kaleiçi civarı olsun — plan yürüme mesafesi üzerine kurulu, kardeşlerle buluşmak da kolay olur.
+**Antalya — 1 gece (22):** 🏊 **Havuzlu olanı seçin.** ⭐ **Tuvana Hotel** (~€90-130) — Kaleiçi'nin göbeğinde ama bahçeli ve **havuzlu**; deniz akşamından dönünce iyi gelir. Alternatif **Alp Paşa** (~€70-100, avlulu), bütçe için **Dogan Hotel** (~€60-90). Kaleiçi civarı olsun — plan yürüme mesafesi üzerine kurulu, kardeşlerle buluşmak da kolay olur.
 
 ### 🏔️ Göreme — mağara otel, 2 gece (23-24) — EN ÖNEMLİ REZERVASYON
 
@@ -214,7 +216,8 @@ Burada teras normalden çok daha kritik: **kız arkadaşın balona binmezse tera
 | 🚕 Efes + Şirince dolmuş/taksi ×2 | 15 – 30 | Efes 3 km, Şirince 8 km |
 | 🚌 Selçuk → Denizli ×2 kişi | 25 – 40 | Otobüs ~3 sa 20 dk ya da tren |
 | 🚌 Denizli → Antalya ×2 kişi | 25 – 40 | Pamukkale Turizm, ~3,5 saat |
-| 🏛️ Müze girişleri | 110 – 190 | Efes ~€40, Pamukkale ~€30, Kleopatra Havuzu ekstra — sen **Müzekart** al, yabancı tarifesi sadece kız arkadaşına işler |
+| 🏛️ Müze girişleri | 110 – 190 | Efes ~€40, Pamukkale ~€30 — sen **Müzekart** al, yabancı tarifesi sadece kız arkadaşına işler |
+| 🏊 Kleopatra Antik Havuzu ×2 | ~12 | Kişi başı €6, site girişine ek |
 | 🍽️ Yeme-içme, 8 gün | 580 – 800 | Kahvaltılar çoğu otelde dahil; Antalya'da aile sofrası bunu düşürür |
 | 🚕 Diğer transfer + taksi | 70 – 110 | Kayseri↔Göreme shuttle, Denizli↔Pamukkale minibüsü, İZBAN |
 | 🛂 Vize | 0 | Muafiyet var ✅ |
@@ -238,6 +241,22 @@ Uçak bileti beklediğimizin çok altında çıktı — bütçe rahat bir yere o
 
 **Üç ilke:** hiçbir yolculuk 4 saati geçmiyor · hiçbir ağır gün üst üste gelmiyor · her yol bacağının sonunda bir ödül var (gün batımı, aile sofrası, Kızılçukur). Tek kırmızı gün balon sabahı ve o günün öğleden sonrası bilerek boş bırakıldı.
 
+## 🏊 Yüzme Rehberi
+
+Bu bir "gezi tatili" ama içinde **yedi ayrı su** var — mayoyu en üste koyun.
+
+| Nerede | Ne zaman | Ne |
+|---|---|---|
+| **Kleopatra Antik Havuzu** ⭐ | 21 akşam | **36°C**, devrilmiş Roma sütunlarının arasında. Site girişine ek €6. Hayatta bir kez. |
+| Travertenler | 21 akşam | Sıcak termal suda çıplak ayak yürüyüş (yüzme değil ama su) |
+| **Pamukkale otel termal havuzu** | 21 akşam + **22 sabah** | 22 sabahı tamamen boş — uzun bir havuz sabahı |
+| **Konyaaltı — Akdeniz** ⭐ | 22 akşamüstü | **Deniz 26-27°C.** Duş ve soyunma kabini var |
+| Antalya otel havuzu | 22 akşam | Tuvana'nın bahçe havuzu |
+| Mermerli Plajı | 23 sabah *(isteğe bağlı)* | Kaleiçi'nin içinde, uçaktan önce hızlı bir dalış |
+| Göreme otel havuzu | 24 öğleden sonra | Kelebek'in havuzu; balon sonrası zaten boş bıraktık |
+
+**Planda olmayan tek şey:** şezlongda uzanılan klasik bir plaj günü. İstenirse tek yol Antalya gecesini Kaleiçi yerine Konyaaltı'nda denize sıfır bir otelde geçirmek — ama o zaman eski şehir ve kardeşlerle buluşma kolaylığı gider. Tek gece için değmez; Konyaaltı'na tramvayla 20 dakika.
+
 ## 🧳 Valiz Listesi
 
 **Strateji: tek orta boy valiz + iki el çantası.** 7 gecede 5 otel değişiyor, otobüs ve dolmuş kullanıyorsunuz — hafiflik burada konfor demek. Aldığın SunExpress tarifesinin bagaj hakkını bir kontrol et ("Light" ise sadece el çantası olabilir.)
@@ -257,7 +276,8 @@ Uçak bileti beklediğimizin çok altında çıktı — bütçe rahat bir yere o
 - 4-5 tişört/bluz · 2 pantolon · 1 şort ya da etek · **1 ince hırka veya mont**
 - **1 şık kıyafet** — Antalya'da aile yemeği ve İzmir'de Kordon akşamı için
 - İç çamaşırı ve çorap: 8'er (yıkamaya güvenme, 5 otel değişiyor)
-- **Mayo** — Pamukkale'de termal havuz + Kleopatra Antik Havuzu
+- **Mayo — ikiniz için de, en üste koyun.** Yedi ayrı yerde suya giriyorsunuz (yukarıdaki yüzme rehberine bakın)
+- **Çabuk kuruyan havlu** — Kleopatra Havuzu'nda ve Konyaaltı'nda işe yarar (otel havlusu taşımayın)
 - **Eşarp** (kız arkadaşın için) — cami ziyaretlerinde ve serin sabahlarda
 
 ### 👟 Ayakkabı — sadece iki çift, ikisi de doğru olsun
