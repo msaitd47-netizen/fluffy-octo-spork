@@ -1,0 +1,311 @@
+<title>爱琴海到卡帕多西亚</title>
+<style>
+  :root {
+    --paper: #f4f6f5;
+    --card: #ffffff;
+    --ink: #1e2a2b;
+    --muted: #5b6b6c;
+    --en: #64787a;
+    --line: #d7dedc;
+    --accent: #0e7278;
+    --accent-soft: #e2eeee;
+    --rose: #b4544a;
+    --gold: #8a6a1f;
+    --gold-soft: #f6f0dd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #101b1c;
+      --card: #162324;
+      --ink: #e5ecea;
+      --muted: #93a5a4;
+      --en: #8fa5a6;
+      --line: #2a3a3b;
+      --accent: #5cc0c5;
+      --accent-soft: #16302f;
+      --rose: #e08c84;
+      --gold: #d9bd6e;
+      --gold-soft: #2a2415;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #101b1c;
+    --card: #162324;
+    --ink: #e5ecea;
+    --muted: #93a5a4;
+    --en: #8fa5a6;
+    --line: #2a3a3b;
+    --accent: #5cc0c5;
+    --accent-soft: #16302f;
+    --rose: #e08c84;
+    --gold: #d9bd6e;
+    --gold-soft: #2a2415;
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", sans-serif;
+    line-height: 1.85;
+    margin: 0;
+    font-size: 16px;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
+  .label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em; color: var(--accent); }
+  h1, h2, .day h3 {
+    font-family: "Songti SC", "SimSun", "Noto Serif SC", "Source Han Serif SC", serif;
+  }
+  h1 { font-size: clamp(1.9rem, 5.5vw, 2.7rem); line-height: 1.25; margin: 0.5rem 0 0.2rem; font-weight: 700; }
+  .h1-en {
+    font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    font-size: 1.15rem; color: var(--en); margin: 0 0 1rem; font-style: italic;
+  }
+  .lede { font-size: 1.02rem; color: var(--muted); margin: 0 0 0.5rem; }
+  h2 { font-size: 1.35rem; font-weight: 700; margin: 3rem 0 0.2rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  .h2-en { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 0.98rem; color: var(--en); margin: 0 0 1rem; font-style: italic; }
+  h3.sub { font-size: 1.05rem; font-weight: 700; margin: 1.5rem 0 0.2rem; }
+  p { margin: 0 0 0.85rem; }
+  .en {
+    font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    color: var(--en); font-size: 0.95rem; line-height: 1.6;
+    margin: 0 0 1.1rem; padding-left: 0.85rem; border-left: 2px solid var(--line);
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  strong { font-weight: 600; }
+  .en strong { font-weight: 700; }
+  ul, ol.plain { padding-left: 1.3rem; margin: 0 0 1rem; }
+  li { margin-bottom: 0.45rem; }
+  .note { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 0.9rem 1.1rem; border-radius: 0 4px 4px 0; margin: 1.25rem 0; }
+  .note .en { border-left-color: rgba(128,128,128,0.3); }
+  .note.tip { border-left-color: var(--rose); }
+  .note.tip .label { color: var(--rose); }
+  .ticket { background: var(--gold-soft); border: 1px solid var(--gold); border-radius: 5px; padding: 1.1rem 1.25rem; margin: 0 0 1.25rem; }
+  .ticket .label { color: var(--gold); }
+  .ticket-legs { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; margin: 0.75rem 0; font-size: 0.92rem; }
+  .leg b { display: block; font-size: 0.75rem; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.25rem; font-weight: 600; }
+  .leg .time { font-size: 1.05rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .route { font-size: 0.88rem; font-weight: 600; display: flex; flex-wrap: wrap; gap: 0.35rem 0.5rem; align-items: center; padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: 4px; background: var(--card); margin-bottom: 1.25rem; }
+  .route span { color: var(--ink); }
+  .route em { color: var(--accent); font-style: normal; }
+  .day { display: grid; grid-template-columns: 5rem 1fr; gap: 1.25rem; margin-bottom: 2.4rem; }
+  .day-date { text-align: right; padding-top: 0.2rem; border-right: 2px solid var(--accent); padding-right: 1rem; }
+  .day-date b { display: block; font-size: 1.3rem; line-height: 1.2; color: var(--accent); font-variant-numeric: tabular-nums; font-family: "Songti SC", "Noto Serif SC", serif; }
+  .day-date small { font-size: 0.72rem; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; }
+  .day h3 { margin: 0 0 0.15rem; font-size: 1.1rem; font-weight: 700; }
+  .day .h3-en { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 0.95rem; color: var(--en); font-style: italic; margin: 0 0 0.75rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+  .table-scroll { overflow-x: auto; margin: 0 0 1rem; }
+  th, td { text-align: left; padding: 0.55rem 0.75rem 0.55rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 0.72rem; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+  td .en-inline { display: block; font-family: "Iowan Old Style", Palatino, Georgia, serif; color: var(--en); font-size: 0.88em; font-style: italic; }
+  footer { margin-top: 3.5rem; color: var(--muted); font-size: 0.92rem; border-top: 1px solid var(--line); padding-top: 1.25rem; }
+  @media (max-width: 540px) {
+    .day { grid-template-columns: 1fr; gap: 0.35rem; }
+    .day-date { text-align: left; border-right: none; border-bottom: 2px solid var(--accent); padding: 0 0 0.3rem; margin-bottom: 0.3rem; }
+    .day-date b { display: inline; margin-right: 0.5rem; }
+  }
+</style>
+
+<div class="wrap">
+  <p class="label">9月19日 – 26日 · 都柏林出发 · 7晚 · 全程不自驾</p>
+  <h1>爱琴海到卡帕多西亚</h1>
+  <p class="h1-en">From the Aegean to Cappadocia · 19–26 September, 7 nights, no driving</p>
+  <p class="lede">土耳其九月行程。三个非去不可的地方——<strong>卡帕多西亚、棉花堡、以弗所</strong>——是这趟旅程的骨架；安塔利亚是家人的城市。除了热气球那天，每天早上都可以睡到自然醒。</p>
+  <p class="en">Turkey in September. Three must-sees — <strong>Cappadocia, Pamukkale and Ephesus</strong> — form the backbone; Antalya is the family stop. Apart from the balloon morning, you can sleep in every single day.</p>
+
+  <div class="ticket">
+    <p class="label">✈️ 机票已订 · FLIGHTS BOOKED</p>
+    <div class="ticket-legs">
+      <div class="leg">
+        <b>去程 OUTBOUND · 9月19日 周六 · XQ887</b>
+        <span class="time">18:40</span> 都柏林 Dublin<br>
+        <span class="time">01:05</span> 伊兹密尔 İzmir <em>（次日 +1）</em>
+      </div>
+      <div class="leg">
+        <b>回程 RETURN · 9月26日 周六 · XQ886</b>
+        <span class="time">15:05</span> 伊兹密尔 İzmir<br>
+        <span class="time">17:50</span> 都柏林 Dublin
+      </div>
+    </div>
+    <p style="margin:0 0 0.5rem">直飞，不用转机。回程是下午三点的飞机，所以最后一个上午还能在伊兹密尔悠闲地吃早餐。</p>
+    <p class="en" style="margin:0">Both legs direct, no connections. The return is at 15:05, so the last morning is still a relaxed one in İzmir.</p>
+  </div>
+
+  <h2>路线</h2>
+  <p class="h2-en">The route</p>
+  <div class="route">
+    <span>塞尔丘克 Selçuk ×2</span><em>→</em><span>棉花堡 Pamukkale ×1</span><em>→</em><span>安塔利亚 Antalya ×1</span><em>→</em><span>卡帕多西亚 Cappadocia ×2</span><em>→</em><span>伊兹密尔 İzmir ×1</span>
+  </div>
+  <p>一条单向的线：从西边的爱琴海往南到地中海，再往东进内陆，最后飞回伊兹密尔。<strong>不走回头路。</strong>中间还有两班土耳其国内航班：9月23日安塔利亚→开塞利，9月25日开塞利→伊兹密尔，都是直飞一个半小时。</p>
+  <p class="en">One line that never doubles back: west from the Aegean, south to the Mediterranean, east into the interior, then a hop back to İzmir for the flight home. Two domestic flights in the middle — Antalya→Kayseri on the 23rd, Kayseri→İzmir on the 25th, both direct, ~1.5 hours.</p>
+
+  <h2>每日行程</h2>
+  <p class="h2-en">Day by day</p>
+
+  <div class="day">
+    <div class="day-date"><b>19</b><small>周六 Sat</small></div>
+    <div>
+      <h3>都柏林 → 塞尔丘克（深夜抵达）</h3>
+      <p class="h3-en">Dublin → Selçuk, arriving late</p>
+      <p>白天在都柏林可以慢慢收拾，傍晚6点40分的飞机。<strong>凌晨1点05分</strong>落地伊兹密尔，有人来机场接我们，开一小时到<strong>塞尔丘克</strong>——一个安静的小镇，我们住两晚。到酒店大概两点半，直接睡。</p>
+      <p class="en">A free day in Dublin to pack slowly; the flight leaves at 18:40. We land in İzmir at <strong>01:05</strong>, where a friend's driver meets us for the hour's drive to <strong>Selçuk</strong> — a quiet little town where we stay two nights. Into the hotel around 02:30, straight to bed.</p>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-date"><b>20</b><small>周日 Sun</small></div>
+    <div>
+      <h3>希林杰 + 以弗所 🏛️</h3>
+      <p class="h3-en">Şirince village + Ephesus</p>
+      <p>昨晚睡得晚，<strong>今天睡到自然醒</strong>。中午去<strong>希林杰</strong>（8公里，有小巴）——山上的石头房子村庄，以<strong>水果酒</strong>出名，在这里吃一顿长长的午饭。</p>
+      <p class="en">We got in late, so <strong>sleep as long as you like</strong>. Around midday we head to <strong>Şirince</strong> (8 km, local minibus) — a hillside village of stone houses famous for its <strong>fruit wines</strong>, and a long lunch there.</p>
+      <p>下午3点去<strong>以弗所</strong>（离酒店只有3公里）。这是地中海保存最完好的古城：<strong>塞尔苏斯图书馆</strong>的立面、能坐两万五千人的古剧场、脚下的大理石街道。邮轮团下午就回船了，人少；而且下午的<strong>金色阳光</strong>打在图书馆上，比早上还好看。附近还有<strong>阿尔忒弥斯神庙</strong>遗址（古代世界七大奇迹之一）。傍晚回镇上吃饭。</p>
+      <p class="en">At 15:00 we go to <strong>Ephesus</strong>, only 3 km away — the best-preserved ancient city in the Mediterranean: the façade of the <strong>Library of Celsus</strong>, a theatre that seated 25,000, marble streets underfoot. The cruise groups head back to their ships in the afternoon, so it empties out — and the <strong>golden late light</strong> on the Library is better than morning. Nearby are the ruins of the <strong>Temple of Artemis</strong>, one of the Seven Wonders. Dinner back in town.</p>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-date"><b>21</b><small>周一 Mon</small></div>
+    <div>
+      <h3>塞尔丘克 → 棉花堡 ⚪</h3>
+      <p class="h3-en">Selçuk → Pamukkale</p>
+      <p>上午不赶时间。吃完早餐坐<strong>长途大巴去代尼兹利</strong>（约3小时20分），再转20分钟小巴到<strong>棉花堡村</strong>，下午5点左右到。</p>
+      <p class="en">No rush in the morning. After breakfast, a <strong>coach to Denizli</strong> (~3h20), then a 20-minute minibus to <strong>Pamukkale village</strong>, arriving around 17:00.</p>
+      <p>🏊 <strong>克利奥帕特拉古池</strong>——这个一定要下水。全年恒温<strong>36°C</strong>，池底躺着公元7世纪大地震震塌的<strong>古罗马石柱</strong>，你就在这些两千年的大理石中间游泳。有更衣室和储物柜。</p>
+      <p class="en">🏊 <strong>Cleopatra's Antique Pool</strong> — don't skip this one. A steady <strong>36°C</strong> all year, with <strong>Roman columns</strong> lying on the bottom where a 7th-century earthquake dropped them. You swim among two-thousand-year-old marble. Changing rooms and lockers on site.</p>
+      <p>游完泳再往上走去<strong>棉花堡</strong>的白色梯田。<strong>必须赤脚</strong>进入（规定），温泉水是暖的。日落前的最后一个半小时，雪白的钙化梯田会变成橙金色——旅行团这个点早就走光了，这是住在村里才有的待遇。晚上在村里吃饭，酒店有温泉泳池。</p>
+      <p class="en">Then we walk up the white terraces of <strong>Pamukkale</strong> itself. You must go <strong>barefoot</strong> (it's the rule), and the water is warm. In the last 90 minutes before closing the white travertines turn orange and gold — the tour buses are long gone by then. This is the reward for staying in the village. Dinner locally, and the hotel has a thermal pool.</p>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-date"><b>22</b><small>周二 Tue</small></div>
+    <div>
+      <h3>泡温泉的早上 → 安塔利亚看海 🌊</h3>
+      <p class="h3-en">A morning in the thermal pool → the sea at Antalya</p>
+      <p>上午<strong>整个都留给温泉泳池</strong>。9点到10点之间坐大巴去<strong>安塔利亚</strong>（约3.5小时，翻过托罗斯山脉），中午1点左右到。住在<strong>卡莱伊奇</strong>老城——奥斯曼时期的木房子、窄石板路、游艇码头，整个老城建在临海的悬崖上。</p>
+      <p class="en">The <strong>whole morning is for the thermal pool</strong>. Between 09:00 and 10:00 we take the coach to <strong>Antalya</strong> (~3.5h over the Taurus mountains), arriving around 13:00. We stay in <strong>Kaleiçi</strong>, the old town — Ottoman wooden houses, narrow lanes, a yacht harbour, the whole quarter sitting on cliffs above the sea.</p>
+      <p><strong>下午3点到5点：坐船。</strong>从老城码头出发，沿着悬崖走，能看到<strong>下杜登瀑布直接从崖上落进海里</strong>——土耳其只有这一处。</p>
+      <p class="en"><strong>15:00–17:00: a boat trip</strong> from the old harbour, along the cliffs to the point where the <strong>Lower Düden waterfall drops straight into the sea</strong> — the only place in Turkey where that happens.</p>
+      <p>🏊 <strong>傍晚去孔亚阿尔特海滩</strong>，坐复古有轨电车过去。背后是<strong>贝伊山脉</strong>，面前是地中海，<strong>太阳正好落在海面上</strong>。九月底海水<strong>26–27°C</strong>——整个夏天晒暖的水，比都柏林的空气还热，海滩有淋浴和更衣室，<strong>带泳衣</strong>。晚上和他的家人一起吃饭。</p>
+      <p class="en">🏊 <strong>Late afternoon at Konyaaltı beach</strong>, reached by the vintage tram. The <strong>Beydağları mountains</strong> behind you, the open Mediterranean in front, and <strong>the sun sets directly over the water</strong>. The sea is <strong>26–27°C</strong> in late September — warmer than the air in Dublin — and there are showers and changing cabins, so <strong>bring a swimsuit</strong>. Dinner with his family in the evening.</p>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-date"><b>23</b><small>周三 Wed</small></div>
+    <div>
+      <h3>安塔利亚 → 卡帕多西亚</h3>
+      <p class="h3-en">Antalya → Cappadocia</p>
+      <p>上午在老城走走：<strong>哈德良门</strong>、宣礼塔、从城墙看地中海。想再下一次水的话，<strong>老城里就有一个小海滩</strong>，四十五分钟就够。中午的飞机飞<strong>开塞利</strong>，再一小时车程到<strong>格雷梅</strong>。我们住<strong>洞穴酒店</strong>——房间是直接在岩石里凿出来的。</p>
+      <p class="en">A morning walk through the old town: <strong>Hadrian's Gate</strong>, the fluted minaret, the Mediterranean seen from the walls. If you want one more swim, there's <strong>a small beach inside the old town itself</strong> — 45 minutes is enough. A midday flight to <strong>Kayseri</strong>, then an hour by road to <strong>Göreme</strong>, where we stay in a <strong>cave hotel</strong> — rooms carved directly into the rock.</p>
+      <p>傍晚去<strong>乌奇希萨尔城堡</strong>俯瞰整片地区，日落去<strong>红谷</strong>——岩石会真的变成红色。晚饭吃<strong>陶罐烤肉</strong>：肉在密封的陶罐里烤熟，上桌时服务员当着你的面用小锤把罐子敲开。早点睡，明天要早起。</p>
+      <p class="en">Late afternoon at <strong>Uçhisar Castle</strong> for the view over the whole region, then sunset in the <strong>Red Valley</strong>, where the rock really does turn red. Dinner is <strong>testi kebabı</strong> — meat slow-cooked in a sealed clay pot that the waiter cracks open at your table with a little hammer. Early night: tomorrow starts early.</p>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-date"><b>24</b><small>周四 Thu</small></div>
+    <div>
+      <h3>热气球的早晨 🎈</h3>
+      <p class="h3-en">Balloon morning</p>
+      <p><strong>凌晨4点45分起床——全程唯一一次早起。</strong>热气球公司会来酒店接，飞行约一小时，落地后有香槟，8点就回来吃早饭了。</p>
+      <p class="en"><strong>Up at 04:45 — the only early start of the whole trip.</strong> The balloon company collects us from the hotel, the flight is about an hour, there's champagne on landing, and we're back for breakfast by 08:00.</p>
+
+      <div class="note tip">
+        <p class="label">关于害怕这件事 · IF YOU'RE NERVOUS 🎈</p>
+        <p style="margin:0.4rem 0 0.6rem">很多人第一次都紧张，但热气球和想象中不一样：<strong>吊篮很大，边沿到肩膀高</strong>，站在里面是「被围住」的感觉，不是悬空。最神奇的是——<strong>因为你跟着风一起走，所以完全感觉不到风</strong>。没有发动机、没有震动、没有突然的移动，只有偶尔的喷火声和一片安静。很多恐高的人说比坐玻璃电梯还稳。唯一有点颠的是落地，飞行员会提前提醒。</p>
+        <p class="en" style="margin:0 0 0.6rem">Almost everyone is nervous the first time, but a balloon is nothing like what people imagine. <strong>The basket is large and its sides come up to your shoulders</strong> — it feels enclosed, not exposed. The strangest part is that <strong>you feel no wind at all, because you travel with it</strong>. No engine, no vibration, no sudden movement — just the occasional roar of the burner and then complete silence. People who are afraid of heights often find it steadier than a glass lift. The only bumpy moment is the landing, and the pilot warns you first.</p>
+        <p style="margin:0 0 0.6rem"><strong>而且随时可以改主意</strong>，前一天晚上、甚至当天凌晨都可以。不飞也完全没关系：<strong>酒店的露台就是最好的观景位</strong>——那些著名的照片，大多就是从露台或者红谷拍的，几百个气球同时升起来。一个在天上拍，一个在地上拍，两边都好。</p>
+        <p class="en" style="margin:0">And <strong>you can change your mind at any point</strong> — the night before, or even at 04:45 on the morning itself. Not flying is genuinely fine: <strong>the hotel terrace is the best seat in the house</strong>. Most of those famous photographs are taken from a terrace or from the Red Valley, with hundreds of balloons rising at once. One of us shoots from above, one from below — both of us win.</p>
+      </div>
+
+      <p><strong>吃完早餐回房间补觉。</strong>这一天下午故意留空了，可以泡酒店泳池，也可以慢慢逛：<strong>格雷梅露天博物馆</strong>（走路15分钟，凿在岩石里的拜占庭教堂，满墙壁画）和<strong>阿瓦诺斯</strong>的陶艺工作坊（小巴20分钟，可以自己上手拉坯——这里做陶的传统有几千年了，和中国的瓷器算是遥远的亲戚）。晚上在葡萄酒露台看日落。</p>
+      <p class="en"><strong>After breakfast, go back to bed.</strong> The afternoon is deliberately left empty: the hotel pool, or a slow wander to the <strong>Göreme Open-Air Museum</strong> (15 minutes on foot — Byzantine churches cut into the rock, walls covered in frescoes) and the pottery workshops of <strong>Avanos</strong> (20 minutes by minibus, where you can throw a pot yourself; the tradition here is thousands of years old, a distant cousin of Chinese porcelain). Sunset from a wine terrace in the evening.</p>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-date"><b>25</b><small>周五 Fri</small></div>
+    <div>
+      <h3>飞伊兹密尔，海边的傍晚</h3>
+      <p class="h3-en">Fly to İzmir, an evening by the water</p>
+      <p>如果昨天因为风大取消了热气球，<strong>今天早上是备用场次</strong>。中午飞<strong>伊兹密尔</strong>，下午到，住在海边长廊旁的<strong>阿尔桑贾克</strong>。傍晚沿着<strong>科尔登海滨长廊</strong>散步——太阳落进伊兹密尔湾，路上有马车。晚上吃<strong>meze</strong>（土耳其式的一桌小菜，配茴香酒），这是这趟旅程的告别晚餐。</p>
+      <p class="en">If yesterday's flight was cancelled for wind, <strong>this morning is the backup slot</strong>. A midday flight to <strong>İzmir</strong>, arriving in the afternoon; we stay in <strong>Alsancak</strong>, right by the waterfront. In the late afternoon we walk the <strong>Kordon promenade</strong> — the sun drops into the bay and horse-drawn carriages pass by. Dinner is <strong>meze</strong>, a table full of small dishes with rakı — our farewell meal.</p>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-date"><b>26</b><small>周六 Sat</small></div>
+    <div>
+      <h3>伊兹密尔 → 都柏林</h3>
+      <p class="h3-en">İzmir → Dublin</p>
+      <p>上午在科尔登吃一顿伊兹密尔式早餐：<strong>boyoz</strong>（当地的酥皮点心）配水煮蛋和红茶。然后去<strong>科纳克广场</strong>看钟楼，在<strong>凯梅拉尔蒂大巴扎</strong>买最后的手信。中午12点半去机场（轻轨25分钟）→ <strong>下午3点05分起飞，5点50分回到都柏林。</strong></p>
+      <p class="en">An İzmir breakfast on the Kordon: <strong>boyoz</strong>, the local flaky pastry, with a boiled egg and black tea. Then <strong>Konak Square</strong> and its clock tower, and last souvenirs in the <strong>Kemeraltı bazaar</strong>. To the airport at 12:30 (25 minutes on the light rail) → <strong>15:05 departure, home in Dublin by 17:50.</strong></p>
+    </div>
+  </div>
+
+  <h2>🏊 什么时候可以游泳</h2>
+  <p class="h2-en">Where you can swim</p>
+  <p>这虽然是一趟以看风景为主的旅行，但一共有<strong>七个地方可以下水</strong>——泳衣放在行李最上面。</p>
+  <p class="en">This is mostly a sightseeing trip, but there are <strong>seven separate places to get in the water</strong> — pack the swimsuit on top.</p>
+  <div class="table-scroll"><table>
+    <tr><th>地点 Where</th><th>时间 When</th><th>说明 What</th></tr>
+    <tr><td><strong>克利奥帕特拉古池</strong> ⭐<span class="en-inline">Cleopatra's Antique Pool</span></td><td>21日傍晚<span class="en-inline">21st, evening</span></td><td><strong>36°C</strong>，在倒塌的罗马石柱之间游泳<span class="en-inline">36°C, swimming among fallen Roman columns</span></td></tr>
+    <tr><td>棉花堡梯田<span class="en-inline">The travertine terraces</span></td><td>21日傍晚<span class="en-inline">21st, evening</span></td><td>赤脚走在温泉水里<span class="en-inline">Barefoot in warm thermal water</span></td></tr>
+    <tr><td><strong>棉花堡酒店温泉池</strong><span class="en-inline">Hotel thermal pool</span></td><td>21日晚 + <strong>22日上午</strong><span class="en-inline">21st night + all of the 22nd morning</span></td><td>22号上午完全空着<span class="en-inline">The morning is left completely free</span></td></tr>
+    <tr><td><strong>孔亚阿尔特海滩</strong> ⭐<span class="en-inline">Konyaaltı beach</span></td><td>22日傍晚<span class="en-inline">22nd, late afternoon</span></td><td><strong>海水26–27°C</strong>，有淋浴更衣室<span class="en-inline">Sea at 26–27°C, showers and cabins</span></td></tr>
+    <tr><td>安塔利亚酒店泳池<span class="en-inline">Antalya hotel pool</span></td><td>22日晚<span class="en-inline">22nd, evening</span></td><td>老城酒店的花园泳池<span class="en-inline">Garden pool in the old town</span></td></tr>
+    <tr><td>老城小海滩<span class="en-inline">Mermerli beach</span></td><td>23日上午（可选）<span class="en-inline">23rd morning (optional)</span></td><td>就在城墙下面<span class="en-inline">Right below the old town walls</span></td></tr>
+    <tr><td>格雷梅酒店泳池<span class="en-inline">Göreme hotel pool</span></td><td>24日下午<span class="en-inline">24th afternoon</span></td><td>热气球之后的空白时间<span class="en-inline">The free time after the balloon</span></td></tr>
+  </table></div>
+
+  <h2>🧳 行李清单</h2>
+  <p class="h2-en">Packing list</p>
+  <p><strong>原则：一个中号行李箱 + 两个随身包。</strong>七晚要换五家酒店，还要坐大巴和小巴，行李轻就是舒服。</p>
+  <p class="en"><strong>One medium suitcase and two day bags between us.</strong> Seven nights, five hotels, plus coaches and minibuses — travelling light is what makes it comfortable.</p>
+
+  <h3 class="sub">⚡ 最容易忘、但特别重要的 · Easy to forget, but important</h3>
+  <div class="table-scroll"><table>
+    <tr><th>物品 Item</th><th>原因 Why</th></tr>
+    <tr><td><strong>转换插头</strong><span class="en-inline">Plug adapter (Irish → European)</span></td><td>都柏林是英标三脚，土耳其是欧标两脚。<strong>清单上最关键的一项</strong>，带两个<span class="en-inline">Dublin uses the 3-pin type, Turkey the 2-pin European. <strong>The single most important item here</strong> — bring two</span></td></tr>
+    <tr><td><strong>泳衣 + 速干毛巾</strong><span class="en-inline">Swimsuit + quick-dry towel</span></td><td>七个地方要下水<span class="en-inline">Seven places to swim</span></td></tr>
+    <tr><td><strong>薄外套或开衫</strong><span class="en-inline">A light jacket or cardigan</span></td><td>凌晨的气球吊篮里只有10–12°C<span class="en-inline">It's only 10–12°C in the balloon basket at dawn</span></td></tr>
+    <tr><td><strong>晕车药</strong><span class="en-inline">Motion-sickness tablets</span></td><td>代尼兹利到安塔利亚要翻山，3.5小时盘山路<span class="en-inline">3.5 hours of mountain road from Denizli to Antalya</span></td></tr>
+    <tr><td><strong>创可贴 / 水泡贴</strong><span class="en-inline">Blister plasters</span></td><td>古城和山谷全是不平的石头路<span class="en-inline">Ancient sites and valleys, all uneven stone</span></td></tr>
+    <tr><td><strong>充电宝</strong><span class="en-inline">Power bank</span></td><td>手机同时当相机、地图和机票<span class="en-inline">The phone is camera, map and boarding pass at once</span></td></tr>
+  </table></div>
+
+  <h3 class="sub">👟 鞋——只带两双，但要带对 · Shoes: two pairs, both right</h3>
+  <ul>
+    <li><strong>穿惯了的舒服的走路鞋</strong>——<em>千万不要穿新鞋</em>，这是唯一能毁掉这趟旅行的东西<br><span class="en" style="display:block;margin:0.3rem 0 0;padding-left:0.85rem">Comfortable walking shoes you've already broken in — <em>no new shoes</em>. It's the one thing that can genuinely ruin a trip like this.</span></li>
+    <li>拖鞋或凉鞋——温泉、酒店、晚饭<br><span class="en" style="display:block;margin:0.3rem 0 0;padding-left:0.85rem">Sandals or flip-flops, for the thermal pools, the hotel and dinner.</span></li>
+  </ul>
+
+  <h3 class="sub">👕 衣服和防晒 · Clothes and sun</h3>
+  <ul>
+    <li>4–5件上衣 · 2条长裤 · 1条短裤或裙子 · 1件薄外套 · <strong>1套正式一点的衣服</strong>（家庭晚餐和告别晚餐）<span class="en-inline" style="font-style:italic">4–5 tops · 2 trousers · shorts or a skirt · a light jacket · <strong>one smarter outfit</strong> for the family dinner and the farewell meal</span></li>
+    <li><strong>一条丝巾</strong>——进清真寺时需要，早晚也能挡风<span class="en-inline" style="font-style:italic">A scarf — needed inside mosques, and useful in cool mornings</span></li>
+    <li>帽子、墨镜、<strong>高倍防晒霜</strong>（棉花堡的白色地面会把阳光反射两遍）<span class="en-inline" style="font-style:italic">Hat, sunglasses, <strong>high-factor sunscreen</strong> — Pamukkale's white ground reflects the sun back at you</span></li>
+  </ul>
+
+  <div class="note tip">
+    <p class="label">💳 关于支付 · ABOUT PAYING</p>
+    <p style="margin:0.4rem 0 0.6rem"><strong>土耳其不能用微信支付和支付宝。</strong>请提前准备好可以在境外刷的信用卡（Visa/Mastercard），再换一点土耳其里拉现金——小巴、集市、给小费的时候用得上。其他地方刷卡都没问题。</p>
+    <p class="en" style="margin:0"><strong>WeChat Pay and Alipay do not work in Turkey.</strong> Bring a Visa or Mastercard that works abroad, plus some Turkish lira in cash for minibuses, markets and tips. Cards are accepted almost everywhere else.</p>
+  </div>
+
+  <h2>📌 其他实用信息</h2>
+  <p class="h2-en">Practical notes</p>
+  <ul>
+    <li><strong>签证：不需要。</strong>中国护照免签入境土耳其，护照有效期在回程日之后还有6个月以上就可以。<span class="en-inline" style="font-style:italic"><strong>No visa needed</strong> — Chinese passports enter Turkey visa-free; the passport just needs 6 months' validity beyond the return date.</span></li>
+    <li><strong>网络：</strong>出发前在都柏林买好土耳其的 eSIM，落地直接能用。<span class="en-inline" style="font-style:italic">Buy a Turkish eSIM in Dublin before we leave — it works the moment we land.</span></li>
+    <li><strong>时差：</strong>土耳其比爱尔兰快2小时。<span class="en-inline" style="font-style:italic">Turkey is 2 hours ahead of Ireland.</span></li>
+    <li><strong>天气：</strong>九月底海边白天28–30°C，卡帕多西亚白天22–25°C但清晨只有10–12°C。<span class="en-inline" style="font-style:italic">Late September: 28–30°C on the coast, 22–25°C in Cappadocia by day but only 10–12°C at dawn.</span></li>
+    <li><strong>长途大巴：</strong>土耳其的城际大巴意外地舒服——有座椅屏幕、发饮料和小食。<span class="en-inline" style="font-style:italic">Turkish intercity coaches are surprisingly comfortable — seat-back screens, drinks and snacks served.</span></li>
+    <li><strong>棉花堡进景区必须赤脚</strong>，这是保护钙化层的规定。<span class="en-inline" style="font-style:italic">You must walk barefoot at Pamukkale — it protects the mineral terraces.</span></li>
+  </ul>
+
+  <footer>祝旅途愉快 🧿 —— 土耳其人道别时说 <em>güle güle</em>，意思是「笑着走」。<br>
+  <span style="font-family:'Iowan Old Style',Georgia,serif;font-style:italic">Have a wonderful trip. In Turkish, goodbye is <em>güle güle</em> — "go smiling".</span></footer>
+</div>
