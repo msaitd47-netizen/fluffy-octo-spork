@@ -58,13 +58,15 @@ Tek gece, ama planın en akıllı gecesi. Günübirlik turlar tam öğlen, kalab
 Gece geldiğiniz için sabah serbest; günü tersine çeviriyoruz.
 - **Geç uyan.** Kasabada acelesiz kahvaltı, Selçuk sokaklarında kısa tur.
 - Öğlen: **Şirince** köyü (8 km, dolmuş var) — meyve şarabı tadımı, taş sokaklar, uzun bir köy öğle yemeği.
-- **15:00'te Efes'te ol.** [Yaz sezonunda 08:00-19:00 açık, son giriş 17:00](https://www.bestephesustours.com/ephesus-opening-hours.html) — yani 4 saatiniz var. Kruvaziyer grupları öğleden sonra gemilerine döndüğü için ortalık boşalır, üstelik **altın saat ışığı Celsus Kütüphanesi için sabahtan bile iyi.** Otelden 3 km.
+- **15:00'te Efes'te ol.** [Yaz sezonunda 08:00-19:00 açık, son giriş 17:00](https://www.bestephesustours.com/ephesus-opening-hours.html) — yani 4 saatiniz var. Kruvaziyer grupları öğleden sonra gemilerine döndüğü için ortalık boşalır, üstelik **altın saat ışığı Celsus Kütüphanesi için sabahtan bile iyi.**
+- 🚕 **Ulaşım:** Otelden Efes'e 3-5 km (girişe göre) — yürünmez, **taksi/dolmuşla ~10 dakika**, ucuz.
+- 💡 **Taktik: taksiyle Üst Kapı'ya çıkın, antik kenti yokuş aşağı yürüyün, Alt Kapı'dan çıkın.** Böylece bütün gezi inişli olur; tersini yaparsanız üç saat tırmanırsınız. Çıkışta dolmuş ve taksi bol.
 - Aynı bölgede: **Artemis Tapınağı** kalıntısı (dünyanın yedi harikasından biriydi), **Efes Müzesi**, **Meryem Ana Evi** — hangisine vakit kalırsa.
 - Akşam: Selçuk'ta yemek, Ayasuluk tepesinde gün batımı.
 
 ### 📍 21 Eylül Pzt — Selçuk → Pamukkale ⚪
 - Sabah acele yok, kasabada rahat bir kahvaltı.
-- Öğlen: **Selçuk → Denizli** — [otobüs ~3 saat 20 dk (Pamukkale Turizm)](https://www.pamukkale.com.tr/otobus-bileti/selcuk-denizli/) ya da **tren ~3,5 saat** (bu hatta tren daha ucuz ve konforlu, Menderes ovasını geçer). Denizli'den Pamukkale köyüne **minibüs 20 dk**, 20 dakikada bir kalkıyor.
+- Öğlen: **Selçuk → Denizli** — otelden **otogara 200 metre**, bavulla bile rahat yürünür. [Otobüs ~3 saat 20 dk (Pamukkale Turizm)](https://www.pamukkale.com.tr/otobus-bileti/selcuk-denizli/) ya da **tren ~3,5 saat** (bu hatta tren daha ucuz ve konforlu, Menderes ovasını geçer). Denizli'den Pamukkale köyüne **minibüs 20 dk**, 20 dakikada bir kalkıyor.
 - **~17:00-18:00 Pamukkale köyünde.** Otele bırak, doğruca travertenlere: **güneş batarken beyaz teraslar turuncuya ve altına dönüyor**, tur otobüsleri çoktan gitmiş. Sıcak termal suda çıplak ayak yukarı doğru yürüyün — tepeye vardığınızda zaten **Hierapolis'in kenarına** değmiş olursunuz, isteyen oradan biraz dolaşır.
 - 🏊 **Kleopatra Antik Havuzu — bunu atlamayın.** Aynı alanın içinde: [yıl boyu 36°C, 08:00-20:00 açık, site girişine ek €6](https://www.pamukkale-turkey.com/cleopatras-pool). 7. yüzyıldaki depremde devrilmiş **Roma sütunlarının arasında yüzüyorsunuz** — havuzun dibi antik mermer. Soyunma odası ve dolap var. **Önce havuz (~17:30), sonra gün batımı için travertenlere çıkın.**
 - Akşam: köyde sakin yemek, sonra otelin termal havuzunda gece keyfi.
@@ -201,11 +203,18 @@ Burada teras normalden çok daha kritik: **kız arkadaşın balona binmezse tera
 8. 🚌 Otobüsler: Selçuk→Denizli (21.09 öğlen), **Denizli→Antalya (22.09 sabah ~09:00-10:00)** — obilet.com
 9. 🔴 Kızıl Tur — **önceden alma**, 23 akşamı Göreme'de karar ver (isteğe bağlı)
 
-### ✅ Alınan otellerde teyit edilecek üç şey
-Rezervasyon yapıldıysa bile bunları yazılı teyit et — sonradan sürpriz olmasın:
-1. **Selçuk:** gece **02:30 check-in** kabul ediliyor mu, gece resepsiyonu var mı? (01:05 uçuşu yüzünden kritik)
-2. **Göreme:** **balon manzaralı teras** var mı ve **04:45 balon çıkışı** için kahvaltı paketi verilebiliyor mu?
-3. **Pamukkale:** otel gerçekten **köyün içinde** mi (Karahayıt değil), **termal havuz** var mı ve 22.09 sabahı için **geç çıkış / bagaj emaneti** mümkün mü?
+### ✅ Alınan Oteller
+
+| Nerede | Otel | Durum |
+|---|---|---|
+| Selçuk (19-20) | **Celsus Boutique Hotel** | [Otogara 200 m](https://www.booking.com/hotel/tr/celsus.html), Efes Müzesi 400 m, merkez 5 dk yürüme |
+| Pamukkale (21) | **Melrose Viewpoint** | Travertenlere 3-5 dk, teras manzarası, açık havuz |
+| Göreme (23-24) | **Vista Cave Hotel** | [Teraslardan ve özel balkonlardan balon manzarası](https://vista-cave.goremehotelsweb.com/en/) |
+
+**Her birinde teyit edilecek tek şey:**
+1. **Celsus:** gece **02:30 check-in** kabul ediliyor mu, gece resepsiyonu var mı? (01:05 uçuşu yüzünden kritik) — *Otogarın 200 m olması 21 Eylül'de bavulla yürümeyi kolaylaştırıyor, bu büyük artı.*
+2. **Melrose:** havuz **gerçek termal mi, normal havuz mu?** 22 Eylül sabahını orada geçireceksiniz. Termal değilse sorun değil ama bilin.
+3. **Vista Cave:** **"24 Eylül sabahı 06:00'da teras açık olacak mı, çay/kahve bulabilir miyiz?"** — yorumlarda tek eleştiri "erken sabah balon izlemeyi kolaylaştırabilirler" olmuş; kız arkadaşın terastan izleyecekse şimdiden netleştir. Ayrıca **04:45 çıkış için kahvaltı paketi** iste.
 
 ## Kabaca Bütçe (2 kişi, toplam)
 
