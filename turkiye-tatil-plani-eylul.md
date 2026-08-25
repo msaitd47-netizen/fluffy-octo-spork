@@ -192,15 +192,20 @@ Burada teras normalden çok daha kritik: **kız arkadaşın balona binmezse tera
 
 ## Yapılacaklar Listesi (şimdi, sırayla)
 1. ✅ ~~Dublin uçuşları — XQ887 / XQ886, €529~~ **ALINDI**
-2. 🏨 **Göreme mağara oteli** — en acil olan bu, eylül sonu için hızla doluyor. **"Balloon view terrace" teyidi al.**
-3. 🎈 Balon: arkadaşa **24.09 asıl, 25.09 sabahı yedek** tarihlerini ver + *"biri uçup biri yerden izleyebilir mi?"* diye sor
-4. ✈️ İç hat 1: AYT→ASR (23.09 **öğlen** seferi) — TL üzerinden
-5. ✈️ İç hat 2: ASR→ADB (25.09 **12:20 ya da 15:10**) — TL üzerinden
+2. ✅ ~~Oteller: Selçuk (2 gece), Pamukkale köyü (1), Göreme mağara otel (2)~~ **ALINDI**
+3. ✈️ **İç hat 1: AYT→ASR (23.09 öğlen seferi)** — sıradaki en acil, TL üzerinden al
+4. ✈️ **İç hat 2: ASR→ADB (25.09, 12:20 ya da 15:10)** — öğlen olsun ki balon yedeği korunsun
+5. 🎈 Balon: arkadaşa **24.09 asıl, 25.09 sabahı yedek** tarihlerini ver + *"biri uçup biri yerden izleyebilir mi?"* diye sor
 6. 🚐 **Abine haber ver:** 19.09 **gece 01:05 varışı** için havalimanı → Selçuk transferi — gece 02:00 mümkün mü, €50 aynı mı?
-7. 🌙 **Selçuk oteli** + rezervasyona "01:05 uçuşuyla geliyoruz, 02:30 check-in" notu
-8. 🏨 Kalan oteller: Pamukkale köyü (1), Antalya Kaleiçi (1), İzmir (1) — acelesi yok
-9. 🚌 Otobüsler: Selçuk→Denizli (21.09 öğlen), **Denizli→Antalya (22.09 sabah ~09:00-10:00)** — obilet.com
-10. 🔴 Kızıl Tur — **önceden alma**, 23 akşamı Göreme'de karar ver (isteğe bağlı)
+7. 🏨 Kalan iki otel: **Antalya Kaleiçi (22.09)** + **İzmir Alsancak (25.09)** — acelesi yok ama ikisi de havuzlu olsun
+8. 🚌 Otobüsler: Selçuk→Denizli (21.09 öğlen), **Denizli→Antalya (22.09 sabah ~09:00-10:00)** — obilet.com
+9. 🔴 Kızıl Tur — **önceden alma**, 23 akşamı Göreme'de karar ver (isteğe bağlı)
+
+### ✅ Alınan otellerde teyit edilecek üç şey
+Rezervasyon yapıldıysa bile bunları yazılı teyit et — sonradan sürpriz olmasın:
+1. **Selçuk:** gece **02:30 check-in** kabul ediliyor mu, gece resepsiyonu var mı? (01:05 uçuşu yüzünden kritik)
+2. **Göreme:** **balon manzaralı teras** var mı ve **04:45 balon çıkışı** için kahvaltı paketi verilebiliyor mu?
+3. **Pamukkale:** otel gerçekten **köyün içinde** mi (Karahayıt değil), **termal havuz** var mı ve 22.09 sabahı için **geç çıkış / bagaj emaneti** mümkün mü?
 
 ## Kabaca Bütçe (2 kişi, toplam)
 
