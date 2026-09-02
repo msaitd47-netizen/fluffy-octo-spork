@@ -18,11 +18,20 @@ Kişi başı ~€265 gidiş-dönüş — diğer seçenekler €539 (İzmir g-d) 
 - **Dönüş 15:05** — son sabah acelesiz İzmir'de geçiyor, gece yarısı uçuşu ya da şafak kalkışı yok. Alsancak'tan havalimanına İZBAN'la 25 dakika.
 - **İzmir plana geri döndü.** Önceki kurguda "feda ettiklerimiz" listesindeydi; artık Kordon gün batımı, Alsancak mezesi ve boyozlu son kahvaltı var — üstelik abinle tatilin hem başında hem sonunda buluşuyorsun.
 
-### İç hatlar (henüz alınmadı)
-- **23 Eylül Çar:** Antalya → Kayseri, **öğlen seferi** — [gün boyu sefer var, sonuncusu 23:30](https://tr.omio.com/ucak-seferleri/antalya/kayseri-fhchf)
-- **25 Eylül Cum:** Kayseri → İzmir, **12:20 ya da 15:10** — [gün içinde bol seçenek](https://www.flightsfrom.com/ASR-ADB)
+### İç hatlar (henüz alınmadı) — bu hafta al
 
-💡 İç hatları **TL üzerinden al** ([enuygun](https://www.enuygun.com/ucak-bileti/), biletall ya da havayolunun TR sitesi) — euro fiyatlandırmasından genelde daha ucuz. İkisi de direkt, ~1,5 saat.
+| Tarih | Uçuş | Saat | Neden |
+|---|---|---|---|
+| 23 Eyl Çar | **Antalya → Kayseri** | **11:00-13:00 arası** | Sabah Kaleiçi'nde kardeşlerle; ~15:30 Göreme, Kızılçukur gün batımına (19:15) rahat yetişir |
+| 25 Eyl Cum | **Kayseri → İzmir** | **12:20** | Balon 25'e kayarsa 07:30'da iner, 08:30 otel, 10:30 havalimanı — rahat yetişir. **08:25 seferini alma**, balon yedeğini öldürür |
+
+**Nereden:** TL üzerinden, havayolunun Türkçe sitesinden (flypgs.com, sunexpress.com) ya da [enuygun](https://www.enuygun.com/ucak-bileti/) / biletall. İrlanda'dan girince siteler euro gösterebiliyor — **ülkeyi Türkiye, para birimini TL yap.** Üçünü de karşılaştır: **Pegasus, SunExpress, AJet.**
+
+> 💰 **BAGAJ — en çok kaybettiren nokta.** Türk iç hatlarında temel ücret genelde **sadece el bagajı** (~8 kg); orta boy valiziniz kabine girmez. **İki uçuşta da bagaj hakkını bileti alırken ekleyin** — havalimanı tarifesi kat kat pahalı. Tek valiz taşıdığınız için tek bagaj hakkı yeter, ikinize ayrı almayın. Bagajla birlikte gerçekçi toplam: **ikiniz için ~€180-250.**
+
+😌 **Rahatlatıcı not:** 25'inde aksilik olsa bile Dublin uçuşuna **bir gece buffer** var (o akşam İzmir'de kalıyorsunuz). Bu iki iç hatta paranoyak olmaya gerek yok.
+
+🚐 **Kayseri havalimanı → Göreme:** transferi Vista Cave'e sorun — otelin kendi shuttle'ı genelde en pratiği (~€10-15/kişi).
 
 ### 🇨🇳 Kız arkadaşın için vize — HALLOLDU ✅
 Çin vatandaşlarına **vize muafiyeti** var: e-vizeye bile gerek yok, pasaportla direkt giriş. Tek dikkat: pasaport dönüş tarihinden itibaren **en az 6 ay geçerli** olsun ve yıpranmamış olsun.
