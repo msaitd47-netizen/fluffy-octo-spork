@@ -78,11 +78,11 @@ Gece geldiğiniz için sabah serbest; günü tersine çeviriyoruz.
 - Öğlen: **Selçuk → Denizli** — otelden **otogara 200 metre**, bavulla bile rahat yürünür. [Otobüs ~3 saat 20 dk (Pamukkale Turizm)](https://www.pamukkale.com.tr/otobus-bileti/selcuk-denizli/) ya da **tren ~3,5 saat** (bu hatta tren daha ucuz ve konforlu, Menderes ovasını geçer). Denizli'den Pamukkale köyüne **minibüs 20 dk**, 20 dakikada bir kalkıyor.
 - **~17:00-18:00 Pamukkale köyünde.** Otele bırak, doğruca travertenlere: **güneş batarken beyaz teraslar turuncuya ve altına dönüyor**, tur otobüsleri çoktan gitmiş. Sıcak termal suda çıplak ayak yukarı doğru yürüyün — tepeye vardığınızda zaten **Hierapolis'in kenarına** değmiş olursunuz, isteyen oradan biraz dolaşır.
 - 🏊 **Kleopatra Antik Havuzu — bunu atlamayın.** Aynı alanın içinde: [yıl boyu 36°C, 08:00-20:00 açık, site girişine ek €6](https://www.pamukkale-turkey.com/cleopatras-pool). 7. yüzyıldaki depremde devrilmiş **Roma sütunlarının arasında yüzüyorsunuz** — havuzun dibi antik mermer. Soyunma odası ve dolap var. **Önce havuz (~17:30), sonra gün batımı için travertenlere çıkın.**
-- Akşam: köyde sakin yemek, sonra otelin termal havuzunda gece keyfi.
+- Akşam: köyde sakin yemek, sonra isteyen **otelin havuzunda** gece keyfi (normal havuz). Yarın sabah erken otobüs var, çok geç kalmayın.
 
-### 📍 22 Eylül Sal — Havuz sabahı → Antalya, deniz akşamı 🌊
-Hierapolis'i çıkardık; sabah tamamen suya ayrıldı.
-- Sabah: acelesiz kahvaltı, sonra **otelin termal havuzunda uzun bir tembellik.** Aceleniz yok, bagajı öğlene kadar toplayın.
+### 📍 22 Eylül Sal — Antalya'ya geçiş, deniz akşamı 🌊
+- Sabah ~07:30 kahvaltı, ~08:15 otelden çıkış (otogara 20 dk minibüs). **Erken kalkmak yok ama oyalanmak da yok** — bugünün ödülü Antalya'da.
+- ⚠️ *Havuz sabahı planlamayın:* [Melrose'un havuzu normal havuz, termal değil](https://www.booking.com/hotel/tr/melrose-viewpoint.html) ve erken otobüse yetişmek gerekiyor. Havuza girmek isterseniz **21 akşamı**, travertenlerden döndükten sonra girin. Gerçek termal deneyimi zaten dün akşam Kleopatra Havuzu'nda aldınız.
 - **~09:00-10:00 Denizli otobüsü** ([Pamukkale Turizm, ~3,5 saat](https://www.pamukkale.com.tr/otobus-bileti/denizli-antalya/)) → **~13:00 Antalya.** Toros geçişi manzaralı.
 - Öğleden sonra: Kaleiçi'ne yerleş, **yat limanı** ve dar sokaklarda kısa tur.
 - **Akşamüstü — günün asıl olayı: Konyaaltı sahili.** Kaleiçi'nden **nostaljik tramvayla** gidilir (kendi başına küçük bir keyif). Uzun çakıl sahil, arkanızda **Beydağları**, önünüzde açık Akdeniz — ve **güneş tam denizin üstüne batıyor.** Sahil boyunca yürüyün, ayaklarınızı suya sokun.
@@ -167,7 +167,7 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 4. "21 Eylül akşamüstü ~18:00 varıyoruz" — sorun olmaz ama haber verin.
 5. Mümkünse **traverten manzaralı oda** iste; beyaz duvar akşam ışıklandırılıyor.
 
-💡 Bu geceye çok para harcamana gerek yok — köy otelleri sade ve ucuz. **Ama havuzuna bak:** akşamı travertende, ertesi sabahı otelin termal havuzunda geçireceksiniz, yani havuz burada odadan önemli. €60 civarı, havuzu iyi bir yer fazlasıyla yeter.
+💡 Bu geceye çok para harcamana gerek yok — köy otelleri sade ve ucuz, siz zaten akşamı travertende ve Kleopatra Havuzu'nda geçireceksiniz. €60-80 civarı, güney kapıya yakın bir yer fazlasıyla yeter. *(Sen Melrose'u aldın: 700 m, €80.)*
 
 **Antalya — 1 gece (22):** 🏊 **Havuzlu olanı seçin.** ⭐ **Tuvana Hotel** (~€90-130) — Kaleiçi'nin göbeğinde ama bahçeli ve **havuzlu**; deniz akşamından dönünce iyi gelir. Alternatif **Alp Paşa** (~€70-100, avlulu), bütçe için **Dogan Hotel** (~€60-90). Kaleiçi civarı olsun — plan yürüme mesafesi üzerine kurulu, kardeşlerle buluşmak da kolay olur.
 
@@ -217,12 +217,12 @@ Burada teras normalden çok daha kritik: **kız arkadaşın balona binmezse tera
 | Nerede | Otel | Durum |
 |---|---|---|
 | Selçuk (19-20) | **Celsus Boutique Hotel** | [Otogara 200 m](https://www.booking.com/hotel/tr/celsus.html), Efes Müzesi 400 m, merkez 5 dk yürüme |
-| Pamukkale (21) | **Melrose Viewpoint** | Travertenlere 3-5 dk, teras manzarası, açık havuz |
+| Pamukkale (21) | **Melrose Viewpoint Pansiyon** | Güney kapıya **700 m**, 24 saat resepsiyon, teras, bagaj emaneti ✅ · havuz **normal** (termal değil) |
 | Göreme (23-24) | **Vista Cave Hotel** | [Teraslardan ve özel balkonlardan balon manzarası](https://vista-cave.goremehotelsweb.com/en/) |
 
 **Her birinde teyit edilecek tek şey:**
 1. **Celsus:** gece **02:30 check-in** kabul ediliyor mu, gece resepsiyonu var mı? (01:05 uçuşu yüzünden kritik) — *Otogarın 200 m olması 21 Eylül'de bavulla yürümeyi kolaylaştırıyor, bu büyük artı.*
-2. **Melrose:** havuz **gerçek termal mi, normal havuz mu?** 22 Eylül sabahını orada geçireceksiniz. Termal değilse sorun değil ama bilin.
+2. ✅ ~~**Melrose:** havuz termal mi?~~ **Cevap alındı: normal havuz.** Güney kapıya 700 m, bagaj emaneti var, check-out 11:00, 24 saat resepsiyon. Sorulacak bir şey kalmadı.
 3. **Vista Cave:** **"24 Eylül sabahı 06:00'da teras açık olacak mı, çay/kahve bulabilir miyiz?"** — yorumlarda tek eleştiri "erken sabah balon izlemeyi kolaylaştırabilirler" olmuş; kız arkadaşın terastan izleyecekse şimdiden netleştir. Ayrıca **04:45 çıkış için kahvaltı paketi** iste.
 
 ## Kabaca Bütçe (2 kişi, toplam)
@@ -256,7 +256,7 @@ Uçak bileti beklediğimizin çok altında çıktı — bütçe rahat bir yere o
 | 19 Cmt | 🟡 | Gündüz Dublin'de serbest, akşam uçuş, gece varış |
 | 20 Paz | 🟢 | Geç uyanma, Şirince, öğleden sonra Efes |
 | 21 Pzt | 🟡 | Öğlen 3,5 sa otobüs → akşam gün batımı travertende |
-| 22 Sal | 🟡 | Tembel sabah → 3,5 sa otobüs → **Konyaaltı'nda deniz + gün batımı** → aile yemeği |
+| 22 Sal | 🟡 | Sabah otobüs (3,5 sa) → öğleden sonra tekne turu → **Konyaaltı'nda deniz + gün batımı** → aile yemeği |
 | 23 Çar | 🟡 | Sabah Kaleiçi → öğlen 1,5 sa uçuş → akşamüstü Kızılçukur |
 | 24 Per | 🔴 | **04:45 balon** — sonrası serbest, öğlen uyku |
 | 25 Cum | 🟢 | Geç uyanma, öğlen uçuş, Kordon akşamı |
@@ -272,7 +272,7 @@ Bu bir "gezi tatili" ama içinde **yedi ayrı su** var — mayoyu en üste koyun
 |---|---|---|
 | **Kleopatra Antik Havuzu** ⭐ | 21 akşam | **36°C**, devrilmiş Roma sütunlarının arasında. Site girişine ek €6. Hayatta bir kez. |
 | Travertenler | 21 akşam | Sıcak termal suda çıplak ayak yürüyüş (yüzme değil ama su) |
-| **Pamukkale otel termal havuzu** | 21 akşam + **22 sabah** | 22 sabahı tamamen boş — uzun bir havuz sabahı |
+| Pamukkale otel havuzu | **21 akşam** | Normal havuz (termal değil) — travertenlerden dönünce |
 | **Konyaaltı — Akdeniz** ⭐ | 22 akşamüstü | **Deniz 26-27°C.** Duş ve soyunma kabini var |
 | Antalya otel havuzu | 22 akşam | Tuvana'nın bahçe havuzu |
 | Mermerli Plajı | 23 sabah *(isteğe bağlı)* | Kaleiçi'nin içinde, uçaktan önce hızlı bir dalış |
