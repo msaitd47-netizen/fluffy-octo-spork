@@ -18,18 +18,33 @@ Kişi başı ~€265 gidiş-dönüş — diğer seçenekler €539 (İzmir g-d) 
 - **Dönüş 15:05** — son sabah acelesiz İzmir'de geçiyor, gece yarısı uçuşu ya da şafak kalkışı yok. Alsancak'tan havalimanına İZBAN'la 25 dakika.
 - **İzmir plana geri döndü.** Önceki kurguda "feda ettiklerimiz" listesindeydi; artık Kordon gün batımı, Alsancak mezesi ve boyozlu son kahvaltı var — üstelik abinle tatilin hem başında hem sonunda buluşuyorsun.
 
-### İç hatlar (henüz alınmadı) — bu hafta al
+### İç hatlar (henüz alınmadı) — **önce 25 Eylül'e bak**
 
-| Tarih | Uçuş | Saat | Neden |
-|---|---|---|---|
-| 23 Eyl Çar | **Antalya → Kayseri** | **11:00-13:00 arası** | Sabah Kaleiçi'nde kardeşlerle; ~15:30 Göreme, Kızılçukur gün batımına (19:15) rahat yetişir |
-| 25 Eyl Cum | **Kayseri → İzmir** | **12:20** | Balon 25'e kayarsa 07:30'da iner, 08:30 otel, 10:30 havalimanı — rahat yetişir. **08:25 seferini alma**, balon yedeğini öldürür |
+İki bacak var ama risk profilleri hiç aynı değil. **Sıralamayı bozma: önce 25'ini araştır, sonra 23'ü al.** Çünkü 25 kısıtlı bacak; oradan çıkacak sonuç 23'ün saatini de etkileyebilir.
 
-**Nereden:** TL üzerinden, havayolunun Türkçe sitesinden (flypgs.com, sunexpress.com) ya da [enuygun](https://www.enuygun.com/ucak-bileti/) / biletall. İrlanda'dan girince siteler euro gösterebiliyor — **ülkeyi Türkiye, para birimini TL yap.** Üçünü de karşılaştır: **Pegasus, SunExpress, AJet.**
+| Sıra | Tarih | Uçuş | Aranacak kalkış aralığı | Risk |
+|---|---|---|---|---|
+| **1️⃣ önce** | 25 Eyl **Cuma** | **Kayseri → İzmir** | **11:00–19:00** | ⚠️ İnce hat — aşağıyı oku |
+| 2️⃣ sonra | 23 Eyl **Çar** | **Antalya → Kayseri** | **10:00–15:00** | ✅ Rahat — SunExpress bu hatta [her gün, haftada ~8 sefer](https://www.flypgs.com/sehirler/antalya-kayseri-ucak-bileti) uçuyor, Pegasus haftada ~4 |
 
-> 💰 **BAGAJ — en çok kaybettiren nokta.** Türk iç hatlarında temel ücret genelde **sadece el bagajı** (~8 kg); orta boy valiziniz kabine girmez. **İki uçuşta da bagaj hakkını bileti alırken ekleyin** — havalimanı tarifesi kat kat pahalı. Tek valiz taşıdığınız için tek bagaj hakkı yeter, ikinize ayrı almayın. Bagajla birlikte gerçekçi toplam: **ikiniz için ~€180-250.**
+**23 Eylül (Antalya → Kayseri):** sabah Kaleiçi'nde kardeşlerle; 10:00–15:00 arası herhangi bir kalkış Göreme'ye ~17:00'de indirir, [Kızılçukur gün batımına](https://www.goreme.com) (19:15) rahat yetişirsin. Bu bacakta gerçek bir sıkıntı beklemiyorum.
 
-😌 **Rahatlatıcı not:** 25'inde aksilik olsa bile Dublin uçuşuna **bir gece buffer** var (o akşam İzmir'de kalıyorsunuz). Bu iki iç hatta paranoyak olmaya gerek yok.
+> ⚠️ **25 Eylül Cuma, Kayseri → İzmir — burada bir varsayımımı düzeltiyorum.**
+> Planda uzun süre **"12:20 seferini al"** yazdım. Araştırınca o saatte bir sefer doğrulayamadım: bu hatta gördüğüm kalkışlar **06:15, 08:45 ve 23:20–23:35** civarında kümeleniyor. Toplamda [haftada ~10 sefer](https://www.flightsfrom.com/ASR-ADB) (Pegasus PC3191/PC3193 + SunExpress XQ9039/XQ9239) yani günde ortalama bir uçuş, ama **günlere eşit dağılmıyor** — SunExpress'in iki seferi de Cuma uçmuyor gibi görünüyor. Yani Cuma günü İzmir'e ne var, saat kaçta, **bunu senin canlı olarak kontrol etmen gerekiyor.** Üç ihtimal ve ne yapacağın:
+>
+> | Cuma ne çıkarsa | Karar |
+> |---|---|
+> | **Öğlen–akşam arası bir direkt** (11:00–19:00) | 🎯 Al, gitsin. Plan aynen işliyor. |
+> | **Sadece 08:45 gibi bir sabah seferi** | ❌ Alma — balon 25'e kayarsa yetişemezsin. Aşağıdaki aktarmaya geç. |
+> | **Sadece 23:20 gibi bir gece seferi** | ❌ Alma — İzmir'e 00:50'de iner, Dublin uçuşundan önceki geceyi ve İzmir akşamını birden yakar. Aktarmaya geç. |
+>
+> 🔁 **Yedek: İstanbul aktarmalı.** Kayseri → İstanbul (SAW) → İzmir. İki bacak da yüksek frekanslı, öğleden sonra kalkışla akşam İzmir'de olursun; kapıdan kapıya ~5 saat. Direkt saatleri kötüyse bu, planı bozmadan çözer — sadece o öğleden sonrayı uçakta geçirirsin. **Tek biletle, tek PNR'da al** (ayrı ayrı alırsan ilk bacak gecikince ikincisi yanar).
+
+**Nereden:** TL üzerinden, havayolunun Türkçe sitesinden ([flypgs.com](https://www.flypgs.com), [sunexpress.com](https://www.sunexpress.com/tr-tr/), ajet.com) ya da [enuygun](https://www.enuygun.com/ucak-bileti/) / biletall. İrlanda'dan girince siteler euro gösterebiliyor — **ülkeyi Türkiye, para birimini TL yap.** Üçünü de karşılaştır: **Pegasus, SunExpress, AJet.**
+
+> 💰 **BAGAJ — en çok kaybettiren nokta.** Türk iç hatlarında temel ücret genelde **sadece el bagajı** (~8 kg); orta boy valiziniz kabine girmez. **İki uçuşta da bagaj hakkını bileti alırken ekleyin** — havalimanı tarifesi kat kat pahalı. Tek valiz taşıdığınız için tek bagaj hakkı yeter, ikinize ayrı almayın. Bagajla birlikte gerçekçi toplam: **ikiniz için ~€180-250** (aktarmalı çözersen ~€40-60 fazlası).
+
+😌 **Rahatlatıcı not:** 25'inde ne olursa olsun Dublin uçuşuna **bir gece buffer** var — o akşam zaten İzmir'de kalıyorsunuz, Dublin ertesi gün 15:05. Yani bu bacakta kaybedilebilecek en kötü şey Kordon'da bir akşam; tatil değil. Paniğe gerek yok, sadece **bugün kontrol et.**
 
 🚐 **Kayseri havalimanı → Göreme:** transferi Vista Cave'e sorun — otelin kendi shuttle'ı genelde en pratiği (~€10-15/kişi).
 
@@ -118,7 +133,7 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 > 🔴 **Kızıl Tur — isteğe bağlı, önceden almayın.** Enerjiniz yerindeyse rehberli Kızıl Tur (~09:30-17:30, öğle yemeği dahil, ~€45-75/kişi) Açık Hava Müzesi + **Paşabağ** peri bacaları + **Devrent (Hayal) Vadisi** + Avanos'u tek pakette veriyor; daha çok yer görürsünüz. Ama balonun üstüne tam gün tur yorucudur. **Kararı 23 akşamı, Göreme'ye vardığınızda verin** — oteller son dakika satıyor, rezervasyona gerek yok.
 
 ### 📍 25 Eylül Cum — Uçak → İzmir (Kordon akşamı)
-- **Balon yedek sabahı:** dün rüzgârdan iptal olduysa bu sabah uçarsınız — balon 07:30'da iner, 08:30'da oteldesiniz, 12:20 ya da 15:10 uçağına rahat yetişirsiniz.
+- **Balon yedek sabahı:** dün rüzgârdan iptal olduysa bu sabah uçarsınız — balon 07:30'da iner, 08:30'da oteldesiniz, 10:15'te havalimanına doğru yoldasınız. **Öğlenden sonraki her uçuşa rahat yetişirsiniz**; işte bu yüzden bu bacakta sabah seferi almıyoruz.
 - **Öğlen Kayseri→İzmir uçağı**, öğleden sonra İzmir'desiniz. Otel: **Alsancak/Kordon**.
 - Akşamüstü: **Kordon'da gün batımı yürüyüşü** — körfezde batan güneş, atlı arabalar. Abini çağır, tatili başladığı şehirde bitiriyorsun.
 - Akşam: Alsancak'ta meze masası + rakı; tatilin veda yemeği.
@@ -204,8 +219,8 @@ Burada teras normalden çok daha kritik: **kız arkadaşın balona binmezse tera
 ## Yapılacaklar Listesi (şimdi, sırayla)
 1. ✅ ~~Dublin uçuşları — XQ887 / XQ886, €529~~ **ALINDI**
 2. ✅ ~~Oteller: Selçuk (2 gece), Pamukkale köyü (1), Göreme mağara otel (2)~~ **ALINDI**
-3. ✈️ **İç hat 1: AYT→ASR (23.09 öğlen seferi)** — sıradaki en acil, TL üzerinden al
-4. ✈️ **İç hat 2: ASR→ADB (25.09, 12:20 ya da 15:10)** — öğlen olsun ki balon yedeği korunsun
+3. ✈️ **İç hat — ÖNCE ARAŞTIR: ASR→ADB (25.09 Cuma)** — Cuma günü öğlen/akşam direkt var mı? Yoksa SAW aktarmalı tek bilet. **Sabah ve gece seferlerini alma.**
+4. ✈️ **Sonra al: AYT→ASR (23.09 Çar, 10:00–15:00 kalkış)** — bu hat rahat, 25'in sonucu netleşince al. İkisinde de **bagaj hakkını bilette ekle**, TL üzerinden
 5. 🎈 Balon: arkadaşa **24.09 asıl, 25.09 sabahı yedek** tarihlerini ver + *"biri uçup biri yerden izleyebilir mi?"* diye sor
 6. 🚐 **Abine haber ver:** 19.09 **gece 01:05 varışı** için havalimanı → Selçuk transferi — gece 02:00 mümkün mü, €50 aynı mı?
 7. 🏨 Kalan iki otel: **Antalya Kaleiçi (22.09)** + **İzmir Alsancak (25.09)** — acelesi yok ama ikisi de havuzlu olsun
