@@ -11,6 +11,8 @@
 | 5 | Mete | Trabzonspor | Bodur ve geniş, güneş gözlüğü alnına takılı |
 | 6 | Tuna | Beşiktaş | En genç, kabuğu pırıl pırıl yeni — sonradan gelir |
 | 7 | Uğur abi | — | İri, yaşlıca, evde beyaz atletle; forma giymiyor |
+| 8 | Hüseyin | Fenerbahçe | Sıska, boynunda ince altın zincir, kalın kaşlı, sürekli sırıtıyor |
+| 9 | Yiğit | Galatasaray | Tedbirli ve titiz hareketler, eşyasına aşırı düşkün |
 
 Üçü aynı formayı (Fenerbahçe) giydiği için ayırt edici fiziksel özellik şart:
 model sadece formaya bakarsa Sait, Mustafa ve Afsan'ı birbirine karıştırıyor.
@@ -25,6 +27,7 @@ Video modelleri kulüp isimlerini ve armalarını ya reddediyor ya da bozuk
 | Fenerbahçe | `navy blue and bright yellow vertically striped football jersey` |
 | Beşiktaş | `black and white vertically striped football jersey` |
 | Trabzonspor | `burgundy and blue football jersey` |
+| Galatasaray | `yellow and red halved football jersey` |
 
 ## Karakter blokları — prompta birebir kopyalayın
 
@@ -60,6 +63,15 @@ karakterin cümlesini o prompta **kelimesi kelimesine** aynı yapıştırın.
 **Uğur abi**
 > a big heavyset older cockroach in a white sleeveless undershirt, relaxed
 > unhurried manner, at home rather than in a football jersey
+
+**Hüseyin**
+> a wiry skinny cockroach in a navy blue and bright yellow vertically striped
+> football jersey, a thin gold chain around his neck, thick eyebrows and a
+> permanent smirk
+
+**Yiğit**
+> a neat careful cockroach in a yellow and red halved football jersey, precise
+> protective movements, fussy about his belongings
 
 ## Grup çekimi için
 
