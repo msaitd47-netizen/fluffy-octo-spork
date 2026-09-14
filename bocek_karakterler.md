@@ -13,6 +13,7 @@
 | 7 | Uğur abi | — | İri, yaşlıca, evde beyaz atletle; forma giymiyor |
 | 8 | Hüseyin | Fenerbahçe | Sıska, boynunda ince altın zincir, kalın kaşlı, sürekli sırıtıyor |
 | 9 | Yiğit | Galatasaray | Tedbirli ve titiz hareketler, eşyasına aşırı düşkün |
+| 10 | Yekta | — | Uzun sıska, kalın çerçeveli gözlük, sırt çantası; alakasız şeyler söyler |
 
 Üçü aynı formayı (Fenerbahçe) giydiği için ayırt edici fiziksel özellik şart:
 model sadece formaya bakarsa Sait, Mustafa ve Afsan'ı birbirine karıştırıyor.
@@ -80,3 +81,8 @@ Hepsi aynı karede olacaksa isimleri değil, kadrodaki yerlerini tarif edin —
 (Mustafa bloğu), ..." şeklinde soldan sağa sırayla. 16:9 yatay kadroda altı
 karakter yan yana rahat sığıyor; dikeyde zorlanan bu düzen yatayda sorun
 çıkarmıyor.
+
+**Yekta**
+> a tall gangly cockroach in thick-framed glasses, a backpack worn on both
+> straps, a messy stack of papers in his front legs, talks too loudly and too
+> close, brings up things nobody asked about
