@@ -67,7 +67,7 @@ Tek gece, ama planın en akıllı gecesi. Günübirlik turlar tam öğlen, kalab
 ### 📍 19 Eylül Cmt — Dublin → Selçuk (gece varışı)
 **XQ887, Dublin 18:40 → İzmir 01:05.** Gündüz Dublin'de serbestsin — bu gün için izin almana gerek yok, rahat rahat toplanıp akşam çıkıyorsun.
 - 01:05 iniş → **abinin arkadaşının transferi** (~1 saat) → **~02:30 Selçuk**. Otel: **Selçuk merkez**, 2 gece (oda 19 Eylül gecesinden tutulacak).
-- ⚠️ **İki teyit şart:** (1) transfer gece 02:00'de mümkün mü, €50 aynı mı? (2) Otel 02:30 check-in kabul ediyor mu, gece resepsiyonu var mı? Rezervasyona "01:05 uçuşuyla geliyoruz" notunu düş.
+- ✅ **İkisi de teyit edildi:** transfer gece 02:00'de geliyor (€50), Celsus 02:30 check-in'i kabul ediyor. Bu gece için yapılacak bir şey kalmadı — uçaktan inip arabaya binip yatağa gidiyorsunuz.
 
 ### 📍 20 Eylül Paz — Şirince + Efes 🏛️ (altın saat)
 Gece geldiğiniz için sabah serbest; günü tersine çeviriyoruz.
@@ -133,7 +133,7 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 ### 📍 25 Eylül Cum — Erken uçuş → **neredeyse tam bir İzmir günü**
 **Uçak 08:50, Göreme'den çıkış 06:15.** Zor yarısı önce, ödülü sonra.
 - **05:30 kalk.** Bavul dün akşamdan hazır olsun, sabah sadece giyinip binin. Vista Cave'den **kahvaltı paketi** alın — havalimanında ya da uçakta yersiniz.
-- **06:15 transfer → 07:45 Kayseri havalimanı → 08:50 kalkış → ~10:20 İzmir.**
+- **06:15 taksi ✅ ayarlandı → 07:45 Kayseri havalimanı → 08:50 kalkış → ~10:20 İzmir.**
 - **~11:30 Alsancak'ta otel** (havalimanından İZBAN'la 25 dk, çok ucuz). Bavulu bırak.
 - 😴 **Öğleden sonra bir şekerleme yap.** İki gün üst üste şafakta kalktınız; bu tatilin gidişatı için o bir saatlik uyku Kemeraltı'nda geçirilecek bir saatten daha değerli.
 - Öğleden sonra kendi hızınızda: **Kemeraltı Çarşısı** (baharat, kuruyemiş, hediyelik — kalabalık ve canlı), **Konak Meydanı** + Saat Kulesi, isterseniz **Tarihi Asansör**'den körfez manzarası.
@@ -160,16 +160,19 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 
 *Bu bölüm artık tarihe karıştı — **beş otelin hepsi alındı.** Hangisinin nerede olduğu ve neyin doğrulandığı aşağıdaki [Alınan Oteller](#-alınan-oteller--hepsi-tamam) tablosunda. Araştırma notları (Pamukkale'de hangi kasaba, Göreme'de teras neden kritik, hangi alternatifler vardı) git geçmişinde duruyor; ihtiyaç olursa oradan bakılır.*
 
-## Yapılacaklar Listesi — **rezervasyonlar bitti, kalan 5 madde**
+## Yapılacaklar Listesi — **kalan 3 madde**
 
-Bilet ve otel işi tamamen kapandı. Kalanlar bir telefon ya da bir mesajlık işler, ama **ikisi kritik:**
+Uçuşlar, beş otel ve **üç transferin hepsi** kapandı. Bütün lojistik halloldu; kalanlar birer mesajlık işler.
 
-1. 🎈 **Balon arkadaşına: "24 Eylül, tek tarih."** Yedek gün yok (25'te uçak 08:50) — bunu net söyle. Bir de sor: *biri uçup biri yerden izleyebilir mi?*
-2. 🚐 **25 Eylül, Göreme → Kayseri havalimanı, sabah 06:15** — o saatte kendiliğinden araç bulunmaz, **önceden rezerve et.** Vista Cave'e sor.
-3. 🥐 **Vista Cave'den İKİ kahvaltı paketi** — 24'ünde 04:45 balon çıkışı, 25'inde 06:15 havalimanı çıkışı. İkisi de kahvaltı saatinden önce.
-4. 🚐 **Abine hatırlat:** 19.09 **gece 01:05 varışı** için havalimanı → Selçuk transferi — gece 02:00 mümkün mü, €50 aynı mı?
-5. 🚌 **Otobüsler:** Selçuk→Denizli (21.09 öğlen), Denizli→Antalya (22.09 sabah ~09:00-10:00) — [obilet.com](https://www.obilet.com), koltuk seçerek al
-6. 🔴 Kızıl Tur — **önceden alma**, 23 akşamı Göreme'de karar ver (isteğe bağlı; 23 öğleden sonra müzeyi gezerseniz gerek kalmayabilir)
+1. 🎈 **Balon arkadaşına: "24 Eylül, tek tarih."** ⬅️ *kalan en önemli madde.* Yedek gün yok (25'te uçak 08:50) — bunu net söyle. Bir de sor: *biri uçup biri yerden izleyebilir mi?*
+2. 🥐 **Vista Cave'den İKİ kahvaltı paketi** — 24'ünde 04:45 balon çıkışı, 25'inde 06:15 taksi. İkisi de kahvaltı saatinden önce. Aynı mesajda: *"24'ünde gün doğumunda teras açık mı, çay/kahve olur mu?"*
+3. 🚌 **Otobüsler:** Selçuk→Denizli (21.09 öğlen), Denizli→Antalya (22.09 sabah ~09:00-10:00) — [obilet.com](https://www.obilet.com), koltuk seçerek al. **Bu hafta sonu için gecikme, eylül sonu hatları dolabiliyor.**
+
+✅ **Kapanan transferler:** 19.09 havalimanı → Selçuk (abinin arkadaşı) · Celsus gece check-in'i · **25.09 Göreme → Kayseri havalimanı taksisi (06:15)**
+
+*(🔴 Kızıl Tur listede değil çünkü bilerek açık bırakıldı — 23 akşamı Göreme'de karar ver. 23 öğleden sonra müzeyi gezerseniz gerek kalmayabilir.)*
+
+❓ **Tek açık soru:** ayarladığın taksi **25'i sabah çıkış** için, değil mi? **23'ü, Kayseri havalimanı → Göreme** yönü de duruyor mu (uçak 12:55'te iniyor)? Vista Cave'in shuttle'ı ya da aynı şoför halleder; bavullarla ~75 dk yol.
 
 ### ✅ Alınan Oteller — hepsi tamam
 
@@ -181,11 +184,11 @@ Bilet ve otel işi tamamen kapandı. Kalanlar bir telefon ya da bir mesajlık i�
 | Göreme (23-24) | **Vista Cave Hotel** | [Teraslardan ve özel balkonlardan balon manzarası](https://vista-cave.goremehotelsweb.com/en/) |
 | İzmir (25) | **Alsancak** | Kordon ve meze sokakları yürüme mesafesi; havalimanına İZBAN'la 25 dk |
 
-**Kalan tek teyit:**
-1. **Celsus:** gece **02:30 check-in** kabul ediliyor mu, gece resepsiyonu var mı? (01:05 uçuşu yüzünden kritik) — *Otogarın 200 m olması 21 Eylül'de bavulla yürümeyi kolaylaştırıyor, bu büyük artı.*
+**Teyitler:**
+1. ✅ ~~**Celsus:** gece 02:30 check-in olur mu?~~ **Onaylandı.** *Otogarın 200 m olması 21 Eylül'de bavulla yürümeyi kolaylaştırıyor, bu büyük artı.*
 2. ✅ ~~**Melrose:** havuz termal mi?~~ **Normal havuz.** Sorulacak bir şey kalmadı.
 3. ✅ ~~**Casamax:** nerede, havuz var mı?~~ **Konyaaltı, havuz yok, kahvaltı dahil.** Havuz yokluğu bu planda sorun değil — o akşam **denize** giriyorsunuz, havuza değil.
-4. **Vista Cave:** 06:15 transferi + iki kahvaltı paketi (yukarıda 2 ve 3). Bir de: *"24'ünde gün doğumunda teras misafirlere açık mı, çay/kahve olur mu?"* — kız arkadaşın terastan izleyecekse önemli.
+4. **Vista Cave:** tek kalan iki kahvaltı paketi + gün doğumunda terasın açık olup olmadığı. Taksi ✅ ayarlandı.
 
 ## Kabaca Bütçe (2 kişi, toplam)
 
