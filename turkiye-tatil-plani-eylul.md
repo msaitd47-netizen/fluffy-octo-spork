@@ -1,6 +1,6 @@
 # Türkiye Turu: 19–26 Eylül 🇹🇷
 
-*Dublin'den kalkıp 8 günde Türkiye'nin en iyi yüzlerini bir Çinli misafire gösterme planı. Üç olmazsa olmaz — **Kapadokya, Pamukkale, Efes** — planın omurgası; Antalya aile durağı. Araba yok, tek erken kalkış balon sabahı.*
+*Dublin'den kalkıp 8 günde Türkiye'nin en iyi yüzlerini bir Çinli misafire gösterme planı. Üç olmazsa olmaz — **Kapadokya, Pamukkale, Efes** — planın omurgası; Antalya aile durağı. Araba yok. **Bütün uçuşlar ve beş otel alındı;** iki erken sabah var (24'ü balon, 25'i uçak), gerisi 08:00'den önce kalkmıyor.*
 
 Eylül sonu, Türkiye gezmek için yılın **en iyi zamanı**dır: yaz kalabalığı çekilmiş, fiyatlar inmiş, hava hâlâ tatlı sıcak (sahilde 28–30°C, Kapadokya'da 22–25°C).
 
@@ -18,35 +18,26 @@ Kişi başı ~€265 gidiş-dönüş — diğer seçenekler €539 (İzmir g-d) 
 - **Dönüş 15:05** — son sabah acelesiz İzmir'de geçiyor, gece yarısı uçuşu ya da şafak kalkışı yok. Alsancak'tan havalimanına İZBAN'la 25 dakika.
 - **İzmir plana geri döndü.** Önceki kurguda "feda ettiklerimiz" listesindeydi; artık Kordon gün batımı, Alsancak mezesi ve boyozlu son kahvaltı var — üstelik abinle tatilin hem başında hem sonunda buluşuyorsun.
 
-### İç hatlar (henüz alınmadı) — **önce 25 Eylül'e bak**
+### İç hatlar — ✅ BİLETLER ALINDI
 
-İki bacak var ama risk profilleri hiç aynı değil. **Sıralamayı bozma: önce 25'ini araştır, sonra 23'ü al.** Çünkü 25 kısıtlı bacak; oradan çıkacak sonuç 23'ün saatini de etkileyebilir.
-
-| Sıra | Tarih | Uçuş | Aranacak kalkış aralığı | Risk |
+| Tarih | Uçuş | Kalkış | Varış | Otelden çıkış |
 |---|---|---|---|---|
-| **1️⃣ önce** | 25 Eyl **Cuma** | **Kayseri → İzmir** | **11:00–19:00** | ⚠️ İnce hat — aşağıyı oku |
-| 2️⃣ sonra | 23 Eyl **Çar** | **Antalya → Kayseri** | **10:00–15:00** | ✅ Rahat — SunExpress bu hatta [her gün, haftada ~8 sefer](https://www.flypgs.com/sehirler/antalya-kayseri-ucak-bileti) uçuyor, Pegasus haftada ~4 |
+| 23 Eyl Çar | **Antalya → Kayseri** | **11:35** | ~12:55 | **09:30** (Casamax → AYT 30 dk) |
+| 25 Eyl Cum | **Kayseri → İzmir** | **08:50** | ~10:20 | **06:15** (Göreme → ASR 75 dk) |
 
-**23 Eylül (Antalya → Kayseri):** sabah Kaleiçi'nde kardeşlerle; 10:00–15:00 arası herhangi bir kalkış Göreme'ye ~17:00'de indirir, [Kızılçukur gün batımına](https://www.goreme.com) (19:15) rahat yetişirsin. Bu bacakta gerçek bir sıkıntı beklemiyorum.
+Artık tatilin bütün sabit noktaları belli. Bu iki saat planın iki gününü yeniden şekillendirdi — aşağıda gün gün işlendi, ama iki sonucu burada söylüyorum çünkü ikisi de **aksiyon gerektiriyor:**
 
-> ⚠️ **25 Eylül Cuma, Kayseri → İzmir — burada bir varsayımımı düzeltiyorum.**
-> Planda uzun süre **"12:20 seferini al"** yazdım. Araştırınca o saatte bir sefer doğrulayamadım: bu hatta gördüğüm kalkışlar **06:15, 08:45 ve 23:20–23:35** civarında kümeleniyor. Toplamda [haftada ~10 sefer](https://www.flightsfrom.com/ASR-ADB) (Pegasus PC3191/PC3193 + SunExpress XQ9039/XQ9239) yani günde ortalama bir uçuş, ama **günlere eşit dağılmıyor** — SunExpress'in iki seferi de Cuma uçmuyor gibi görünüyor. Yani Cuma günü İzmir'e ne var, saat kaçta, **bunu senin canlı olarak kontrol etmen gerekiyor.** Üç ihtimal ve ne yapacağın:
->
-> | Cuma ne çıkarsa | Karar |
-> |---|---|
-> | **Öğlen–akşam arası bir direkt** (11:00–19:00) | 🎯 Al, gitsin. Plan aynen işliyor. |
-> | **Sadece 08:45 gibi bir sabah seferi** | ❌ Alma — balon 25'e kayarsa yetişemezsin. Aşağıdaki aktarmaya geç. |
-> | **Sadece 23:20 gibi bir gece seferi** | ❌ Alma — İzmir'e 00:50'de iner, Dublin uçuşundan önceki geceyi ve İzmir akşamını birden yakar. Aktarmaya geç. |
->
-> 🔁 **Yedek: İstanbul aktarmalı.** Kayseri → İstanbul (SAW) → İzmir. İki bacak da yüksek frekanslı, öğleden sonra kalkışla akşam İzmir'de olursun; kapıdan kapıya ~5 saat. Direkt saatleri kötüyse bu, planı bozmadan çözer — sadece o öğleden sonrayı uçakta geçirirsin. **Tek biletle, tek PNR'da al** (ayrı ayrı alırsan ilk bacak gecikince ikincisi yanar).
+> 🎈 **BALON ARTIK TEK ŞANS: 24 EYLÜL.**
+> 25'inde uçak 08:50'de kalkıyor, yani Göreme'den 06:15'te çıkıyorsunuz. Balon ~07:30'da iniyor — yetişmek matematiksel olarak imkânsız. **Yedek gün diye bir şey kalmadı.** Arkadaşına bunu net söyle: *24 Eylül, tek tarih.* Rüzgârdan iptal olursa ikinci deneme yok; o sabah hiçbir balon uçmadığı için terastan izlenecek bir şey de olmaz. İptal ihtimali %15-20, yani **%80-85 ihtimalle uçuyorsunuz** — ama bilerek girin.
 
-**Nereden:** TL üzerinden, havayolunun Türkçe sitesinden ([flypgs.com](https://www.flypgs.com), [sunexpress.com](https://www.sunexpress.com/tr-tr/), ajet.com) ya da [enuygun](https://www.enuygun.com/ucak-bileti/) / biletall. İrlanda'dan girince siteler euro gösterebiliyor — **ülkeyi Türkiye, para birimini TL yap.** Üçünü de karşılaştır: **Pegasus, SunExpress, AJet.**
+> ⏰ **24 EYLÜL AKŞAMI BAVULU HAZIRLA.**
+> 24'ünde 04:45 balon kalkışı, 25'inde 05:30 uyanma. **Üst üste iki şafak sabahı** — planın başından beri kaçındığım tek şey buydu, uçuş saatleri yüzünden kaçınılamadı. Hafifletmesi şu: 24'ünde balondan sonra öğlen uykusu, akşam erken yatış, ve 25'inde İzmir'de öğleden sonra bir şekerleme. **25'in sabahı zor, kalanı tatilin en rahat yarım günü.**
 
-> 💰 **BAGAJ — en çok kaybettiren nokta.** Türk iç hatlarında temel ücret genelde **sadece el bagajı** (~8 kg); orta boy valiziniz kabine girmez. **İki uçuşta da bagaj hakkını bileti alırken ekleyin** — havalimanı tarifesi kat kat pahalı. Tek valiz taşıdığınız için tek bagaj hakkı yeter, ikinize ayrı almayın. Bagajla birlikte gerçekçi toplam: **ikiniz için ~€180-250** (aktarmalı çözersen ~€40-60 fazlası).
+🚐 **İki transferi şimdi ayarla** (ikisi de normal saat değil):
+- **23 Eyl, Kayseri havalimanı → Göreme** (~13:20 varışa) — Vista Cave shuttle'ı en pratiği, ~€10-15/kişi
+- **25 Eyl, Göreme → Kayseri havalimanı, sabah 06:15** — bu saatte kendiliğinden araç bulunmaz, **önceden rezerve et** + Vista Cave'den **ikinci bir kahvaltı paketi** iste (24 için olanın yanına)
 
-😌 **Rahatlatıcı not:** 25'inde ne olursa olsun Dublin uçuşuna **bir gece buffer** var — o akşam zaten İzmir'de kalıyorsunuz, Dublin ertesi gün 15:05. Yani bu bacakta kaybedilebilecek en kötü şey Kordon'da bir akşam; tatil değil. Paniğe gerek yok, sadece **bugün kontrol et.**
-
-🚐 **Kayseri havalimanı → Göreme:** transferi Vista Cave'e sorun — otelin kendi shuttle'ı genelde en pratiği (~€10-15/kişi).
+😌 **Rahatlatıcı not:** 25'inde bir aksilik olsa bile Dublin uçuşuna **bir gece buffer** var — o akşam İzmir'de kalıyorsunuz, Dublin ertesi gün 15:05. Sabah uçuşunun sessiz ödülü de bu: 10:20'de İzmir'e inince **neredeyse tam bir İzmir günü** kazandınız, eski plandaki üç saat yerine.
 
 ### 🇨🇳 Kız arkadaşın için vize — HALLOLDU ✅
 Çin vatandaşlarına **vize muafiyeti** var: e-vizeye bile gerek yok, pasaportla direkt giriş. Tek dikkat: pasaport dönüş tarihinden itibaren **en az 6 ay geçerli** olsun ve yıpranmamış olsun.
@@ -99,28 +90,33 @@ Gece geldiğiniz için sabah serbest; günü tersine çeviriyoruz.
 - Sabah ~07:30 kahvaltı, ~08:15 otelden çıkış (otogara 20 dk minibüs). **Erken kalkmak yok ama oyalanmak da yok** — bugünün ödülü Antalya'da.
 - ⚠️ *Havuz sabahı planlamayın:* [Melrose'un havuzu normal havuz, termal değil](https://www.booking.com/hotel/tr/melrose-viewpoint.html) ve erken otobüse yetişmek gerekiyor. Havuza girmek isterseniz **21 akşamı**, travertenlerden döndükten sonra girin. Gerçek termal deneyimi zaten dün akşam Kleopatra Havuzu'nda aldınız.
 - **~09:00-10:00 Denizli otobüsü** ([Pamukkale Turizm, ~3,5 saat](https://www.pamukkale.com.tr/otobus-bileti/denizli-antalya/)) → **~13:00 Antalya.** Toros geçişi manzaralı.
-- Öğleden sonra: Kaleiçi'ne yerleş, **yat limanı** ve dar sokaklarda kısa tur.
-- **Akşamüstü — günün asıl olayı: Konyaaltı sahili.** Kaleiçi'nden **nostaljik tramvayla** gidilir (kendi başına küçük bir keyif). Uzun çakıl sahil, arkanızda **Beydağları**, önünüzde açık Akdeniz — ve **güneş tam denizin üstüne batıyor.** Sahil boyunca yürüyün, ayaklarınızı suya sokun.
-  - 🏊 **Eylül sonu denizi ~26-27°C** — bütün yazın ısıttığı su, Dublin'in havasından sıcak. **Mayoyu yanınıza alın**, bu gerçek bir yüzme fırsatı; sahilde duş ve soyunma kabini var.
+- **~14:00: Casamax Suites'e yerleş** — otel [Kaleiçi'nde değil, **Konyaaltı'nda**](https://www.booking.com/hotel/tr/casamaxsuites.html) (Akkuyu Mah.). Otogardan tramvay ya da taksiyle ~25 dk.
+- ⚠️ **Kardeşlere yeri doğru söyle:** buluşma Kaleiçi değil **Konyaaltı.** Otelden Kaleiçi'ne 15 dk taksi, sahile 6 dk (yürümeye kalkarsanız 40 dk — kalkmayın, 5 dakikalık taksi ya da otobüs var).
 - **~15:00-17:00: Kaleiçi marinasından tekne turu** — falezler, mağaralar ve **Aşağı Düden Şelalesi'nin denize döküldüğü** yer; Türkiye'de başka örneği yok, çok da fotojenik.
   - **2 saatlik turu alın** (Düden'e ancak o gidiyor): [TC vatandaşı 300 TL, yabancı 550 TL](https://www.turizm365.com/antalya-kaleici-tekne-turu-fiyatlari-2024/79/) → ikinize ~850 TL (**~€23**). 45 dakikalık kısa tur ~500 TL ama şelaleye çıkmıyor.
   - Marinada birkaç tekneye sorun; boş kalmak istemeyen kaptan indirim yapar.
-- Akşam: kardeşlerle Akdeniz sofrası — piyaz, şiş köfte, künefe. Gece Kaleiçi'nde.
+- **17:00-17:45: Kaleiçi'nde yürüyüş** — Hadrian Kapısı, Yivli Minare, dar sokaklar. **Kısa tutun, bilerek:** yarın sabah Kaleiçi'ne dönme şansınız yok (uçak 11:35), yani eski şehri görmenin tek penceresi bu. Tekne turundan çıkınca marinanın hemen üstünde zaten.
+- **~18:00 — günün asıl olayı: Konyaaltı sahili.** Kaleiçi'nden taksi/tramvayla ~20 dk. Uzun çakıl sahil, arkanızda **Beydağları**, önünüzde açık Akdeniz — ve **güneş tam denizin üstüne batıyor** (~19:05).
+  - 🏊 **Eylül sonu denizi ~26-27°C** — bütün yazın ısıttığı su, Dublin'in havasından sıcak. **Bu, tatilin tek Akdeniz yüzmesi** (yarın sabah vakit yok), yani mayoyu otelde bırakmayın. Sahilde duş ve soyunma kabini var.
+  - 🎯 **Otelin Konyaaltı'nda olması burada avantaja dönüyor:** denizden çıkıp 6 dakikada yatağınızdasınız, ıslak saçla şehir katetmiyorsunuz.
+- Akşam: kardeşlerle **Konyaaltı'nda** Akdeniz sofrası — piyaz, şiş köfte, künefe. Sahil boyu balıkçı ve ocakbaşı bol.
+- 🧳 **Bavulu bu akşam topla:** yarın 09:30'da çıkıyorsunuz ve sabah sadece kahvaltıya vakit var.
 
-> 🏖️ **Hızlı seçenek:** Konyaaltı'na gitmek istemezseniz, **Mermerli Plajı** doğrudan Kaleiçi'nin içinde — surların dibinde küçük bir koy, restorandan iniliyor. "Akdeniz'e ayak bastık" faslını 10 dakikada halleder.
-
-### 📍 23 Eylül Çar — Antalya Sabahı → Kapadokya
-- Sabah: **Kaleiçi** — Hadrian Kapısı, Yivli Minare, yat limanı, surlardan Akdeniz manzarası. Kardeşlerle kahvaltı.
-- 🏊 İsteğe bağlı hızlı dalış: **Mermerli Plajı** doğrudan Kaleiçi'nin içinde, surların dibinde küçük bir koy (restorandan iniliyor). Uçaktan önce son bir Akdeniz banyosu isterseniz 45 dakikada halledersiniz.
-- Öğlen: **AYT→Kayseri uçağı**, **havalimanı shuttle'ı** ile ~1 saatte Göreme. Otel: **mağara otel, 2 gece** — kaya içine oyulmuş oda tek başına bir deneyim, burada cimrilik yok.
-- Akşamüstü: **Uçhisar Kalesi** (bölgeye kuşbakışı), gün batımı **Kızılçukur (Red Valley)** — kayalar kelimenin tam anlamıyla kızıla döner.
-- Akşam: **Testi kebabı** — masada çekiçle kırılan çömlek, Çinli bir misafir için müthiş şov. Erken yat: yarın büyük gün.
+### 📍 23 Eylül Çar — Antalya sabahı → Kapadokya *(sıkı sabah)*
+**Uçak 11:35, otelden çıkış 09:30** (AYT 20,8 km / ~30 dk). Bu sabahın tek işi kahvaltı.
+- **08:00-09:15: otelde kahvaltı, kardeşlerle veda.** [Kahvaltı fiyata dahil](https://www.booking.com/hotel/tr/casamaxsuites.html) — dışarı çıkmaya gerek yok, hem kardeşler de otele gelebilir.
+- ❌ **Kaleiçi turu ve Mermerli Plajı bu sabahtan çıktı** — 11:35 uçuşu ile sığmıyor. İkisi de dün akşama taşındı (yukarı bak). Bunu bilerek feda ediyoruz: Antalya bu planda bir akşam şehri, sabah şehri değil.
+- **09:30 çıkış → 10:00 havalimanı → 11:35 kalkış → ~12:55 Kayseri.**
+- Bagaj + **shuttle ~13:20'de kalkarsa ~14:45 Göreme.** Otel: **Vista Cave, 2 gece** — kaya içine oyulmuş oda tek başına bir deneyim.
+- Öğleden sonra rahat: yerleşme, sonra **Göreme Açık Hava Müzesi** (otele 15 dk yürüme, [fresk dolu kaya kiliseleri, 2 saat yeter](https://muze.gov.tr)). Bunu bugün yapmak yarını boşaltıyor — **yarın öğleden sonra dinlenmeniz gerekecek**, çünkü ertesi sabah 05:30 kalkış var.
+- Akşamüstü: **Uçhisar Kalesi** (bölgeye kuşbakışı), gün batımı **Kızılçukur (Red Valley)** — kayalar kelimenin tam anlamıyla kızıla döner. 11:35 uçuşu bu ikisine rahat yetiştiriyor.
+- Akşam: **Testi kebabı** — masada çekiçle kırılan çömlek, Çinli bir misafir için müthiş şov. **Erken yat: 04:45 kalkış var.**
 
 ### 📍 24 Eylül Per — Balon Sabahı 🎈 + Serbest Gezi
 Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 - **04:45 kalk — tatilin tek erken sabahı, ona da değer.** Balon firması otelden alır, ~1 saat uçuş, iniş sonrası şampanya, 08:00'de kahvaltıdasınız.
 - **Kahvaltıdan sonra odaya dön ve uyu.** Ciddiyim — 2-3 saatlik sabah uykusu bu tatilin en iyi yatırımlarından biri. Kapadokya öğleden sonra da orada duruyor.
-- 🏊 Kelebek gibi havuzlu bir otel seçtiyseniz, öğleden sonranın bir kısmını havuzda geçirin — bu gün zaten bilerek boş bırakıldı.
+- 😴 **Bu öğleden sonrayı bilerek boş bıraktık ve artık boş kalması şart:** yarın sabah 05:30'da kalkıyorsunuz. Müzeyi dün gezdiğiniz için bugün gerçekten serbestsiniz.
 - Öğleden sonra, kendi hızınızda (hepsi Göreme'den yürüme ya da dolmuş mesafesi):
   - **Göreme Açık Hava Müzesi** — fresk dolu kaya kiliseleri, UNESCO listesinde. Otele 15 dk yürüme, 2 saat yeter.
   - **Avanos**'ta çömlek atölyesi (dolmuşla 20 dk) — çarkta kendi çömleğinizi yapın; Çin'in porselen kültürüyle tatlı bir paralellik, sohbeti kendi açar.
@@ -128,19 +124,27 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 
 > 🎈 **Balondan çekinene not (çok normal bir korku):** Sepet büyük, kenarları omuz hizasında — açıkta değil, kapalı bir yerde gibi hissedersiniz. **Rüzgârla birlikte hareket ettiğiniz için rüzgâr hissi yok**; ne motor, ne titreşim, ne ani hareket, sadece arada brülör sesi. Yükseklik korkusu olanlar çoğu zaman cam asansörden rahat buluyor; tek sarsıntılı an iniş, onu da pilot önceden söylüyor. Kapadokya balonculuğu sıkı denetimli ve sadece sakin havada uçuluyor — o iptal oranı güvenlik sisteminin çalıştığının kanıtı.
 >
-> **Karar için acele yok:** 23 akşamı, hatta 04:45'te bile vazgeçilebilir. Arkadaşına sor: *biri uçup biri yerden izleyebilir mi?* Yerden izlemek teselli ödülü değil — meşhur fotoğrafların çoğu zaten otel terasından ya da Kızılçukur'dan, yüzlerce balon aynı anda kalkarken çekiliyor. Biri yukarıdan, biri aşağıdan çeker. **Bu yüzden otelde "balloon view terrace" şart.**
+> **Karar için acele yok:** 23 akşamı, hatta 04:45'te bile vazgeçilebilir. Arkadaşına sor: *biri uçup biri yerden izleyebilir mi?* Yerden izlemek teselli ödülü değil — meşhur fotoğrafların çoğu zaten otel terasından ya da Kızılçukur'dan, yüzlerce balon aynı anda kalkarken çekiliyor. Biri yukarıdan, biri aşağıdan çeker. **Bu yüzden Vista Cave'in terası önemli.**
+>
+> ⚠️ **Ama bugün tek şansınız.** 25'inde uçak 08:50'de kalkıyor, balon 07:30'da iniyor — yedek gün kalmadı. Rüzgârdan iptal olursa ikinci deneme yok. Kararı ona göre verin: *bugün binmezseniz hiç binmemiş olacaksınız.*
 
 > 🔴 **Kızıl Tur — isteğe bağlı, önceden almayın.** Enerjiniz yerindeyse rehberli Kızıl Tur (~09:30-17:30, öğle yemeği dahil, ~€45-75/kişi) Açık Hava Müzesi + **Paşabağ** peri bacaları + **Devrent (Hayal) Vadisi** + Avanos'u tek pakette veriyor; daha çok yer görürsünüz. Ama balonun üstüne tam gün tur yorucudur. **Kararı 23 akşamı, Göreme'ye vardığınızda verin** — oteller son dakika satıyor, rezervasyona gerek yok.
 
-### 📍 25 Eylül Cum — Uçak → İzmir (Kordon akşamı)
-- **Balon yedek sabahı:** dün rüzgârdan iptal olduysa bu sabah uçarsınız — balon 07:30'da iner, 08:30'da oteldesiniz, 10:15'te havalimanına doğru yoldasınız. **Öğlenden sonraki her uçuşa rahat yetişirsiniz**; işte bu yüzden bu bacakta sabah seferi almıyoruz.
-- **Öğlen Kayseri→İzmir uçağı**, öğleden sonra İzmir'desiniz. Otel: **Alsancak/Kordon**.
-- Akşamüstü: **Kordon'da gün batımı yürüyüşü** — körfezde batan güneş, atlı arabalar. Abini çağır, tatili başladığı şehirde bitiriyorsun.
+### 📍 25 Eylül Cum — Erken uçuş → **neredeyse tam bir İzmir günü**
+**Uçak 08:50, Göreme'den çıkış 06:15.** Zor yarısı önce, ödülü sonra.
+- **05:30 kalk.** Bavul dün akşamdan hazır olsun, sabah sadece giyinip binin. Vista Cave'den **kahvaltı paketi** alın — havalimanında ya da uçakta yersiniz.
+- **06:15 transfer → 07:45 Kayseri havalimanı → 08:50 kalkış → ~10:20 İzmir.**
+- **~11:30 Alsancak'ta otel** (havalimanından İZBAN'la 25 dk, çok ucuz). Bavulu bırak.
+- 😴 **Öğleden sonra bir şekerleme yap.** İki gün üst üste şafakta kalktınız; bu tatilin gidişatı için o bir saatlik uyku Kemeraltı'nda geçirilecek bir saatten daha değerli.
+- Öğleden sonra kendi hızınızda: **Kemeraltı Çarşısı** (baharat, kuruyemiş, hediyelik — kalabalık ve canlı), **Konak Meydanı** + Saat Kulesi, isterseniz **Tarihi Asansör**'den körfez manzarası.
+- **~19:00: Kordon'da gün batımı yürüyüşü** — körfezde batan güneş, atlı arabalar, palmiyeler. Abini çağır: tatili başladığı şehirde bitiriyorsun.
 - Akşam: Alsancak'ta meze masası + rakı; tatilin veda yemeği.
 
+> 🎁 **Sabah uçuşunun sessiz ödülü:** eski planda İzmir'e 17:00'de varıp sadece gün batımına yetişiyordunuz. Şimdi **11:30'da şehirdesiniz** — Kemeraltı, Konak, Asansör ve bir şekerleme sığıyor. Yedi gün gezdikten sonra İzmir, üstüne bir şehir daha tıkıştırılan yer değil; **yumuşak iniş.** Bu sabahın bedeli buydu ve fena bir takas değil.
+
 ### 📍 26 Eylül Cmt — İzmir → Dublin
-- Sabah: **Kordon'da İzmir klasiği kahvaltı** (boyoz + haşlanmış yumurta + çay), **Konak Meydanı** + Saat Kulesi, **Kemeraltı Çarşısı**'ndan son hediyelikler.
-- ~12:30'da havalimanına (Alsancak'tan **İZBAN treniyle 25 dk**, çok ucuz) → **XQ886, 15:05 → Dublin 17:50.** Akşam evde, aktarmasız, ertesi gün Pazar — dinlenmeye bile vakit var.
+- Sabah acelesiz: **Kordon'da İzmir klasiği kahvaltı** — boyoz + haşlanmış yumurta + çay. Dün Kemeraltı'nı gezdiyseniz bu sabah gerçekten boş; körfez kenarında oturun.
+- ~12:30'da havalimanına (Alsancak'tan **İZBAN treniyle 25 dk**) → **XQ886, 15:05 → Dublin 17:50.** Akşam evde, aktarmasız, ertesi gün Pazar — dinlenmeye bile vakit var.
 
 ---
 
@@ -154,99 +158,42 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 
 ## Otel Önerileri 🏨
 
-**Selçuk — 2 gece (19-20):** Sakin pansiyon/butik oteller, ~€60-90. Merkezde, **Efes'e ve otogara yakın** bir yer seçin (kasaba küçük, her yer yürüme mesafesi). Bahçeli, ev usulü kahvaltı veren yerler bol; abinin arkadaşlarına da sor — yerel tavsiye altın değerinde. ⚠️ **02:30 check-in teyidi al.**
+*Bu bölüm artık tarihe karıştı — **beş otelin hepsi alındı.** Hangisinin nerede olduğu ve neyin doğrulandığı aşağıdaki [Alınan Oteller](#-alınan-oteller--hepsi-tamam) tablosunda. Araştırma notları (Pamukkale'de hangi kasaba, Göreme'de teras neden kritik, hangi alternatifler vardı) git geçmişinde duruyor; ihtiyaç olursa oradan bakılır.*
 
-### ⚪ Pamukkale — 1 gece (21)
+## Yapılacaklar Listesi — **rezervasyonlar bitti, kalan 5 madde**
 
-**⚠️ Önce en kritik şey: PAMUKKALE KÖYÜ'nde kal.** Rezervasyon yaparken karşına üç yer çıkacak, ikisi yanlış:
-- ✅ **Pamukkale köyü** — travertenlerin dibinde, **güney kapıya yürüme mesafesi.** Doğru cevap bu.
-- ❌ **Karahayıt** — 5 km kuzeyde, büyük termal resortlar var ama travertenlere yürüyemezsin. Akşam gün batımına yetişmek için araç gerekir; bütün planın mantığı çöker.
-- ❌ **Denizli** — 20 km, şehir merkezi. Sadece otogar için uğrayacağın yer.
+Bilet ve otel işi tamamen kapandı. Kalanlar bir telefon ya da bir mesajlık işler, ama **ikisi kritik:**
 
-**⭐ Önerim: Melrose Viewpoint Hotel** (~€50-80)
-[Traverten caddesine 3 dakika, Hierapolis girişine 5 dakika yürüme](https://www.booking.com/landmark/tr/pamukkale-travertines.html); adının hakkını veren teras ve bahçe manzarası, mevsimlik açık havuz. Konum + manzara dengesi en iyi olan bu — akşam gün batımından dönüp terasa oturursun.
+1. 🎈 **Balon arkadaşına: "24 Eylül, tek tarih."** Yedek gün yok (25'te uçak 08:50) — bunu net söyle. Bir de sor: *biri uçup biri yerden izleyebilir mi?*
+2. 🚐 **25 Eylül, Göreme → Kayseri havalimanı, sabah 06:15** — o saatte kendiliğinden araç bulunmaz, **önceden rezerve et.** Vista Cave'e sor.
+3. 🥐 **Vista Cave'den İKİ kahvaltı paketi** — 24'ünde 04:45 balon çıkışı, 25'inde 06:15 havalimanı çıkışı. İkisi de kahvaltı saatinden önce.
+4. 🚐 **Abine hatırlat:** 19.09 **gece 01:05 varışı** için havalimanı → Selçuk transferi — gece 02:00 mümkün mü, €50 aynı mı?
+5. 🚌 **Otobüsler:** Selçuk→Denizli (21.09 öğlen), Denizli→Antalya (22.09 sabah ~09:00-10:00) — [obilet.com](https://www.obilet.com), koltuk seçerek al
+6. 🔴 Kızıl Tur — **önceden alma**, 23 akşamı Göreme'de karar ver (isteğe bağlı; 23 öğleden sonra müzeyi gezerseniz gerek kalmayabilir)
 
-**Alternatifler:**
+### ✅ Alınan Oteller — hepsi tamam
 
-| Otel | Fiyat/gece | Neden |
-|---|---|---|
-| **Bellamaritimo Hotel** | ~€50-75 | Travertenlere **5 dakika yürüme**, köyün en bilinen otellerinden, misafirperverliğiyle ün yapmış |
-| **Venus Suite Hotel** | ~€45-70 | Köy merkezinde, havuzlu, uygun fiyatlı klasik seçenek |
-| **Aspawa Hotel** | ~€45-70 | **Havuzunda gerçek Pamukkale kaynak suyu var** — termal deneyimi otelde de yaşamak istersen |
-| **Naturalis Pamukkale** | ~€60-90 | Tam donanımlı spa + açık havuz; girişe 10 dk (biraz uzak ama en konforlusu) |
-
-**📞 Rezervasyondan önce sor:**
-1. **"Güney kapıya (köy tarafı) kaç dakika yürüme?"** — 10 dakikayı geçmesin.
-2. **"Havuz gerçek termal su mu?"** — bazı oteller "termal" yazıp normal havuz koyuyor. 22 Eylül sabahını orada geçireceksiniz, önemli.
-3. **"Geç check-out mümkün mü?"** — sabah acele etmeden havuzda oyalanmak istersiniz; değilse bagaj emaneti yeter.
-4. "21 Eylül akşamüstü ~18:00 varıyoruz" — sorun olmaz ama haber verin.
-5. Mümkünse **traverten manzaralı oda** iste; beyaz duvar akşam ışıklandırılıyor.
-
-💡 Bu geceye çok para harcamana gerek yok — köy otelleri sade ve ucuz, siz zaten akşamı travertende ve Kleopatra Havuzu'nda geçireceksiniz. €60-80 civarı, güney kapıya yakın bir yer fazlasıyla yeter. *(Sen Melrose'u aldın: 700 m, €80.)*
-
-**Antalya — 1 gece (22):** 🏊 **Havuzlu olanı seçin.** ⭐ **Tuvana Hotel** (~€90-130) — Kaleiçi'nin göbeğinde ama bahçeli ve **havuzlu**; deniz akşamından dönünce iyi gelir. Alternatif **Alp Paşa** (~€70-100, avlulu), bütçe için **Dogan Hotel** (~€60-90). Kaleiçi civarı olsun — plan yürüme mesafesi üzerine kurulu, kardeşlerle buluşmak da kolay olur.
-
-### 🏔️ Göreme — mağara otel, 2 gece (23-24) — EN ÖNEMLİ REZERVASYON
-
-Burada teras normalden çok daha kritik: **kız arkadaşın balona binmezse terasta izleyecek**, yani orası onun balon deneyimi olacak. Terası zayıf bir otel bu tatilin en önemli sabahını yarım bırakır.
-
-**⭐ Önerim: Kelebek Special Cave Hotel** (~€90-150)
-[Sultan'ın verdiği hissi daha uygun fiyata veriyor](https://charlieswanderings.com/accommodation/the-10-very-best-cave-hotels-in-cappadocia/): **iki ayrı teras** (biri vadiye, biri Göreme'ye bakıyor), havuz, hamam ve Michelin'in tanıdığı bir restoran. Kalite/fiyat dengesi en iyi olan bu, üstelik kahvaltısı efsane.
-
-**Alternatifler:**
-
-| Otel | Fiyat/gece | Neden |
-|---|---|---|
-| **Sultan Cave Suites** | €150-350 | [Kapadokya'nın en meşhur terası](https://abovecappadocia.com/blog/best-hotels-cappadocia-balloon-view-terrace) — Göreme'nin en tepesinde, 180° kesintisiz balon manzarası, balon sezonunda terasta erken kahvaltı. ⚠️ *Ama tam da bu yüzden gün doğumunda teras fotoğraf çekimi yapanlarla dolu oluyor; sakinlik arıyorsan tercih etme.* |
-| **Mithra Cave Hotel** | ~€100-180 | Bölgenin en iyi teraslarından, gün doğumu için minderler ve halılarla döşenmiş. Sultan kadar kalabalık değil — **sessizlik isteyenin seçimi.** |
-| **Koza Cave Hotel** | ~€100-200 | Kapadokya'nın **en yüksek çatı terası**; ödüllü, çevre dostu, sakin. |
-| **Terra Cave Hotel** | ~€90-160 | Göreme'nin göbeğinde, panoramik vadi terası. |
-| **Traveler's Cave** | €60-120 | Bütçe dostu ama terası çok katlı ve iyi — ucuzdan da iyi manzara olur. |
-
-**📞 Rezervasyondan önce mutlaka sor:**
-1. **"Balon manzaralı teras var mı, odadan mı ortak alandan mı?"** — bazı oteller "cave hotel" diyor ama vadiye bakmıyor.
-2. **"Oda penceresiz mi?"** — gerçek mağara odaları bazen tamamen kapalı ve rutubetli olabiliyor. Kız arkadaşın kapalı alandan tedirginse **pencereli ya da kemerli bir oda** iste; balondan çekindiğine göre bu detay önemli.
-3. **"24 Eylül sabahı 04:45 balon transferi için erken çıkış sorun olur mu, kahvaltı paketi verebilir misiniz?"**
-4. **"23 Eylül akşamüstü varıyoruz, geç check-in olur mu?"**
-5. Balona binmeyen için: **"Gün doğumunda teras misafirlere açık mı, çay/kahve servisi var mı?"**
-
-⏰ **Aciliyet:** Eylül sonu için [2-3 ay önceden rezervasyon öneriliyor](https://abovecappadocia.com/blog/best-hotels-cappadocia-balloon-view-terrace); sen ~5 hafta kala bakıyorsun. İyi teraslı odalar ilk gidenler — **bu haftayı geçirme.** Booking.com'da iptal edilebilir tarifeyle hemen tut, sonra otelin kendi sitesinden fiyat sor.
-
-**İzmir Alsancak/Kordon — 1 gece (25):** **İzmir Palas** (~€90-120) — 1927'den beri Kordon'un üzerinde, deniz manzaralı oda alın. Alternatif **Kordon Otel Pasaport** (~€80-110).
-
-💡 Genel taktik: booking.com'da iptal edilebilir tarifeyle tutun, sonra otelin kendi sitesinden fiyat isteyin — direkt rezervasyon çoğu zaman ~%10 daha ucuz ya da oda upgrade'i getirir.
-
-## Yapılacaklar Listesi (şimdi, sırayla)
-1. ✅ ~~Dublin uçuşları — XQ887 / XQ886, €529~~ **ALINDI**
-2. ✅ ~~Oteller: Selçuk (2 gece), Pamukkale köyü (1), Göreme mağara otel (2)~~ **ALINDI**
-3. ✈️ **İç hat — ÖNCE ARAŞTIR: ASR→ADB (25.09 Cuma)** — Cuma günü öğlen/akşam direkt var mı? Yoksa SAW aktarmalı tek bilet. **Sabah ve gece seferlerini alma.**
-4. ✈️ **Sonra al: AYT→ASR (23.09 Çar, 10:00–15:00 kalkış)** — bu hat rahat, 25'in sonucu netleşince al. İkisinde de **bagaj hakkını bilette ekle**, TL üzerinden
-5. 🎈 Balon: arkadaşa **24.09 asıl, 25.09 sabahı yedek** tarihlerini ver + *"biri uçup biri yerden izleyebilir mi?"* diye sor
-6. 🚐 **Abine haber ver:** 19.09 **gece 01:05 varışı** için havalimanı → Selçuk transferi — gece 02:00 mümkün mü, €50 aynı mı?
-7. 🏨 Kalan iki otel: **Antalya Kaleiçi (22.09)** + **İzmir Alsancak (25.09)** — acelesi yok ama ikisi de havuzlu olsun
-8. 🚌 Otobüsler: Selçuk→Denizli (21.09 öğlen), **Denizli→Antalya (22.09 sabah ~09:00-10:00)** — obilet.com
-9. 🔴 Kızıl Tur — **önceden alma**, 23 akşamı Göreme'de karar ver (isteğe bağlı)
-
-### ✅ Alınan Oteller
-
-| Nerede | Otel | Durum |
+| Nerede | Otel | Doğrulanan |
 |---|---|---|
 | Selçuk (19-20) | **Celsus Boutique Hotel** | [Otogara 200 m](https://www.booking.com/hotel/tr/celsus.html), Efes Müzesi 400 m, merkez 5 dk yürüme |
 | Pamukkale (21) | **Melrose Viewpoint Pansiyon** | Güney kapıya **700 m**, 24 saat resepsiyon, teras, bagaj emaneti ✅ · havuz **normal** (termal değil) |
+| Antalya (22) | **Casamax Suites** | ⚠️ **Konyaaltı'nda, Kaleiçi'nde değil** · sahile 6 dk araçla, Kaleiçi'ne 15 dk taksi, AYT'ye 20,8 km / 30 dk · kahvaltı dahil, 24 saat resepsiyon, **havuz yok** ([9,5 puan / 754 yorum](https://www.booking.com/hotel/tr/casamaxsuites.html), €142) |
 | Göreme (23-24) | **Vista Cave Hotel** | [Teraslardan ve özel balkonlardan balon manzarası](https://vista-cave.goremehotelsweb.com/en/) |
+| İzmir (25) | **Alsancak** | Kordon ve meze sokakları yürüme mesafesi; havalimanına İZBAN'la 25 dk |
 
-**Her birinde teyit edilecek tek şey:**
+**Kalan tek teyit:**
 1. **Celsus:** gece **02:30 check-in** kabul ediliyor mu, gece resepsiyonu var mı? (01:05 uçuşu yüzünden kritik) — *Otogarın 200 m olması 21 Eylül'de bavulla yürümeyi kolaylaştırıyor, bu büyük artı.*
-2. ✅ ~~**Melrose:** havuz termal mi?~~ **Cevap alındı: normal havuz.** Güney kapıya 700 m, bagaj emaneti var, check-out 11:00, 24 saat resepsiyon. Sorulacak bir şey kalmadı.
-3. **Vista Cave:** **"24 Eylül sabahı 06:00'da teras açık olacak mı, çay/kahve bulabilir miyiz?"** — yorumlarda tek eleştiri "erken sabah balon izlemeyi kolaylaştırabilirler" olmuş; kız arkadaşın terastan izleyecekse şimdiden netleştir. Ayrıca **04:45 çıkış için kahvaltı paketi** iste.
+2. ✅ ~~**Melrose:** havuz termal mi?~~ **Normal havuz.** Sorulacak bir şey kalmadı.
+3. ✅ ~~**Casamax:** nerede, havuz var mı?~~ **Konyaaltı, havuz yok, kahvaltı dahil.** Havuz yokluğu bu planda sorun değil — o akşam **denize** giriyorsunuz, havuza değil.
+4. **Vista Cave:** 06:15 transferi + iki kahvaltı paketi (yukarıda 2 ve 3). Bir de: *"24'ünde gün doğumunda teras misafirlere açık mı, çay/kahve olur mu?"* — kız arkadaşın terastan izleyecekse önemli.
 
 ## Kabaca Bütçe (2 kişi, toplam)
 
 | Kalem | Tahmin (€) | Not |
 |---|---|---|
 | ✈️ Dublin uçuşları (XQ887 + XQ886) | **529** | ✅ Kesin — kişi başı ~€265 g-d |
-| ✈️ İç hatlar AYT→ASR + ASR→ADB ×2 | 120 – 200 | İkisi de direkt, TL üzerinden al |
-| 🏨 Oteller, 7 gece (çift kişilik) | 550 – 860 | Selçuk 2×€60-90; Pamukkale ~€60; **Antalya ~€60-130**; Göreme 2×€120-180; İzmir ~€95 |
+| ✈️ İç hatlar AYT→ASR + ASR→ADB ×2 | 120 – 200 | ✅ Alındı — 23'ü 11:35, 25'i 08:50 |
+| 🏨 Oteller, 7 gece (çift kişilik) | 630 – 900 | ✅ Hepsi alındı. Selçuk 2×€60-90; Pamukkale €80; **Antalya €142**; Göreme 2×€120-180; İzmir ~€95 |
 | 🎈 Balon ×2 | 0 — bütçe dışı | Arkadaş ayarlıyor (piyasa değeri €400-500) |
 | 🔴 Kızıl Tur ×2 | **0 – 150** | İsteğe bağlı — 23 akşamı karar ver; almazsanız girişleri ayrı ödersiniz |
 | ⛵ Antalya tekne turu ×2 | 15 – 25 | 2 saatlik Düden turu (~850 TL); TC tarifesi sana ucuz |
@@ -271,29 +218,38 @@ Uçak bileti beklediğimizin çok altında çıktı — bütçe rahat bir yere o
 | 19 Cmt | 🟡 | Gündüz Dublin'de serbest, akşam uçuş, gece varış |
 | 20 Paz | 🟢 | Geç uyanma, Şirince, öğleden sonra Efes |
 | 21 Pzt | 🟡 | Öğlen 3,5 sa otobüs → akşam gün batımı travertende |
-| 22 Sal | 🟡 | Sabah otobüs (3,5 sa) → öğleden sonra tekne turu → **Konyaaltı'nda deniz + gün batımı** → aile yemeği |
-| 23 Çar | 🟡 | Sabah Kaleiçi → öğlen 1,5 sa uçuş → akşamüstü Kızılçukur |
-| 24 Per | 🔴 | **04:45 balon** — sonrası serbest, öğlen uyku |
-| 25 Cum | 🟢 | Geç uyanma, öğlen uçuş, Kordon akşamı |
-| 26 Cmt | 🟢 | İzmir sabahı, 15:05 uçuş |
+| 22 Sal | 🟡 | Sabah otobüs (3,5 sa) → tekne turu → Kaleiçi → **Konyaaltı'nda deniz + gün batımı** → aile yemeği. *Dolu ama ödüllü gün.* |
+| 23 Çar | 🟡 | **09:30 çıkış**, 11:35 uçuş → 14:45 Göreme → müze → Kızılçukur |
+| 24 Per | 🔴 | **04:45 balon** — sonrası serbest, öğlen uyku, **erken yatış** |
+| 25 Cum | 🟠 | **05:30 kalkış**, 08:50 uçuş → 11:30 İzmir → şekerleme → Kemeraltı → Kordon |
+| 26 Cmt | 🟢 | Acelesiz İzmir sabahı, 15:05 uçuş |
 
-**Üç ilke:** hiçbir yolculuk 4 saati geçmiyor · hiçbir ağır gün üst üste gelmiyor · her yol bacağının sonunda bir ödül var (gün batımı, aile sofrası, Kızılçukur). Tek kırmızı gün balon sabahı ve o günün öğleden sonrası bilerek boş bırakıldı.
+**Üç ilkenin ikisi duruyor, biri kırıldı:** hiçbir yolculuk 4 saati geçmiyor ✅ · her yol bacağının sonunda bir ödül var ✅ · ~~hiçbir ağır gün üst üste gelmiyor~~ ❌.
+
+**24-25 artık üst üste iki şafak sabahı** (04:45 ve 05:30) — uçuş saatleri buna mecbur bıraktı, planın tek gerçek pürüzü bu. Üç şeyle hafifletiliyor:
+1. **23 öğleden sonra müzeyi gezmek** → 24 öğleden sonrasını tamamen boşaltıyor (balondan sonra uyku)
+2. **24 akşamı erken yatış + bavulun hazır olması** → 25 sabahı sadece giyinip binmek
+3. **25 öğleden sonra İzmir'de şekerleme** → son akşama ve dönüş gününe dinlenmiş girmek
+
+Kalan beş günün hiçbirinde 08:00'den önce kalkmak yok.
 
 ## 🏊 Yüzme Rehberi
 
-Bu bir "gezi tatili" ama içinde **yedi ayrı su** var — mayoyu en üste koyun.
+Rezervasyonlar netleşince liste **dört suya** indi — ama en iyi ikisi duruyor.
 
 | Nerede | Ne zaman | Ne |
 |---|---|---|
 | **Kleopatra Antik Havuzu** ⭐ | 21 akşam | **36°C**, devrilmiş Roma sütunlarının arasında. Site girişine ek €6. Hayatta bir kez. |
 | Travertenler | 21 akşam | Sıcak termal suda çıplak ayak yürüyüş (yüzme değil ama su) |
-| Pamukkale otel havuzu | **21 akşam** | Normal havuz (termal değil) — travertenlerden dönünce |
-| **Konyaaltı — Akdeniz** ⭐ | 22 akşamüstü | **Deniz 26-27°C.** Duş ve soyunma kabini var |
-| Antalya otel havuzu | 22 akşam | Tuvana'nın bahçe havuzu |
-| Mermerli Plajı | 23 sabah *(isteğe bağlı)* | Kaleiçi'nin içinde, uçaktan önce hızlı bir dalış |
-| Göreme otel havuzu | 24 öğleden sonra | Kelebek'in havuzu; balon sonrası zaten boş bıraktık |
+| Pamukkale otel havuzu | 21 akşam | Melrose'un havuzu — normal havuz, travertenlerden dönünce |
+| **Konyaaltı — Akdeniz** ⭐ | **22 akşamüstü** | **Deniz 26-27°C**, güneş denize batarken. Duş ve soyunma kabini var |
 
-**Planda olmayan tek şey:** şezlongda uzanılan klasik bir plaj günü. İstenirse tek yol Antalya gecesini Kaleiçi yerine Konyaaltı'nda denize sıfır bir otelde geçirmek — ama o zaman eski şehir ve kardeşlerle buluşma kolaylığı gider. Tek gece için değmez; Konyaaltı'na tramvayla 20 dakika.
+⚠️ **22 Eylül akşamı, Akdeniz'e girmenin tek fırsatı.** Eskiden üç Antalya seçeneği vardı; üçü de kapandı:
+- ~~Antalya otel havuzu~~ → **Casamax'ta havuz yok**
+- ~~Mermerli Plajı, 23 sabah~~ → **11:35 uçuşu ile sığmıyor**
+- ~~Göreme otel havuzu~~ → 24'ünde teoride var ama Kapadokya'da 22-25°C ve o öğleden sonra uykuya ayrıldı
+
+Yani **mayo çantanın en üstünde olsun ve 22 akşamı sahile mayoyla gidin.** O akşamı kaçırırsanız kız arkadaşın Akdeniz'e hiç girmemiş olacak — ki bütün planı onun yüzme isteğine göre yeniden kurmuştuk.
 
 ## 🧳 Valiz Listesi
 
@@ -348,7 +304,7 @@ Bu bir "gezi tatili" ama içinde **yedi ayrı su** var — mayoyu en üste koyun
 - **Tek erken kalkış:** 24 Eylül, balon. Onun dışında her sabah 08:00-09:00 uyanmayla çalışıyor; 20 Eylül'de ise gece varışı yüzünden istediğin kadar uyu.
 - **Hafif seyahat et:** 7 gecede 5 otel değişiyor — yorgunluğun en sessiz kaynağı bavul taşımak. **Tek orta boy valiz + iki el çantası** ideal; otobüs ve dolmuşlarda da hayat kurtarır.
 - **Gece varışı:** 19-20 Eylül gecesi otele 02:30'da gireceksiniz; odayı 19'undan tutun ve otele önceden haber verin.
-- **Balon iptali:** %15-20 ihtimalle rüzgârdan iptal olur; 25 sabahı yedek, uçak öğlen olduğu için rahat yetişir. O sabah bavulu akşamdan hazırla.
+- **Balon iptali:** %15-20 ihtimalle rüzgârdan iptal olur ve **yedek gün yok** (25'te uçak 08:50). Yani %80-85 ihtimalle uçuyorsunuz, ama tek atış. İptal olursa Kapadokya'da zaten üç yarım gününüz var — Kızılçukur, Uçhisar, müze, Avanos; balon olmadan da orası orası.
 - **Pamukkale ayakkabısı:** Travertenlere **çıplak ayak** girilir (zorunlu), yanınıza ıslak ayak için ince havlu + terlik alın.
 - **Para:** Nakit TL biraz bulundurun (dolmuş, pazar, bahşiş); geri kalan her yerde kart geçer. WeChat Pay / Alipay geçmez — kız arkadaşını önceden uyar.
 - **İnternet:** Senin Türk hattın hazır (faturalı/açık olduğunu kontrol et); kız arkadaşına Dublin'den Türkiye eSIM'i al (Airalo vb., ~€10-15).
