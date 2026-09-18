@@ -255,6 +255,70 @@ Rezervasyonlar netleşince liste **dört suya** indi — ama en iyi ikisi duruyo
 
 Yani **mayo çantanın en üstünde olsun ve 22 akşamı sahile mayoyla gidin.** O akşamı kaçırırsanız kız arkadaşın Akdeniz'e hiç girmemiş olacak — ki bütün planı onun yüzme isteğine göre yeniden kurmuştuk.
 
+## 🍽️ Nerede Ne Yenir
+
+*Gün gün, o akşam nerede olacağınıza göre. Her durakta bir ⭐ önerim var, yanında alternatifler. Kaynak: Türkiye'deki yemek ve gezi rehberleri — **açılış saatlerini ve hâlâ açık olduklarını doğrulayamadım**, o yüzden yola çıkmadan haritadan bir bakın.*
+
+### 20 Eylül — Şirince öğle + Selçuk akşam
+Şirince'de öğle yemeği bu tatilin ilk "uzun sofra" anı; acele etmeyin.
+
+| Nerede | Ne | Not |
+|---|---|---|
+| ⭐ **Artemis Restaurant ve Şarap Evi** | Şirince | Manzara + **şarap evi** aynı yerde — "meyve şarabı tadımı ve uzun köy öğlesi" maddesini tek adreste bitiriyor |
+| **Erdem Çiftliği** | Şirince | [Her şey kendi üretimleri](https://wanderlog.com/tr/list/geoCategory/202164/nerede-yenir-sirincedeki-en-iyi-restoran); serpme kahvaltıda taze peynirler ve zeytinyağlılar öne çıkıyor |
+| **Mercan Restoran** | Şirince | **Şirince kebabı**, şevketi bostan, **kabak çiçeği dolması**, patlıcanlı gözleme |
+| **Mekan Efes** | Selçuk merkez | Akşam için: et ve balıkla tanınıyor, kahvaltıdan akşama açık |
+
+🍷 Şirince meyve şarabı turistik ama gerçek bir gelenek — **nar, dut, vişne** klasikleri. Tadım genelde ücretsiz, şişe almadan da içilir.
+
+### 21 Eylül — Pamukkale köyü akşamı
+Travertenden dönünce köyde yenir; mekanlar sade ve ucuz.
+
+⭐ **Denizli kebabı yiyin** — bölgenin imzası, başka yerde bulamazsınız. Yanında **kuzu kapama**, **tas kapama**, **Denizli mantısı**, **yoğurtlu patlıcan gömmesi**.
+
+Köyde öne çıkanlar: **Somunarası**, **Yörük Sofrası**, **Cadde Grill House**, **Beyrani Kebap**, tatlı için **Tabea**. ([kaynak](https://www.kucukoteller.com.tr/pamukkale-ne-yenir))
+
+### 22 Eylül — Antalya, Konyaaltı akşamı (kardeşlerle) 🌊
+Otel Konyaaltı'nda, sahil de öyle — denizden çıkıp yürüme mesafesinde yemek var.
+
+| Nerede | Ne | Not |
+|---|---|---|
+| ⭐ **Adab-ı Balık** | Konyaaltı | [Günlük taze Akdeniz balığı, el yapımı mezeler](https://adabibalik.com/) — sahile en yakın ciddi balıkçı |
+| **Antalya Balık Evi** | Antalya | **2026 Gault & Millau rehberinde** — şehrin en köklülerinden |
+| **Lara Balık Evi** | Konyaaltı şubesi | Şehrin en büyüğü, manzaralı |
+
+💰 Balık restoranlarında kişi başı **~400-700 TL.** 📞 **Rezervasyon yaptırın** — [popüler mekanlar 1-2 gün önceden doluyor](https://www.antalyahurses.com/konyaaltinin-en-gozde-balik-restoranlari/531381).
+
+🥩 **Balık istemezseniz ocakbaşı:** piyaz + şiş köfte + **künefe** üçlüsü Antalya'nın kendi klasiği, sahil boyu bol. 👨‍👩‍👦 **En iyisi kardeşlerine sor** — orada yaşıyorlar, mevsimine ve o haftaki duruma göre senden iyi bilirler. Bu liste sadece elin boş kalmasın diye.
+
+### 23-24 Eylül — Göreme
+İki akşam var, ikisini farklı kurun: biri testi kebabı, biri manzara.
+
+| Nerede | Ne zaman | Not |
+|---|---|---|
+| ⭐ **Seten Restaurant** | **23 akşamı** | [Peri bacası manzaralı teras](https://www.sofra.com.tr/nerede-ne-yenir/2026/03/09/kapadokyanin-en-iyi-restoranlari); meze, yaprak sarma, **testi kebabı**, mantı, kabak çiçeği dolması |
+| **Dibek Restaurant** | Göreme merkez | Testi kebabı ve çömlek güveçleriyle bölgenin en çok anılanı |
+| **Göreme Han** | Göreme merkez | Merkezde, testi kebabı için pratik seçim |
+| ⭐ **Elai Teras** | **24 akşamı** | Uçhisar'da; **Kızıl Vadi ve Erciyes'e uzanan manzara**, gün batımında kokteyl + akşam yemeği — planın "şarap terasında gün batımı" maddesi tam burası |
+| **Seki Restaurant** | Uçhisar | Elai dolu olursa aynı bölgede güçlü alternatif |
+
+🍲 **Testi kebabı pratik bilgi:** [2 kişilik 800-1.500 TL](https://www.zeppelincappadocia.com/tr/blog/kapadokya-testi-kebabi-en-iyi-restoranlar-ve-fiyatlari) (pilav-salata-içecek ekstra). Çömlekte uzun pişiyor — **rezervasyon yaparken "testi kebabı istiyoruz" deyin**, masaya geldiğinde çekiçle kırılması kız arkadaşın için tatilin en iyi videosu olur. Göreme turistik, **yoğun akşamlarda rezervasyon şart.**
+
+### 25 Eylül — İzmir, Alsancak veda yemeği 🥂
+⭐ **Tek Tek Meyhanesi (Kordon)** — manzaralı, mezeleri ve ızgaralarıyla biliniyor, canlı meyhane havası var.
+
+> 💡 **Yerlinin taktiği:** [Kordon'un kendisi manzara odaklı ve pahalı; **bir blok geri, Kıbrıs Şehitleri Caddesi civarı** daha iyi yemek ve daha uygun fiyat veriyor.](https://www.theturkiyeguide.com/city/izmir/best-restaurants/) Gün batımını Kordon'da yürüyerek izleyin, sofrayı arka sokaklarda kurun.
+
+🇨🇳 **Kız arkadaşın için not:** meyhane düzeni — ortaya gelen onlarca küçük tabak, paylaşarak yemek — Çin sofra kültürüne şaşırtıcı derecede yakın. Muhtemelen tatilin en rahat ettiği yemeği bu olur.
+
+### 26 Eylül — son sabah, Kordon kahvaltısı
+⭐ **Fırından al, Kordon'da ye.** [İzmir'in en otantik ve en ucuz kahvaltısı bu](https://www.izmirliyiz.com/izmir-kahvalti-mekanlari-egenin-incisinde-boyoz-ve-gevrek-kokulu-bir-sabah-keyfi/): taze **boyoz** + **gevrek**, yanında çay, körfez kenarında bir bank.
+
+- **Zeynel Ergin Gevrek Fırını** (Alsancak) — gevreğin hası burada; **tulum peynirli kumru**su da meşhur
+- **Dostlar Fırını** (Alsancak) — en köklü boyozculardan, enginarlı/patlıcanlı/peynirli/zeytinli çeşitleri var
+
+Boyozun yanında **haşlanmış yumurta** istemek İzmir usulüdür. Uçak 15:05, yani acele yok.
+
 ## 🧳 Valiz Listesi
 
 **Strateji: tek orta boy valiz + iki el çantası.** 7 gecede 5 otel değişiyor, otobüs ve dolmuş kullanıyorsunuz — hafiflik burada konfor demek. Aldığın SunExpress tarifesinin bagaj hakkını bir kontrol et ("Light" ise sadece el çantası olabilir.)
