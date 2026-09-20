@@ -267,7 +267,13 @@ Yani **mayo çantanın en üstünde olsun ve 22 akşamı sahile mayoyla gidin.**
 | ⭐ **Artemis Restaurant ve Şarap Evi** | Şirince | Manzara + **şarap evi** aynı yerde — "meyve şarabı tadımı ve uzun köy öğlesi" maddesini tek adreste bitiriyor |
 | **Erdem Çiftliği** | Şirince | [Her şey kendi üretimleri](https://wanderlog.com/tr/list/geoCategory/202164/nerede-yenir-sirincedeki-en-iyi-restoran); serpme kahvaltıda taze peynirler ve zeytinyağlılar öne çıkıyor |
 | **Mercan Restoran** | Şirince | **Şirince kebabı**, şevketi bostan, **kabak çiçeği dolması**, patlıcanlı gözleme |
-| **Mekan Efes** | Selçuk merkez | Akşam için: et ve balıkla tanınıyor, kahvaltıdan akşama açık |
+| ⭐ **Ejder Restaurant** | Selçuk merkez | [Kasabanın kalbinde, geleneksel Türk mutfağı, makul fiyat](https://wanderlog.com/list/geoCategory/30024/best-restaurants-to-have-dinner-in-selcuk) — akşam için en tutarlı öneri |
+| **Ali Baba & Mehmet Kebab House** | Selçuk merkez | Selçuk'ta en çok adı geçen favori |
+| **Efes Restaurant** | Selçuk merkez | Küçük, samimi, **ucuz**; vejetaryen çeşidi bol. ⚠️ Bu adda **iki ayrı yer** var (Namık Kemal Cd. / 1006. Sk.) — yorumlara bak |
+| **Mekan Efes** | Selçuk merkez | Et ve balıkla tanınıyor, kahvaltıdan akşama açık |
+| **Selçuk Pidecisi** | Selçuk merkez | Hafif akşam için: taş fırın pide, tatlısı **tahinli pide** |
+
+🍢 **Selçuk'ta çöp şiş yiyin** — [çöp şiş İzmir'de doğrudan Selçuk ilçesiyle özdeşleşmiş](https://www.gezinomi.com/gezi-rehberi/selcuk-meshur-yemekleri-ve-restoranlari.html) bir lezzet: ince şişlerde küçük et parçaları, yanında lavaş ve soğan piyazı. Burada yemenin anlamı var.
 
 🍷 Şirince meyve şarabı turistik ama gerçek bir gelenek — **nar, dut, vişne** klasikleri. Tadım genelde ücretsiz, şişe almadan da içilir.
 
