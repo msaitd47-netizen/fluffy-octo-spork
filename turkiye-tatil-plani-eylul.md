@@ -87,17 +87,20 @@ Gece geldiğiniz için sabah serbest; günü tersine çeviriyoruz.
 - Akşam: köyde sakin yemek, sonra isteyen **otelin havuzunda** gece keyfi (normal havuz). Yarın sabah erken otobüs var, çok geç kalmayın.
 
 ### 📍 22 Eylül Sal — Antalya'ya geçiş, deniz akşamı 🌊
-- Sabah ~07:30 kahvaltı, ~08:15 otelden çıkış (otogara 20 dk minibüs). **Erken kalkmak yok ama oyalanmak da yok** — bugünün ödülü Antalya'da.
+**Otobüs 10:00** (alındı). Sabah rahat: ~07:45 kahvaltı, **~08:40 otelden çıkış**.
 - ⚠️ *Havuz sabahı planlamayın:* [Melrose'un havuzu normal havuz, termal değil](https://www.booking.com/hotel/tr/melrose-viewpoint.html) ve erken otobüse yetişmek gerekiyor. Havuza girmek isterseniz **21 akşamı**, travertenlerden döndükten sonra girin. Gerçek termal deneyimi zaten dün akşam Kleopatra Havuzu'nda aldınız.
-- Köyden **dolmuşla Denizli otogarına** (~30 dk; [dolmuşlar 06:00-21:00 arası düzenli](https://en.wikipedia.org/wiki/Denizli_Bus_Terminal), sabah erken sorun değil) → ~08:50 otogar.
-- **09:00-09:30 Antalya otobüsü** — [bu hatta günde 34 sefer var, Pamukkale Turizm ile ~3 saat 15 dk](https://www.pamukkale.com.tr/otobus-bileti/denizli-antalya/) → **~12:30-13:00 Antalya otogar.** Toros geçişi manzaralı. ⚠️ **10:00'u geçen sefer alma** — otele yerleşip 15:00 tekne turuna yetişmek sıkışır.
-- **~13:30: Casamax Suites'e yerleş** — otel [Kaleiçi'nde değil, **Konyaaltı'nda**](https://www.booking.com/hotel/tr/casamaxsuites.html) (Akkuyu Mah.). ⚠️ Antalya otogarı **şehrin kuzeyinde (Kepez)**, otel **güneybatıda** — yakın değil, ~25-30 dk. **Bavulla tramvay aktarmasıyla uğraşma, taksiye bin;** kardeşlerinden biri otogardan alabilirse daha da iyi.
+- Köyden **dolmuşla Denizli otogarına** (~30 dk; [dolmuşlar 06:00-21:00 arası düzenli](https://en.wikipedia.org/wiki/Denizli_Bus_Terminal), 15-20 dakikada bir) → **~09:20-09:30 otogar.** 20 dakika payın var, yeter.
+- **10:00 Antalya otobüsü** ([Pamukkale Turizm ile ~3 saat 15 dk](https://www.pamukkale.com.tr/otobus-bileti/denizli-antalya/)) → **~13:15-13:45 Antalya otogar.** Toros geçişi manzaralı.
+- **~14:00-14:20: Casamax Suites'e yerleş** — otel [Kaleiçi'nde değil, **Konyaaltı'nda**](https://www.booking.com/hotel/tr/casamaxsuites.html) (Akkuyu Mah.). ⚠️ Antalya otogarı **şehrin kuzeyinde (Kepez)**, otel **güneybatıda** — yakın değil, ~25-30 dk. **Bavulla tramvay aktarmasıyla uğraşma, taksiye bin;** kardeşlerinden biri otogardan alabilirse daha da iyi.
 - ⚠️ **Kardeşlere yeri doğru söyle:** buluşma Kaleiçi değil **Konyaaltı.** Otelden Kaleiçi'ne 15 dk taksi, sahile 6 dk (yürümeye kalkarsanız 40 dk — kalkmayın, 5 dakikalık taksi ya da otobüs var).
-- **~15:00-17:00: Kaleiçi marinasından tekne turu** — falezler, mağaralar ve **Aşağı Düden Şelalesi'nin denize döküldüğü** yer; Türkiye'de başka örneği yok, çok da fotojenik.
+> 🔄 **10:00 otobüsü yüzünden öğleden sonrayı yeniden sıraladım.** Eskiden "önce tekne, sonra Kaleiçi" idi; 14:00'te otelde olunca 15:00 teknesine koşturmak gerekirdi. Yeni sıra hem rahat hem daha iyi ışık veriyor: **önce Kaleiçi yürüyüşü, sonra tekne, sonra gün batımında deniz.**
+
+- **~14:40-15:30: Kaleiçi yürüyüşü** — Hadrian Kapısı, Yivli Minare, dar sokaklar, surlardan Akdeniz. Otelden taksiyle 15 dk. **Eski şehri görmenin tek penceresi bu** (yarın sabah uçak 11:35, dönüş yok).
+- **~16:00-18:00: marinadan tekne turu** — falezler, mağaralar ve **Aşağı Düden Şelalesi'nin denize döküldüğü** yer; Türkiye'de başka örneği yok. Yürüyüş zaten sizi marinaya indiriyor.
+  - ⚠️ **Marinada önce son 2 saatlik kalkışı sor.** 16:00 yoksa en geç kaçta kalkıyorsa onu al ve Kaleiçi yürüyüşünü tekneden sonraya kaydır — sıra esnek, tekne saati değil.
   - **2 saatlik turu alın** (Düden'e ancak o gidiyor): [TC vatandaşı 300 TL, yabancı 550 TL](https://www.turizm365.com/antalya-kaleici-tekne-turu-fiyatlari-2024/79/) → ikinize ~850 TL (**~€23**). 45 dakikalık kısa tur ~500 TL ama şelaleye çıkmıyor.
   - Marinada birkaç tekneye sorun; boş kalmak istemeyen kaptan indirim yapar.
-- **17:00-17:45: Kaleiçi'nde yürüyüş** — Hadrian Kapısı, Yivli Minare, dar sokaklar. **Kısa tutun, bilerek:** yarın sabah Kaleiçi'ne dönme şansınız yok (uçak 11:35), yani eski şehri görmenin tek penceresi bu. Tekne turundan çıkınca marinanın hemen üstünde zaten.
-- **~18:00 — günün asıl olayı: Konyaaltı sahili.** Kaleiçi'nden taksi/tramvayla ~20 dk. Uzun çakıl sahil, arkanızda **Beydağları**, önünüzde açık Akdeniz — ve **güneş tam denizin üstüne batıyor** (~19:05).
+- **~18:20 — günün asıl olayı: Konyaaltı sahili.** Kaleiçi'nden taksi/tramvayla ~20 dk; gün batımına (~19:05) tam yetişiyorsunuz. Uzun çakıl sahil, arkanızda **Beydağları**, önünüzde açık Akdeniz — ve **güneş tam denizin üstüne batıyor** (~19:05).
   - 🏊 **Eylül sonu denizi ~26-27°C** — bütün yazın ısıttığı su, Dublin'in havasından sıcak. **Bu, tatilin tek Akdeniz yüzmesi** (yarın sabah vakit yok), yani mayoyu otelde bırakmayın. Sahilde duş ve soyunma kabini var.
   - 🎯 **Otelin Konyaaltı'nda olması burada avantaja dönüyor:** denizden çıkıp 6 dakikada yatağınızdasınız, ıslak saçla şehir katetmiyorsunuz.
 - Akşam: kardeşlerle **Konyaaltı'nda** Akdeniz sofrası — piyaz, şiş köfte, künefe. Sahil boyu balıkçı ve ocakbaşı bol.
