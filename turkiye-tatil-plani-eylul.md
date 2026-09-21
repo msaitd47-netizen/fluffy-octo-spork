@@ -81,7 +81,7 @@ Gece geldiğiniz için sabah serbest; günü tersine çeviriyoruz.
 
 ### 📍 21 Eylül Pzt — Selçuk → Pamukkale ⚪
 - Sabah acele yok, kasabada rahat bir kahvaltı.
-- Öğlen: **Selçuk → Denizli** — otelden **otogara 200 metre**, bavulla bile rahat yürünür. [Otobüs ~3 saat 20 dk (Pamukkale Turizm)](https://www.pamukkale.com.tr/otobus-bileti/selcuk-denizli/) ya da **tren ~3,5 saat** (bu hatta tren daha ucuz ve konforlu, Menderes ovasını geçer). Denizli'den Pamukkale köyüne **minibüs**: otogarda **alt kata inip Peron 76**'ya git — [15-20 dakikada bir kalkıyor, ~18 km, ~30 dk](https://turkeytravelplanner.com/go/Aegean/Pamukkale/trans/index.html), bilet yok, binince ödüyorsun. 💡 obilet'te varış yeri doğrudan **"Pamukkale"** diye satan bir firma çıkarsa onu al — Denizli otogarından köye ücretsiz servis veriyorlar, peron arama faslı biter.
+- Öğlen: **Selçuk → Denizli** — ⚠️ **otogar yürüme mesafesinde değil** (Booking "200 m" diyor ama otel resepsiyonu "biraz uzak" dedi — yerinde olan haklı). **Resepsiyondan taksi çağırtın**, birkaç dakika sürer. Otogarda 15-20 dk erken olmak için planladığından 15 dk önce çık. [Otobüs ~3 saat 20 dk (Pamukkale Turizm)](https://www.pamukkale.com.tr/otobus-bileti/selcuk-denizli/) ya da **tren ~3,5 saat** (bu hatta tren daha ucuz ve konforlu, Menderes ovasını geçer). Denizli'den Pamukkale köyüne **minibüs**: otogarda **alt kata inip Peron 76**'ya git — [15-20 dakikada bir kalkıyor, ~18 km, ~30 dk](https://turkeytravelplanner.com/go/Aegean/Pamukkale/trans/index.html), bilet yok, binince ödüyorsun. 💡 obilet'te varış yeri doğrudan **"Pamukkale"** diye satan bir firma çıkarsa onu al — Denizli otogarından köye ücretsiz servis veriyorlar, peron arama faslı biter.
 - **~17:00-18:00 Pamukkale köyünde.** Otele bırak, doğruca travertenlere: **güneş batarken beyaz teraslar turuncuya ve altına dönüyor**, tur otobüsleri çoktan gitmiş. Sıcak termal suda çıplak ayak yukarı doğru yürüyün — tepeye vardığınızda zaten **Hierapolis'in kenarına** değmiş olursunuz, isteyen oradan biraz dolaşır.
 - 🏊 **Kleopatra Antik Havuzu — bunu atlamayın.** Aynı alanın içinde: [yıl boyu 36°C, 08:00-20:00 açık, site girişine ek €6](https://www.pamukkale-turkey.com/cleopatras-pool). 7. yüzyıldaki depremde devrilmiş **Roma sütunlarının arasında yüzüyorsunuz** — havuzun dibi antik mermer. Soyunma odası ve dolap var. **Önce havuz (~17:30), sonra gün batımı için travertenlere çıkın.**
 - Akşam: köyde sakin yemek, sonra isteyen **otelin havuzunda** gece keyfi (normal havuz). Yarın sabah erken otobüs var, çok geç kalmayın.
@@ -179,14 +179,14 @@ Uçuşlar, beş otel ve **üç transferin hepsi** kapandı. Bütün lojistik hal
 
 | Nerede | Otel | Doğrulanan |
 |---|---|---|
-| Selçuk (19-20) | **Celsus Boutique Hotel** | [Otogara 200 m](https://www.booking.com/hotel/tr/celsus.html), Efes Müzesi 400 m, merkez 5 dk yürüme |
+| Selçuk (19-20) | **Celsus Boutique Hotel** | Efes Müzesi 400 m, merkez 5 dk yürüme. ⚠️ **Otogar yürüme mesafesinde değil** — Booking'in "200 m" verisi yanlış çıktı, resepsiyon "biraz uzak" dedi; otogara taksiyle gidin |
 | Pamukkale (21) | **Melrose Viewpoint Pansiyon** | Güney kapıya **700 m**, 24 saat resepsiyon, teras, bagaj emaneti ✅ · havuz **normal** (termal değil) |
 | Antalya (22) | **Casamax Suites** | ⚠️ **Konyaaltı'nda, Kaleiçi'nde değil** · sahile 6 dk araçla, Kaleiçi'ne 15 dk taksi, AYT'ye 20,8 km / 30 dk · kahvaltı dahil, 24 saat resepsiyon, **havuz yok** ([9,5 puan / 754 yorum](https://www.booking.com/hotel/tr/casamaxsuites.html), €142) |
 | Göreme (23-24) | **Vista Cave Hotel** | [Teraslardan ve özel balkonlardan balon manzarası](https://vista-cave.goremehotelsweb.com/en/) |
 | İzmir (25) | **Alsancak** | Kordon ve meze sokakları yürüme mesafesi; havalimanına İZBAN'la 25 dk |
 
 **Teyitler:**
-1. ✅ ~~**Celsus:** gece 02:30 check-in olur mu?~~ **Onaylandı.** *Otogarın 200 m olması 21 Eylül'de bavulla yürümeyi kolaylaştırıyor, bu büyük artı.*
+1. ✅ ~~**Celsus:** gece 02:30 check-in olur mu?~~ **Onaylandı.** ⚠️ *Düzeltme: Booking'in "otogara 200 m" verisi sahada doğrulanmadı — resepsiyon otogarın biraz uzak olduğunu söyledi. 21 Eylül çıkışında taksi gerekiyor.*
 2. ✅ ~~**Melrose:** havuz termal mi?~~ **Normal havuz.** Sorulacak bir şey kalmadı.
 3. ✅ ~~**Casamax:** nerede, havuz var mı?~~ **Konyaaltı, havuz yok, kahvaltı dahil.** Havuz yokluğu bu planda sorun değil — o akşam **denize** giriyorsunuz, havuza değil.
 4. **Vista Cave:** tek kalan iki kahvaltı paketi + gün doğumunda terasın açık olup olmadığı. Taksi ✅ ayarlandı.
