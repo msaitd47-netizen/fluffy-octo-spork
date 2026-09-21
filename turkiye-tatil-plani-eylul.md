@@ -286,7 +286,11 @@ Travertenden dönünce köyde yenir; mekanlar sade ve ucuz.
 
 ⭐ **Denizli kebabı yiyin** — bölgenin imzası, başka yerde bulamazsınız. Yanında **kuzu kapama**, **tas kapama**, **Denizli mantısı**, **yoğurtlu patlıcan gömmesi**.
 
-Köyde öne çıkanlar: **Somunarası**, **Yörük Sofrası**, **Cadde Grill House**, **Beyrani Kebap**, tatlı için **Tabea**. ([kaynak](https://www.kucukoteller.com.tr/pamukkale-ne-yenir))
+⭐ **Mekan: Kayas Wine House** — köy merkezinde, otellerin arasında, Melrose'dan yürüme mesafesi. [Google 4,6](https://wanderlog.com/place/details/754765/kayas-wine-house); Türk-Akdeniz mutfağı, ızgaralar, bahçe terası, akşam canlı müzik, makul fiyat. En çok övülen: **közlenmiş patlıcan**. ⚠️ Kalabalıkken servis yavaşlıyor.
+
+Alternatifler: **Somunarası**, **Cadde Grill House**, **Beyrani Kebap**, tatlı için **Tabea**.
+
+❌ **Yörük Sofrası'nı listeden çıkardım** — [Tripadvisor'da 3,9 ve 68 restoran içinde 38. sırada](https://www.tripadvisor.com/Restaurant_Review-g297992-d1405688-Reviews-Yoruk_Sofrasi-Pamukkale.html). Üst terasında traverten manzarası var ama manzara mekânı, yemek mekânı değil — üstelik travertenleri zaten içeriden görmüş olacaksınız.
 
 ### 22 Eylül — Antalya, Konyaaltı akşamı (kardeşlerle) 🌊
 Otel Konyaaltı'nda, sahil de öyle — denizden çıkıp yürüme mesafesinde yemek var.
