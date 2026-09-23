@@ -311,12 +311,14 @@ Otel Konyaaltı'nda, sahil de öyle — denizden çıkıp yürüme mesafesinde y
 | Nerede | Ne zaman | Not |
 |---|---|---|
 | ⭐ **Seten Restaurant** | **23 akşamı** | [Peri bacası manzaralı teras](https://www.sofra.com.tr/nerede-ne-yenir/2026/03/09/kapadokyanin-en-iyi-restoranlari); meze, yaprak sarma, **testi kebabı**, mantı, kabak çiçeği dolması |
-| **Dibek Restaurant** | Göreme merkez | Testi kebabı ve çömlek güveçleriyle bölgenin en çok anılanı |
+| **Topdeck Cave** | Göreme merkez | Küçük, samimi, mağara içinde; en çok önerilenlerden. Yer az, **mutlaka ara** |
+| **Dibek** | Göreme merkez | Testi kebabının klasik adresi ama [4,0 / 203 restoran içinde 76.](https://www.tripadvisor.com/Restaurant_Review-g297983-d1099947-Reviews-Dibek-Goreme_Nevsehir_Province_Cappadocia.html) — bazı yorumlar "eski şöhretiyle yaşayan turist tuzağı" diyor |
+| **Old Cappadocia / Cappadocian Cuisine** | Göreme merkez | 2026 listelerinde geçen alternatifler |
 | **Göreme Han** | Göreme merkez | Merkezde, testi kebabı için pratik seçim |
 | ⭐ **Elai Teras** | **24 akşamı** | Uçhisar'da; **Kızıl Vadi ve Erciyes'e uzanan manzara**, gün batımında kokteyl + akşam yemeği — planın "şarap terasında gün batımı" maddesi tam burası |
 | **Seki Restaurant** | Uçhisar | Elai dolu olursa aynı bölgede güçlü alternatif |
 
-🍲 **Testi kebabı pratik bilgi:** [2 kişilik 800-1.500 TL](https://www.zeppelincappadocia.com/tr/blog/kapadokya-testi-kebabi-en-iyi-restoranlar-ve-fiyatlari) (pilav-salata-içecek ekstra). Çömlekte uzun pişiyor — **rezervasyon yaparken "testi kebabı istiyoruz" deyin**, masaya geldiğinde çekiçle kırılması kız arkadaşın için tatilin en iyi videosu olur. Göreme turistik, **yoğun akşamlarda rezervasyon şart.**
+🍲 **Testi kebabı — en kritik detay:** çömlekte **3-4 saat** pişiyor, bu yüzden bazı yerler (Dibek dahil) **bir gün öncesinden rezervasyon** istiyor. **Nereye giderseniz gidin önce telefon edip "bu akşam testi kebabı var mı?" diye sorun** — gidip masaya oturunca öğrenmeyin. Fiyat: [2 kişilik 800-1.500 TL](https://www.zeppelincappadocia.com/tr/blog/kapadokya-testi-kebabi-en-iyi-restoranlar-ve-fiyatlari) (pilav-salata-içecek ekstra). Bir akşam bulamazsanız sorun değil — iki akşamınız var, testiyi diğerine kaydırın, masaya geldiğinde çekiçle kırılması kız arkadaşın için tatilin en iyi videosu olur. Göreme turistik, **yoğun akşamlarda rezervasyon şart.**
 
 ### 25 Eylül — İzmir, Alsancak veda yemeği 🥂
 ⭐ **Tek Tek Meyhanesi (Kordon)** — manzaralı, mezeleri ve ızgaralarıyla biliniyor, canlı meyhane havası var.
