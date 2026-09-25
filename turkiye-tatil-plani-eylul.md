@@ -328,7 +328,20 @@ Otel Konyaaltı'nda, sahil de öyle — denizden çıkıp yürüme mesafesinde y
 🇨🇳 **Kız arkadaşın için not:** meyhane düzeni — ortaya gelen onlarca küçük tabak, paylaşarak yemek — Çin sofra kültürüne şaşırtıcı derecede yakın. Muhtemelen tatilin en rahat ettiği yemeği bu olur.
 
 ### 26 Eylül — son sabah, Kordon kahvaltısı
-⭐ **Fırından al, Kordon'da ye.** [İzmir'in en otantik ve en ucuz kahvaltısı bu](https://www.izmirliyiz.com/izmir-kahvalti-mekanlari-egenin-incisinde-boyoz-ve-gevrek-kokulu-bir-sabah-keyfi/): taze **boyoz** + **gevrek**, yanında çay, körfez kenarında bir bank.
+⭐ **En iyisi ikisini birden yap: otur serpme kahvaltı + dönüşte fırından boyoz.**
+
+**Serpme için** (otel Atatürk Cd. 404-410, ikisi de aynı kaldırımda):
+
+| Nerede | Adres | Not |
+|---|---|---|
+| ⭐ **Moresi Kordon** | Atatürk Cd. **344** | Girit esintili serpme, ev yapımı reçeller. Rezervasyon **0553 838 28 38** |
+| **Tuzu Biberi Kordon** | Atatürk Cd. **376 A** | Soğuk çeşitler **sınırsız** |
+| **Veli Usta Kordon** | Kordon | 30 yılı aşkın, 30+ çeşit, deniz manzaralı bölüm |
+| **80ler Kahvaltı** | Alsancak | Tarihi Rum evinde |
+
+⚠️ **26 Eylül Cumartesi** — [Kordon kahvaltıcıları 08:00-09:00 açılıyor, hafta sonu doluyor](https://www.lezzet.com.tr/lezzetten-haberler/alsancak-kahvalti-mekanlari): 09:00'da orada ol ya da akşamdan ara.
+
+**Sonra fırından boyoz al.** [İzmir'in en otantik ve en ucuz kahvaltısı bu](https://www.izmirliyiz.com/izmir-kahvalti-mekanlari-egenin-incisinde-boyoz-ve-gevrek-kokulu-bir-sabah-keyfi/): taze **boyoz** + **gevrek**, yanında çay, körfez kenarında bir bank.
 
 - **Zeynel Ergin Gevrek Fırını** (Alsancak) — gevreğin hası burada; **tulum peynirli kumru**su da meşhur
 - **Dostlar Fırını** (Alsancak) — en köklü boyozculardan, enginarlı/patlıcanlı/peynirli/zeytinli çeşitleri var
