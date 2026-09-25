@@ -321,7 +321,16 @@ Otel Konyaaltı'nda, sahil de öyle — denizden çıkıp yürüme mesafesinde y
 🍲 **Testi kebabı — en kritik detay:** çömlekte **3-4 saat** pişiyor, bu yüzden bazı yerler (Dibek dahil) **bir gün öncesinden rezervasyon** istiyor. **Nereye giderseniz gidin önce telefon edip "bu akşam testi kebabı var mı?" diye sorun** — gidip masaya oturunca öğrenmeyin. Fiyat: [2 kişilik 800-1.500 TL](https://www.zeppelincappadocia.com/tr/blog/kapadokya-testi-kebabi-en-iyi-restoranlar-ve-fiyatlari) (pilav-salata-içecek ekstra). Bir akşam bulamazsanız sorun değil — iki akşamınız var, testiyi diğerine kaydırın, masaya geldiğinde çekiçle kırılması kız arkadaşın için tatilin en iyi videosu olur. Göreme turistik, **yoğun akşamlarda rezervasyon şart.**
 
 ### 25 Eylül — İzmir, Alsancak veda yemeği 🥂
-⭐ **Tek Tek Meyhanesi (Kordon)** — manzaralı, mezeleri ve ızgaralarıyla biliniyor, canlı meyhane havası var.
+🐟 **Balık isterseniz — ikisi de otelle aynı caddede (Atatürk Cd., otel 404'te):**
+
+| Nerede | Adres | Not |
+|---|---|---|
+| ⭐ **Birinci Kordon Balık** | Atatürk Cd. **196/A** | [2025 ve 2026 Michelin Rehberi'nde "Seçilen Restoranlar"](https://guide.michelin.com/us/en/izmir/izmir_2809416/restaurant/birinci-kordon-bal%C4%B1k-restoran); günlük taze balık, Ege otları |
+| **Kordonboyu Balık** | Atatürk Cd. **174 B/1** | 2005'ten beri; [levrek, çipura, karides, midye](https://kordonboyubalik.com/) |
+
+🚶 **Yürüyüş ve yemek tek hamlede:** otel 404, restoranlar 196/174 — Kordon boyunca güneye ~20-25 dk. **18:30'da çıkın**, güneş 19:05'te denize batarken yoldasınız, 19:30-19:45'te masadasınız. 📞 Cuma akşamı **rezervasyon şart.** 💰 Levreğin fiyatını sipariş etmeden sorun, mevsime göre değişiyor.
+
+🍶 **Meze ağırlıklı meyhane isterseniz:** **Tek Tek Meyhanesi (Kordon)** — manzaralı, mezeleri ve ızgaralarıyla biliniyor, canlı meyhane havası var.
 
 > 💡 **Yerlinin taktiği:** [Kordon'un kendisi manzara odaklı ve pahalı; **bir blok geri, Kıbrıs Şehitleri Caddesi civarı** daha iyi yemek ve daha uygun fiyat veriyor.](https://www.theturkiyeguide.com/city/izmir/best-restaurants/) Gün batımını Kordon'da yürüyerek izleyin, sofrayı arka sokaklarda kurun.
 
