@@ -139,7 +139,7 @@ Planın tek erken kalkışı bugün; gerisini **bilerek gevşek bıraktık.**
 **Uçak 08:50, Göreme'den çıkış 06:15.** Zor yarısı önce, ödülü sonra.
 - **05:30 kalk.** Bavul dün akşamdan hazır olsun, sabah sadece giyinip binin. Vista Cave'den **kahvaltı paketi** alın — havalimanında ya da uçakta yersiniz.
 - **06:15 taksi ✅ ayarlandı → 07:45 Kayseri havalimanı → 08:50 kalkış → ~10:20 İzmir.**
-- **~11:30 Alsancak'ta otel** (havalimanından İZBAN'la 25 dk, çok ucuz). Bavulu bırak.
+- **~11:30 ibis İzmir Alsancak** — havalimanı istasyonundan **İZBAN ile aktarmasız ~27 dk**, istasyon otele 50 m. ⚠️ **İZBAN'da İzmirim Kart gerekiyor** (temassız kredi kartı şimdilik havalimanı ESHOT otobüslerinde geçiyor, İZBAN'da değil) — istasyon gişesinden bir kart al, **tek kart ikinize yeter**, 4 biniş yükle (bugün gidiş + yarın dönüş). Kart işi uzarsa taksi ~20 km / 25-30 dk. Bavulu bırak.
 - 😴 **Öğleden sonra bir şekerleme yap.** İki gün üst üste şafakta kalktınız; bu tatilin gidişatı için o bir saatlik uyku Kemeraltı'nda geçirilecek bir saatten daha değerli.
 - Öğleden sonra kendi hızınızda: **Kemeraltı Çarşısı** (baharat, kuruyemiş, hediyelik — kalabalık ve canlı), **Konak Meydanı** + Saat Kulesi, isterseniz **Tarihi Asansör**'den körfez manzarası.
 - **~19:00: Kordon'da gün batımı yürüyüşü** — körfezde batan güneş, atlı arabalar, palmiyeler. Abini çağır: tatili başladığı şehirde bitiriyorsun.
@@ -187,7 +187,7 @@ Uçuşlar, beş otel ve **üç transferin hepsi** kapandı. Bütün lojistik hal
 | Pamukkale (21) | **Melrose Viewpoint Pansiyon** | Güney kapıya **700 m**, 24 saat resepsiyon, teras, bagaj emaneti ✅ · havuz **normal** (termal değil) |
 | Antalya (22) | **Casamax Suites** | ⚠️ **Konyaaltı'nda, Kaleiçi'nde değil** · sahile 6 dk araçla, Kaleiçi'ne 15 dk taksi, AYT'ye 20,8 km / 30 dk · kahvaltı dahil, 24 saat resepsiyon, **havuz yok** ([9,5 puan / 754 yorum](https://www.booking.com/hotel/tr/casamaxsuites.html), €142) |
 | Göreme (23-24) | **Vista Cave Hotel** | [Teraslardan ve özel balkonlardan balon manzarası](https://vista-cave.goremehotelsweb.com/en/) |
-| İzmir (25) | **Alsancak** | Kordon ve meze sokakları yürüme mesafesi; havalimanına İZBAN'la 25 dk |
+| İzmir (25) | **ibis İzmir Alsancak** | **Atatürk Caddesi 404-410 — doğrudan Kordon üstünde.** [İZBAN Alsancak istasyonu otele 50 m](https://www.ibisizmir.com/), havalimanına aktarmasız ~27 dk. Kordon gün batımı ve boyoz kahvaltısı kapının önünde |
 
 **Teyitler:**
 1. ✅ ~~**Celsus:** gece 02:30 check-in olur mu?~~ **Onaylandı.** ⚠️ *Düzeltme: Booking'in "otogara 200 m" verisi sahada doğrulanmadı — resepsiyon otogarın biraz uzak olduğunu söyledi. 21 Eylül çıkışında taksi gerekiyor.*
