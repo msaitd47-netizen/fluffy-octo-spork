@@ -114,6 +114,16 @@ td.day { font-weight: 600; white-space: nowrap; }
 .list-rows div { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-block: 4px; }
 @media (prefers-reduced-motion: no-preference) { .habit, .week .cell i { transition: background 0.2s, opacity 0.2s; } }
 [lang="zh"] { font-family: var(--font-zh); }
+.celebrate { background: var(--accent); color: var(--bg); border-radius: 14px; padding: 12px 16px; font-weight: 600; display: flex; gap: 10px; align-items: center; }
+.celebrate .zh { color: inherit; opacity: 0.85; }
+@media (prefers-reduced-motion: no-preference) { .celebrate:not([hidden]) { animation: pop 0.4s ease-out; } @keyframes pop { from { transform: scale(0.96); opacity: 0; } to { transform: none; opacity: 1; } } }
+.goalbar { height: 14px; border-radius: 999px; background: var(--line); overflow: hidden; display: flex; }
+.goalbar i { display: block; height: 100%; }
+.goalbar .g1 { background: var(--p1); } .goalbar .g2 { background: var(--p2); }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.badge { font-size: 0.75rem; font-weight: 600; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.badge.on { background: var(--lane-soft); border-color: var(--lane); color: var(--fg); }
+.week-sum { display: flex; flex-wrap: wrap; gap: 6px 16px; font-variant-numeric: tabular-nums; }
 .weeksw { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .weeksw button { font: inherit; font-weight: 600; font-size: 0.9rem; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
 .weeksw button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
@@ -155,6 +165,23 @@ td.day { font-weight: 600; white-space: nowrap; }
     <div style="display:flex;justify-content:space-between;align-items:end;gap:10px;flex-wrap:wrap">
       <h2 id="today-title">Today</h2>
       <label class="small muted" style="display:flex;gap:6px;align-items:center">Day <input type="date" id="day" style="width:auto"></label>
+    </div>
+    <div class="celebrate" id="celebrate" role="status" aria-live="polite" hidden></div>
+    <div class="card" id="goal-card">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
+        <h3>Team goal <span lang="zh" class="zh-inline">共同目标</span></h3>
+        <button type="button" class="btn ghost small" id="goal-edit" style="padding:4px 10px">Edit goal</button>
+      </div>
+      <p class="small" id="goal-text"></p>
+      <div class="goalbar" id="goal-bar" role="img"></div>
+      <p class="small muted" id="goal-sub"></p>
+      <form class="form" id="goal-form" hidden>
+        <label>Reward<input type="text" id="goal-reward" maxlength="80"></label>
+        <label>Good days needed (together)<input type="number" id="goal-target" min="5" max="400"></label>
+        <label>Counting from<input type="date" id="goal-start"></label>
+        <button class="btn" type="submit">Save goal</button>
+      </form>
+      <div class="week-sum small" id="week-sum"></div>
     </div>
     <div class="lanes" id="lanes"></div>
     <p class="small muted">You can only tick your own boxes. Choose who you are at the top first.</p>
@@ -731,17 +758,100 @@ td.day { font-weight: 600; white-space: nowrap; }
           <input type="checkbox" id="h-${p}-${k}" data-p="${p}" data-k="${k}" ${h[k] ? "checked" : ""} ${mine ? "" : "disabled"}><span>${habitLabel(p, k, en, cn)}</span></label>`).join("")}
         <div class="week">${last7.map(x => `<span class="d">${DAYS[x.getDay()]}</span>`).join("")}
           ${last7.map(x => `<span class="cell" title="${iso(x)}: ${countOf(iso(x), p)}/6"><i style="opacity:${countOf(iso(x), p) / 6}"></i></span>`).join("")}</div>
+        ${badgesHtml(p)}
         <p class="streak">Streak: <b>${streakOf(p)} ${streakOf(p) === 1 ? "day" : "days"}</b> (4+ boxes)${p === "p2" ? ` <span lang="zh">连续打卡</span>` : ""}</p>
       </div>`;
     }).join("");
+    renderGoal();
     $$("#lanes input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => toggle(cb.dataset.p, cb.dataset.k, cb.checked)));
+  };
+
+  const BADGES = [
+    ["perfect", "Perfect day", "完美一天", st => st.perfect >= 1, "tick all 6 boxes in one day"],
+    ["s3", "3-day streak", "连续 3 天", st => st.best >= 3, st => `${3 - st.cur} more day${3 - st.cur === 1 ? "" : "s"} in a row`],
+    ["s7", "7-day streak", "连续 7 天", st => st.best >= 7, st => `${7 - st.cur} more days in a row`],
+    ["g10", "10 good days", "10 个好日子", st => st.good >= 10, st => `${10 - st.good} more good days`],
+    ["pb", "First personal best", "第一个个人纪录", st => st.pb >= 1, "beat your first weight on any machine"],
+    ["s14", "2-week streak", "连续 14 天", st => st.best >= 14, st => `${14 - st.cur} more days in a row`],
+    ["g25", "25 good days", "25 个好日子", st => st.good >= 25, st => `${25 - st.good} more good days`],
+    ["s30", "30-day streak", "连续 30 天", st => st.best >= 30, st => `${30 - st.cur} more days in a row`],
+    ["g50", "50 good days", "50 个好日子", st => st.good >= 50, st => `${50 - st.good} more good days`],
+  ];
+  const statsOf = p => {
+    const dates = Object.keys(state.days).filter(k => k.endsWith("_" + p)).map(k => k.slice(0, 10)).sort();
+    let good = 0, perfect = 0, best = 0, run = 0, prev = null;
+    dates.forEach(d => {
+      const c = countOf(d, p);
+      if (c === 6) perfect++;
+      if (c >= 4) {
+        good++;
+        const exp = prev ? iso(new Date(new Date(prev + "T12:00:00").getTime() + 864e5)) : null;
+        run = exp === d ? run + 1 : 1; prev = d; best = Math.max(best, run);
+      }
+    });
+    const pb = LIFTS.filter(l => { const v = state.lifts[`${p}_${l[0]}`]; return v && v.best > v.first; }).length;
+    return { good, perfect, best, cur: streakOf(p), pb };
+  };
+  const badgesHtml = p => {
+    const st = statsOf(p);
+    const next = BADGES.find(b => !b[3](st));
+    const hint = next ? (typeof next[4] === "function" ? next[4](st) : next[4]) : "";
+    return `<div class="badges">${BADGES.filter(b => b[3](st) || b === next).map(b => `<span class="badge ${b[3](st) ? "on" : ""}" title="${b[1]}">${b[3](st) ? "★ " : ""}${b[1]}${p === "p2" ? ` <span lang="zh">${b[2]}</span>` : ""}</span>`).join("")}</div>
+      ${next ? `<p class="small muted">Next badge: <b>${next[1]}</b> (${hint})</p>` : `<p class="small"><b>Every badge earned. Amazing!</b></p>`}`;
+  };
+  const DEFAULT_GOAL = { reward: "Dinner out at your favourite restaurant", target: 40, start: "" };
+  const goalOf = () => ({ ...DEFAULT_GOAL, ...(state.goal || {}) });
+  const mondayOf = d => { const x = new Date(d); x.setHours(12); x.setDate(x.getDate() - ((x.getDay() + 6) % 7)); return x; };
+  const renderGoal = () => {
+    const g = goalOf();
+    const allDates = Object.keys(state.days).map(k => k.slice(0, 10)).sort();
+    const start = g.start || allDates[0] || TODAY;
+    const goodFor = p => Object.keys(state.days).filter(k => k.endsWith("_" + p) && k.slice(0, 10) >= start && countOf(k.slice(0, 10), p) >= 4).length;
+    const a = goodFor("p1"), b = goodFor("p2"), total = a + b, t = Math.max(1, +g.target || 40);
+    const pa = Math.min(100, a / t * 100), pbw = Math.min(100 - pa, b / t * 100);
+    $("#goal-text").innerHTML = `<b>${esc(g.reward)}</b> when you reach ${t} good days together (a good day = 4+ boxes).`;
+    $("#goal-bar").innerHTML = `<i class="g1" style="width:${pa}%"></i><i class="g2" style="width:${pbw}%"></i>`;
+    $("#goal-bar").setAttribute("aria-label", `${total} of ${t} good days`);
+    $("#goal-sub").innerHTML = total >= t
+      ? `<b>Goal reached! Time for: ${esc(g.reward)} 🎉</b> <span lang="zh">目标达成！</span>`
+      : `${total} / ${t} good days · <span style="color:var(--p1)">${esc(state.names.p1)} ${a}</span> + <span style="color:var(--p2)">${esc(state.names.p2)} ${b}</span> · ${t - total} to go · since ${new Date(start + "T12:00:00").toLocaleDateString(LOC, { day: "numeric", month: "short" })}`;
+    const mon = mondayOf(new Date()), wk = [...Array(7)].map((_, i) => { const x = new Date(mon); x.setDate(mon.getDate() + i); return iso(x); });
+    const boxes = p => wk.reduce((n, d) => n + countOf(d, p), 0);
+    const b1 = boxes("p1"), b2 = boxes("p2");
+    $("#week-sum").innerHTML = `<span><b>This week</b> <span lang="zh">本周</span></span><span style="color:var(--p1)">${esc(state.names.p1)}: ${b1} boxes</span><span style="color:var(--p2)">${esc(state.names.p2)}: ${b2} boxes</span><span>Team: ${b1 + b2} / 84</span>`;
+  };
+  $("#goal-edit").addEventListener("click", () => {
+    const f = $("#goal-form"), g = goalOf(); f.hidden = !f.hidden;
+    $("#goal-reward").value = g.reward; $("#goal-target").value = g.target; $("#goal-start").value = g.start || TODAY;
+  });
+  $("#goal-form").addEventListener("submit", async e => {
+    e.preventDefault();
+    const goal = { reward: $("#goal-reward").value.trim() || DEFAULT_GOAL.reward, target: Math.max(5, +$("#goal-target").value || 40), start: $("#goal-start").value || TODAY };
+    state.goal = goal; $("#goal-form").hidden = true; renderGoal();
+    if (state.db) { try { await state.db.doc("settings/goal").set(goal); } catch (err) { setStatus("Couldn't save the goal: you may not have edit access.", true); } }
+    else store.set("bf-goal", JSON.stringify(goal));
+  });
+  let celebrateTimer = null;
+  const celebrate = (en, cn) => {
+    const el = $("#celebrate");
+    el.innerHTML = `<span aria-hidden="true">🎉</span><span>${en}${cn ? `<span class="zh" lang="zh">${cn}</span>` : ""}</span>`;
+    el.hidden = false; clearTimeout(celebrateTimer);
+    celebrateTimer = setTimeout(() => { el.hidden = true; }, 6000);
   };
 
   const toggle = async (p, k, val) => {
     if (p !== state.me) return;
     const id = `${state.day}_${p}`;
     const habits = { ...habitsOf(state.day, p), [k]: val };
-    state.days[id] = habits; renderToday();
+    const before = { c: countOf(state.day, p), st: statsOf(p) };
+    state.days[id] = habits;
+    const after = { c: countOf(state.day, p), st: statsOf(p) };
+    const isP2 = p === "p2", nm = esc(state.names[p]);
+    const newBadge = BADGES.find(b => !b[3](before.st) && b[3](after.st));
+    if (newBadge) celebrate(`New badge for ${nm}: ${newBadge[1]}!`, isP2 ? `获得新徽章：${newBadge[2]}！` : "");
+    else if (before.c < 6 && after.c === 6) celebrate(`Perfect day, ${nm}! All 6 boxes.`, isP2 ? "完美的一天！6 项全部完成。" : "");
+    else if (before.c < 4 && after.c === 4) celebrate(`Good day locked in, ${nm}. That counts towards the team goal.`, isP2 ? "今天达标了，计入共同目标。" : "");
+    renderToday();
     if (state.db) {
       try { await state.db.doc(`days/${id}`).set({ date: state.day, p, habits }); }
       catch (err) { setStatus("Couldn't save. You may not have permission to edit this page; ask the owner for access.", true); }
@@ -756,7 +866,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     if (!(kg >= 0) || $("#l-kg").value === "") { msg.textContent = "Enter the weight in kg."; return; }
     const id = `${state.me}_${key}`, prev = state.lifts[id];
     const doc = { p: state.me, key, first: prev ? prev.first : kg, best: prev ? Math.max(prev.best, kg) : kg, last: kg, updated: TODAY };
-    state.lifts[id] = doc; renderLifts();
+    state.lifts[id] = doc; renderLifts(); renderToday();
     try {
       if (state.db) await state.db.doc(`lifts/${id}`).set(doc); else saveLocal();
       msg.textContent = prev && kg > prev.best ? "New personal best! Saved." : "Saved.";
@@ -780,6 +890,7 @@ td.day { font-weight: 600; white-space: nowrap; }
       : '<tr><td colspan="3" class="muted small">After your first session, log the weights you used here; your progress will show up in this table.</td></tr>';
   }
   function renderAll() { renderNames(); renderToday(); renderLifts(); }
+  try { const g = JSON.parse(store.get("bf-goal") || "null"); if (g) state.goal = g; } catch {}
   function saveLocal() { store.set("bf-local", JSON.stringify({ days: state.days, lifts: state.lifts })); }
   function loadLocal() {
     try { const d = JSON.parse(store.get("bf-local") || "{}"); Object.assign(state, { days: d.days || {}, lifts: d.lifts || {} }); } catch {}
@@ -799,6 +910,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     }
     state.db = db;
     setStatus(state.me ? "Shared saving is on. Your ticks show up for your partner straight away." : "Shared saving is on. Choose who you are at the top first.");
+    db.doc("settings/goal").onSnapshot(s => { if (s.exists) { state.goal = s.data(); renderGoal(); } });
     db.doc("settings/names").onSnapshot(s => { if (s.exists) { const d = s.data(); state.names = { p1: d.p1 || DEFAULT_NAMES.p1, p2: d.p2 || DEFAULT_NAMES.p2 }; renderAll(); } });
     db.collection("days").orderBy("date", "desc").limit(400).onSnapshot(snap => {
       const days = {};
@@ -807,7 +919,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     }, () => setStatus("Couldn't load the daily records.", true));
     db.collection("lifts").onSnapshot(snap => {
       const l = {}; snap.docs.forEach(d => { const v = d.data(); if (v) l[d.id] = v; });
-      state.lifts = l; renderLifts();
+      state.lifts = l; renderLifts(); renderToday();
     });
   })();
 })();
