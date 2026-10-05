@@ -147,6 +147,9 @@ td.day { font-weight: 600; white-space: nowrap; }
     <p class="status" id="status">Connecting…</p>
   </header>
 
+  <div class="celebrate" id="pick-me" hidden style="flex-wrap:wrap">
+    <span>Who's using this phone? Tap your name, then tick your boxes.<span class="zh" lang="zh">请先点你的名字，然后就可以打勾了。</span></span>
+  </div>
   <div class="who" id="who">
     <span class="small muted">I am:</span>
     <button type="button" class="p1" data-p="p1" id="who-p1">Sait</button>
@@ -830,6 +833,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     $("#who-p2").textContent = state.names.p2;
     $$(".pname").forEach(el => el.textContent = state.names[el.dataset.p]);
     $$("#who button[data-p]").forEach(b => b.classList.toggle("on", b.dataset.p === state.me));
+    $("#pick-me").hidden = !!state.me;
   };
   $$("#who button[data-p]").forEach(b => b.addEventListener("click", () => {
     state.me = b.dataset.p; store.set("bf-me", state.me); renderAll();
@@ -870,10 +874,11 @@ td.day { font-weight: 600; white-space: nowrap; }
     const last7 = [...Array(7)].map((_, i) => { const x = new Date(); x.setDate(x.getDate() - 6 + i); return x; });
     $("#lanes").innerHTML = ["p1", "p2"].map(p => {
       const h = habitsOf(state.day, p), mine = state.me === p, c = countOf(state.day, p);
+      const canTick = mine || !state.me;
       return `<div class="lane ${p}">
         <div class="lane-head"><h3>${esc(state.names[p])}${mine ? ' <span class="small muted">(you)</span>' : ""}</h3><span class="score">${c}<small>/6</small></span></div>
-        ${HABITS.map(([k, en, cn]) => `<label class="habit ${h[k] ? "done" : ""}" ${mine ? "" : 'aria-disabled="true"'}>
-          <input type="checkbox" id="h-${p}-${k}" data-p="${p}" data-k="${k}" ${h[k] ? "checked" : ""} ${mine ? "" : "disabled"}><span>${habitLabel(p, k, en, cn)}</span></label>`).join("")}
+        ${HABITS.map(([k, en, cn]) => `<label class="habit ${h[k] ? "done" : ""}" ${canTick ? "" : 'aria-disabled="true"'}>
+          <input type="checkbox" id="h-${p}-${k}" data-p="${p}" data-k="${k}" ${h[k] ? "checked" : ""} ${canTick ? "" : "disabled"}><span>${habitLabel(p, k, en, cn)}</span></label>`).join("")}
         <div class="week">${last7.map(x => `<span class="d">${DAYS[x.getDay()]}</span>`).join("")}
           ${last7.map(x => `<span class="cell" title="${iso(x)}: ${countOf(iso(x), p)}/6"><i style="opacity:${countOf(iso(x), p) / 6}"></i></span>`).join("")}</div>
         ${badgesHtml(p)}
@@ -958,6 +963,7 @@ td.day { font-weight: 600; white-space: nowrap; }
   };
 
   const toggle = async (p, k, val) => {
+    if (!state.me) { state.me = p; store.set("bf-me", p); renderNames(); setStatus(state.db ? `Hi ${state.names[p]}! Your ticks are shared with your partner.` : `Hi ${state.names[p]}!`); }
     if (p !== state.me) return;
     const id = `${state.day}_${p}`;
     const habits = { ...habitsOf(state.day, p), [k]: val };
@@ -972,7 +978,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     renderToday();
     if (state.db) {
       try { await state.db.doc(`days/${id}`).set({ date: state.day, p, habits }); }
-      catch (err) { setStatus("Couldn't save. You may not have permission to edit this page; ask the owner for access.", true); }
+      catch (err) { { setStatus("That tick didn't save to the shared list. Check you're signed in to claude.ai and that the page was shared with you as an editor.", true); celebrate("That tick didn't save. Check you're signed in to claude.ai.", state.me === "p2" ? "没有保存成功，请确认已登录 claude.ai。" : ""); } }
     } else saveLocal();
   };
 
@@ -1063,7 +1069,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     const db = window.claude?.use ? await window.claude.use("db") : null;
     if (!db) {
       state.local = true; loadLocal(); renderAll();
-      setStatus("Shared saving isn't available right now; your ticks are only kept on this device.", true);
+      setStatus("Not connected to the shared list (are you signed in to claude.ai?). Ticks are only kept on this phone for now.", true);
       return;
     }
     state.db = db;
