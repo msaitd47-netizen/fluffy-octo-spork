@@ -114,6 +114,13 @@ td.day { font-weight: 600; white-space: nowrap; }
 .list-rows div { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-block: 4px; }
 @media (prefers-reduced-motion: no-preference) { .habit, .week .cell i { transition: background 0.2s, opacity 0.2s; } }
 [lang="zh"] { font-family: var(--font-zh); }
+.shopcat { display: grid; gap: 4px; align-content: start; min-width: 0; }
+.shopitem { display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 8px; border: 1px solid var(--line); cursor: pointer; font-size: 0.88rem; }
+.shopitem input { width: 18px; height: 18px; accent-color: var(--accent); flex: none; }
+.shopitem.done { background: var(--accent-soft); border-color: transparent; }
+.shopitem.done span { text-decoration: line-through; color: var(--muted); }
+.shopitem .who-dot { width: 8px; height: 8px; border-radius: 50%; margin-left: auto; flex: none; }
+.shopitem .del { margin-left: auto; border: 0; background: none; color: var(--muted); cursor: pointer; font: inherit; }
 .celebrate { background: var(--accent); color: var(--bg); border-radius: 14px; padding: 12px 16px; font-weight: 600; display: flex; gap: 10px; align-items: center; }
 .celebrate .zh { color: inherit; opacity: 0.85; }
 @media (prefers-reduced-motion: no-preference) { .celebrate:not([hidden]) { animation: pop 0.4s ease-out; } @keyframes pop { from { transform: scale(0.96); opacity: 0; } to { transform: none; opacity: 1; } } }
@@ -357,21 +364,25 @@ td.day { font-weight: 600; white-space: nowrap; }
     </div>
     <div class="card" data-week="1">
       <h3>Shopping list, week 1 (for 2)</h3>
+      <p class="small">Shared list: tick things as they go in the basket and the other person sees it straight away.</p>
       <p class="small muted">Big shop at Dunnes Stores at the weekend, top-ups at Tesco during the week. Doubanjiang and Sichuan pepper: Tesco's world foods aisle or an Asian supermarket.</p>
-      <div class="lanes" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
-        <div><span class="label">Protein</span><ul class="small"><li>40 eggs</li><li>700 g chicken thighs + 1.15 kg chicken breast</li><li>650 g 5% lean beef mince</li><li>2 tins tuna (backup box)</li><li>2 salmon fillets</li><li>350 g lean beef steak</li><li>2 kg yoghurt (incl. Greek), 1 L kefir</li><li>Cottage cheese, feta-style white cheese</li><li>Firm tofu (Tofoo or Cauldron)</li><li>Red lentils, chickpeas</li></ul></div>
-        <div><span class="label">Veg &amp; fruit</span><ul class="small"><li>Tomatoes, cucumber, peppers</li><li>Spinach, broccoli, courgette, white cabbage, beansprouts</li><li>Green beans, aubergine</li><li>Pak choi, spring onions, ginger</li><li>Lettuce, rocket, dill</li><li>Pomegranate molasses, sumac (Tesco world foods aisle or a Middle Eastern shop)</li><li>Onions, garlic, lemons</li><li>Apples, bananas, seasonal fruit</li></ul></div>
-        <div><span class="label">Grains &amp; other</span><ul class="small"><li>Nomadic Clusters (14)</li><li>Jasmine or brown rice</li><li>Egg noodles or udon</li><li>Oyster sauce, rice vinegar</li><li>Reduced-salt soy sauce, sesame oil, doubanjiang</li><li>Wholewheat bread and wraps</li><li>Olive oil, olives</li><li>Almonds, walnuts</li></ul></div>
-      </div>
+      <div class="lanes" id="shop-1" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
+      <form class="form" data-shopadd="1" style="margin-top:6px">
+        <label>Add something<input type="text" id="shop-add-1" maxlength="60" placeholder="e.g. kitchen roll"></label>
+        <button class="btn" type="submit">Add</button>
+        <button class="btn ghost" type="button" data-shopclear="1">Untick all</button>
+      </form>
     </div>
     <div class="card" data-week="2" hidden>
       <h3>Shopping list, week 2 (for 2)</h3>
+      <p class="small">Shared list: tick things as they go in the basket and the other person sees it straight away.</p>
       <p class="small muted">Big shop at Dunnes Stores at the weekend, top-ups at Tesco during the week. Wide rice noodles (ho fun) and Chinese cabbage: an Asian supermarket or Tesco's world foods aisle.</p>
-      <div class="lanes" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
-        <div><span class="label">Protein</span><ul class="small"><li>40 eggs</li><li>700 g chicken thighs + 700 g chicken breast</li><li>600 g 5% lean beef mince</li><li>650 g lean beef steak</li><li>150 g raw king prawns</li><li>4 sea bass fillets</li><li>2 kg yoghurt (incl. 500 g Greek)</li><li>Feta-style white cheese</li><li>Firm tofu (Tofoo or Cauldron)</li><li>2 tins chickpeas</li></ul></div>
-        <div><span class="label">Veg &amp; fruit</span><ul class="small"><li>3 aubergines, 4 peppers, 1 courgette</li><li>Tomatoes, 3 cucumbers, carrots</li><li>Spinach, pak choi, Chinese cabbage, mushrooms</li><li>Lettuce for Sait's salad</li><li>400 g beansprouts</li><li>Frozen peas &amp; sweetcorn</li><li>2 bunches spring onions, ginger, garlic, onions, red onion</li><li>Dill, dried mint, lemons</li><li>2 ripe bananas, berries, seasonal fruit</li></ul></div>
-        <div><span class="label">Grains &amp; other</span><ul class="small"><li>Nomadic Clusters (14)</li><li>Jasmine or brown rice</li><li>Fine bulgur (for kısır), vermicelli (şehriye) for the pilaf</li><li>Pomegranate molasses (optional)</li><li>Egg noodles; wide rice noodles (ho fun)</li><li>Porridge oats, baking powder</li><li>Chicken stock</li><li>Light and dark soy sauce, oyster sauce, rice vinegar, sesame oil, doubanjiang</li><li>Tahini or peanut butter</li><li>Wholewheat bread</li></ul></div>
-      </div>
+      <div class="lanes" id="shop-2" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))"></div>
+      <form class="form" data-shopadd="2" style="margin-top:6px">
+        <label>Add something<input type="text" id="shop-add-2" maxlength="60" placeholder="e.g. kitchen roll"></label>
+        <button class="btn" type="submit">Add</button>
+        <button class="btn ghost" type="button" data-shopclear="2">Untick all</button>
+      </form>
     </div>
   </section>
 
@@ -395,6 +406,8 @@ td.day { font-weight: 600; white-space: nowrap; }
     <h2>Training together</h2>
     <p class="muted small">In the gym at your complex, 3 days a week, 45 minutes: <b>Tuesday 6:45 pm · Thursday 6:45 pm · Saturday 4 pm</b>. Thursday dinner, and Tuesday dinner when it isn't batch night, are 10–20 minute recipes so you eat before 8.</p>
 
+    <div class="weeksw" role="group" aria-label="Training block"><button type="button" data-blk="1">Weeks 1–4</button><button type="button" data-blk="2">Weeks 5–8</button><button type="button" data-blk="3">Weeks 9–12</button></div>
+    <div data-block="1" class="wrap" style="padding:0">
     <div class="card">
       <h3>The first 4 weeks</h3>
       <div class="scroll">
@@ -414,6 +427,50 @@ td.day { font-weight: 600; white-space: nowrap; }
     <div class="lanes">
       <div class="card"><h3>Day A</h3><div id="wa"></div></div>
       <div class="card"><h3>Day B</h3><div id="wb"></div></div>
+    </div>
+    </div>
+    <div data-block="2" class="wrap" style="padding:0" hidden>
+      <div class="card">
+        <h3>Weeks 5–8 · Build</h3>
+        <div class="scroll"><table>
+          <thead><tr><th>Week</th><th>Day order</th><th>Sets × reps</th><th>Weight</th><th>Bike</th></tr></thead>
+          <tbody>
+            <tr><td class="day">5 · Build</td><td>A · B · A</td><td>3 × 8–10</td><td>New exercises. Start a step heavier than week 4: fewer reps, more weight.</td><td>Intervals: 6 × (30 s fast / 60 s easy)</td></tr>
+            <tr><td class="day">6</td><td>B · A · B</td><td>3 × 8–10</td><td>Add a rep or a step each session.</td><td>8 intervals</td></tr>
+            <tr><td class="day">7</td><td>A · B · A</td><td>4 sets on the first exercise</td><td>Add a 4th set to the first exercise of the day.</td><td>8 intervals</td></tr>
+            <tr><td class="day">8 · Recharge</td><td>B · A · B</td><td>2 × 10</td><td>About 20% lighter. Your body recovers and comes back stronger for the next block.</td><td>15 min easy</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="lanes">
+        <div class="card"><h3>Day A</h3><div id="wa2"></div></div>
+        <div class="card"><h3>Day B</h3><div id="wb2"></div></div>
+      </div>
+    </div>
+    <div data-block="3" class="wrap" style="padding:0" hidden>
+      <div class="card">
+        <h3>Weeks 9–12 · Strong</h3>
+        <div class="scroll"><table>
+          <thead><tr><th>Week</th><th>Day order</th><th>Sets × reps</th><th>Weight</th><th>Bike</th></tr></thead>
+          <tbody>
+            <tr><td class="day">9 · Strong</td><td>A · B · A</td><td>First 2 exercises: <span style="color:var(--p1)">Sait 4 × 6–8</span>, <span style="color:var(--p2)">Serena 3 × 8–10</span>. Others 3 × 10–12.</td><td>Your heaviest block. Rest 2 min on the first 2 exercises.</td><td>8 intervals</td></tr>
+            <tr><td class="day">10</td><td>B · A · B</td><td>Same</td><td>Top of the rep range on every set? Go up a step.</td><td>8 intervals</td></tr>
+            <tr><td class="day">11</td><td>A · B · A</td><td>Same</td><td>Go for new personal bests.</td><td>10 intervals</td></tr>
+            <tr><td class="day">12 · Celebrate</td><td>B · A · B</td><td>Same</td><td>Last session: log your best weights and compare them with week 1 in the strength log.</td><td>15 min easy</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="lanes">
+        <div class="card"><h3>Day A</h3><div id="wa3"></div></div>
+        <div class="card"><h3>Day B</h3><div id="wb3"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Easy day <span lang="zh" class="zh-inline">轻松日</span></h3>
+      <p class="small">20 minutes, all seated. For busy days, low-energy days or rest-your-feet days. It still counts as your workout box.
+        <span class="zh" lang="zh">20 分钟，全程坐姿。适合忙碌、没精神或想让双脚休息的日子，同样算作当天的训练。</span></p>
+      <div id="weasy"></div>
     </div>
 
     <div class="card">
@@ -471,8 +528,8 @@ td.day { font-weight: 600; white-space: nowrap; }
   ];
   const HABIT_ALT = { p2: { adim: ["Feet-friendly movement (bike, swim)", "护脚运动（骑车、游泳）"] } };
   const LUNCH = {
-    1: { a: "Roast chicken, veg &amp; rice", az: "烤鸡腿配蔬菜和米饭", b: "宫保鸡丁 Kung pao chicken + rice", bz: "宫保鸡丁配米饭" },
-    2: { a: "Chicken &amp; chickpea stew + rice", az: "土耳其鹰嘴豆炖鸡配米饭", b: "鱼香茄子 Fish-fragrant aubergine with beef + rice", bz: "鱼香茄子配米饭" },
+    1: { a: "Roast chicken, veg &amp; rice (or chicken &amp; mushroom sauté)", az: "烤鸡腿配蔬菜和米饭（或蘑菇炒鸡）", b: "宫保鸡丁 Kung pao chicken + rice", bz: "宫保鸡丁配米饭" },
+    2: { a: "Chicken &amp; chickpea stew + rice (or chicken &amp; mushroom sauté)", az: "土耳其鹰嘴豆炖鸡配米饭（或蘑菇炒鸡）", b: "鱼香茄子 Fish-fragrant aubergine with beef + rice", bz: "鱼香茄子配米饭" },
   };
   const MENU = [
     ["Monday", "番茄鸡蛋面 Tomato &amp; egg noodles + broccoli (15 min)"],
@@ -501,6 +558,10 @@ td.day { font-weight: 600; white-space: nowrap; }
       ing: ["700 g boneless, skinless chicken thighs", "2 tbsp yoghurt, 1 tbsp red pepper paste (or tomato purée), 1 tbsp olive oil", "Cumin, chilli flakes, black pepper, 2 garlic cloves", "2 courgettes, 2 peppers, 2 onions", "200 g rice (dry)"],
       steps: ["Mix the chicken with the yoghurt, paste, oil and spices (marinate overnight if you can).", "Cut the veg into chunks and spread on the same tray as the chicken.", "Roast at 200 °C for 40 min.", "Cook the rice. Pack 4 boxes: 2 for each of you."],
       p1: "Per box: 200 g chicken (raw weight) · 1 bowl rice · veg", p2: "Per box: 130 g chicken · ½ bowl rice · lots of veg", p2zh: "每盒：130 克鸡肉 · 半碗米饭 · 多放蔬菜", k1: 640, k2: 420 },
+    { name: "Chicken &amp; mushroom sauté", zh: "蘑菇炒鸡", when: "Batch 1 swap: use instead of the roast chicken or the stew in any week", time: "30 min",
+      ing: ["700 g boneless, skinless chicken thighs, in strips", "400 g chestnut mushrooms, sliced", "1 onion, 2 peppers, 2 garlic cloves", "1 tbsp red pepper paste or tomato purée, 1 tomato, chopped", "1 tbsp oil or butter; thyme, black pepper, chilli flakes", "200 g rice (dry)"],
+      steps: ["Start the rice. Fry the chicken in the oil over high heat for 6–7 min until golden; set aside.", "In the same pan, fry the mushrooms until their water has gone and they brown, about 6 min.", "Add the onion, peppers and garlic for 3 min, then the paste, tomato and spices.", "Return the chicken, simmer for 5 min and pack 4 boxes. (Chinese-style: swap the paste and tomato for 2 tbsp soy sauce, 1 tbsp oyster sauce and ginger.)"],
+      p1: "Per box: 200 g chicken · 1 bowl rice · mushrooms", p2: "Per box: 130 g chicken · ½ bowl rice · plenty of mushrooms", p2zh: "每盒：130 克鸡肉 · 半碗米饭 · 多放蘑菇", k1: 620, k2: 400 },
     { name: "Kung pao chicken ×3", zh: "宫保鸡丁", when: "Lunch batch 2 · batch night dinner + 4 boxes", time: "30 min",
       ing: ["900 g chicken breast, diced", "2 red peppers, 2 courgettes, 6 spring onions", "3 garlic cloves, a thumb of ginger", "6–8 dried chillies (Sichuan pepper optional)", "40 g raw peanuts", "Sauce: 3 tbsp soy sauce, 1½ tbsp rice vinegar, 2 tsp honey, 2 tsp cornflour, 5 tbsp water", "1½ tbsp oil; 450 g rice (dry)"],
       steps: ["Toss the chicken with 1 tbsp soy sauce and 1 tsp cornflour; start the rice.", "Fry the dried chillies and peanuts in a little oil for 30 s; set aside.", "Cook the chicken in two batches over high heat so it sears, 5–6 min each; add the garlic, ginger and veg for 3 min.", "Pour in the sauce; once it thickens, add the peanuts and spring onion. Serve 2 portions and pack 4 boxes."],
@@ -555,6 +616,10 @@ td.day { font-weight: 600; white-space: nowrap; }
       ing: ["700 g boneless, skinless chicken thighs, diced", "2 tins chickpeas, drained", "1 onion, 2 peppers", "1 tbsp tomato purée + 1 tbsp red pepper paste", "1 tin chopped tomatoes, 400 ml water or stock", "1 tbsp olive oil; cumin, paprika, black pepper", "200 g rice (dry)"],
       steps: ["Brown the chicken in the oil for 5 min.", "Add the onion and peppers for 5 min, then the purées and spices.", "Add the tomatoes, chickpeas and water; simmer for 30 min until thick.", "Cook the rice. Pack 4 boxes: 2 larger for Sait, 2 smaller for Serena."],
       p1: "Per box: ~210 g chicken · 1 bowl rice · chickpeas", p2: "Per box: ~140 g chicken · ½ bowl rice · chickpeas", p2zh: "每盒：约 140 克鸡肉 · 半碗米饭 · 鹰嘴豆", k1: 700, k2: 450 },
+    { name: "Chicken &amp; mushroom sauté", zh: "蘑菇炒鸡", when: "Batch 1 swap: use instead of the roast chicken or the stew in any week", time: "30 min",
+      ing: ["700 g boneless, skinless chicken thighs, in strips", "400 g chestnut mushrooms, sliced", "1 onion, 2 peppers, 2 garlic cloves", "1 tbsp red pepper paste or tomato purée, 1 tomato, chopped", "1 tbsp oil or butter; thyme, black pepper, chilli flakes", "200 g rice (dry)"],
+      steps: ["Start the rice. Fry the chicken in the oil over high heat for 6–7 min until golden; set aside.", "In the same pan, fry the mushrooms until their water has gone and they brown, about 6 min.", "Add the onion, peppers and garlic for 3 min, then the paste, tomato and spices.", "Return the chicken, simmer for 5 min and pack 4 boxes. (Chinese-style: swap the paste and tomato for 2 tbsp soy sauce, 1 tbsp oyster sauce and ginger.)"],
+      p1: "Per box: 200 g chicken · 1 bowl rice · mushrooms", p2: "Per box: 130 g chicken · ½ bowl rice · plenty of mushrooms", p2zh: "每盒：130 克鸡肉 · 半碗米饭 · 多放蘑菇", k1: 620, k2: 400 },
     { name: "Fish-fragrant aubergine with beef ×3", zh: "鱼香茄子", when: "Lunch batch 2 · batch night dinner + 4 boxes", time: "35 min",
       ing: ["3 large aubergines, cut into batons", "600 g 5% lean beef mince", "4 garlic cloves, a thumb of ginger, 4 spring onions", "1½ tbsp doubanjiang", "Sauce: 3 tbsp soy sauce, 1½ tbsp rice vinegar, 2 tsp honey, 2 tsp cornflour, 150 ml water", "1 tbsp oil; 450 g rice (dry)"],
       steps: ["Start the rice. Steam or microwave the aubergine for 6–8 min until soft (far less oil than frying).", "Brown the mince in the oil until dry.", "Add the doubanjiang, garlic and ginger for 1 min.", "Add the aubergine and sauce and simmer for 3 min until glossy. Serve 2 portions and pack 4 boxes."],
@@ -592,6 +657,7 @@ td.day { font-weight: 600; white-space: nowrap; }
       steps: ["Simmer the stock in a wide pot in the middle of the table (or on the hob).", "Cook the beef, tofu and veg a few pieces at a time; dip and eat.", "Finish with the noodles cooked in the rich broth."],
       p1: "~210 g beef + tofu · 60 g noodles at the end", p2: "~140 g beef + tofu · 30 g noodles · lots of veg", p2zh: "约 140 克牛肉 + 豆腐 · 30 克面 · 多吃蔬菜", k1: 650, k2: 420 },
   ];
+  const SHOP = {"1": [["Protein", ["40 eggs", "700 g chicken thighs + 1.15 kg chicken breast", "650 g 5% lean beef mince", "2 tins tuna (backup box)", "2 salmon fillets", "350 g lean beef steak", "2 kg yoghurt (incl. Greek), 1 L kefir", "Cottage cheese, feta-style white cheese", "Firm tofu (Tofoo or Cauldron)", "Red lentils, chickpeas"]], ["Veg & fruit", ["Tomatoes, cucumber, peppers", "Spinach, broccoli, courgette, white cabbage, beansprouts", "Green beans, aubergine", "Pak choi, spring onions, ginger", "400 g chestnut mushrooms (for the mushroom sauté)", "Lettuce, rocket, dill", "Pomegranate molasses, sumac (Tesco world foods aisle or a Middle Eastern shop)", "Onions, garlic, lemons", "Apples, bananas, seasonal fruit"]], ["Grains & other", ["Nomadic Clusters (14)", "Jasmine or brown rice", "Egg noodles or udon", "Oyster sauce, rice vinegar", "Reduced-salt soy sauce, sesame oil, doubanjiang", "Wholewheat bread and wraps", "Olive oil, olives", "Almonds, walnuts"]]], "2": [["Protein", ["40 eggs", "700 g chicken thighs + 700 g chicken breast", "600 g 5% lean beef mince", "650 g lean beef steak", "150 g raw king prawns", "4 sea bass fillets", "2 kg yoghurt (incl. 500 g Greek)", "Feta-style white cheese", "Firm tofu (Tofoo or Cauldron)", "2 tins chickpeas"]], ["Veg & fruit", ["3 aubergines, 4 peppers, 1 courgette", "Tomatoes, 3 cucumbers, carrots", "Spinach, pak choi, Chinese cabbage, mushrooms", "Lettuce for Sait's salad", "400 g beansprouts", "Frozen peas & sweetcorn", "2 bunches spring onions, ginger, garlic, onions, red onion", "Dill, dried mint, lemons", "2 ripe bananas, berries, seasonal fruit"]], ["Grains & other", ["Nomadic Clusters (14)", "Jasmine or brown rice", "Fine bulgur (for kısır), vermicelli (şehriye) for the pilaf", "Pomegranate molasses (optional)", "Egg noodles; wide rice noodles (ho fun)", "Porridge oats, baking powder", "Chicken stock", "Light and dark soy sauce, oyster sauce, rice vinegar, sesame oil, doubanjiang", "Tahini or peanut butter", "Wholewheat bread"]]]};
   const LIFTS = [
     ["legpress", "Leg press", "40–60 kg", "20–30 kg"],
     ["chest", "Chest press machine", "20–30 kg", "10–15 kg"],
@@ -603,6 +669,47 @@ td.day { font-weight: 600; white-space: nowrap; }
     ["split", "Split squat", "Bodyweight", "–"],
     ["legext", "Leg extension", "–", "10–20 kg"],
     ["lat", "Lat pulldown", "30–40 kg", "15–25 kg"],
+    ["incline", "Incline chest press (from week 5)", "20–30 kg", "8–12 kg"],
+    ["lunge", "Reverse lunge (from week 5)", "2 × 6–10 kg", "–"],
+    ["hack", "Hack squat (from week 9)", "40–60 kg", "–"],
+    ["dbbench", "Dumbbell bench press (from week 9)", "2 × 14–18 kg", "2 × 5–7 kg"],
+    ["csrow", "Chest-supported row (from week 9)", "30–40 kg", "15–20 kg"],
+  ];
+  const WA2 = [
+    ["Leg press", "3 × 8–10", "Feet a little higher on the platform to work the glutes more", "Same; whole foot flat on the platform", "同样做；整个脚掌平踩在踏板上"],
+    ["Incline chest press (machine or dumbbells)", "3 × 8–10", "Upper chest and shoulders", "", ""],
+    ["Single-arm cable row", "3 × 10 per arm", "Pull your elbow back towards your hip", "", ""],
+    ["Hip thrust", "3 × 10", "Heavier than weeks 1–4; pause 2 s at the top", "", ""],
+    ["Seated Pallof press", "3 × 10 per side", "Sit tall, press the cable straight out and don't let it twist you", "", ""],
+  ];
+  const WB2 = [
+    ["Romanian deadlift (dumbbells)", "3 × 8", "Flat back, push your hips back", "Seated leg curl, 3 × 10", "坐姿腿弯举，3 × 10"],
+    ["Close-grip lat pulldown", "3 × 8–10", "Palms facing each other, elbows to your ribs", "", ""],
+    ["Seated dumbbell shoulder press", "3 × 8–10", "Bench upright, press straight up", "", ""],
+    ["Reverse lunge", "3 × 8 per leg", "Step back and lower your back knee towards the floor", "Leg extension, 3 × 12", "腿屈伸，3 × 12"],
+    ["Kneeling cable crunch", "3 × 12", "Curl down, ribs towards hips", "", ""],
+  ];
+  const WA3 = [
+    ["Hack squat machine", "Sait 4 × 6–8", "Back flat on the pad, go as deep as feels good", "Leg press, 3 × 8–10", "腿举，3 × 8–10"],
+    ["Dumbbell bench press", "4 × 6–8 / 3 × 8–10", "Lower slowly to chest level", "3 × 8–10", "3 × 8–10"],
+    ["Chest-supported row machine", "3 × 8–10", "Chest stays on the pad", "", ""],
+    ["Hip thrust", "3 × 8–10", "Your heaviest yet; 2 s pause at the top", "", ""],
+    ["Side plank", "3 × 20–30 s per side", "Hips high, body in a straight line", "On your knees", "跪姿侧平板"],
+  ];
+  const WB3 = [
+    ["Romanian deadlift (dumbbells)", "Sait 4 × 6–8", "Flat back, push your hips back", "Seated leg curl, 3 × 10", "坐姿腿弯举，3 × 10"],
+    ["Lat pulldown", "4 × 6–8 / 3 × 8–10", "Pull the bar to your upper chest", "3 × 8–10", "3 × 8–10"],
+    ["Seated shoulder press machine", "3 × 8–10", "Press up without arching your back", "", ""],
+    ["Bulgarian split squat", "Sait 3 × 8 per leg", "Back foot on a bench, hold dumbbells", "Leg extension, 3 × 12", "腿屈伸，3 × 12"],
+    ["Knee raises in the captain's chair", "3 × 10", "Back against the pad, lift your knees slowly", "", ""],
+  ];
+  const WEASY = [
+    ["Bike, easy", "5 min", "Gentle pedalling to warm up", "", ""],
+    ["Seated chest press machine", "2 × 12", "Light weight, smooth reps", "", ""],
+    ["Seated cable row", "2 × 12", "Squeeze your shoulder blades", "", ""],
+    ["Seated dumbbell shoulder press", "2 × 12", "Light dumbbells", "", ""],
+    ["Seated knee raises on a bench", "2 × 10", "Lean back slightly, lift both knees", "", ""],
+    ["Seated stretch", "3 min", "Hamstrings, chest and neck", "", ""],
   ];
   const WA = [
     ["Leg press", "3 × 10–12", "Seated on the machine; knees track over your toes", "Start light; keep your whole foot flat on the platform", "从轻重量开始；整个脚掌平踩在踏板上"],
@@ -637,6 +744,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     names: { ...DEFAULT_NAMES },
     days: {},      // `${date}_${p}` -> habits
     lifts: {},     // `${p}_${key}` -> {first, best, last}
+    shop: {},      // item id -> {week, checked, by, text?, custom?}
     day: TODAY,
     db: null, local: false,
   };
@@ -654,12 +762,22 @@ td.day { font-weight: 600; white-space: nowrap; }
     ].map(([t, d, dish, cn]) => `<div class="habit" style="cursor:default;display:grid;gap:2px"><span class="label">${t} → ${d}</span><b>${dish}</b>${zh(cn)}</div>`).join("");
     $("#recipes").innerHTML = recipeHtml(week === 2 ? RECIPES2 : RECIPES);
     $$("[data-week]").forEach(el => el.hidden = el.dataset.week !== String(week));
-    $$(".weeksw button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.wk === String(week))));
+    $$(".weeksw button[data-wk]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.wk === String(week))));
   };
-  $$(".weeksw button").forEach(b => b.addEventListener("click", () => { week = +b.dataset.wk; store.set("bf-week", String(week)); renderWeek(); renderNames(); }));
+  $$(".weeksw button[data-wk]").forEach(b => b.addEventListener("click", () => { week = +b.dataset.wk; store.set("bf-week", String(week)); renderWeek(); renderNames(); }));
   const exHtml = list => list.map(e => `<div class="ex"><b>${e[0]}</b><span class="reps">${e[1]}</span><span class="alt">${e[2]}</span>${e[3] ? `<span class="alt" style="color:var(--p2)"><span class="pname" data-p="p2">Serena</span>: ${e[3]}${zh(e[4])}</span>` : ""}</div>`).join("");
   $("#wa").innerHTML = exHtml(WA);
   $("#wb").innerHTML = exHtml(WB);
+  $("#wa2").innerHTML = exHtml(WA2); $("#wb2").innerHTML = exHtml(WB2);
+  $("#wa3").innerHTML = exHtml(WA3); $("#wb3").innerHTML = exHtml(WB3);
+  $("#weasy").innerHTML = exHtml(WEASY);
+  let blk = ["1", "2", "3"].includes(store.get("bf-blk")) ? store.get("bf-blk") : "1";
+  const renderBlock = () => {
+    $$("[data-block]").forEach(el => el.hidden = el.dataset.block !== blk);
+    $$("[data-blk]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.blk === blk)));
+  };
+  $$("[data-blk]").forEach(b => b.addEventListener("click", () => { blk = b.dataset.blk; store.set("bf-blk", blk); renderBlock(); }));
+  renderBlock();
   $("#start-w").innerHTML = LIFTS.map(l => `<tr><td>${l[1]}</td><td>${l[2]}</td><td>${l[3]}</td></tr>`).join("");
   $("#l-ex").innerHTML = LIFTS.map(l => `<option value="${l[0]}">${l[1]}</option>`).join("");
   function recipeHtml(list) { return list.map(r => `<article class="card">
@@ -874,6 +992,46 @@ td.day { font-weight: 600; white-space: nowrap; }
     } catch (err) { msg.textContent = "Couldn't save. Check your connection and page access."; }
   });
 
+  // ---------- shopping ----------
+  const slug = t => t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 48);
+  const shopId = (wk, t) => `w${wk}_${slug(t)}`;
+  const renderShop = () => {
+    ["1", "2"].forEach(wk => {
+      const custom = Object.entries(state.shop).filter(([, v]) => v.custom && String(v.week) === wk).map(([id, v]) => [id, v.text]);
+      const cats = [...SHOP[wk].map(([c, items]) => [c, items.map(t => [shopId(wk, t), t])]), ...(custom.length ? [["Extras", custom]] : [])];
+      $(`#shop-${wk}`).innerHTML = cats.map(([c, items]) => `<div class="shopcat"><span class="label">${esc(c)}</span>${items.map(([id, t]) => {
+        const v = state.shop[id] || {}, on = !!v.checked;
+        return `<label class="shopitem ${on ? "done" : ""}"><input type="checkbox" data-shop="${id}" data-wk="${wk}" ${on ? "checked" : ""}><span>${esc(t)}</span>${on && v.by ? `<i class="who-dot" style="background:var(--${v.by})" title="${esc(state.names[v.by] || "")}"></i>` : ""}${v.custom ? `<button type="button" class="del" data-shopdel="${id}" aria-label="Remove ${esc(t)}">×</button>` : ""}</label>`;
+      }).join("")}</div>`).join("");
+    });
+    $$("[data-shop]").forEach(cb => cb.addEventListener("change", () => shopSet(cb.dataset.shop, { week: +cb.dataset.wk, checked: cb.checked, by: state.me || "" })));
+    $$("[data-shopdel]").forEach(b => b.addEventListener("click", e => { e.preventDefault(); shopDel(b.dataset.shopdel); }));
+  };
+  const shopSet = async (id, patch) => {
+    state.shop[id] = { ...(state.shop[id] || {}), ...patch }; renderShop();
+    if (state.db) { try { await state.db.doc(`shop/${id}`).set(state.shop[id]); } catch (err) { setStatus("Couldn't update the shopping list.", true); } }
+    else saveLocal();
+  };
+  const shopDel = async id => {
+    delete state.shop[id]; renderShop();
+    if (state.db) { try { await state.db.doc(`shop/${id}`).delete(); } catch (err) { setStatus("Couldn't update the shopping list.", true); } }
+    else saveLocal();
+  };
+  $$("[data-shopadd]").forEach(f => f.addEventListener("submit", e => {
+    e.preventDefault();
+    const wk = f.dataset.shopadd, inp = $(`#shop-add-${wk}`), t = inp.value.trim();
+    if (!t) return;
+    inp.value = "";
+    shopSet(`w${wk}_x${Date.now().toString(36)}`, { week: +wk, text: t, custom: true, checked: false });
+  }));
+  $$("[data-shopclear]").forEach(b => b.addEventListener("click", async () => {
+    const wk = b.dataset.shopclear;
+    for (const [id, v] of Object.entries(state.shop)) {
+      if (String(v.week) !== wk || !v.checked) continue;
+      if (v.custom) await shopSet(id, { checked: false, by: "" }); else await shopDel(id);
+    }
+  }));
+
   // ---------- helpers ----------
   function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
   function setStatus(t, warn) { const s = $("#status"); s.textContent = t; s.classList.toggle("warn", !!warn); }
@@ -889,11 +1047,11 @@ td.day { font-weight: 600; white-space: nowrap; }
       ? used.map(l => `<tr><td>${l[1]}</td><td style="font-variant-numeric:tabular-nums">${cell("p1", l[0])}</td><td style="font-variant-numeric:tabular-nums">${cell("p2", l[0])}</td></tr>`).join("")
       : '<tr><td colspan="3" class="muted small">After your first session, log the weights you used here; your progress will show up in this table.</td></tr>';
   }
-  function renderAll() { renderNames(); renderToday(); renderLifts(); }
+  function renderAll() { renderNames(); renderToday(); renderLifts(); renderShop(); }
   try { const g = JSON.parse(store.get("bf-goal") || "null"); if (g) state.goal = g; } catch {}
-  function saveLocal() { store.set("bf-local", JSON.stringify({ days: state.days, lifts: state.lifts })); }
+  function saveLocal() { store.set("bf-local", JSON.stringify({ days: state.days, lifts: state.lifts, shop: state.shop })); }
   function loadLocal() {
-    try { const d = JSON.parse(store.get("bf-local") || "{}"); Object.assign(state, { days: d.days || {}, lifts: d.lifts || {} }); } catch {}
+    try { const d = JSON.parse(store.get("bf-local") || "{}"); Object.assign(state, { days: d.days || {}, lifts: d.lifts || {}, shop: d.shop || {} }); } catch {}
     try { const n = JSON.parse(store.get("bf-names") || "null"); if (n) state.names = n; } catch {}
   }
 
@@ -917,6 +1075,10 @@ td.day { font-weight: 600; white-space: nowrap; }
       snap.docs.forEach(d => { const v = d.data(); if (v && v.date && v.p) days[`${v.date}_${v.p}`] = v.habits || {}; });
       state.days = days; renderToday();
     }, () => setStatus("Couldn't load the daily records.", true));
+    db.collection("shop").onSnapshot(snap => {
+      const sh = {}; snap.docs.forEach(d => { const v = d.data(); if (v) sh[d.id] = v; });
+      state.shop = sh; renderShop();
+    });
     db.collection("lifts").onSnapshot(snap => {
       const l = {}; snap.docs.forEach(d => { const v = d.data(); if (v) l[d.id] = v; });
       state.lifts = l; renderLifts(); renderToday();
