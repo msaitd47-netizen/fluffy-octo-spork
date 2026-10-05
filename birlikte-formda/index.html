@@ -1,0 +1,534 @@
+<title>Birlikte Formda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow phone-first column; sticky tab bar; two partners side by side in colour-coded lanes */
+:root {
+  --bg: #f3f6f2;
+  --surface: #ffffff;
+  --fg: #16231d;
+  --muted: #5d6d65;
+  --line: #dbe3dc;
+  --accent: #2b7a57;
+  --accent-soft: #e2f0e7;
+  --p1: #2f68a3;
+  --p1-soft: #e3ecf6;
+  --p2: #b03f76;
+  --p2-soft: #f6e4ed;
+  --warn: #9a6a12;
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101713; --surface: #18221c; --fg: #e7efe9; --muted: #9db0a5; --line: #2a3830;
+    --accent: #5cc193; --accent-soft: #1c3427;
+    --p1: #7fb0e6; --p1-soft: #1b2a3a; --p2: #ec8fbd; --p2-soft: #3a1f2d; --warn: #e3b55a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101713; --surface: #18221c; --fg: #e7efe9; --muted: #9db0a5; --line: #2a3830;
+  --accent: #5cc193; --accent-soft: #1c3427;
+  --p1: #7fb0e6; --p1-soft: #1b2a3a; --p2: #ec8fbd; --p2-soft: #3a1f2d; --warn: #e3b55a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 760px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 64px; display: grid; gap: 20px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: 1.35rem; font-weight: 800; }
+h3 { font-size: 1.05rem; font-weight: 600; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.small { font-size: 0.85rem; }
+.label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+header { display: grid; gap: 6px; }
+.status { font-size: 0.82rem; color: var(--muted); }
+.status.warn { color: var(--warn); }
+
+nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); display: flex; gap: 6px; overflow-x: auto; padding-block: 8px; border-bottom: 1px solid var(--line); }
+nav.tabs button { flex: 0 0 auto; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 999px; padding: 7px 14px; font: inherit; font-weight: 600; font-size: 0.9rem; cursor: pointer; }
+nav.tabs button[aria-selected="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.who { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.who button { border: 2px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 10px; padding: 6px 12px; font: inherit; font-weight: 600; cursor: pointer; }
+.who button.on.p1 { border-color: var(--p1); background: var(--p1-soft); }
+.who button.on.p2 { border-color: var(--p2); background: var(--p2-soft); }
+
+.lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 560px) { .lanes { grid-template-columns: 1fr; } }
+.lane { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px; display: grid; gap: 10px; min-width: 0; border-top: 4px solid var(--lane); }
+.lane.p1 { --lane: var(--p1); --lane-soft: var(--p1-soft); }
+.lane.p2 { --lane: var(--p2); --lane-soft: var(--p2-soft); }
+.lane-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.lane-head h3 { color: var(--lane); }
+.score { font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; font-variant-numeric: tabular-nums; }
+.score small { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+
+.habit { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); cursor: pointer; user-select: none; }
+.habit input { width: 20px; height: 20px; accent-color: var(--lane); flex: none; }
+.habit.done { background: var(--lane-soft); border-color: transparent; }
+.habit[aria-disabled="true"] { cursor: default; opacity: 0.85; }
+.habit span { min-width: 0; }
+
+.week { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.week .cell { aspect-ratio: 1; max-width: 100%; border-radius: 6px; background: var(--line); position: relative; }
+.week .cell i { position: absolute; inset: 0; border-radius: 6px; background: var(--lane); }
+.week .d { font-size: 0.66rem; text-align: center; color: var(--muted); }
+.streak { font-size: 0.85rem; color: var(--muted); }
+.streak b { color: var(--fg); font-variant-numeric: tabular-nums; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 10px; min-width: 0; }
+.card ul { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; }
+.pill { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; background: var(--accent-soft); color: var(--accent); }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; font-variant-numeric: tabular-nums; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; font-weight: 600; }
+.big { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; font-variant-numeric: tabular-nums; }
+.note { border-left: 3px solid var(--accent); padding: 8px 12px; background: var(--accent-soft); border-radius: 0 10px 10px 0; font-size: 0.9rem; }
+
+.form { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; align-items: end; }
+.form label { display: grid; gap: 4px; font-size: 0.85rem; color: var(--muted); }
+input[type=number], input[type=text], input[type=date], select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; width: 100%; }
+.btn { font: inherit; font-weight: 600; border: 0; border-radius: 10px; padding: 9px 16px; background: var(--accent); color: var(--bg); cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+td.day { font-weight: 600; white-space: nowrap; }
+.ex { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding-block: 6px; border-bottom: 1px dashed var(--line); }
+.ex:last-child { border-bottom: 0; }
+.ex b { font-weight: 600; }
+.ex .reps { font-variant-numeric: tabular-nums; color: var(--muted); text-align: right; }
+.ex .alt { grid-column: 1 / -1; font-size: 0.82rem; color: var(--muted); }
+.trend { display: flex; gap: 14px; flex-wrap: wrap; }
+.trend .card { flex: 1 1 200px; }
+.up { color: var(--warn); } .down { color: var(--accent); }
+.list-rows { display: grid; gap: 6px; font-variant-numeric: tabular-nums; }
+.list-rows div { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-block: 4px; }
+@media (prefers-reduced-motion: no-preference) { .habit, .week .cell i { transition: background 0.2s, opacity 0.2s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="label">Çift programı · 12 hafta</span>
+    <h1>Birlikte Formda</h1>
+    <p class="muted">Her gün 6 alışkanlık. İkiniz de kendi kutularınızı işaretleyin, birbirinizin ilerlemesini görün.</p>
+    <p class="status" id="status">Bağlanıyor…</p>
+  </header>
+
+  <div class="who" id="who">
+    <span class="small muted">Ben:</span>
+    <button type="button" class="p1" data-p="p1" id="who-p1">1. kişi</button>
+    <button type="button" class="p2" data-p="p2" id="who-p2">2. kişi</button>
+    <button type="button" class="btn ghost small" id="rename" style="padding:5px 10px">İsimleri değiştir</button>
+  </div>
+  <form id="rename-form" class="card form" hidden>
+    <label>1. kişi (mavi)<input type="text" id="name-p1" maxlength="20"></label>
+    <label>2. kişi (pembe)<input type="text" id="name-p2" maxlength="20"></label>
+    <button class="btn" type="submit">Kaydet</button>
+  </form>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="bugun" aria-selected="true">Bugün</button>
+    <button role="tab" data-tab="plan" aria-selected="false">Plan</button>
+    <button role="tab" data-tab="menu" aria-selected="false">Menü</button>
+    <button role="tab" data-tab="spor" aria-selected="false">Antrenman</button>
+    <button role="tab" data-tab="olcum" aria-selected="false">Ölçüm</button>
+  </nav>
+
+  <!-- BUGÜN -->
+  <section data-panel="bugun" class="wrap" style="padding:0">
+    <div style="display:flex;justify-content:space-between;align-items:end;gap:10px;flex-wrap:wrap">
+      <h2 id="today-title">Bugün</h2>
+      <label class="small muted" style="display:flex;gap:6px;align-items:center">Gün <input type="date" id="day" style="width:auto"></label>
+    </div>
+    <div class="lanes" id="lanes"></div>
+    <p class="small muted">Sadece kendi kutularını işaretleyebilirsin. Üstten "Ben" seçimini yap.</p>
+  </section>
+
+  <!-- PLAN -->
+  <section data-panel="plan" hidden class="wrap" style="padding:0">
+    <h2>Kişisel planlar</h2>
+    <div class="lanes">
+      <div class="lane p1">
+        <div class="lane-head"><h3 class="pname" data-p="p1">1. kişi</h3><span class="pill">Yağ yak, kas kazan</span></div>
+        <p class="small">175–177 cm, ~80 kg. Hedef: kilo sayısı değil, daha sıkı ve kaslı bir vücut. Buna <b>rekompozisyon</b> denir: hafif kalori açığı + yüksek protein + ağırlık antrenmanı.</p>
+        <dl class="kv">
+          <dt>Kalori</dt><dd id="kcal-p1">≈ 2.200–2.300 kcal</dd>
+          <dt>Protein</dt><dd>140–160 g / gün</dd>
+          <dt>Kuvvet</dt><dd>Haftada 3–4 gün</dd>
+          <dt>Adım</dt><dd>8.000–10.000 / gün</dd>
+          <dt>Tempo</dt><dd>Ayda 1–2 kg, bel −1–2 cm</dd>
+        </dl>
+        <ul class="small">
+          <li>Her öğünde 30–40 g protein: yumurta, tavuk, ton, kıyma, yoğurt, lor.</li>
+          <li>Ağırlıkları her hafta azıcık artır. Kas bu sinyalle gelir.</li>
+          <li>Tartı yavaş düşebilir. Bel ölçüsü ve aynadaki fark daha doğru gösterge.</li>
+        </ul>
+      </div>
+      <div class="lane p2">
+        <div class="lane-head"><h3 class="pname" data-p="p2">2. kişi</h3><span class="pill">Göbek ve bel</span></div>
+        <p class="small">Kilo yazılmıyor, sadece bel ölçüsü takip ediliyor. Hedef: karın çevresindeki yağı azaltmak, sıkı bir orta bölge.</p>
+        <div class="note">Mekik tek başına göbeği eritmez; vücut yağı bölgesel değil genel olarak azalır. Kalori dengesi, protein, kuvvet antrenmanı ve uyku birlikte işleyince bel incelir.</div>
+        <dl class="kv">
+          <dt>Tabak</dt><dd>½ sebze · ¼ protein · ¼ tam tahıl</dd>
+          <dt>Protein</dt><dd>Her öğünde avuç içi kadar</dd>
+          <dt>Kuvvet</dt><dd>Haftada 3 gün</dd>
+          <dt>Adım</dt><dd>8.000+ / gün</dd>
+          <dt>Uyku</dt><dd>7–8 saat</dd>
+        </dl>
+        <ul class="small">
+          <li>Şekerli içecek, paketli atıştırmalık ve gece atıştırmasını azalt. Göbek yağında en hızlı farkı bunlar yapar.</li>
+          <li>Stres ve uykusuzluk bel çevresine yağ depolamayı artırır; uyku listede bu yüzden var.</li>
+          <li>Bel ölçüsü ayda 2–4 cm azalırsa harika gidiyorsun.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Kalori hesaplayıcı</h3>
+      <p class="small muted">Yaklaşık günlük ihtiyacını hesaplar (Mifflin-St Jeor). Girdiğin değerler hiçbir yere kaydedilmez.</p>
+      <form class="form" id="calc">
+        <label>Cinsiyet<select id="c-sex"><option value="m">Erkek</option><option value="f">Kadın</option></select></label>
+        <label>Yaş<input type="number" id="c-age" min="15" max="80" value="27"></label>
+        <label>Boy (cm)<input type="number" id="c-h" min="140" max="210" value="176"></label>
+        <label>Kilo (kg)<input type="number" id="c-w" min="40" max="200" value="80"></label>
+        <label>Hareket<select id="c-act">
+          <option value="1.2">Masa başı, spor yok</option>
+          <option value="1.375" selected>Haftada 1–3 spor</option>
+          <option value="1.55">Haftada 3–5 spor</option>
+          <option value="1.725">Çok aktif</option>
+        </select></label>
+      </form>
+      <div class="trend">
+        <div><span class="label">Koruma</span><div class="big" id="c-tdee">–</div></div>
+        <div><span class="label">Yağ yakımı hedefi</span><div class="big" id="c-target" style="color:var(--accent)">–</div></div>
+        <div><span class="label">Protein</span><div class="big" id="c-prot">–</div></div>
+      </div>
+    </div>
+    <p class="small muted">Bu plan genel sağlıklı yaşam önerisidir. Bir sağlık sorununuz, düzenli kullandığınız ilaç ya da hamilelik durumu varsa önce doktor veya diyetisyene danışın.</p>
+  </section>
+
+  <!-- MENÜ -->
+  <section data-panel="menu" hidden class="wrap" style="padding:0">
+    <h2>Ortak haftalık menü</h2>
+    <p class="muted small">Aynı yemeği ikiniz de yiyin; fark porsiyonda. <b class="pname" data-p="p1" style="color:var(--p1)">1. kişi</b>: protein ve karbonhidrat porsiyonu 1,5 kat. <b class="pname" data-p="p2" style="color:var(--p2)">2. kişi</b>: tabak yöntemi, ekmek/pilav yarım porsiyon.</p>
+    <div class="card scroll" style="padding:0">
+      <table>
+        <thead><tr><th>Gün</th><th>Kahvaltı</th><th>Öğle</th><th>Akşam</th></tr></thead>
+        <tbody id="menu-body"></tbody>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Ara öğün seçenekleri</h3>
+      <ul class="small">
+        <li>1 kase yoğurt veya kefir + bir avuç meyve</li>
+        <li>10–12 çiğ badem veya ceviz</li>
+        <li>2 haşlanmış yumurta</li>
+        <li>Lor peyniri + salatalık</li>
+        <li>1 elma + 1 tatlı kaşığı fıstık ezmesi</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Haftalık alışveriş listesi (2 kişi)</h3>
+      <div class="lanes" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+        <div><span class="label">Protein</span><ul class="small"><li>30 yumurta</li><li>1,5 kg tavuk göğsü/but</li><li>500 g yağsız kıyma</li><li>2 kutu ton balığı</li><li>1 somon veya levrek</li><li>2 kg yoğurt, 1 L kefir</li><li>Lor ve beyaz peynir</li><li>Kırmızı mercimek, nohut</li></ul></div>
+        <div><span class="label">Sebze, meyve</span><ul class="small"><li>Domates, salatalık, biber</li><li>Ispanak, brokoli, kabak</li><li>Taze fasulye, patlıcan</li><li>Marul, roka, maydanoz</li><li>Soğan, sarımsak, limon</li><li>Elma, muz, mevsim meyvesi</li></ul></div>
+        <div><span class="label">Tahıl, diğer</span><ul class="small"><li>Yulaf</li><li>Bulgur, esmer pirinç</li><li>Tam buğday ekmek</li><li>Tam buğday makarna</li><li>Zeytinyağı, zeytin</li><li>Badem, ceviz</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTRENMAN -->
+  <section data-panel="spor" hidden class="wrap" style="padding:0">
+    <h2>Birlikte antrenman</h2>
+    <p class="muted small">Haftada 3 gün, 45 dakika: <b>Pazartesi A · Çarşamba B · Cuma A</b>, sonraki hafta B-A-B. Aynı hareketleri birlikte yapın; ağırlıklar kişiye göre. Diğer günler 30–45 dk tempolu yürüyüş.</p>
+    <div class="lanes">
+      <div class="card"><h3>Gün A</h3><div id="wa"></div></div>
+      <div class="card"><h3>Gün B</h3><div id="wb"></div></div>
+    </div>
+    <div class="card">
+      <h3>Kurallar</h3>
+      <ul class="small">
+        <li>Başlamadan 5 dk ısınma: yerinde yürüyüş, kol çevirme, 10 boş squat.</li>
+        <li>Her sette son 2 tekrar zor gelmeli. Kolay geliyorsa bir sonraki hafta ağırlık veya tekrar ekle.</li>
+        <li>Setler arası 60–90 saniye dinlen.</li>
+        <li>Ağrı (kas yorgunluğu değil, eklem ağrısı) olursa o hareketi bırak.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ÖLÇÜM -->
+  <section data-panel="olcum" hidden class="wrap" style="padding:0">
+    <h2>Haftalık ölçüm</h2>
+    <p class="muted small">Haftada bir, aynı gün, sabah kahvaltıdan önce. Mezurayı göbek deliği hizasından, nefesi tutmadan sar.</p>
+    <div class="trend" id="trend"></div>
+    <div class="card">
+      <h3>Ölçümünü ekle</h3>
+      <p class="small muted" id="privacy-note">Ölçümlerin sadece sana görünür. Partnerin yalnızca kaç cm değiştiğini görür.</p>
+      <form class="form" id="mform">
+        <label>Tarih<input type="date" id="m-date"></label>
+        <label>Bel (cm)<input type="number" id="m-waist" step="0.5" min="40" max="200" required></label>
+        <label id="m-weight-wrap">Kilo (kg, isteğe bağlı)<input type="number" id="m-weight" step="0.1" min="30" max="250"></label>
+        <button class="btn" type="submit">Kaydet</button>
+      </form>
+      <p class="small" id="m-msg" aria-live="polite"></p>
+    </div>
+    <div class="card">
+      <h3>Geçmişim</h3>
+      <div class="list-rows" id="history"><p class="small muted">Henüz ölçüm yok. İlk ölçümünü yukarıdan ekle; bu senin başlangıç noktan olur.</p></div>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const HABITS = [
+    ["su", "Su: 2–2,5 litre"],
+    ["adim", "8.000+ adım"],
+    ["protein", "Her öğünde protein"],
+    ["spor", "Antrenman veya 30 dk yürüyüş"],
+    ["seker", "Şekerli içecek / tatlı yok"],
+    ["uyku", "7+ saat uyku"],
+  ];
+  const MENU = [
+    ["Pazartesi", "Menemen (2–3 yumurta), beyaz peynir, domates-salatalık, 1 dilim tam buğday ekmek", "Tavuk sote + bulgur pilavı + çoban salata", "Kırmızı mercimek çorbası + zeytinyağlı taze fasulye + yoğurt"],
+    ["Salı", "Yulaf lapası: süt, muz, ceviz, tarçın", "Ton balıklı salata (nohut, mısır, yeşillik)", "Izgara köfte + közlenmiş biber-patlıcan + cacık"],
+    ["Çarşamba", "Haşlanmış yumurta, lor, zeytin, yeşillik", "Akşamdan kalan köfte + salata", "Fırında tavuk but + fırın sebze + yoğurt"],
+    ["Perşembe", "Yoğurt + yulaf + meyve + 1 kaşık fıstık ezmesi", "Kuru fasulye veya nohut + az pilav + turşu", "Fırında somon/levrek + roka salatası"],
+    ["Cuma", "Peynirli omlet, domates, salatalık", "Tavuk dürüm (tam buğday lavaş) + ayran", "Kıymalı ıspanak + yoğurt + 1 dilim ekmek"],
+    ["Cumartesi", "Serpme kahvaltı: yumurta, peynir, zeytin, sebze. Börek, poğaça yok", "Hafif: mercimek çorbası + salata", "Serbest öğün: dışarıda yiyin, porsiyonu paylaşın"],
+    ["Pazar", "Yumurtalı ekmek (fırında) + kefir", "Tavuk şiş + bulgur + salata", "Zeytinyağlı kabak + lor + yoğurt"],
+  ];
+  const WA = [
+    ["Squat (goblet veya halter)", "3 × 10–12", "Evde: su bidonu veya sırt çantası ile"],
+    ["Şınav", "3 × max", "Zorsa dizler yerde ya da duvara karşı"],
+    ["Dumbbell row (tek kol)", "3 × 10 / kol", "Evde: dolu çanta veya bidon"],
+    ["Hip thrust / köprü", "3 × 12–15", "Kalçayı en üstte 1 sn sık"],
+    ["Plank", "3 × 30–45 sn", "Kalça düz, karın sıkı"],
+  ];
+  const WB = [
+    ["Romanian deadlift", "3 × 10", "Sırt düz, kalçayı geriye it"],
+    ["Omuz press", "3 × 10", "Oturarak veya ayakta"],
+    ["Lunge (öne adım)", "3 × 10 / bacak", "Denge için duvara yakın"],
+    ["Lat pulldown / bant çekiş", "3 × 12", "Evde: kapıya bağlı direnç bandı"],
+    ["Dead bug", "3 × 10 / taraf", "Bel yere yapışık; derin karın kası"],
+  ];
+
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const pad = n => String(n).padStart(2, "0");
+  const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  const TODAY = iso(new Date());
+  const DAYS_TR = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch {} },
+  };
+
+  const state = {
+    me: store.get("bf-me"),
+    names: { p1: "1. kişi", p2: "2. kişi" },
+    days: {},      // `${date}_${p}` -> habits
+    progress: {},  // p -> {waistDelta, weightDelta}
+    measures: [],  // own private
+    day: TODAY,
+    db: null, uid: null, local: false,
+  };
+
+  // ---------- static content ----------
+  $("#menu-body").innerHTML = MENU.map(r => `<tr><td class="day">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("");
+  const exHtml = list => list.map(e => `<div class="ex"><b>${e[0]}</b><span class="reps">${e[1]}</span><span class="alt">${e[2]}</span></div>`).join("");
+  $("#wa").innerHTML = exHtml(WA);
+  $("#wb").innerHTML = exHtml(WB);
+
+  // ---------- tabs ----------
+  const showTab = t => {
+    $$("nav.tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === t)));
+    $$("[data-panel]").forEach(p => p.hidden = p.dataset.panel !== t);
+    store.set("bf-tab", t);
+  };
+  $$("nav.tabs button").forEach(b => b.addEventListener("click", () => showTab(b.dataset.tab)));
+  const hashTab = location.hash.slice(1);
+  showTab(["bugun", "plan", "menu", "spor", "olcum"].includes(hashTab) ? hashTab : (store.get("bf-tab") || "bugun"));
+
+  // ---------- calculator ----------
+  const calc = () => {
+    const sex = $("#c-sex").value, age = +$("#c-age").value, h = +$("#c-h").value, w = +$("#c-w").value, act = +$("#c-act").value;
+    if (!age || !h || !w) return;
+    const bmr = 10 * w + 6.25 * h - 5 * age + (sex === "m" ? 5 : -161);
+    const tdee = bmr * act;
+    const target = Math.max(sex === "m" ? 1600 : 1300, tdee - (sex === "m" ? 300 : 400));
+    const r = n => Math.round(n / 10) * 10;
+    $("#c-tdee").textContent = r(tdee).toLocaleString("tr-TR") + " kcal";
+    $("#c-target").textContent = r(target).toLocaleString("tr-TR") + " kcal";
+    $("#c-prot").textContent = `${Math.round(w * 1.6)}–${Math.round(w * 2)} g`;
+  };
+  $("#calc").addEventListener("input", calc);
+  $("#c-sex").addEventListener("change", () => {
+    const f = $("#c-sex").value === "f";
+    $("#c-h").value = f ? 165 : 176; $("#c-w").value = f ? 62 : 80; calc();
+  });
+  calc();
+
+  // ---------- who am I ----------
+  const renderNames = () => {
+    $("#who-p1").textContent = state.names.p1;
+    $("#who-p2").textContent = state.names.p2;
+    $$(".pname").forEach(el => el.textContent = state.names[el.dataset.p]);
+    $$("#who button[data-p]").forEach(b => b.classList.toggle("on", b.dataset.p === state.me));
+    const isP2 = state.me === "p2";
+    $("#m-weight-wrap").hidden = isP2;
+  };
+  $$("#who button[data-p]").forEach(b => b.addEventListener("click", () => {
+    state.me = b.dataset.p; store.set("bf-me", state.me); renderAll();
+  }));
+  $("#rename").addEventListener("click", () => {
+    const f = $("#rename-form"); f.hidden = !f.hidden;
+    $("#name-p1").value = state.names.p1; $("#name-p2").value = state.names.p2;
+  });
+  $("#rename-form").addEventListener("submit", async e => {
+    e.preventDefault();
+    const names = { p1: $("#name-p1").value.trim() || "1. kişi", p2: $("#name-p2").value.trim() || "2. kişi" };
+    state.names = names; $("#rename-form").hidden = true; renderAll();
+    if (state.db) { try { await state.db.doc("settings/names").set(names); } catch (err) { setStatus("İsimler kaydedilemedi: bu sayfada yazma iznin yok.", true); } }
+    else store.set("bf-names", JSON.stringify(names));
+  });
+
+  // ---------- today ----------
+  $("#day").value = state.day; $("#day").max = TODAY;
+  $("#day").addEventListener("change", () => { state.day = $("#day").value || TODAY; renderToday(); });
+
+  const habitsOf = (date, p) => state.days[`${date}_${p}`] || {};
+  const countOf = (date, p) => HABITS.filter(([k]) => habitsOf(date, p)[k]).length;
+  const streakOf = p => {
+    let n = 0; const d = new Date();
+    if (countOf(iso(d), p) < 4) d.setDate(d.getDate() - 1); // today still in progress
+    while (countOf(iso(d), p) >= 4 && n < 999) { n++; d.setDate(d.getDate() - 1); }
+    return n;
+  };
+
+  const renderToday = () => {
+    const dd = new Date(state.day + "T12:00:00");
+    $("#today-title").textContent = state.day === TODAY ? "Bugün" : dd.toLocaleDateString("tr-TR", { day: "numeric", month: "long", weekday: "long" });
+    const last7 = [...Array(7)].map((_, i) => { const x = new Date(); x.setDate(x.getDate() - 6 + i); return x; });
+    $("#lanes").innerHTML = ["p1", "p2"].map(p => {
+      const h = habitsOf(state.day, p), mine = state.me === p, c = countOf(state.day, p);
+      const delta = state.progress[p]?.waistDelta;
+      return `<div class="lane ${p}">
+        <div class="lane-head"><h3>${esc(state.names[p])}${mine ? ' <span class="small muted">(sen)</span>' : ""}</h3><span class="score">${c}<small>/6</small></span></div>
+        ${HABITS.map(([k, label]) => `<label class="habit ${h[k] ? "done" : ""}" ${mine ? "" : 'aria-disabled="true"'}>
+          <input type="checkbox" id="h-${p}-${k}" data-p="${p}" data-k="${k}" ${h[k] ? "checked" : ""} ${mine ? "" : "disabled"}><span>${label}</span></label>`).join("")}
+        <div class="week">${last7.map(x => `<span class="d">${DAYS_TR[x.getDay()]}</span>`).join("")}
+          ${last7.map(x => `<span class="cell" title="${iso(x)}: ${countOf(iso(x), p)}/6"><i style="opacity:${countOf(iso(x), p) / 6}"></i></span>`).join("")}</div>
+        <p class="streak">Seri: <b>${streakOf(p)} gün</b> (4+ kutu)${typeof delta === "number" ? ` · Bel: <b class="${delta <= 0 ? "down" : "up"}">${delta > 0 ? "+" : ""}${delta.toLocaleString("tr-TR")} cm</b>` : ""}</p>
+      </div>`;
+    }).join("");
+    $$("#lanes input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => toggle(cb.dataset.p, cb.dataset.k, cb.checked)));
+  };
+
+  const toggle = async (p, k, val) => {
+    if (p !== state.me) return;
+    const id = `${state.day}_${p}`;
+    const habits = { ...habitsOf(state.day, p), [k]: val };
+    state.days[id] = habits; renderToday();
+    if (state.db) {
+      try { await state.db.doc(`days/${id}`).set({ date: state.day, p, habits }); }
+      catch (err) { setStatus("Kaydedilemedi. Bu sayfada yazma iznin olmayabilir; sahibinden 'Katkıda bulunan' erişimi iste.", true); }
+    } else saveLocal();
+  };
+
+  // ---------- measurements ----------
+  $("#m-date").value = TODAY; $("#m-date").max = TODAY;
+  const renderMeasures = () => {
+    const ms = [...state.measures].sort((a, b) => a.date.localeCompare(b.date));
+    const hist = $("#history");
+    if (!ms.length) hist.innerHTML = '<p class="small muted">Henüz ölçüm yok. İlk ölçümünü yukarıdan ekle; bu senin başlangıç noktan olur.</p>';
+    else hist.innerHTML = [...ms].reverse().map(m => `<div><span>${new Date(m.date + "T12:00:00").toLocaleDateString("tr-TR", { day: "numeric", month: "short" })}</span><span>${m.waist} cm${m.weight ? ` · ${m.weight} kg` : ""}</span></div>`).join("");
+    $("#trend").innerHTML = ["p1", "p2"].map(p => {
+      const d = state.progress[p] || {};
+      const fmt = (v, u) => typeof v === "number" ? `<span class="${v <= 0 ? "down" : "up"}">${v > 0 ? "+" : ""}${v.toLocaleString("tr-TR")} ${u}</span>` : '<span class="muted">–</span>';
+      return `<div class="card lane ${p}"><span class="label">${esc(state.names[p])} · başlangıçtan beri</span>
+        <div class="big">${fmt(d.waistDelta, "cm")}</div>
+        ${p === "p1" ? `<p class="small muted">Kilo: ${fmt(d.weightDelta, "kg")}</p>` : '<p class="small muted">Sadece bel ölçüsü</p>'}</div>`;
+    }).join("");
+  };
+
+  $("#mform").addEventListener("submit", async e => {
+    e.preventDefault();
+    const msg = $("#m-msg");
+    if (!state.me) { msg.textContent = "Önce en üstten kim olduğunu seç."; return; }
+    const date = $("#m-date").value || TODAY, waist = +$("#m-waist").value;
+    const weight = state.me === "p1" && $("#m-weight").value ? +$("#m-weight").value : null;
+    if (!waist) { msg.textContent = "Bel ölçüsünü cm olarak yaz."; return; }
+    const entry = { date, p: state.me, waist, ...(weight ? { weight } : {}) };
+    state.measures = state.measures.filter(m => m.date !== date).concat(entry);
+    const ms = [...state.measures].sort((a, b) => a.date.localeCompare(b.date));
+    const first = ms[0], last = ms[ms.length - 1];
+    const r1 = n => Math.round(n * 10) / 10;
+    const prog = { waistDelta: r1(last.waist - first.waist), updated: TODAY };
+    const fw = ms.find(m => m.weight), lw = [...ms].reverse().find(m => m.weight);
+    if (state.me === "p1" && fw && lw) prog.weightDelta = r1(lw.weight - fw.weight);
+    state.progress[state.me] = prog;
+    renderMeasures(); renderToday();
+    try {
+      if (state.db && state.uid) {
+        await state.db.collection(`data/users/${state.uid}`).doc(`m_${date}`).set(entry);
+        await state.db.doc(`progress/${state.me}`).set(prog);
+      } else saveLocal();
+      msg.textContent = "Kaydedildi.";
+      $("#m-waist").value = ""; $("#m-weight").value = "";
+    } catch (err) { msg.textContent = "Kaydedilemedi. Bağlantını ve sayfa iznini kontrol et."; }
+  });
+
+  // ---------- helpers ----------
+  function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+  function setStatus(t, warn) { const s = $("#status"); s.textContent = t; s.classList.toggle("warn", !!warn); }
+  function renderAll() { renderNames(); renderToday(); renderMeasures(); }
+  function saveLocal() { store.set("bf-local", JSON.stringify({ days: state.days, progress: state.progress, measures: state.measures })); }
+  function loadLocal() {
+    try { const d = JSON.parse(store.get("bf-local") || "{}"); Object.assign(state, { days: d.days || {}, progress: d.progress || {}, measures: d.measures || [] }); } catch {}
+    try { const n = JSON.parse(store.get("bf-names") || "null"); if (n) state.names = n; } catch {}
+  }
+
+  renderAll();
+
+  // ---------- shared store ----------
+  (async () => {
+    const db = window.claude?.use ? await window.claude.use("db") : null;
+    const user = window.claude?.use ? await window.claude.use("user") : null;
+    if (!db) {
+      state.local = true; loadLocal(); renderAll();
+      setStatus("Ortak kayıt şu an kullanılamıyor; işaretlerin sadece bu cihazda tutuluyor.", true);
+      return;
+    }
+    state.db = db;
+    try { state.uid = user ? await user.id() : null; } catch { state.uid = null; }
+    setStatus(state.me ? "Ortak kayıt açık. İşaretlerin anında partnerine görünür." : "Ortak kayıt açık. Önce üstten kim olduğunu seç.");
+    db.doc("settings/names").onSnapshot(s => { if (s.exists) { const d = s.data(); state.names = { p1: d.p1 || "1. kişi", p2: d.p2 || "2. kişi" }; renderAll(); } });
+    db.collection("days").orderBy("date", "desc").limit(400).onSnapshot(snap => {
+      const days = {};
+      snap.docs.forEach(d => { const v = d.data(); if (v && v.date && v.p) days[`${v.date}_${v.p}`] = v.habits || {}; });
+      state.days = days; renderToday();
+    }, () => setStatus("Günlük kayıtlar okunamadı.", true));
+    db.collection("progress").onSnapshot(snap => {
+      const pr = {}; snap.docs.forEach(d => { pr[d.id] = d.data() || {}; });
+      state.progress = pr; renderToday(); renderMeasures();
+    });
+    if (state.uid) {
+      db.collection(`data/users/${state.uid}`).onSnapshot(snap => {
+        state.measures = snap.docs.filter(d => d.id.startsWith("m_")).map(d => d.data()).filter(Boolean);
+        renderMeasures();
+      });
+    } else {
+      $("#privacy-note").textContent = "Ölçüm kaydetmek için claude.ai hesabınla giriş yapmış olman gerekiyor.";
+    }
+  })();
+})();
+</script>
