@@ -320,6 +320,7 @@ td.day { font-weight: 600; white-space: nowrap; }
         </table>
       </div>
       <p class="small muted">On batch night, the batch dish is also that night's dinner: cook it ×3 (2 portions for dinner, 4 boxes). Pack the boxes once they've cooled and keep them in the fridge.</p>
+      <p class="small">Fancy a change? Swap in any dish from the <b>Lunch box library</b> in the Recipes tab: teriyaki chicken, etli kuru fasulye, 番茄炖牛肉, 黑椒牛柳, yaki udon, fried rice, köfte or chicken dürüm.</p>
     </div>
     <div class="card">
       <h3>Ready-meal day (Wednesday or Friday)</h3>
@@ -402,6 +403,19 @@ td.day { font-weight: 600; white-space: nowrap; }
       </dl>
     </div>
     <div id="recipes" style="display:grid;gap:14px"></div>
+    <h2 style="margin-top:12px">Lunch box library <span lang="zh" class="zh-inline">午餐便当菜谱</span></h2>
+    <p class="muted small">More batch dishes for 4 boxes, all good reheated in a microwave. Swap any of them into batch 1 or batch 2 whenever you want a change. Tap a dish to open it.</p>
+    <div class="card">
+      <h3>Lunch box tips</h3>
+      <ul class="small">
+        <li>Cool cooked rice quickly (spread it out) and get the boxes in the fridge within an hour. Reheat until steaming hot all the way through.</li>
+        <li>Batch boxes keep 3 days in the fridge, so batch 1 covers Monday–Tuesday and batch 2 the next two work days.</li>
+        <li>Fish in a shared office microwave isn't popular with colleagues; keep salmon and sea bass for dinners.</li>
+        <li>Keep sauces, dips and salad leaves in a small separate pot and add them after heating.</li>
+        <li>Label the boxes S and Se (or two colours) so the bigger ones go to Sait.</li>
+      </ul>
+    </div>
+    <div id="lunchlib" style="display:grid;gap:10px"></div>
   </section>
 
   <!-- TRAINING -->
@@ -661,6 +675,40 @@ td.day { font-weight: 600; white-space: nowrap; }
       p1: "~210 g beef + tofu · 60 g noodles at the end", p2: "~140 g beef + tofu · 30 g noodles · lots of veg", p2zh: "约 140 克牛肉 + 豆腐 · 30 克面 · 多吃蔬菜", k1: 650, k2: 420 },
   ];
   const SHOP = {"1": [["Protein", ["40 eggs", "700 g chicken thighs + 1.15 kg chicken breast", "650 g 5% lean beef mince", "2 tins tuna (backup box)", "2 salmon fillets", "350 g lean beef steak", "2 kg yoghurt (incl. Greek), 1 L kefir", "Cottage cheese, feta-style white cheese", "Firm tofu (Tofoo or Cauldron)", "Red lentils, chickpeas"]], ["Veg & fruit", ["Tomatoes, cucumber, peppers", "Spinach, broccoli, courgette, white cabbage, beansprouts", "Green beans, aubergine", "Pak choi, spring onions, ginger", "400 g chestnut mushrooms (for the mushroom sauté)", "Lettuce, rocket, dill", "Pomegranate molasses, sumac (Tesco world foods aisle or a Middle Eastern shop)", "Onions, garlic, lemons", "Apples, bananas, seasonal fruit"]], ["Grains & other", ["Nomadic Clusters (14)", "Jasmine or brown rice", "Egg noodles or udon", "Oyster sauce, rice vinegar", "Reduced-salt soy sauce, sesame oil, doubanjiang", "Wholewheat bread and wraps", "Olive oil, olives", "Almonds, walnuts"]]], "2": [["Protein", ["40 eggs", "700 g chicken thighs + 700 g chicken breast", "600 g 5% lean beef mince", "650 g lean beef steak", "150 g raw king prawns", "4 sea bass fillets", "2 kg yoghurt (incl. 500 g Greek)", "Feta-style white cheese", "Firm tofu (Tofoo or Cauldron)", "2 tins chickpeas"]], ["Veg & fruit", ["3 aubergines, 4 peppers, 1 courgette", "Tomatoes, 3 cucumbers, carrots", "Spinach, pak choi, Chinese cabbage, mushrooms", "Lettuce for Sait's salad", "400 g beansprouts", "Frozen peas & sweetcorn", "2 bunches spring onions, ginger, garlic, onions, red onion", "Dill, dried mint, lemons", "2 ripe bananas, berries, seasonal fruit"]], ["Grains & other", ["Nomadic Clusters (14)", "Jasmine or brown rice", "Fine bulgur (for kısır), vermicelli (şehriye) for the pilaf", "Pomegranate molasses (optional)", "Egg noodles; wide rice noodles (ho fun)", "Porridge oats, baking powder", "Chicken stock", "Light and dark soy sauce, oyster sauce, rice vinegar, sesame oil, doubanjiang", "Tahini or peanut butter", "Wholewheat bread"]]]};
+  const LUNCHLIB = [
+    { name: "Teriyaki chicken rice bowl", zh: "照烧鸡肉饭", time: "30 min",
+      ing: ["700 g boneless, skinless chicken thighs, in strips", "1 head of broccoli, 2 carrots", "Sauce: 4 tbsp soy sauce, 1 tbsp honey, 1 tbsp rice vinegar, grated ginger and garlic, 1 tsp cornflour + 4 tbsp water", "1 tbsp oil, sesame seeds, spring onion", "200 g rice (dry)"],
+      steps: ["Start the rice. Steam or boil the broccoli and sliced carrots for 3 min.", "Fry the chicken in the oil over high heat until golden, 7–8 min.", "Pour in the sauce and bubble until sticky.", "Pack rice, veg and chicken; sprinkle with sesame seeds and spring onion."],
+      p1: "Per box: 200 g chicken · 1 bowl rice · veg", p2: "Per box: 130 g chicken · ½ bowl rice · extra veg", p2zh: "每盒：130 克鸡肉 · 半碗米饭 · 多放蔬菜", k1: 630, k2: 410 },
+    { name: "Beef &amp; white bean stew (etli kuru fasulye)", zh: "土耳其牛肉白豆炖菜", time: "50 min",
+      ing: ["500 g lean diced beef or 5% mince", "2 tins cannellini or butter beans, drained", "1 onion, 1 pepper, 2 garlic cloves", "1 tbsp red pepper paste + 1 tbsp tomato purée, 1 tin chopped tomatoes", "1 tbsp olive oil, paprika, black pepper, 400 ml water", "200 g rice (dry) or bread"],
+      steps: ["Brown the beef in the oil, then add the onion, pepper and garlic for 5 min.", "Stir in the pastes and spices, then the tomatoes and water.", "Simmer for 30 min (diced beef) or 15 min (mince), add the beans for the last 10 min.", "Pack with rice, or take a slice of bread."],
+      p1: "Per box: 125 g beef + beans · 1 bowl rice", p2: "Per box: 85 g beef + beans · ½ bowl rice", p2zh: "每盒：85 克牛肉加白豆 · 半碗米饭", k1: 680, k2: 440 },
+    { name: "Tomato beef stew", zh: "番茄炖牛肉", time: "1 h 20 min (mostly simmering)",
+      ing: ["700 g lean braising beef, in cubes", "4 ripe tomatoes + 1 tbsp tomato purée", "1 onion, 2 carrots, 3 slices ginger, 2 spring onions", "2 tbsp soy sauce, 1 tsp honey, 1 star anise (optional)", "1 tbsp oil; 200 g rice (dry)"],
+      steps: ["Blanch the beef in boiling water for 3 min, then drain (keeps the stew clear).", "Fry the onion, ginger and chopped tomatoes until soft; add the purée, soy sauce and honey.", "Add the beef, carrots, star anise and water to just cover; simmer covered for 1 hour until tender.", "Pack with rice. Great on a slow Sunday."],
+      p1: "Per box: 175 g beef · 1 bowl rice", p2: "Per box: 115 g beef · ½ bowl rice · extra carrots", p2zh: "每盒：115 克牛肉 · 半碗米饭 · 多放胡萝卜", k1: 640, k2: 420 },
+    { name: "Black pepper beef with peppers", zh: "黑椒牛柳", time: "25 min",
+      ing: ["600 g lean beef steak, in strips", "3 peppers (mixed colours), 1 onion", "Sauce: 3 tbsp soy sauce, 1 tbsp oyster sauce, 1–2 tsp coarse black pepper, 1 tsp cornflour, 4 tbsp water", "2 garlic cloves, 1 tbsp oil", "200 g rice (dry)"],
+      steps: ["Start the rice. Toss the beef with 1 tsp soy sauce and a pinch of cornflour.", "Sear the beef in a very hot wok in two batches, 2 min each; set aside.", "Stir-fry the peppers, onion and garlic for 3 min.", "Return the beef with the sauce and toss until glossy. Pack with rice."],
+      p1: "Per box: 180 g beef · 1 bowl rice · peppers", p2: "Per box: 120 g beef · ½ bowl rice · extra peppers", p2zh: "每盒：120 克牛肉 · 半碗米饭 · 多放彩椒", k1: 620, k2: 400 },
+    { name: "Chicken yaki udon", zh: "鸡肉炒乌冬", time: "20 min",
+      ing: ["600 g chicken breast, in strips", "4 packs straight-to-wok udon (2 for Sait's boxes, 1 split between Serena's)", "Cabbage, carrot, pepper, mushrooms, spring onion", "Sauce: 3 tbsp soy sauce, 1 tbsp oyster sauce, 1 tsp honey, 1 tsp sesame oil", "1 tbsp oil"],
+      steps: ["Fry the chicken in the oil until cooked, 6 min.", "Add the veg and stir-fry for 3 min.", "Add the udon and sauce and toss for 2 min until hot.", "Pack while warm, cool, then fridge. Add a splash of water before microwaving."],
+      p1: "Per box: 180 g chicken · 1 pack udon", p2: "Per box: 120 g chicken · ½ pack udon · extra veg", p2zh: "每盒：120 克鸡肉 · 半包乌冬 · 多放蔬菜", k1: 620, k2: 400 },
+    { name: "Chicken &amp; egg fried rice", zh: "鸡肉蛋炒饭", time: "20 min (use day-old rice)",
+      ing: ["600 g cooked rice, cold (about 200 g dry)", "500 g chicken breast, diced", "5 eggs", "250 g frozen peas, sweetcorn and carrot", "3 spring onions; 3 tbsp soy sauce, 1 tsp sesame oil, 1 tbsp oil"],
+      steps: ["Fry the chicken until cooked; set aside.", "Scramble the eggs; set aside.", "Stir-fry the rice and veg over high heat for 5 min.", "Toss everything with the soy sauce, sesame oil and spring onion. Cool quickly before packing."],
+      p1: "Per box: 150 g chicken · 1½ eggs · 180 g rice", p2: "Per box: 100 g chicken · 1 egg · 120 g rice · extra peas", p2zh: "每盒：100 克鸡肉 · 1 个鸡蛋 · 120 克米饭 · 多放豌豆", k1: 620, k2: 410 },
+    { name: "Köfte lunch box", zh: "土耳其肉丸便当", time: "30 min",
+      ing: ["600 g 5% lean beef mince", "1 grated onion, 1 egg, 2 tbsp oats, cumin, black pepper, salt", "Courgette, peppers, red onion for roasting", "Yoghurt dip: 200 g yoghurt, garlic, dried mint (pack in a small pot)", "200 g rice (dry) or wholewheat wraps"],
+      steps: ["Mix and shape the mince into 16 small köfte.", "Roast with the chopped veg at 220 °C for 18–20 min.", "Cook the rice and stir the dip together.", "Pack köfte, veg and rice; keep the dip separate and add after microwaving."],
+      p1: "Per box: 5 köfte · 1 bowl rice · veg", p2: "Per box: 3 köfte · ½ bowl rice · extra veg", p2zh: "每盒：3 个肉丸 · 半碗米饭 · 多放蔬菜", k1: 660, k2: 420 },
+    { name: "Chicken dürüm box", zh: "土耳其鸡肉卷饼便当", time: "25 min",
+      ing: ["700 g chicken thighs, in strips", "Marinade: 2 tbsp yoghurt, 1 tbsp tomato purée, paprika, cumin, garlic, lemon", "Wholewheat wraps (2 per box for Sait, 1 for Serena)", "Lettuce, tomato, cucumber, red onion, sumac", "Garlic yoghurt sauce in a small pot"],
+      steps: ["Marinate the chicken for 10 min (or overnight).", "Cook in a hot pan or under the grill, 8–10 min, until charred at the edges.", "Pack the chicken in the box; wraps, salad and sauce separate.", "At work: microwave the chicken, then wrap it up with the salad and sauce."],
+      p1: "Per box: 200 g chicken · 2 wraps · salad", p2: "Per box: 130 g chicken · 1 wrap · lots of salad", p2zh: "每盒：130 克鸡肉 · 1 张卷饼 · 多放沙拉", k1: 650, k2: 420 },
+  ];
   const LIFTS = [
     ["legpress", "Leg press", "40–60 kg", "20–30 kg"],
     ["chest", "Chest press machine", "20–30 kg", "10–15 kg"],
@@ -771,6 +819,7 @@ td.day { font-weight: 600; white-space: nowrap; }
   const exHtml = list => list.map(e => `<div class="ex"><b>${e[0]}</b><span class="reps">${e[1]}</span><span class="alt">${e[2]}</span>${e[3] ? `<span class="alt" style="color:var(--p2)"><span class="pname" data-p="p2">Serena</span>: ${e[3]}${zh(e[4])}</span>` : ""}</div>`).join("");
   $("#wa").innerHTML = exHtml(WA);
   $("#wb").innerHTML = exHtml(WB);
+  $("#lunchlib").innerHTML = libHtml(LUNCHLIB);
   $("#wa2").innerHTML = exHtml(WA2); $("#wb2").innerHTML = exHtml(WB2);
   $("#wa3").innerHTML = exHtml(WA3); $("#wb3").innerHTML = exHtml(WB3);
   $("#weasy").innerHTML = exHtml(WEASY);
@@ -783,6 +832,17 @@ td.day { font-weight: 600; white-space: nowrap; }
   renderBlock();
   $("#start-w").innerHTML = LIFTS.map(l => `<tr><td>${l[1]}</td><td>${l[2]}</td><td>${l[3]}</td></tr>`).join("");
   $("#l-ex").innerHTML = LIFTS.map(l => `<option value="${l[0]}">${l[1]}</option>`).join("");
+  function libHtml(list) { return list.map(r => `<details class="card"><summary style="cursor:pointer"><b>${r.name}</b> <span lang="zh" class="zh-inline">${r.zh}</span> <span class="pill">${r.time}</span></summary>
+      <div style="display:grid;gap:10px;margin-top:10px">
+      <div class="lanes" style="gap:10px">
+        <div class="lane p1" style="padding:10px"><span class="label pname" data-p="p1">Sait</span><span class="small">${r.p1}</span><b class="small">≈ ${r.k1} kcal</b></div>
+        <div class="lane p2" style="padding:10px"><span class="label pname" data-p="p2">Serena</span><span class="small">${r.p2}${zh(r.p2zh)}</span><b class="small">≈ ${r.k2} kcal</b></div>
+      </div>
+      <div class="lanes" style="gap:14px">
+        <div><span class="label">Ingredients</span><ul class="small">${r.ing.map(x => `<li>${x}</li>`).join("")}</ul></div>
+        <div><span class="label">Method</span><ol class="small" style="margin:0;padding-left:1.2em;display:grid;gap:4px">${r.steps.map(x => `<li>${x}</li>`).join("")}</ol></div>
+      </div></div>
+    </details>`).join(""); }
   function recipeHtml(list) { return list.map(r => `<article class="card">
       <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
         <h3>${r.name} <span lang="zh" class="zh-inline">${r.zh}</span></h3><span class="pill">${r.time}</span></div>
