@@ -1,4 +1,4 @@
-<title>Birlikte Formda</title>
+<title>Fit Together</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap">
 <style>
@@ -18,6 +18,7 @@
   --warn: #9a6a12;
   --font-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
   --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-zh: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -112,268 +113,286 @@ td.day { font-weight: 600; white-space: nowrap; }
 .list-rows { display: grid; gap: 6px; font-variant-numeric: tabular-nums; }
 .list-rows div { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-block: 4px; }
 @media (prefers-reduced-motion: no-preference) { .habit, .week .cell i { transition: background 0.2s, opacity 0.2s; } }
+[lang="zh"] { font-family: var(--font-zh); }
+.zh { display: block; color: var(--muted); font-size: 0.92em; margin-top: 2px; }
+.zh-title { font-size: 0.5em; color: var(--muted); font-weight: 600; letter-spacing: 0.04em; }
+.zh-inline { color: var(--muted); font-weight: 500; font-size: 0.85em; }
 </style>
 
 <div class="wrap">
   <header>
-    <span class="label">Çift programı · 12 hafta · İrlanda</span>
-    <h1>Birlikte Formda</h1>
-    <p class="muted">Her gün 6 alışkanlık. İkiniz de kendi kutularınızı işaretleyin, birbirinizin ilerlemesini görün.</p>
-    <p class="status" id="status">Bağlanıyor…</p>
+    <span class="label">Couple programme · 12 weeks · Ireland</span>
+    <h1>Fit Together <span lang="zh" class="zh-title">一起健身</span></h1>
+    <p class="muted">Six daily habits each. Tick your own boxes and see each other's progress.</p>
+    <p class="status" id="status">Connecting…</p>
   </header>
 
   <div class="who" id="who">
-    <span class="small muted">Ben:</span>
-    <button type="button" class="p1" data-p="p1" id="who-p1">1. kişi</button>
-    <button type="button" class="p2" data-p="p2" id="who-p2">2. kişi</button>
-    <button type="button" class="btn ghost small" id="rename" style="padding:5px 10px">İsimleri değiştir</button>
+    <span class="small muted">I am:</span>
+    <button type="button" class="p1" data-p="p1" id="who-p1">Sait</button>
+    <button type="button" class="p2" data-p="p2" id="who-p2">Serena</button>
+    <button type="button" class="btn ghost small" id="rename" style="padding:5px 10px">Edit names</button>
   </div>
   <form id="rename-form" class="card form" hidden>
-    <label>1. kişi (mavi)<input type="text" id="name-p1" maxlength="20"></label>
-    <label>2. kişi (pembe)<input type="text" id="name-p2" maxlength="20"></label>
-    <button class="btn" type="submit">Kaydet</button>
+    <label>Person 1 (blue)<input type="text" id="name-p1" maxlength="20"></label>
+    <label>Person 2 (pink)<input type="text" id="name-p2" maxlength="20"></label>
+    <button class="btn" type="submit">Save</button>
   </form>
 
   <nav class="tabs" role="tablist">
-    <button role="tab" data-tab="bugun" aria-selected="true">Bugün</button>
+    <button role="tab" data-tab="today" aria-selected="true">Today</button>
     <button role="tab" data-tab="plan" aria-selected="false">Plan</button>
-    <button role="tab" data-tab="menu" aria-selected="false">Menü</button>
-    <button role="tab" data-tab="tarif" aria-selected="false">Tarifler</button>
-    <button role="tab" data-tab="spor" aria-selected="false">Antrenman</button>
-    <button role="tab" data-tab="olcum" aria-selected="false">Ölçüm</button>
+    <button role="tab" data-tab="menu" aria-selected="false">Menu</button>
+    <button role="tab" data-tab="recipes" aria-selected="false">Recipes</button>
+    <button role="tab" data-tab="training" aria-selected="false">Training</button>
+    <button role="tab" data-tab="measure" aria-selected="false">Measure</button>
   </nav>
 
-  <!-- BUGÜN -->
-  <section data-panel="bugun" class="wrap" style="padding:0">
+  <!-- TODAY -->
+  <section data-panel="today" class="wrap" style="padding:0">
     <div style="display:flex;justify-content:space-between;align-items:end;gap:10px;flex-wrap:wrap">
-      <h2 id="today-title">Bugün</h2>
-      <label class="small muted" style="display:flex;gap:6px;align-items:center">Gün <input type="date" id="day" style="width:auto"></label>
+      <h2 id="today-title">Today</h2>
+      <label class="small muted" style="display:flex;gap:6px;align-items:center">Day <input type="date" id="day" style="width:auto"></label>
     </div>
     <div class="lanes" id="lanes"></div>
-    <p class="small muted">Sadece kendi kutularını işaretleyebilirsin. Üstten "Ben" seçimini yap.</p>
+    <p class="small muted">You can only tick your own boxes. Choose who you are at the top first.</p>
   </section>
 
   <!-- PLAN -->
   <section data-panel="plan" hidden class="wrap" style="padding:0">
-    <h2>Kişisel planlar</h2>
+    <h2>Personal plans</h2>
     <div class="lanes">
       <div class="lane p1">
-        <div class="lane-head"><h3 class="pname" data-p="p1">1. kişi</h3><span class="pill">Yağ yak, kas kazan</span></div>
-        <p class="small">29 yaş, 175–177 cm, ~80 kg, gün içi masa başı. Hedef: kilo sayısı değil, daha sıkı ve kaslı bir vücut. Buna <b>rekompozisyon</b> denir: hafif kalori açığı + yüksek protein + ağırlık antrenmanı.</p>
+        <div class="lane-head"><h3 class="pname" data-p="p1">Sait</h3><span class="pill">Lose fat, build muscle</span></div>
+        <p class="small">29, 175–177 cm, ~80 kg, desk job. The goal isn't a number on the scale but a leaner, more muscular body. This is called <b>body recomposition</b>: a small calorie deficit + high protein + strength training.</p>
         <dl class="kv">
-          <dt>Kalori</dt><dd id="kcal-p1">≈ 2.100–2.200 kcal</dd>
-          <dt>Protein</dt><dd>140–160 g / gün</dd>
-          <dt>Kuvvet</dt><dd>Haftada 3 gün</dd>
-          <dt>Adım</dt><dd>8.000–10.000 / gün</dd>
-          <dt>Tempo</dt><dd>Ayda 1–2 kg, bel −1–2 cm</dd>
+          <dt>Calories</dt><dd>≈ 2,100–2,200 kcal</dd>
+          <dt>Protein</dt><dd>140–160 g a day</dd>
+          <dt>Strength</dt><dd>3 days a week</dd>
+          <dt>Steps</dt><dd>8,000–10,000 a day</dd>
+          <dt>Pace</dt><dd>1–2 kg a month, waist −1–2 cm</dd>
         </dl>
         <ul class="small">
-          <li>Her öğünde 30–40 g protein: yumurta, tavuk, ton, kıyma, yoğurt, lor.</li>
-          <li>Ağırlıkları her hafta azıcık artır. Kas bu sinyalle gelir.</li>
-          <li>Eve ilk sen geldiğin için akşam yemeğini genelde sen yapıyorsun: her akşam 2 porsiyon fazla pişir, ertesi günün öğle kutusu olsun.</li>
-          <li>Tartı yavaş düşebilir. Bel ölçüsü ve aynadaki fark daha doğru gösterge.</li>
+          <li>30–40 g protein at every meal: eggs, chicken, tuna, mince, yoghurt, cottage cheese.</li>
+          <li>Add a little weight every week. That's the signal that builds muscle.</li>
+          <li>You're usually home first and cook dinner: make 2 extra portions every night for the next day's lunch boxes.</li>
+          <li>The scale may move slowly. Your waist and the mirror are better guides.</li>
         </ul>
       </div>
       <div class="lane p2">
-        <div class="lane-head"><h3 class="pname" data-p="p2">2. kişi</h3><span class="pill">Fit ve enerjik</span></div>
-        <p class="small">29 yaş. Hedef: daha güçlü, sıkı ve enerjik hissetmek; ayakların taşıdığı yükü de hafifletmek. Kilo yazılmıyor; ilerleme isteğe bağlı bel ölçüsü, güç artışı ve kendini nasıl hissettiğinle görülür.</p>
-        <div class="note">Sıkı bir orta bölge tek bir hareketten gelmez. Dengeli beslenme, protein, kuvvet antrenmanı ve iyi uyku birlikte çalışınca vücut bütün olarak şekillenir.</div>
+        <div class="lane-head"><h3 class="pname" data-p="p2">Serena</h3><span class="pill">Fit &amp; energised · 健康有活力</span></div>
+        <p class="small">29. Goal: feel stronger, more toned and more energetic, and take some load off your feet. No weight is recorded; progress shows in your (optional) waist measurement, strength gains and how you feel.</p>
+        <p class="small zh" lang="zh">29 岁。目标：更强壮、更紧致、更有活力，同时减轻双脚的负担。不记录体重；进步体现在（可选的）腰围、力量增长和身体感受上。</p>
+        <div class="note">A toned midsection doesn't come from a single exercise. Balanced eating, protein, strength training and good sleep work together and shape the whole body.
+          <span class="zh" lang="zh">紧致的腰腹不是靠某一个动作练出来的。均衡饮食、蛋白质、力量训练和良好睡眠共同作用，让整个身体变得更好。</span></div>
         <dl class="kv">
-          <dt>Tabak</dt><dd>½ sebze · ¼ protein · ¼ tam tahıl</dd>
-          <dt>Protein</dt><dd>Her öğünde avuç içi kadar</dd>
-          <dt>Kuvvet</dt><dd>Haftada 3 gün</dd>
-          <dt>Kardiyo</dt><dd>20–30 dk bisiklet, yüzme veya kısa yürüyüş</dd>
-          <dt>Uyku</dt><dd>7–8 saat</dd>
+          <dt>Plate <span class="zh" lang="zh">餐盘</span></dt><dd>½ veg · ¼ protein · ¼ whole grains <span class="zh" lang="zh">½ 蔬菜 · ¼ 蛋白质 · ¼ 全谷物</span></dd>
+          <dt>Protein <span class="zh" lang="zh">蛋白质</span></dt><dd>A palm-sized portion every meal <span class="zh" lang="zh">每餐一掌心大小</span></dd>
+          <dt>Strength <span class="zh" lang="zh">力量</span></dt><dd>3 days a week <span class="zh" lang="zh">每周 3 天</span></dd>
+          <dt>Cardio <span class="zh" lang="zh">有氧</span></dt><dd>20–30 min cycling, swimming or a short walk <span class="zh" lang="zh">20–30 分钟骑车、游泳或短距离散步</span></dd>
+          <dt>Sleep <span class="zh" lang="zh">睡眠</span></dt><dd>7–8 hours <span class="zh" lang="zh">7–8 小时</span></dd>
         </dl>
         <ul class="small">
-          <li>Şekerli içecek, paketli atıştırmalık ve gece atıştırmasını azalt. En hızlı farkı bu küçük değişiklikler yapar.</li>
-          <li>İyi uyku iştahı ve enerjiyi dengeler; uyku listede bu yüzden var.</li>
-          <li>Ayda 1–3 cm bel değişimi çok iyi bir ilerlemedir.</li>
+          <li>Cut back on sugary drinks, packaged snacks and late-night snacking. Small changes like these make the quickest difference.
+            <span class="zh" lang="zh">减少含糖饮料、包装零食和夜宵。这些小改变见效最快。</span></li>
+          <li>Good sleep balances appetite and energy, which is why it's on the list.
+            <span class="zh" lang="zh">良好的睡眠能平衡食欲和精力，所以它也在清单里。</span></li>
+          <li>1–3 cm off the waist in a month is great progress.
+            <span class="zh" lang="zh">一个月腰围减少 1–3 厘米就是很棒的进步。</span></li>
         </ul>
-        <div class="note"><b>Ayak ve damar sağlığı önce gelir.</b>
+        <div class="note"><b>Happy feet first</b> <span class="zh" lang="zh" style="display:inline">先照顾好双脚</span>
           <ul style="margin-top:6px">
-            <li>Hareket dolaşımı destekler, ama uzun süre ayakta kalmak yok. Makineler, sabit bisiklet ve oturarak yapılan hareketler seçildi; zıplama ve koşu yok.</li>
-            <li>Rahat, iyi oturan spor ayakkabı ve yumuşak çorap ayaklara iyi gelir.</li>
-            <li>Soğuk havada ayakları sıcak tut; antrenmandan sonra 10 dk bacakları yukarı kaldırarak dinlen.</li>
-            <li>Su içmek bu planda özellikle önemli; su kutusunu her gün hedefle.</li>
-                        <li>Doktoru egzersizi öneriyor; takviyeye gerek yok. Kompresyon çorabı düşünülürse önce doktoruna sorulmalı.</li>
-            <li>Ağrı başladığında o gün dinlen. Doktorunun önerileri her zaman bu plandan önce gelir.</li>
+            <li>Movement helps circulation, without long periods of standing. The plan uses machines, the stationary bike and seated exercises; no jumping or running.
+              <span class="zh" lang="zh">运动有助于血液循环，但避免长时间站立。计划选用器械、固定单车和坐姿动作；不跳跃、不跑步。</span></li>
+            <li>Comfortable, well-fitting trainers and soft socks.
+              <span class="zh" lang="zh">穿舒适合脚的运动鞋和柔软的袜子。</span></li>
+            <li>Keep your feet warm in cold weather; after training, rest for 10 minutes with your legs raised.
+              <span class="zh" lang="zh">天冷时注意双脚保暖；训练后抬高双腿休息 10 分钟。</span></li>
+            <li>Water matters in this plan; aim to tick the water box every day.
+              <span class="zh" lang="zh">多喝水在这个计划里尤其重要，每天争取完成喝水目标。</span></li>
+            <li>Your doctor recommends exercise; no supplements needed. If compression stockings come up, ask your doctor first.
+              <span class="zh" lang="zh">医生建议运动；不需要补充剂。如考虑穿压力袜，请先咨询医生。</span></li>
+            <li>If pain starts, rest that day. Your doctor's advice always comes before this plan.
+              <span class="zh" lang="zh">如果开始疼痛，当天就休息。医生的建议永远优先于本计划。</span></li>
           </ul></div>
       </div>
     </div>
 
     <div class="card">
-      <h3>Kalori hesaplayıcı</h3>
-      <p class="small muted">Yaklaşık günlük ihtiyacını hesaplar (Mifflin-St Jeor). Girdiğin değerler hiçbir yere kaydedilmez.</p>
+      <h3>Calorie calculator</h3>
+      <p class="small muted">Estimates your daily needs (Mifflin-St Jeor). Nothing you enter here is saved.</p>
       <form class="form" id="calc">
-        <label>Cinsiyet<select id="c-sex"><option value="m">Erkek</option><option value="f">Kadın</option></select></label>
-        <label>Yaş<input type="number" id="c-age" min="15" max="80" value="29"></label>
-        <label>Boy (cm)<input type="number" id="c-h" min="140" max="210" value="176"></label>
-        <label>Kilo (kg)<input type="number" id="c-w" min="40" max="200" value="80"></label>
-        <label>Hareket<select id="c-act">
-          <option value="1.2">Masa başı, spor yok</option>
-          <option value="1.375" selected>Haftada 1–3 spor</option>
-          <option value="1.55">Haftada 3–5 spor</option>
-          <option value="1.725">Çok aktif</option>
+        <label>Sex<select id="c-sex"><option value="m">Male</option><option value="f">Female</option></select></label>
+        <label>Age<input type="number" id="c-age" min="15" max="80" value="29"></label>
+        <label>Height (cm)<input type="number" id="c-h" min="140" max="210" value="176"></label>
+        <label>Weight (kg)<input type="number" id="c-w" min="40" max="200" value="80"></label>
+        <label>Activity<select id="c-act">
+          <option value="1.2">Desk job, no exercise</option>
+          <option value="1.375" selected>Exercise 1–3× a week</option>
+          <option value="1.55">Exercise 3–5× a week</option>
+          <option value="1.725">Very active</option>
         </select></label>
       </form>
       <div class="trend">
-        <div><span class="label">Koruma</span><div class="big" id="c-tdee">–</div></div>
-        <div><span class="label">Yağ yakımı hedefi</span><div class="big" id="c-target" style="color:var(--accent)">–</div></div>
+        <div><span class="label">Maintenance</span><div class="big" id="c-tdee">–</div></div>
+        <div><span class="label">Fat-loss target</span><div class="big" id="c-target" style="color:var(--accent)">–</div></div>
         <div><span class="label">Protein</span><div class="big" id="c-prot">–</div></div>
       </div>
     </div>
-    <p class="small muted">Bu plan genel sağlıklı yaşam önerisidir. Bir sağlık sorununuz, düzenli kullandığınız ilaç ya da hamilelik durumu varsa önce doktor veya diyetisyene danışın.</p>
+    <p class="small muted">This plan is general healthy-living advice. Your doctor's advice always comes first.</p>
   </section>
 
-  <!-- MENÜ -->
+  <!-- MENU -->
   <section data-panel="menu" hidden class="wrap" style="padding:0">
-    <h2>Ortak haftalık menü</h2>
-    <p class="muted small">Türk ve Çin mutfağından karışık. Domuz eti, maydanoz ve kişniş yok; Çin yemeklerinin süsünde taze soğan kullanın. Aynı yemeği ikiniz de yiyin; fark porsiyonda. <b class="pname" data-p="p1" style="color:var(--p1)">1. kişi</b>: protein ve karbonhidrat porsiyonu 1,5 kat. <b class="pname" data-p="p2" style="color:var(--p2)">2. kişi</b>: tabak yöntemi, ekmek/pilav yarım porsiyon.</p>
+    <h2>Shared weekly menu</h2>
+    <p class="muted small">A mix of Turkish and Chinese food. No pork, parsley or coriander; garnish Chinese dishes with spring onion. You both eat the same meal; only the portions differ.
+      <b class="pname" data-p="p1" style="color:var(--p1)">Sait</b>: 1.5× protein and carbs.
+      <b class="pname" data-p="p2" style="color:var(--p2)">Serena</b>: plate method, half portion of bread or rice <span class="zh" lang="zh" style="display:inline">（餐盘法，面包或米饭半份）</span>.</p>
     <div class="card">
-      <h3>Sabit kahvaltı: Nomadic Clusters (169 g)</h3>
-      <p class="small">Yoğurt + yulaf kümeleri hazır ve pratik. Tek eksiği protein: tek başına yaklaşık 8–10 g veriyor (paketteki değere bakın).</p>
+      <h3>Fixed breakfast: Nomadic Clusters (169 g)</h3>
+      <p class="small">Yoghurt + oat clusters, quick and practical. The only thing it's short on is protein: about 8–10 g on its own (check the pack).</p>
       <ul class="small">
-        <li><b class="pname" data-p="p1" style="color:var(--p1)">1. kişi</b>: yanına 2 haşlanmış yumurta veya 1 bardak süt/kefir. Böylece kahvaltı 25+ g proteine çıkar.</li>
-        <li><b class="pname" data-p="p2" style="color:var(--p2)">2. kişi</b>: tek başına yeterli; açlık olursa yanına 1 haşlanmış yumurta.</li>
+        <li><b class="pname" data-p="p1" style="color:var(--p1)">Sait</b>: add 2 boiled eggs or a glass of milk or kefir. That takes breakfast to 25+ g protein.</li>
+        <li><b class="pname" data-p="p2" style="color:var(--p2)">Serena</b>: enough on its own; if you're hungry, add 1 boiled egg.
+          <span class="zh" lang="zh">单吃就够了；如果饿，加一个水煮蛋。</span></li>
       </ul>
     </div>
     <div class="card scroll" style="padding:0">
       <table>
-        <thead><tr><th>Gün</th><th>Öğle (iş) / geç kahvaltı</th><th>Akşam (20:00 öncesi)</th></tr></thead>
+        <thead><tr><th>Day</th><th>Lunch (work) / brunch</th><th>Dinner (before 8 pm)</th></tr></thead>
         <tbody id="menu-body"></tbody>
       </table>
     </div>
     <div class="card">
-      <h3>Pazar hazırlığı (1 saat)</h3>
+      <h3>Sunday prep (1 hour)</h3>
       <ul class="small">
-        <li>Fırın tepsisine 1,2 kg tavuk but + kabak, biber, soğan: 200 °C, 40 dk. Pazartesi öğle ve salı akşamı.</li>
-        <li>Büyük tencere mercimek çorbası: salı akşamı ve çarşamba öğle.</li>
-        <li>Bir tencere bulgur, bir tencere pirinç: buzdolabında 4 gün dayanır.</li>
-        <li>Sebzeleri yıkayıp doğrayın; hafta içi yemek 15 dakikaya iner.</li>
+        <li>Tray-bake 1.2 kg chicken thighs with courgette, peppers and onion: 200 °C, 40 min. Covers Monday lunch and Tuesday dinner.</li>
+        <li>A big pot of lentil soup: Tuesday dinner and Wednesday lunch.</li>
+        <li>A pot of bulgur and a pot of rice: they keep 4 days in the fridge.</li>
+        <li>Wash and chop vegetables; weekday cooking drops to 15 minutes.</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Ara öğün seçenekleri</h3>
+      <h3>Snack ideas</h3>
       <ul class="small">
-        <li>Skyr veya Greek yoğurt (Tesco/Dunnes) + bir avuç meyve</li>
-        <li>10–12 çiğ badem veya ceviz</li>
-        <li>2 haşlanmış yumurta</li>
-        <li>Lor peyniri + salatalık</li>
-        <li>1 elma + 1 tatlı kaşığı fıstık ezmesi</li>
+        <li>Skyr or Greek yoghurt (Tesco/Dunnes) + a handful of fruit</li>
+        <li>10–12 raw almonds or walnuts</li>
+        <li>2 boiled eggs</li>
+        <li>Cottage cheese + cucumber</li>
+        <li>1 apple + 1 tsp peanut butter</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Haftalık alışveriş listesi (2 kişi)</h3>
-      <p class="small muted">Haftalık alışveriş Dunnes Stores’ta, eksikler hafta içi Tesco’dan. Doubanjiang ve Sichuan biberi için Tesco’nun dünya mutfağı rafı ya da bir Asya marketi.</p>
+      <h3>Weekly shopping list (for 2)</h3>
+      <p class="small muted">Big shop at Dunnes Stores at the weekend, top-ups at Tesco during the week. Doubanjiang and Sichuan pepper: Tesco's world foods aisle or an Asian supermarket.</p>
       <div class="lanes" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
-        <div><span class="label">Protein</span><ul class="small"><li>30 yumurta</li><li>1,2 kg tavuk but + 500 g tavuk göğsü</li><li>500 g yağsız dana kıyma (%5)</li><li>2 kutu ton balığı</li><li>1 somon veya levrek</li><li>2 kg yoğurt, 1 L kefir</li><li>Lor ve beyaz peynir</li><li>Sert tofu (Tofoo veya Cauldron)</li><li>Kırmızı mercimek, nohut</li></ul></div>
-        <div><span class="label">Sebze, meyve</span><ul class="small"><li>Domates, salatalık, biber</li><li>Ispanak, brokoli, kabak, beyaz lahana, fasulye filizi</li><li>Taze fasulye, patlıcan</li><li>Pak choi, taze soğan, zencefil</li><li>Marul, roka, dereotu</li><li>Soğan, sarımsak, limon</li><li>Elma, muz, mevsim meyvesi</li></ul></div>
-        <div><span class="label">Tahıl, diğer</span><ul class="small"><li>Nomadic Clusters (14 adet)</li><li>Yasemin veya esmer pirinç</li><li>Yumurtalı noodle veya udon</li><li>İstiridye sosu, pirinç sirkesi</li><li>Az tuzlu soya sosu, susam yağı, doubanjiang</li><li>Bulgur</li><li>Tam buğday ekmek</li><li>Tam buğday makarna</li><li>Zeytinyağı, zeytin</li><li>Badem, ceviz</li></ul></div>
+        <div><span class="label">Protein</span><ul class="small"><li>30 eggs</li><li>1.2 kg chicken thighs + 500 g chicken breast</li><li>500 g 5% lean beef mince</li><li>2 tins tuna</li><li>4 salmon fillets</li><li>2 kg yoghurt, 1 L kefir</li><li>Cottage cheese, feta-style white cheese</li><li>Firm tofu (Tofoo or Cauldron)</li><li>Red lentils, chickpeas</li></ul></div>
+        <div><span class="label">Veg &amp; fruit</span><ul class="small"><li>Tomatoes, cucumber, peppers</li><li>Spinach, broccoli, courgette, white cabbage, beansprouts</li><li>Green beans, aubergine</li><li>Pak choi, spring onions, ginger</li><li>Lettuce, rocket, dill</li><li>Onions, garlic, lemons</li><li>Apples, bananas, seasonal fruit</li></ul></div>
+        <div><span class="label">Grains &amp; other</span><ul class="small"><li>Nomadic Clusters (14)</li><li>Jasmine or brown rice</li><li>Egg noodles or udon</li><li>Oyster sauce, rice vinegar</li><li>Reduced-salt soy sauce, sesame oil, doubanjiang</li><li>Bulgur</li><li>Wholewheat bread and wraps</li><li>Olive oil, olives</li><li>Almonds, walnuts</li></ul></div>
       </div>
     </div>
   </section>
 
-  <!-- TARİFLER -->
-  <section data-panel="tarif" hidden class="wrap" style="padding:0">
-    <h2>Tarifler ve porsiyonlar</h2>
-    <p class="muted small">Miktarlar ikiniz için. Kalori değerleri porsiyon başına yaklaşıktır. Pirinç ölçüsü: 1 kase ≈ 150 g pişmiş pirinç. Domuz eti, maydanoz ve kişniş yok.</p>
+  <!-- RECIPES -->
+  <section data-panel="recipes" hidden class="wrap" style="padding:0">
+    <h2>Recipes &amp; portions</h2>
+    <p class="muted small">Quantities are for both of you. Calories per portion are approximate. Rice: 1 bowl ≈ 150 g cooked. No pork, parsley or coriander.</p>
     <div class="card">
-      <h3>Porsiyon kuralı</h3>
+      <h3>Portion rule</h3>
       <dl class="kv">
-        <dt class="pname" data-p="p1" style="color:var(--p1)">1. kişi</dt><dd>Protein 1,5 kat, karbonhidrat (pirinç, noodle, bulgur, ekmek) tam porsiyon</dd>
-        <dt class="pname" data-p="p2" style="color:var(--p2)">2. kişi</dt><dd>Protein avuç içi kadar, karbonhidrat yarım porsiyon, sebze serbest</dd>
+        <dt class="pname" data-p="p1" style="color:var(--p1)">Sait</dt><dd>1.5× protein, full portion of carbs (rice, noodles, bulgur, bread)</dd>
+        <dt class="pname" data-p="p2" style="color:var(--p2)">Serena</dt><dd>Palm-sized protein, half portion of carbs, unlimited veg <span class="zh" lang="zh">蛋白质一掌心，主食半份，蔬菜不限量</span></dd>
       </dl>
     </div>
     <div id="recipes" style="display:grid;gap:14px"></div>
   </section>
 
-  <!-- ANTRENMAN -->
-  <section data-panel="spor" hidden class="wrap" style="padding:0">
-    <h2>Birlikte antrenman</h2>
-    <p class="muted small">Sitedeki salonda, haftada 3 gün, 45 dakika: <b>Salı 18:45 · Perşembe 18:45 · Cumartesi 16:00</b>. Salı ve perşembe akşam yemeği hazır olsun (pazar hazırlığı veya 15 dakikalık tarif), böylece 20:00’yi geçmez.</p>
+  <!-- TRAINING -->
+  <section data-panel="training" hidden class="wrap" style="padding:0">
+    <h2>Training together</h2>
+    <p class="muted small">In the gym at your complex, 3 days a week, 45 minutes: <b>Tuesday 6:45 pm · Thursday 6:45 pm · Saturday 4 pm</b>. Have Tuesday and Thursday dinner ready (Sunday prep or a 15-minute recipe) so you eat before 8.</p>
 
     <div class="card">
-      <h3>İlk 4 hafta</h3>
+      <h3>The first 4 weeks</h3>
       <div class="scroll">
         <table>
-          <thead><tr><th>Hafta</th><th>Gün sırası</th><th>Set × tekrar</th><th>Ağırlık</th><th>Bisiklet</th></tr></thead>
+          <thead><tr><th>Week</th><th>Day order</th><th>Sets × reps</th><th>Weight</th><th>Bike</th></tr></thead>
           <tbody>
-            <tr><td class="day">1 · Öğren</td><td>A · B · A</td><td>2 × 12</td><td>Rahatça 15 tekrar yapabileceğin ağırlık. Amaç hareketi öğrenmek.</td><td>10 dk hafif</td></tr>
-            <tr><td class="day">2 · Alış</td><td>B · A · B</td><td>3 × 10–12</td><td>Bir kademe artır. Son 2 tekrar zorlaşmaya başlasın.</td><td>12 dk</td></tr>
-            <tr><td class="day">3 · Güçlen</td><td>A · B · A</td><td>3 × 10–12</td><td>3 setin hepsinde 12 tekrar olursa bir sonraki antrenmanda +1 kademe.</td><td>15 dk, son 5 dk tempolu</td></tr>
-            <tr><td class="day">4 · Rekor</td><td>B · A · B</td><td>3 × 8–12</td><td>Aynı kural. Güç günlüğündeki ilk haftanla karşılaştır.</td><td>15–20 dk</td></tr>
+            <tr><td class="day">1 · Learn</td><td>A · B · A</td><td>2 × 12</td><td>A weight you could easily lift 15 times. The aim is to learn the movement.</td><td>10 min easy</td></tr>
+            <tr><td class="day">2 · Settle in</td><td>B · A · B</td><td>3 × 10–12</td><td>Go up one step. The last 2 reps should start to feel hard.</td><td>12 min</td></tr>
+            <tr><td class="day">3 · Get stronger</td><td>A · B · A</td><td>3 × 10–12</td><td>When you hit 12 reps on all 3 sets, go up one step next session.</td><td>15 min, last 5 brisk</td></tr>
+            <tr><td class="day">4 · Records</td><td>B · A · B</td><td>3 × 8–12</td><td>Same rule. Compare with week 1 in the strength log.</td><td>15–20 min</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="small muted">Her antrenman: 5 dk bisiklette ısınma → 30 dk hareketler → bisiklet → 2–3 dk esneme. Setler arası 60–90 sn dinlenme.</p>
+      <p class="small muted">Every session: 5 min bike warm-up → 30 min exercises → bike → 2–3 min stretching. Rest 60–90 s between sets.</p>
     </div>
 
     <div class="lanes">
-      <div class="card"><h3>Gün A</h3><div id="wa"></div></div>
-      <div class="card"><h3>Gün B</h3><div id="wb"></div></div>
+      <div class="card"><h3>Day A</h3><div id="wa"></div></div>
+      <div class="card"><h3>Day B</h3><div id="wb"></div></div>
     </div>
 
     <div class="card">
-      <h3>Başlangıç ağırlıkları</h3>
-      <p class="small muted">Tahmini başlangıç noktası. Makineler salona göre değişir; ilk gün 15 tekrarı rahat yaptığın kademeyi bul ve güç günlüğüne yaz.</p>
+      <h3>Starting weights</h3>
+      <p class="small muted">A rough starting point. Machines vary between gyms; on day one, find the setting you can comfortably lift 15 times and note it in the strength log.</p>
       <div class="scroll">
         <table>
-          <thead><tr><th>Hareket</th><th class="pname" data-p="p1" style="color:var(--p1)">1. kişi</th><th class="pname" data-p="p2" style="color:var(--p2)">2. kişi</th></tr></thead>
+          <thead><tr><th>Exercise</th><th class="pname" data-p="p1" style="color:var(--p1)">Sait</th><th class="pname" data-p="p2" style="color:var(--p2)">Serena</th></tr></thead>
           <tbody id="start-w"></tbody>
         </table>
       </div>
     </div>
 
     <div class="card">
-      <h3>Güç günlüğü</h3>
-      <p class="small muted">Her antrenmandan sonra o gün kullandığın ağırlığı yaz. İlk değerin ve en iyi değerin yan yana durur; ikinizin ilerlemesi de görünür.</p>
+      <h3>Strength log</h3>
+      <p class="small muted">After each session, note the weight you used. Your first and best numbers sit side by side, and you can see each other's progress.</p>
       <form class="form" id="lform">
-        <label>Hareket<select id="l-ex"></select></label>
-        <label>Ağırlık (kg)<input type="number" id="l-kg" step="0.5" min="0" max="400" required></label>
-        <button class="btn" type="submit">Kaydet</button>
+        <label>Exercise<select id="l-ex"></select></label>
+        <label>Weight (kg)<input type="number" id="l-kg" step="0.5" min="0" max="400" required></label>
+        <button class="btn" type="submit">Save</button>
       </form>
       <p class="small" id="l-msg" aria-live="polite"></p>
       <div class="scroll">
         <table>
-          <thead><tr><th>Hareket</th><th class="pname" data-p="p1" style="color:var(--p1)">1. kişi</th><th class="pname" data-p="p2" style="color:var(--p2)">2. kişi</th></tr></thead>
+          <thead><tr><th>Exercise</th><th class="pname" data-p="p1" style="color:var(--p1)">Sait</th><th class="pname" data-p="p2" style="color:var(--p2)">Serena</th></tr></thead>
           <tbody id="lifts"></tbody>
         </table>
       </div>
     </div>
 
     <div class="card">
-      <h3>Salonda ilk gün</h3>
+      <h3>First day at the gym</h3>
       <ul class="small">
-        <li>Salonda görevli varsa makinelerin ayarını 5 dakikada gösterebilir; çekinmeden sorun.</li>
-        <li>Koltuğu ayarla: tutma kolları göğüs hizasında, dizler makinenin dönme noktasıyla aynı hizada olsun.</li>
-        <li>Ritim: 1 saniyede kaldır, 2 saniyede kontrollü indir. Nefesi tutma; kaldırırken ver.</li>
-        <li>Leg press'te dizleri en üstte tam kilitleme, hafif bükülü bırak.</li>
-        <li>İlk hafta kaslarda hafif ağrı olması normal; 2–3 günde geçer ve sonraki haftalarda azalır.</li>
-        <li>Rahat, destekli spor ayakkabı ve bir su şişesi yeter.</li>
+        <li>If there's staff on, they can show you how to set up the machines in 5 minutes. Just ask.</li>
+        <li>Set the seat so the handles are at chest height and your knees line up with the machine's pivot point.</li>
+        <li>Tempo: lift in 1 second, lower with control in 2. Don't hold your breath; breathe out as you lift.</li>
+        <li>On the leg press, don't lock your knees at the top; keep a slight bend.</li>
+        <li>Mild muscle soreness in the first week is normal; it fades in 2–3 days and gets less each week.</li>
+        <li>Comfortable, supportive trainers and a water bottle are all you need.</li>
       </ul>
     </div>
   </section>
 
-  <!-- ÖLÇÜM -->
-  <section data-panel="olcum" hidden class="wrap" style="padding:0">
-    <h2>Haftalık ölçüm</h2>
-    <p class="muted small">Haftada bir, aynı gün, sabah kahvaltıdan önce. Mezurayı her seferinde aynı yerden (göbek hizası), nefesi tutmadan sar.</p>
+  <!-- MEASURE -->
+  <section data-panel="measure" hidden class="wrap" style="padding:0">
+    <h2>Weekly measurement</h2>
+    <p class="muted small">Once a week, same day, in the morning before breakfast. Wrap the tape in the same place each time (level with the navel), without holding your breath.</p>
     <div class="trend" id="trend"></div>
     <div class="card">
-      <h3>Ölçümünü ekle</h3>
-      <p class="small muted" id="privacy-note">Ölçümlerin sadece sana görünür. Partnerin yalnızca kaç cm değiştiğini görür.</p>
+      <h3>Add a measurement</h3>
+      <p class="small muted" id="privacy-note">Your measurements are only visible to you. Your partner only sees how many cm it has changed.</p>
       <form class="form" id="mform">
-        <label>Tarih<input type="date" id="m-date"></label>
-        <label>Bel (cm)<input type="number" id="m-waist" step="0.5" min="40" max="200" required></label>
-        <label id="m-weight-wrap">Kilo (kg, isteğe bağlı)<input type="number" id="m-weight" step="0.1" min="30" max="250"></label>
-        <button class="btn" type="submit">Kaydet</button>
+        <label>Date<input type="date" id="m-date"></label>
+        <label>Waist (cm)<input type="number" id="m-waist" step="0.5" min="40" max="200" required></label>
+        <label id="m-weight-wrap">Weight (kg, optional)<input type="number" id="m-weight" step="0.1" min="30" max="250"></label>
+        <button class="btn" type="submit">Save</button>
       </form>
       <p class="small" id="m-msg" aria-live="polite"></p>
     </div>
     <div class="card">
-      <h3>Geçmişim</h3>
-      <div class="list-rows" id="history"><p class="small muted">Henüz ölçüm yok. İlk ölçümünü yukarıdan ekle; bu senin başlangıç noktan olur.</p></div>
+      <h3>My history</h3>
+      <div class="list-rows" id="history"><p class="small muted">No measurements yet. Add your first one above; it becomes your starting point.</p></div>
     </div>
   </section>
 </div>
@@ -381,90 +400,90 @@ td.day { font-weight: 600; white-space: nowrap; }
 <script>
 (() => {
   const HABITS = [
-    ["su", "Su: 2–2,5 litre"],
-    ["adim", "8.000+ adım"],
-    ["protein", "Her öğünde protein"],
-    ["spor", "Antrenman veya 20–30 dk kardiyo"],
-    ["seker", "Şekerli içecek / tatlı yok"],
-    ["uyku", "7+ saat uyku"],
+    ["su", "Water: 2–2.5 L", "喝水 2–2.5 升"],
+    ["adim", "8,000+ steps", ""],
+    ["protein", "Protein at every meal", "每餐都有蛋白质"],
+    ["spor", "Workout or 20–30 min cardio", "训练或 20–30 分钟有氧"],
+    ["seker", "No sugary drinks or sweets", "不喝含糖饮料、不吃甜食"],
+    ["uyku", "7+ hours of sleep", "睡够 7 小时"],
   ];
-  const HABIT_ALT = { p2: { adim: "Ayak dostu hareket (bisiklet, yüzme)" } };
+  const HABIT_ALT = { p2: { adim: ["Feet-friendly movement (bike, swim)", "护脚运动（骑车、游泳）"] } };
   const MENU = [
-    ["Pazartesi", "Fırın tavuk + bulgur + sebze (pazar hazırlığı)", "番茄鸡蛋面 Domatesli yumurtalı noodle + brokoli (15 dk)"],
-    ["Salı · antrenman", "Ton balıklı nohut salatası (sabah 5 dk)", "Hazır: fırın tavuk + mercimek çorbası (pazar hazırlığı)"],
-    ["Çarşamba", "Mercimek çorbası + peynirli tam buğday wrap", "宫保鸡丁 Kung pao tavuk + pirinç (fazla yap: yarın öğle)"],
-    ["Perşembe · antrenman", "Dünkü kung pao tavuk + pirinç", "Fırında somon + pak choi + pirinç (15 dk)"],
-    ["Cuma", "Somon-pirinç salatası (dünden)", "鸡肉炒面 Tavuklu sebzeli noodle"],
-    ["Cumartesi · antrenman", "Geç kahvaltı: menemen, beyaz peynir, zeytin, domates-salatalık, tam buğday ekmek", "Serbest öğün: dışarıda yiyin, porsiyonu paylaşın"],
-    ["Pazar", "Geç kahvaltı: Nomadic + haşlanmış yumurta + meyve", "Izgara köfte + közlenmiş sebze + cacık. Ardından 1 saatlik hafta hazırlığı"],
+    ["Monday", "Roast chicken + bulgur + veg (Sunday prep)", "番茄鸡蛋面 Tomato &amp; egg noodles + broccoli (15 min)"],
+    ["Tuesday · workout", "Tuna &amp; chickpea salad (5 min in the morning)", "Ready: roast chicken + lentil soup (Sunday prep)"],
+    ["Wednesday", "Lentil soup + cheese wholewheat wrap", "宫保鸡丁 Kung pao chicken + rice (make extra for tomorrow's lunch)"],
+    ["Thursday · workout", "Yesterday's kung pao chicken + rice", "Baked salmon + pak choi + rice (15 min)"],
+    ["Friday", "Salmon rice salad (from yesterday)", "鸡肉炒面 Chicken &amp; veg chow mein"],
+    ["Saturday · workout", "Brunch: menemen, white cheese, olives, tomato &amp; cucumber, wholewheat bread", "Free meal: eat out and share dishes"],
+    ["Sunday", "Brunch: Nomadic + boiled egg + fruit", "Grilled köfte + roasted veg + cacık, then 1 hour of prep for the week"],
   ];
   const RECIPES = [
-    { name: "Domatesli yumurtalı noodle", zh: "番茄鸡蛋面", when: "Pazartesi akşam", time: "15 dk",
-      ing: ["5 yumurta", "3 olgun domates (veya 1 kutu doğranmış domates)", "Yumurtalı noodle: 100 g + 60 g (kuru)", "2 taze soğan, 1 diş sarımsak", "1 yk az tuzlu soya sosu, 1 tk yağ", "1 baş brokoli"],
-      steps: ["Noodle ve brokoliyi kaynar suda paketteki süre kadar haşla, süz.", "Yumurtaları çırp, 1 tk yağda yumuşak pişir, tabağa al.", "Aynı tavada sarımsak ve doğranmış domatesi 5 dk sulanana kadar pişir; soya sosunu ekle.", "Yumurtayı geri koy, noodle ile karıştır, taze soğanla servis et."],
-      p1: "3 yumurta · 100 g kuru noodle · bol brokoli", p2: "2 yumurta · 60 g kuru noodle · bol brokoli", k1: 650, k2: 430 },
-    { name: "Fırın tavuk, sebze ve bulgur", zh: "", when: "Pazar hazırlığı → Pazartesi öğle, Salı akşam", time: "15 dk + 40 dk fırın",
-      ing: ["1,2 kg kemiksiz, derisiz tavuk but", "2 yk yoğurt, 1 yk biber salçası, 1 yk zeytinyağı", "Kimyon, pul biber, karabiber, 2 diş sarımsak", "2 kabak, 2 biber, 2 soğan", "2 su bardağı bulgur (4 kişilik)"],
-      steps: ["Tavuğu yoğurt, salça, yağ ve baharatla karıştır (akşamdan marine edersen daha iyi).", "Sebzeleri iri doğra, tavukla aynı tepsiye yay.", "200 °C fırında 40 dk pişir.", "Bulguru 1'e 2 su ile 15 dk pişir. 4 kutuya böl: 2'si sana, 2'si ona."],
-      p1: "200 g tavuk (çiğ ağırlık) · 1 kase pişmiş bulgur · sebze", p2: "130 g tavuk · ½ kase bulgur · bol sebze", k1: 640, k2: 420 },
-    { name: "Mercimek çorbası", zh: "", when: "Pazar hazırlığı → Salı akşam, Çarşamba öğle", time: "35 dk",
-      ing: ["2 su bardağı kırmızı mercimek", "1 soğan, 1 havuç", "1 yk salça, 1 yk zeytinyağı", "1,5 L su veya tavuk suyu", "Kimyon, nane, limon", "Servis: 1 yk yoğurt"],
-      steps: ["Soğan ve havucu yağda 5 dk kavur, salçayı ekle.", "Yıkanmış mercimeği ve suyu ekle, 25 dk kısık ateşte pişir.", "Blenderdan geçir, kimyon ve tuzla tatlandır.", "6 kaseye böl; buzdolabında 4 gün dayanır."],
-      p1: "1 büyük kase + 1 yk yoğurt (yanında tavuk veya peynirli wrap)", p2: "1 kase + 1 yk yoğurt (yanında tavuk veya peynirli wrap)", k1: 300, k2: 250 },
-    { name: "Ton balıklı nohut salatası", zh: "", when: "Salı öğle", time: "5 dk",
-      ing: ["2 kutu ton balığı (suda)", "1 kutu nohut, süzülmüş", "Domates, salatalık, roka, mısır", "Limon, 1 tk zeytinyağı, karabiber"],
-      steps: ["Sabah her şeyi iki kutuya paylaştır.", "Limonu ve yağı öğle yemeğinde ekle ki salata sulanmasın."],
-      p1: "1 kutu ton · ½ kutu nohut", p2: "½–1 kutu ton · ⅓ kutu nohut", k1: 450, k2: 320 },
-    { name: "Kung pao tavuk", zh: "宫保鸡丁", when: "Çarşamba akşam → Perşembe öğle", time: "20 dk",
-      ing: ["600 g tavuk göğsü, küp", "1 kırmızı biber, 1 kabak, 4 taze soğan", "2 diş sarımsak, 1 parmak zencefil", "4–6 kuru acı biber (isteğe bağlı Sichuan biberi)", "25 g çiğ yer fıstığı", "Sos: 2 yk soya sosu, 1 yk pirinç sirkesi, 1 tk bal, 1 tk mısır nişastası, 3 yk su", "1 yk yağ; pirinç"],
-      steps: ["Tavuğu 1 yk soya ve 1 tk nişastayla karıştır.", "Wok'ta 1 yk yağda kuru biber ve fıstığı 30 sn çevir, al.", "Tavuğu yüksek ateşte 5–6 dk pişir; sarımsak, zencefil ve sebzeleri ekle, 3 dk.", "Sosu dök, koyulaşınca fıstık ve taze soğanı ekle. Yarısını yarının öğle kutularına ayır."],
-      p1: "180 g tavuk · 1 kase pirinç · 15 g fıstık", p2: "120 g tavuk · ½ kase pirinç · 10 g fıstık", k1: 680, k2: 440 },
-    { name: "Ballı soyalı somon ve pak choi", zh: "", when: "Perşembe akşam → Cuma öğle", time: "15 dk",
-      ing: ["4 somon fileto (Dunnes/Tesco 2'li paket ×2)", "2 yk soya sosu, 1 tk bal, rendelenmiş zencefil, sarımsak", "4 baş pak choi", "Pazardan kalan pişmiş pirinç"],
-      steps: ["Somonları sosla kapla, 200 °C fırında 12–15 dk pişir.", "Pak choiyi ikiye böl, sarımsakla tavada 3 dk çevir.", "2 fileto yarının öğle kutusuna: pirinç, salatalık ve soya sosuyla salata."],
-      p1: "1 büyük fileto (~150 g) · 1 kase pirinç", p2: "1 fileto (~120 g) · ½ kase pirinç · bol pak choi", k1: 620, k2: 430 },
-    { name: "Tavuklu sebzeli noodle", zh: "鸡肉炒面", when: "Cuma akşam", time: "20 dk",
-      ing: ["250 g tavuk göğsü, ince şerit", "Yumurtalı noodle veya udon: 100 g + 60 g (kuru)", "Beyaz lahana, havuç, biber, fasulye filizi", "2 taze soğan, sarımsak, zencefil", "Sos: 2 yk soya, 1 yk istiridye sosu, 1 tk susam yağı", "1 yk yağ"],
-      steps: ["Noodle'ı haşla, soğuk sudan geçir.", "Tavuğu wok'ta yüksek ateşte 5 dk pişir.", "Sebzeleri ekle, 3 dk diri kalacak şekilde çevir.", "Noodle ve sosu ekle, 1 dk karıştır, taze soğanla servis et."],
-      p1: "150 g tavuk · 100 g kuru noodle", p2: "100 g tavuk · 60 g kuru noodle · fazla sebze", k1: 680, k2: 450 },
-    { name: "Menemen kahvaltısı", zh: "", when: "Cumartesi geç kahvaltı", time: "15 dk",
-      ing: ["5 yumurta", "2 domates, 2 sivri biber", "Beyaz peynir, zeytin, salatalık", "Tam buğday ekmek", "1 tk zeytinyağı"],
-      steps: ["Biberi yağda 3 dk sotele, domatesi ekle, suyunu çekene kadar pişir.", "Yumurtaları kır, hafifçe karıştırarak pişir.", "Peynir, zeytin ve salatalıkla servis et."],
-      p1: "3 yumurta · 30 g peynir · 2 dilim ekmek", p2: "2 yumurta · 20 g peynir · 1 dilim ekmek", k1: 600, k2: 400 },
-    { name: "Izgara köfte, közlenmiş sebze, cacık", zh: "", when: "Pazar akşam", time: "30 dk",
-      ing: ["500 g %5 yağlı dana kıyma", "1 rendelenmiş soğan, 1 yumurta, 2 yk yulaf", "Kimyon, karabiber, tuz", "Patlıcan, biber, domates", "Cacık: 300 g yoğurt, 1 salatalık, sarımsak, kuru nane veya dereotu"],
-      steps: ["Kıymayı soğan, yumurta, yulaf ve baharatla yoğur; 10 köfte yap.", "Köfte ve sebzeleri 220 °C fırında veya ızgarada 15–20 dk pişir.", "Cacığı hazırla."],
-      p1: "6 köfte · sebze · cacık · 1 dilim ekmek", p2: "4 köfte · bol sebze · cacık", k1: 650, k2: 420 },
-    { name: "Hafif mapo tofu (yedek tarif)", zh: "麻婆豆腐", when: "İstediğin akşamla değiştir", time: "20 dk",
-      ing: ["1 paket sert tofu (Tofoo, 280 g), küp", "150 g %5 yağlı dana kıyma", "1 yk doubanjiang (acı fasulye ezmesi)", "Sarımsak, zencefil, taze soğan", "1 yk soya sosu, 1 tk nişasta + 100 ml su", "Pirinç, yeşillik"],
-      steps: ["Kıymayı tavada suyunu çekene kadar pişir.", "Doubanjiang, sarımsak ve zencefili ekle, 1 dk.", "Tofu ve 150 ml su ekle, 5 dk pişir.", "Nişastalı suyla koyulaştır, taze soğanla servis et."],
-      p1: "Yarısı · 1 kase pirinç", p2: "Yarısından biraz az · ½ kase pirinç · yeşillik", k1: 620, k2: 420 },
+    { name: "Tomato &amp; egg noodles", zh: "番茄鸡蛋面", when: "Monday dinner", time: "15 min",
+      ing: ["5 eggs", "3 ripe tomatoes (or 1 tin chopped tomatoes)", "Egg noodles: 100 g + 60 g (dry)", "2 spring onions, 1 garlic clove", "1 tbsp reduced-salt soy sauce, 1 tsp oil", "1 head of broccoli"],
+      steps: ["Boil the noodles and broccoli for the time on the pack, then drain.", "Beat the eggs and soft-scramble them in 1 tsp oil; set aside.", "In the same pan, cook the garlic and chopped tomatoes for 5 min until saucy; add the soy sauce.", "Return the eggs, toss with the noodles and serve topped with spring onion."],
+      p1: "3 eggs · 100 g dry noodles · plenty of broccoli", p2: "2 eggs · 60 g dry noodles · plenty of broccoli", p2zh: "2 个鸡蛋 · 60 克干面 · 多吃西兰花", k1: 650, k2: 430 },
+    { name: "Roast chicken, veg &amp; bulgur", zh: "烤鸡腿配蔬菜和布格麦", when: "Sunday prep → Monday lunch, Tuesday dinner", time: "15 min + 40 min oven",
+      ing: ["1.2 kg boneless, skinless chicken thighs", "2 tbsp yoghurt, 1 tbsp red pepper paste (or tomato purée), 1 tbsp olive oil", "Cumin, chilli flakes, black pepper, 2 garlic cloves", "2 courgettes, 2 peppers, 2 onions", "350 g bulgur (4 portions)"],
+      steps: ["Mix the chicken with the yoghurt, paste, oil and spices (marinate overnight if you can).", "Cut the veg into chunks and spread on the same tray as the chicken.", "Roast at 200 °C for 40 min.", "Cook the bulgur with twice its volume of water for 15 min. Split into 4 boxes: 2 for each of you."],
+      p1: "200 g chicken (raw weight) · 1 bowl cooked bulgur · veg", p2: "130 g chicken · ½ bowl bulgur · lots of veg", p2zh: "130 克鸡肉 · 半碗布格麦 · 多吃蔬菜", k1: 640, k2: 420 },
+    { name: "Red lentil soup", zh: "红扁豆汤", when: "Sunday prep → Tuesday dinner, Wednesday lunch", time: "35 min",
+      ing: ["400 g red lentils", "1 onion, 1 carrot", "1 tbsp tomato purée, 1 tbsp olive oil", "1.5 L water or chicken stock", "Cumin, dried mint, lemon", "To serve: 1 tbsp yoghurt"],
+      steps: ["Soften the onion and carrot in the oil for 5 min, then stir in the purée.", "Add the rinsed lentils and water; simmer for 25 min.", "Blend, then season with cumin and salt.", "Split into 6 bowls; keeps 4 days in the fridge."],
+      p1: "1 large bowl + 1 tbsp yoghurt (with chicken or a cheese wrap)", p2: "1 bowl + 1 tbsp yoghurt (with chicken or a cheese wrap)", p2zh: "1 碗 + 1 勺酸奶（配鸡肉或芝士卷饼）", k1: 300, k2: 250 },
+    { name: "Tuna &amp; chickpea salad", zh: "金枪鱼鹰嘴豆沙拉", when: "Tuesday lunch", time: "5 min",
+      ing: ["2 tins tuna (in water)", "1 tin chickpeas, drained", "Tomato, cucumber, rocket, sweetcorn", "Lemon, 1 tsp olive oil, black pepper"],
+      steps: ["In the morning, split everything between two boxes.", "Add the lemon and oil at lunchtime so the salad stays crisp."],
+      p1: "1 tin tuna · ½ tin chickpeas", p2: "½–1 tin tuna · ⅓ tin chickpeas", p2zh: "半罐到 1 罐金枪鱼 · 三分之一罐鹰嘴豆", k1: 450, k2: 320 },
+    { name: "Kung pao chicken", zh: "宫保鸡丁", when: "Wednesday dinner → Thursday lunch", time: "20 min",
+      ing: ["600 g chicken breast, diced", "1 red pepper, 1 courgette, 4 spring onions", "2 garlic cloves, a thumb of ginger", "4–6 dried chillies (Sichuan pepper optional)", "25 g raw peanuts", "Sauce: 2 tbsp soy sauce, 1 tbsp rice vinegar, 1 tsp honey, 1 tsp cornflour, 3 tbsp water", "1 tbsp oil; rice"],
+      steps: ["Toss the chicken with 1 tbsp soy sauce and 1 tsp cornflour.", "Fry the dried chillies and peanuts in 1 tbsp oil in a wok for 30 s; set aside.", "Cook the chicken over high heat for 5–6 min; add the garlic, ginger and veg for 3 min.", "Pour in the sauce; once it thickens, add the peanuts and spring onion. Put half into tomorrow's lunch boxes."],
+      p1: "180 g chicken · 1 bowl rice · 15 g peanuts", p2: "120 g chicken · ½ bowl rice · 10 g peanuts", p2zh: "120 克鸡肉 · 半碗米饭 · 10 克花生", k1: 680, k2: 440 },
+    { name: "Honey-soy salmon &amp; pak choi", zh: "蜂蜜酱油三文鱼配小白菜", when: "Thursday dinner → Friday lunch", time: "15 min",
+      ing: ["4 salmon fillets (2 × 2-packs from Dunnes/Tesco)", "2 tbsp soy sauce, 1 tsp honey, grated ginger, garlic", "4 heads of pak choi", "Cooked rice from Sunday"],
+      steps: ["Coat the salmon in the sauce and bake at 200 °C for 12–15 min.", "Halve the pak choi and stir-fry with garlic for 3 min.", "Put 2 fillets aside for tomorrow's lunch: a salad with rice, cucumber and soy sauce."],
+      p1: "1 large fillet (~150 g) · 1 bowl rice", p2: "1 fillet (~120 g) · ½ bowl rice · plenty of pak choi", p2zh: "1 块三文鱼（约 120 克）· 半碗米饭 · 多吃小白菜", k1: 620, k2: 430 },
+    { name: "Chicken &amp; veg chow mein", zh: "鸡肉炒面", when: "Friday dinner", time: "20 min",
+      ing: ["250 g chicken breast, thin strips", "Egg noodles or udon: 100 g + 60 g (dry)", "White cabbage, carrot, pepper, beansprouts", "2 spring onions, garlic, ginger", "Sauce: 2 tbsp soy sauce, 1 tbsp oyster sauce, 1 tsp sesame oil", "1 tbsp oil"],
+      steps: ["Boil the noodles and rinse under cold water.", "Cook the chicken in a wok over high heat for 5 min.", "Add the veg and stir-fry for 3 min so they stay crisp.", "Add the noodles and sauce, toss for 1 min and serve with spring onion."],
+      p1: "150 g chicken · 100 g dry noodles", p2: "100 g chicken · 60 g dry noodles · extra veg", p2zh: "100 克鸡肉 · 60 克干面 · 多加蔬菜", k1: 680, k2: 450 },
+    { name: "Menemen brunch", zh: "土耳其番茄青椒炒蛋", when: "Saturday brunch", time: "15 min",
+      ing: ["5 eggs", "2 tomatoes, 2 green peppers", "White cheese, olives, cucumber", "Wholewheat bread", "1 tsp olive oil"],
+      steps: ["Soften the peppers in the oil for 3 min, add the tomatoes and cook until the liquid reduces.", "Crack in the eggs and stir gently until just set.", "Serve with cheese, olives and cucumber."],
+      p1: "3 eggs · 30 g cheese · 2 slices bread", p2: "2 eggs · 20 g cheese · 1 slice bread", p2zh: "2 个鸡蛋 · 20 克奶酪 · 1 片面包", k1: 600, k2: 400 },
+    { name: "Grilled köfte, roasted veg &amp; cacık", zh: "土耳其烤肉丸配烤蔬菜和黄瓜酸奶", when: "Sunday dinner", time: "30 min",
+      ing: ["500 g 5% lean beef mince", "1 grated onion, 1 egg, 2 tbsp oats", "Cumin, black pepper, salt", "Aubergine, peppers, tomatoes", "Cacık: 300 g yoghurt, 1 cucumber, garlic, dried mint or dill"],
+      steps: ["Knead the mince with the onion, egg, oats and spices; shape 10 köfte.", "Cook the köfte and veg in a 220 °C oven or on a grill for 15–20 min.", "Mix the cacık."],
+      p1: "6 köfte · veg · cacık · 1 slice bread", p2: "4 köfte · lots of veg · cacık", p2zh: "4 个肉丸 · 多吃蔬菜 · 黄瓜酸奶", k1: 650, k2: 420 },
+    { name: "Light mapo tofu (swap-in)", zh: "麻婆豆腐", when: "Swap with any dinner", time: "20 min",
+      ing: ["1 pack firm tofu (Tofoo, 280 g), cubed", "150 g 5% lean beef mince", "1 tbsp doubanjiang (chilli bean paste)", "Garlic, ginger, spring onion", "1 tbsp soy sauce, 1 tsp cornflour + 100 ml water", "Rice, greens"],
+      steps: ["Brown the mince in a pan until dry.", "Add the doubanjiang, garlic and ginger for 1 min.", "Add the tofu and 150 ml water; simmer for 5 min.", "Thicken with the cornflour water and serve with spring onion."],
+      p1: "Half · 1 bowl rice", p2: "A bit under half · ½ bowl rice · greens", p2zh: "略少于一半 · 半碗米饭 · 青菜", k1: 620, k2: 420 },
   ];
   const LIFTS = [
     ["legpress", "Leg press", "40–60 kg", "20–30 kg"],
-    ["chest", "Chest press makine", "20–30 kg", "10–15 kg"],
+    ["chest", "Chest press machine", "20–30 kg", "10–15 kg"],
     ["row", "Seated cable row", "25–35 kg", "15–20 kg"],
-    ["hip", "Hip thrust", "Vücut ağırlığı → 20 kg bar", "Vücut ağırlığı"],
+    ["hip", "Hip thrust", "Bodyweight → 20 kg bar", "Bodyweight"],
     ["rdl", "Romanian deadlift", "2 × 12–16 kg", "–"],
-    ["legcurl", "Leg curl makine", "–", "10–20 kg"],
-    ["shoulder", "Oturarak omuz press", "2 × 8–10 kg", "2 × 3–5 kg"],
-    ["split", "Split squat", "Vücut ağırlığı", "–"],
+    ["legcurl", "Leg curl machine", "–", "10–20 kg"],
+    ["shoulder", "Seated shoulder press", "2 × 8–10 kg", "2 × 3–5 kg"],
+    ["split", "Split squat", "Bodyweight", "–"],
     ["legext", "Leg extension", "–", "10–20 kg"],
     ["lat", "Lat pulldown", "30–40 kg", "15–25 kg"],
   ];
   const WA = [
-    ["Leg press", "3 × 10–12", "Makinede oturarak; dizler ayak uçlarıyla aynı yönde", "Hafif ağırlıkla başla; ayak tabanı platforma tam bassın"],
-    ["Chest press makine", "3 × 10–12", "Evde: şınav (zorsa dizler yerde)", ""],
-    ["Seated cable row", "3 × 10–12", "Göğüs dik, kürek kemiklerini sık", ""],
-    ["Hip thrust", "3 × 12", "Kalçayı en üstte 1 sn sık", ""],
-    ["Plank", "3 × 30 sn", "Kalça düz, karın sıkı", "Ayak uçları zorlarsa dizler yerde plank"],
+    ["Leg press", "3 × 10–12", "Seated on the machine; knees track over your toes", "Start light; keep your whole foot flat on the platform", "从轻重量开始；整个脚掌平踩在踏板上"],
+    ["Chest press machine", "3 × 10–12", "At home: push-ups (on your knees if needed)", "", ""],
+    ["Seated cable row", "3 × 10–12", "Chest up, squeeze your shoulder blades", "", ""],
+    ["Hip thrust", "3 × 12", "Squeeze your glutes for 1 s at the top", "", ""],
+    ["Plank", "3 × 30 s", "Hips level, core tight", "If your toes feel it, plank on your knees", "如果脚尖不适，改为跪姿平板支撑"],
   ];
   const WB = [
-    ["Romanian deadlift (dumbbell)", "3 × 10", "Sırt düz, kalçayı geriye it", "Yerine leg curl makinesi (oturarak/yüzüstü)"],
-    ["Oturarak omuz press", "3 × 10", "Bench sırtı dik", ""],
-    ["Split squat", "3 × 8 / bacak", "Arka ayak yerde, denge için tutunarak", "Yerine leg extension makinesi"],
-    ["Lat pulldown", "3 × 10–12", "Barı göğsün üstüne çek", ""],
-    ["Dead bug", "3 × 10 / taraf", "Bel yere yapışık; derin karın kası", ""],
+    ["Romanian deadlift (dumbbells)", "3 × 10", "Flat back, push your hips back", "Swap for the leg curl machine", "改用腿弯举器械"],
+    ["Seated shoulder press", "3 × 10", "Bench upright", "", ""],
+    ["Split squat", "3 × 8 per leg", "Back foot down, hold on for balance", "Swap for the leg extension machine", "改用腿屈伸器械"],
+    ["Lat pulldown", "3 × 10–12", "Pull the bar to your upper chest", "", ""],
+    ["Dead bug", "3 × 10 per side", "Lower back pressed down; deep core", "", ""],
   ];
 
   const $ = (s, r = document) => r.querySelector(s);
@@ -472,7 +491,9 @@ td.day { font-weight: 600; white-space: nowrap; }
   const pad = n => String(n).padStart(2, "0");
   const iso = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
   const TODAY = iso(new Date());
-  const DAYS_TR = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
+  const LOC = "en-IE";
+  const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const DEFAULT_NAMES = { p1: "Sait", p2: "Serena" };
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch { return null; } },
     set(k, v) { try { localStorage.setItem(k, v); } catch {} },
@@ -480,7 +501,7 @@ td.day { font-weight: 600; white-space: nowrap; }
 
   const state = {
     me: store.get("bf-me"),
-    names: { p1: "1. kişi", p2: "2. kişi" },
+    names: { ...DEFAULT_NAMES },
     days: {},      // `${date}_${p}` -> habits
     progress: {},  // p -> {waistDelta, weightDelta}
     lifts: {},     // `${p}_${key}` -> {first, best, last}
@@ -490,35 +511,37 @@ td.day { font-weight: 600; white-space: nowrap; }
   };
 
   // ---------- static content ----------
+  const zh = t => t ? `<span class="zh" lang="zh">${t}</span>` : "";
   $("#menu-body").innerHTML = MENU.map(r => `<tr><td class="day">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join("");
-  const exHtml = list => list.map(e => `<div class="ex"><b>${e[0]}</b><span class="reps">${e[1]}</span><span class="alt">${e[2]}</span>${e[3] ? `<span class="alt" style="color:var(--p2)"><span class="pname" data-p="p2">2. kişi</span>: ${e[3]}</span>` : ""}</div>`).join("");
+  const exHtml = list => list.map(e => `<div class="ex"><b>${e[0]}</b><span class="reps">${e[1]}</span><span class="alt">${e[2]}</span>${e[3] ? `<span class="alt" style="color:var(--p2)"><span class="pname" data-p="p2">Serena</span>: ${e[3]}${zh(e[4])}</span>` : ""}</div>`).join("");
   $("#wa").innerHTML = exHtml(WA);
   $("#wb").innerHTML = exHtml(WB);
   $("#start-w").innerHTML = LIFTS.map(l => `<tr><td>${l[1]}</td><td>${l[2]}</td><td>${l[3]}</td></tr>`).join("");
   $("#l-ex").innerHTML = LIFTS.map(l => `<option value="${l[0]}">${l[1]}</option>`).join("");
   $("#recipes").innerHTML = RECIPES.map(r => `<article class="card">
       <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
-        <h3>${r.zh ? `<span lang="zh">${r.zh}</span> ` : ""}${r.name}</h3><span class="pill">${r.time}</span></div>
+        <h3>${r.name} <span lang="zh" class="zh-inline">${r.zh}</span></h3><span class="pill">${r.time}</span></div>
       <p class="small muted">${r.when}</p>
       <div class="lanes" style="gap:10px">
-        <div class="lane p1" style="padding:10px"><span class="label pname" data-p="p1">1. kişi</span><span class="small">${r.p1}</span><b class="small">≈ ${r.k1} kcal</b></div>
-        <div class="lane p2" style="padding:10px"><span class="label pname" data-p="p2">2. kişi</span><span class="small">${r.p2}</span><b class="small">≈ ${r.k2} kcal</b></div>
+        <div class="lane p1" style="padding:10px"><span class="label pname" data-p="p1">Sait</span><span class="small">${r.p1}</span><b class="small">≈ ${r.k1} kcal</b></div>
+        <div class="lane p2" style="padding:10px"><span class="label pname" data-p="p2">Serena</span><span class="small">${r.p2}${zh(r.p2zh)}</span><b class="small">≈ ${r.k2} kcal</b></div>
       </div>
       <div class="lanes" style="gap:14px">
-        <div><span class="label">Malzemeler</span><ul class="small">${r.ing.map(x => `<li>${x}</li>`).join("")}</ul></div>
-        <div><span class="label">Yapılışı</span><ol class="small" style="margin:0;padding-left:1.2em;display:grid;gap:4px">${r.steps.map(x => `<li>${x}</li>`).join("")}</ol></div>
+        <div><span class="label">Ingredients</span><ul class="small">${r.ing.map(x => `<li>${x}</li>`).join("")}</ul></div>
+        <div><span class="label">Method</span><ol class="small" style="margin:0;padding-left:1.2em;display:grid;gap:4px">${r.steps.map(x => `<li>${x}</li>`).join("")}</ol></div>
       </div>
     </article>`).join("");
 
   // ---------- tabs ----------
+  const TABS = ["today", "plan", "menu", "recipes", "training", "measure"];
   const showTab = t => {
     $$("nav.tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === t)));
     $$("[data-panel]").forEach(p => p.hidden = p.dataset.panel !== t);
-    store.set("bf-tab", t);
+    store.set("bf-tab2", t);
   };
   $$("nav.tabs button").forEach(b => b.addEventListener("click", () => showTab(b.dataset.tab)));
-  const hashTab = location.hash.slice(1);
-  showTab(["bugun", "plan", "menu", "tarif", "spor", "olcum"].includes(hashTab) ? hashTab : (store.get("bf-tab") || "bugun"));
+  const hashTab = location.hash.slice(1), savedTab = store.get("bf-tab2");
+  showTab(TABS.includes(hashTab) ? hashTab : (TABS.includes(savedTab) ? savedTab : "today"));
 
   // ---------- calculator ----------
   const calc = () => {
@@ -528,8 +551,8 @@ td.day { font-weight: 600; white-space: nowrap; }
     const tdee = bmr * act;
     const target = Math.max(sex === "m" ? 1600 : 1300, tdee - (sex === "m" ? 300 : 400));
     const r = n => Math.round(n / 10) * 10;
-    $("#c-tdee").textContent = r(tdee).toLocaleString("tr-TR") + " kcal";
-    $("#c-target").textContent = r(target).toLocaleString("tr-TR") + " kcal";
+    $("#c-tdee").textContent = r(tdee).toLocaleString(LOC) + " kcal";
+    $("#c-target").textContent = r(target).toLocaleString(LOC) + " kcal";
     $("#c-prot").textContent = `${Math.round(w * 1.6)}–${Math.round(w * 2)} g`;
   };
   $("#calc").addEventListener("input", calc);
@@ -545,8 +568,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     $("#who-p2").textContent = state.names.p2;
     $$(".pname").forEach(el => el.textContent = state.names[el.dataset.p]);
     $$("#who button[data-p]").forEach(b => b.classList.toggle("on", b.dataset.p === state.me));
-    const isP2 = state.me === "p2";
-    $("#m-weight-wrap").hidden = isP2;
+    $("#m-weight-wrap").hidden = state.me === "p2";
   };
   $$("#who button[data-p]").forEach(b => b.addEventListener("click", () => {
     state.me = b.dataset.p; store.set("bf-me", state.me); renderAll();
@@ -557,9 +579,9 @@ td.day { font-weight: 600; white-space: nowrap; }
   });
   $("#rename-form").addEventListener("submit", async e => {
     e.preventDefault();
-    const names = { p1: $("#name-p1").value.trim() || "1. kişi", p2: $("#name-p2").value.trim() || "2. kişi" };
+    const names = { p1: $("#name-p1").value.trim() || DEFAULT_NAMES.p1, p2: $("#name-p2").value.trim() || DEFAULT_NAMES.p2 };
     state.names = names; $("#rename-form").hidden = true; renderAll();
-    if (state.db) { try { await state.db.doc("settings/names").set(names); } catch (err) { setStatus("İsimler kaydedilemedi: bu sayfada yazma iznin yok.", true); } }
+    if (state.db) { try { await state.db.doc("settings/names").set(names); } catch (err) { setStatus("Couldn't save the names: you don't have edit access on this page.", true); } }
     else store.set("bf-names", JSON.stringify(names));
   });
 
@@ -575,21 +597,26 @@ td.day { font-weight: 600; white-space: nowrap; }
     while (countOf(iso(d), p) >= 4 && n < 999) { n++; d.setDate(d.getDate() - 1); }
     return n;
   };
+  const habitLabel = (p, k, en, cn) => {
+    const alt = HABIT_ALT[p]?.[k];
+    const [e, c] = alt || [en, cn];
+    return p === "p2" && c ? `${e}${zh(c)}` : e;
+  };
 
   const renderToday = () => {
     const dd = new Date(state.day + "T12:00:00");
-    $("#today-title").textContent = state.day === TODAY ? "Bugün" : dd.toLocaleDateString("tr-TR", { day: "numeric", month: "long", weekday: "long" });
+    $("#today-title").textContent = state.day === TODAY ? "Today" : dd.toLocaleDateString(LOC, { weekday: "long", day: "numeric", month: "long" });
     const last7 = [...Array(7)].map((_, i) => { const x = new Date(); x.setDate(x.getDate() - 6 + i); return x; });
     $("#lanes").innerHTML = ["p1", "p2"].map(p => {
       const h = habitsOf(state.day, p), mine = state.me === p, c = countOf(state.day, p);
       const delta = state.progress[p]?.waistDelta;
       return `<div class="lane ${p}">
-        <div class="lane-head"><h3>${esc(state.names[p])}${mine ? ' <span class="small muted">(sen)</span>' : ""}</h3><span class="score">${c}<small>/6</small></span></div>
-        ${HABITS.map(([k, base]) => [k, HABIT_ALT[p]?.[k] || base]).map(([k, label]) => `<label class="habit ${h[k] ? "done" : ""}" ${mine ? "" : 'aria-disabled="true"'}>
-          <input type="checkbox" id="h-${p}-${k}" data-p="${p}" data-k="${k}" ${h[k] ? "checked" : ""} ${mine ? "" : "disabled"}><span>${label}</span></label>`).join("")}
-        <div class="week">${last7.map(x => `<span class="d">${DAYS_TR[x.getDay()]}</span>`).join("")}
+        <div class="lane-head"><h3>${esc(state.names[p])}${mine ? ' <span class="small muted">(you)</span>' : ""}</h3><span class="score">${c}<small>/6</small></span></div>
+        ${HABITS.map(([k, en, cn]) => `<label class="habit ${h[k] ? "done" : ""}" ${mine ? "" : 'aria-disabled="true"'}>
+          <input type="checkbox" id="h-${p}-${k}" data-p="${p}" data-k="${k}" ${h[k] ? "checked" : ""} ${mine ? "" : "disabled"}><span>${habitLabel(p, k, en, cn)}</span></label>`).join("")}
+        <div class="week">${last7.map(x => `<span class="d">${DAYS[x.getDay()]}</span>`).join("")}
           ${last7.map(x => `<span class="cell" title="${iso(x)}: ${countOf(iso(x), p)}/6"><i style="opacity:${countOf(iso(x), p) / 6}"></i></span>`).join("")}</div>
-        <p class="streak">Seri: <b>${streakOf(p)} gün</b> (4+ kutu)${typeof delta === "number" ? ` · Bel: <b class="${delta <= 0 ? "down" : "up"}">${delta > 0 ? "+" : ""}${delta.toLocaleString("tr-TR")} cm</b>` : ""}</p>
+        <p class="streak">Streak: <b>${streakOf(p)} ${streakOf(p) === 1 ? "day" : "days"}</b> (4+ boxes)${p === "p2" ? ` <span lang="zh">连续打卡</span>` : ""}${typeof delta === "number" ? ` · Waist: <b class="${delta <= 0 ? "down" : "up"}">${delta > 0 ? "+" : ""}${delta.toLocaleString(LOC)} cm</b>` : ""}</p>
       </div>`;
     }).join("");
     $$("#lanes input[type=checkbox]").forEach(cb => cb.addEventListener("change", () => toggle(cb.dataset.p, cb.dataset.k, cb.checked)));
@@ -602,7 +629,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     state.days[id] = habits; renderToday();
     if (state.db) {
       try { await state.db.doc(`days/${id}`).set({ date: state.day, p, habits }); }
-      catch (err) { setStatus("Kaydedilemedi. Bu sayfada yazma iznin olmayabilir; sahibinden 'Katkıda bulunan' erişimi iste.", true); }
+      catch (err) { setStatus("Couldn't save. You may not have permission to edit this page; ask the owner for access.", true); }
     } else saveLocal();
   };
 
@@ -611,24 +638,24 @@ td.day { font-weight: 600; white-space: nowrap; }
   const renderMeasures = () => {
     const ms = [...state.measures].sort((a, b) => a.date.localeCompare(b.date));
     const hist = $("#history");
-    if (!ms.length) hist.innerHTML = '<p class="small muted">Henüz ölçüm yok. İlk ölçümünü yukarıdan ekle; bu senin başlangıç noktan olur.</p>';
-    else hist.innerHTML = [...ms].reverse().map(m => `<div><span>${new Date(m.date + "T12:00:00").toLocaleDateString("tr-TR", { day: "numeric", month: "short" })}</span><span>${m.waist} cm${m.weight ? ` · ${m.weight} kg` : ""}</span></div>`).join("");
+    if (!ms.length) hist.innerHTML = '<p class="small muted">No measurements yet. Add your first one above; it becomes your starting point.</p>';
+    else hist.innerHTML = [...ms].reverse().map(m => `<div><span>${new Date(m.date + "T12:00:00").toLocaleDateString(LOC, { day: "numeric", month: "short" })}</span><span>${m.waist} cm${m.weight ? ` · ${m.weight} kg` : ""}</span></div>`).join("");
     $("#trend").innerHTML = ["p1", "p2"].map(p => {
       const d = state.progress[p] || {};
-      const fmt = (v, u) => typeof v === "number" ? `<span class="${v <= 0 ? "down" : "up"}">${v > 0 ? "+" : ""}${v.toLocaleString("tr-TR")} ${u}</span>` : '<span class="muted">–</span>';
-      return `<div class="card lane ${p}"><span class="label">${esc(state.names[p])} · başlangıçtan beri</span>
+      const fmt = (v, u) => typeof v === "number" ? `<span class="${v <= 0 ? "down" : "up"}">${v > 0 ? "+" : ""}${v.toLocaleString(LOC)} ${u}</span>` : '<span class="muted">–</span>';
+      return `<div class="card lane ${p}"><span class="label">${esc(state.names[p])} · since the start</span>
         <div class="big">${fmt(d.waistDelta, "cm")}</div>
-        ${p === "p1" ? `<p class="small muted">Kilo: ${fmt(d.weightDelta, "kg")}</p>` : '<p class="small muted">Sadece bel ölçüsü</p>'}</div>`;
+        ${p === "p1" ? `<p class="small muted">Weight: ${fmt(d.weightDelta, "kg")}</p>` : `<p class="small muted">Waist only${zh("只记录腰围")}</p>`}</div>`;
     }).join("");
   };
 
   $("#mform").addEventListener("submit", async e => {
     e.preventDefault();
     const msg = $("#m-msg");
-    if (!state.me) { msg.textContent = "Önce en üstten kim olduğunu seç."; return; }
+    if (!state.me) { msg.textContent = "Choose who you are at the top first."; return; }
     const date = $("#m-date").value || TODAY, waist = +$("#m-waist").value;
     const weight = state.me === "p1" && $("#m-weight").value ? +$("#m-weight").value : null;
-    if (!waist) { msg.textContent = "Bel ölçüsünü cm olarak yaz."; return; }
+    if (!waist) { msg.textContent = "Enter your waist in cm."; return; }
     const entry = { date, p: state.me, waist, ...(weight ? { weight } : {}) };
     state.measures = state.measures.filter(m => m.date !== date).concat(entry);
     const ms = [...state.measures].sort((a, b) => a.date.localeCompare(b.date));
@@ -644,25 +671,25 @@ td.day { font-weight: 600; white-space: nowrap; }
         await state.db.collection(`data/users/${state.uid}`).doc(`m_${date}`).set(entry);
         await state.db.doc(`progress/${state.me}`).set(prog);
       } else saveLocal();
-      msg.textContent = "Kaydedildi.";
+      msg.textContent = "Saved.";
       $("#m-waist").value = ""; $("#m-weight").value = "";
-    } catch (err) { msg.textContent = "Kaydedilemedi. Bağlantını ve sayfa iznini kontrol et."; }
+    } catch (err) { msg.textContent = "Couldn't save. Check your connection and page access."; }
   });
 
   $("#lform").addEventListener("submit", async e => {
     e.preventDefault();
     const msg = $("#l-msg");
-    if (!state.me) { msg.textContent = "Önce en üstten kim olduğunu seç."; return; }
+    if (!state.me) { msg.textContent = "Choose who you are at the top first."; return; }
     const key = $("#l-ex").value, kg = +$("#l-kg").value;
-    if (!(kg >= 0) || $("#l-kg").value === "") { msg.textContent = "Ağırlığı kg olarak yaz."; return; }
+    if (!(kg >= 0) || $("#l-kg").value === "") { msg.textContent = "Enter the weight in kg."; return; }
     const id = `${state.me}_${key}`, prev = state.lifts[id];
     const doc = { p: state.me, key, first: prev ? prev.first : kg, best: prev ? Math.max(prev.best, kg) : kg, last: kg, updated: TODAY };
     state.lifts[id] = doc; renderLifts();
     try {
       if (state.db) await state.db.doc(`lifts/${id}`).set(doc); else saveLocal();
-      msg.textContent = prev && kg > prev.best ? "Yeni rekor! Kaydedildi." : "Kaydedildi.";
+      msg.textContent = prev && kg > prev.best ? "New personal best! Saved." : "Saved.";
       $("#l-kg").value = "";
-    } catch (err) { msg.textContent = "Kaydedilemedi. Bağlantını ve sayfa iznini kontrol et."; }
+    } catch (err) { msg.textContent = "Couldn't save. Check your connection and page access."; }
   });
 
   // ---------- helpers ----------
@@ -673,12 +700,12 @@ td.day { font-weight: 600; white-space: nowrap; }
       const v = state.lifts[`${p}_${k}`];
       if (!v) return '<span class="muted">–</span>';
       const gain = Math.round((v.best - v.first) * 10) / 10;
-      return `${v.first} → <b>${v.best} kg</b>${gain > 0 ? ` <span class="down">+${gain.toLocaleString("tr-TR")}</span>` : ""}`;
+      return `${v.first} → <b>${v.best} kg</b>${gain > 0 ? ` <span class="down">+${gain.toLocaleString(LOC)}</span>` : ""}`;
     };
     const used = LIFTS.filter(l => state.lifts[`p1_${l[0]}`] || state.lifts[`p2_${l[0]}`]);
     $("#lifts").innerHTML = used.length
       ? used.map(l => `<tr><td>${l[1]}</td><td style="font-variant-numeric:tabular-nums">${cell("p1", l[0])}</td><td style="font-variant-numeric:tabular-nums">${cell("p2", l[0])}</td></tr>`).join("")
-      : '<tr><td colspan="3" class="muted small">İlk antrenmandan sonra kullandığın ağırlıkları buraya yaz; ilerlemen burada görünecek.</td></tr>';
+      : '<tr><td colspan="3" class="muted small">After your first session, log the weights you used here; your progress will show up in this table.</td></tr>';
   }
   function renderAll() { renderNames(); renderToday(); renderMeasures(); renderLifts(); }
   function saveLocal() { store.set("bf-local", JSON.stringify({ days: state.days, progress: state.progress, measures: state.measures, lifts: state.lifts })); }
@@ -695,18 +722,18 @@ td.day { font-weight: 600; white-space: nowrap; }
     const user = window.claude?.use ? await window.claude.use("user") : null;
     if (!db) {
       state.local = true; loadLocal(); renderAll();
-      setStatus("Ortak kayıt şu an kullanılamıyor; işaretlerin sadece bu cihazda tutuluyor.", true);
+      setStatus("Shared saving isn't available right now; your ticks are only kept on this device.", true);
       return;
     }
     state.db = db;
     try { state.uid = user ? await user.id() : null; } catch { state.uid = null; }
-    setStatus(state.me ? "Ortak kayıt açık. İşaretlerin anında partnerine görünür." : "Ortak kayıt açık. Önce üstten kim olduğunu seç.");
-    db.doc("settings/names").onSnapshot(s => { if (s.exists) { const d = s.data(); state.names = { p1: d.p1 || "1. kişi", p2: d.p2 || "2. kişi" }; renderAll(); } });
+    setStatus(state.me ? "Shared saving is on. Your ticks show up for your partner straight away." : "Shared saving is on. Choose who you are at the top first.");
+    db.doc("settings/names").onSnapshot(s => { if (s.exists) { const d = s.data(); state.names = { p1: d.p1 || DEFAULT_NAMES.p1, p2: d.p2 || DEFAULT_NAMES.p2 }; renderAll(); } });
     db.collection("days").orderBy("date", "desc").limit(400).onSnapshot(snap => {
       const days = {};
       snap.docs.forEach(d => { const v = d.data(); if (v && v.date && v.p) days[`${v.date}_${v.p}`] = v.habits || {}; });
       state.days = days; renderToday();
-    }, () => setStatus("Günlük kayıtlar okunamadı.", true));
+    }, () => setStatus("Couldn't load the daily records.", true));
     db.collection("lifts").onSnapshot(snap => {
       const l = {}; snap.docs.forEach(d => { const v = d.data(); if (v) l[d.id] = v; });
       state.lifts = l; renderLifts();
@@ -721,7 +748,7 @@ td.day { font-weight: 600; white-space: nowrap; }
         renderMeasures();
       });
     } else {
-      $("#privacy-note").textContent = "Ölçüm kaydetmek için claude.ai hesabınla giriş yapmış olman gerekiyor.";
+      $("#privacy-note").textContent = "To save measurements you need to be signed in to your claude.ai account.";
     }
   })();
 })();
