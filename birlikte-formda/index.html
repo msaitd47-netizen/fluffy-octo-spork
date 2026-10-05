@@ -203,19 +203,19 @@ td.day { font-weight: 600; white-space: nowrap; }
     <div class="lanes">
       <div class="lane p1">
         <div class="lane-head"><h3 class="pname" data-p="p1">Sait</h3><span class="pill">Lose fat, build muscle</span></div>
-        <p class="small">29, 175–177 cm, ~80 kg, desk job. The goal isn't a number on the scale but a leaner, more muscular body. This is called <b>body recomposition</b>: a small calorie deficit + high protein + strength training.</p>
+        <p class="small">29, desk job. The goal is a leaner, stronger, more muscular body. This is called <b>body recomposition</b>: a small calorie deficit + high protein + strength training.</p>
         <dl class="kv">
           <dt>Calories</dt><dd>≈ 2,100–2,200 kcal</dd>
           <dt>Protein</dt><dd>140–160 g a day</dd>
           <dt>Strength</dt><dd>3 days a week</dd>
           <dt>Steps</dt><dd>8,000–10,000 a day</dd>
-          <dt>Pace</dt><dd>1–2 kg a month, waist −1–2 cm</dd>
+          <dt>Progress</dt><dd>Heavier lifts every few weeks in the strength log</dd>
         </dl>
         <ul class="small">
           <li>30–40 g protein at every meal: eggs, chicken, tuna, mince, yoghurt, cottage cheese.</li>
           <li>Add a little weight every week. That's the signal that builds muscle.</li>
           <li>Lunch boxes come from two batch cooks a week (Sunday and one weeknight), so weeknight dinners stay quick.</li>
-          <li>The scale may move slowly. The mirror and your strength log are better guides.</li>
+          <li>The mirror and your strength log are your best guides.</li>
         </ul>
       </div>
       <div class="lane p2">
@@ -259,12 +259,12 @@ td.day { font-weight: 600; white-space: nowrap; }
 
     <div class="card">
       <h3>Calorie calculator</h3>
-      <p class="small muted">Estimates your daily needs (Mifflin-St Jeor). Nothing you enter here is saved.</p>
+      <p class="small muted">Estimates daily needs (Mifflin-St Jeor). Fill in your own details; nothing you enter is saved or shown to anyone else.</p>
       <form class="form" id="calc">
         <label>Sex<select id="c-sex"><option value="m">Male</option><option value="f">Female</option></select></label>
         <label>Age<input type="number" id="c-age" min="15" max="80" value="29"></label>
-        <label>Height (cm)<input type="number" id="c-h" min="140" max="210" value="176"></label>
-        <label>Weight (kg)<input type="number" id="c-w" min="40" max="200" value="80"></label>
+        <label>Height (cm)<input type="number" id="c-h" min="140" max="210"></label>
+        <label>Weight (kg)<input type="number" id="c-w" min="40" max="200"></label>
         <label>Activity<select id="c-act">
           <option value="1.2">Desk job, no exercise</option>
           <option value="1.375" selected>Exercise 1–3× a week</option>
@@ -811,7 +811,7 @@ td.day { font-weight: 600; white-space: nowrap; }
   // ---------- calculator ----------
   const calc = () => {
     const sex = $("#c-sex").value, age = +$("#c-age").value, h = +$("#c-h").value, w = +$("#c-w").value, act = +$("#c-act").value;
-    if (!age || !h || !w) return;
+    if (!age || !h || !w) { ["#c-tdee", "#c-target", "#c-prot"].forEach(id => $(id).textContent = "–"); return; }
     const bmr = 10 * w + 6.25 * h - 5 * age + (sex === "m" ? 5 : -161);
     const tdee = bmr * act;
     const target = Math.max(sex === "m" ? 1600 : 1300, tdee - (sex === "m" ? 300 : 400));
@@ -821,10 +821,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     $("#c-prot").textContent = `${Math.round(w * 1.6)}–${Math.round(w * 2)} g`;
   };
   $("#calc").addEventListener("input", calc);
-  $("#c-sex").addEventListener("change", () => {
-    const f = $("#c-sex").value === "f";
-    $("#c-h").value = f ? 165 : 176; $("#c-w").value = f ? 62 : 80; calc();
-  });
+  $("#c-sex").addEventListener("change", calc);
   calc();
 
   // ---------- who am I ----------
