@@ -176,6 +176,7 @@ td.day { font-weight: 600; white-space: nowrap; }
       <h2 id="today-title">Today</h2>
       <label class="small muted" style="display:flex;gap:6px;align-items:center">Day <input type="date" id="day" style="width:auto"></label>
     </div>
+    <div class="card" id="tonight"></div>
     <div class="celebrate" id="celebrate" role="status" aria-live="polite" hidden></div>
     <div class="card" id="goal-card">
       <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
@@ -821,7 +822,13 @@ td.day { font-weight: 600; white-space: nowrap; }
 
   // ---------- static content ----------
   const zh = t => t ? `<span class="zh" lang="zh">${t}</span>` : "";
-  let week = store.get("bf-week") === "2" ? 2 : 1;
+  const PROGRAM_START = "2026-10-05"; // Monday of week 1; weeks alternate 1, 2, 1, 2…
+  const currentWeek = () => {
+    const now = new Date(); now.setHours(12); now.setDate(now.getDate() - ((now.getDay() + 6) % 7));
+    const n = Math.floor((now - new Date(PROGRAM_START + "T12:00:00")) / 6048e5);
+    return ((n % 2) + 2) % 2 === 0 ? 1 : 2;
+  };
+  let week = currentWeek();
   const renderWeek = () => {
     $("#menu-body").innerHTML = (week === 2 ? MENU2 : MENU).map(r => `<tr><td class="day">${r[0]}</td><td>${r[1]}</td></tr>`).join("");
     const L = LUNCH[week];
@@ -834,7 +841,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     $$("[data-week]").forEach(el => el.hidden = el.dataset.week !== String(week));
     $$(".weeksw button[data-wk]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.wk === String(week))));
   };
-  $$(".weeksw button[data-wk]").forEach(b => b.addEventListener("click", () => { week = +b.dataset.wk; store.set("bf-week", String(week)); renderWeek(); renderNames(); }));
+  $$(".weeksw button[data-wk]").forEach(b => b.addEventListener("click", () => { week = +b.dataset.wk; renderWeek(); renderNames(); }));
   const exHtml = list => list.map(e => `<div class="ex"><b>${e[0]}</b><span class="reps">${e[1]}</span><span class="alt">${e[2]}</span>${e[3] ? `<span class="alt" style="color:var(--p2)"><span class="pname" data-p="p2">Serena</span>: ${e[3]}${zh(e[4])}</span>` : ""}</div>`).join("");
   $("#wa").innerHTML = exHtml(WA);
   $("#wb").innerHTML = exHtml(WB);
@@ -862,7 +869,8 @@ td.day { font-weight: 600; white-space: nowrap; }
         <div><span class="label">Method</span><ol class="small" style="margin:0;padding-left:1.2em;display:grid;gap:4px">${r.steps.map(x => `<li>${x}</li>`).join("")}</ol></div>
       </div></div>
     </details>`).join(""); }
-  function recipeHtml(list) { return list.map(r => `<article class="card">
+  const recId = r => "rec-" + r.name.toLowerCase().replace(/[^a-z]+/g, "");
+  function recipeHtml(list) { return list.map(r => `<article class="card" id="${recId(r)}">
       <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
         <h3>${r.name} <span lang="zh" class="zh-inline">${r.zh}</span></h3><span class="pill">${r.time}</span></div>
       <p class="small muted">${r.when}</p>
@@ -878,6 +886,41 @@ td.day { font-weight: 600; white-space: nowrap; }
 
   // ---------- tabs ----------
   const TABS = ["today", "plan", "menu", "recipes", "training"];
+  const TONIGHT = {
+    1: { mon: ["Tomato &amp; egg noodles"], batch: "Kung pao", other: "Honey-soy salmon", thu: ["Light mapo"], fri: ["chow mein"], sat: ["Menemen", "Beef &amp; broccoli"], sun: ["Çılbır", "Grilled köfte"] },
+    2: { mon: ["Prawn"], batch: "Fish-fragrant", other: "sea bass", thu: ["Sesame chicken noodles"], fri: ["chow fun"], sat: ["Spinach", "Chicken shish"], sun: ["Oat &amp; banana", "hot pot"] },
+  };
+  const findRec = (wk, kw) => (wk === 2 ? RECIPES2 : RECIPES).find(r => r.name.toLowerCase().includes(kw.toLowerCase()));
+  const dishHtml = (wk, kw, label) => {
+    const r = findRec(wk, kw); if (!r) return "";
+    return `<div class="habit" style="cursor:default;display:grid;gap:4px">
+      ${label ? `<span class="label">${label}</span>` : ""}
+      <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline"><b>${r.name} <span lang="zh" class="zh-inline">${r.zh}</span></b><span class="pill">${r.time}</span></div>
+      <span class="small"><span style="color:var(--p1)">${esc(state.names.p1)}</span>: ${r.p1}</span>
+      <span class="small"><span style="color:var(--p2)">${esc(state.names.p2)}</span>: ${r.p2}${zh(r.p2zh)}</span>
+      <button type="button" class="btn ghost small" data-openrec="${recId(r)}" data-recwk="${wk}" style="justify-self:start;padding:4px 10px">Open recipe</button>
+    </div>`;
+  };
+  const renderTonight = () => {
+    const now = new Date(), d = now.getDay(), wk = currentWeek(), T = TONIGHT[wk];
+    const dayName = now.toLocaleDateString(LOC, { weekday: "long" });
+    let body = "";
+    if (d === 1) body = dishHtml(wk, T.mon[0]);
+    else if (d === 2 || d === 3) body = dishHtml(wk, T.batch, d === 2 ? "If tonight is batch night (ready meal on Friday): cook ×3" : "If tonight is batch night (ready meal today): cook ×3")
+      + dishHtml(wk, T.other, "Otherwise");
+    else if (d === 4) body = dishHtml(wk, T.thu[0]);
+    else if (d === 5) body = dishHtml(wk, T.fri[0]);
+    else if (d === 6) body = dishHtml(wk, T.sat[0], "Brunch") + dishHtml(wk, T.sat[1], "Dinner");
+    else body = dishHtml(wk, T.sun[0], "Brunch") + dishHtml(wk, T.sun[1], "Dinner") + `<p class="small muted">After dinner: prep lunch batch 1 for next week (week ${wk === 1 ? 2 : 1}).</p>`;
+    $("#tonight").innerHTML = `<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
+        <h3>Tonight's dinner <span lang="zh" class="zh-inline">今晚吃什么</span></h3><span class="small muted">${dayName} · week ${wk}</span></div>
+      <div style="display:grid;gap:8px">${body}</div>
+      <p class="small muted">With Sait's salad on the table, and 2 boiled eggs for ${esc(state.names.p2)}.<span class="zh" lang="zh">配 Sait 的沙拉，Serena 再加 2 个水煮蛋。</span></p>`;
+    $$("[data-openrec]").forEach(b => b.addEventListener("click", () => {
+      week = +b.dataset.recwk; renderWeek(); renderNames(); showTab("recipes");
+      const el = document.getElementById(b.dataset.openrec); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }));
+  };
   const showTab = t => {
     $$("nav.tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === t)));
     $$("[data-panel]").forEach(p => p.hidden = p.dataset.panel !== t);
@@ -1129,7 +1172,7 @@ td.day { font-weight: 600; white-space: nowrap; }
       ? used.map(l => `<tr><td>${l[1]}</td><td style="font-variant-numeric:tabular-nums">${cell("p1", l[0])}</td><td style="font-variant-numeric:tabular-nums">${cell("p2", l[0])}</td></tr>`).join("")
       : '<tr><td colspan="3" class="muted small">After your first session, log the weights you used here; your progress will show up in this table.</td></tr>';
   }
-  function renderAll() { renderNames(); renderToday(); renderLifts(); renderShop(); }
+  function renderAll() { renderTonight(); renderNames(); renderToday(); renderLifts(); renderShop(); }
   try { const g = JSON.parse(store.get("bf-goal") || "null"); if (g) state.goal = g; } catch {}
   function saveLocal() { store.set("bf-local", JSON.stringify({ days: state.days, lifts: state.lifts, shop: state.shop })); }
   function loadLocal() {
