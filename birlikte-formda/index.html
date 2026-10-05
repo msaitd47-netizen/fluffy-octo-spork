@@ -138,6 +138,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     <button role="tab" data-tab="bugun" aria-selected="true">Bugün</button>
     <button role="tab" data-tab="plan" aria-selected="false">Plan</button>
     <button role="tab" data-tab="menu" aria-selected="false">Menü</button>
+    <button role="tab" data-tab="tarif" aria-selected="false">Tarifler</button>
     <button role="tab" data-tab="spor" aria-selected="false">Antrenman</button>
     <button role="tab" data-tab="olcum" aria-selected="false">Ölçüm</button>
   </nav>
@@ -268,10 +269,24 @@ td.day { font-weight: 600; white-space: nowrap; }
       <p class="small muted">Haftalık alışveriş Dunnes Stores’ta, eksikler hafta içi Tesco’dan. Doubanjiang ve Sichuan biberi için Tesco’nun dünya mutfağı rafı ya da bir Asya marketi.</p>
       <div class="lanes" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
         <div><span class="label">Protein</span><ul class="small"><li>30 yumurta</li><li>1,2 kg tavuk but + 500 g tavuk göğsü</li><li>500 g yağsız dana kıyma (%5)</li><li>2 kutu ton balığı</li><li>1 somon veya levrek</li><li>2 kg yoğurt, 1 L kefir</li><li>Lor ve beyaz peynir</li><li>Sert tofu (Tofoo veya Cauldron)</li><li>Kırmızı mercimek, nohut</li></ul></div>
-        <div><span class="label">Sebze, meyve</span><ul class="small"><li>Domates, salatalık, biber</li><li>Ispanak, brokoli, kabak</li><li>Taze fasulye, patlıcan</li><li>Pak choi, taze soğan, zencefil</li><li>Marul, roka, dereotu</li><li>Soğan, sarımsak, limon</li><li>Elma, muz, mevsim meyvesi</li></ul></div>
-        <div><span class="label">Tahıl, diğer</span><ul class="small"><li>Nomadic Clusters (14 adet)</li><li>Yasemin veya esmer pirinç</li><li>Az tuzlu soya sosu, susam yağı, doubanjiang</li><li>Bulgur</li><li>Tam buğday ekmek</li><li>Tam buğday makarna</li><li>Zeytinyağı, zeytin</li><li>Badem, ceviz</li></ul></div>
+        <div><span class="label">Sebze, meyve</span><ul class="small"><li>Domates, salatalık, biber</li><li>Ispanak, brokoli, kabak, beyaz lahana, fasulye filizi</li><li>Taze fasulye, patlıcan</li><li>Pak choi, taze soğan, zencefil</li><li>Marul, roka, dereotu</li><li>Soğan, sarımsak, limon</li><li>Elma, muz, mevsim meyvesi</li></ul></div>
+        <div><span class="label">Tahıl, diğer</span><ul class="small"><li>Nomadic Clusters (14 adet)</li><li>Yasemin veya esmer pirinç</li><li>Yumurtalı noodle veya udon</li><li>İstiridye sosu, pirinç sirkesi</li><li>Az tuzlu soya sosu, susam yağı, doubanjiang</li><li>Bulgur</li><li>Tam buğday ekmek</li><li>Tam buğday makarna</li><li>Zeytinyağı, zeytin</li><li>Badem, ceviz</li></ul></div>
       </div>
     </div>
+  </section>
+
+  <!-- TARİFLER -->
+  <section data-panel="tarif" hidden class="wrap" style="padding:0">
+    <h2>Tarifler ve porsiyonlar</h2>
+    <p class="muted small">Miktarlar ikiniz için. Kalori değerleri porsiyon başına yaklaşıktır. Pirinç ölçüsü: 1 kase ≈ 150 g pişmiş pirinç. Domuz eti, maydanoz ve kişniş yok.</p>
+    <div class="card">
+      <h3>Porsiyon kuralı</h3>
+      <dl class="kv">
+        <dt class="pname" data-p="p1" style="color:var(--p1)">1. kişi</dt><dd>Protein 1,5 kat, karbonhidrat (pirinç, noodle, bulgur, ekmek) tam porsiyon</dd>
+        <dt class="pname" data-p="p2" style="color:var(--p2)">2. kişi</dt><dd>Protein avuç içi kadar, karbonhidrat yarım porsiyon, sebze serbest</dd>
+      </dl>
+    </div>
+    <div id="recipes" style="display:grid;gap:14px"></div>
   </section>
 
   <!-- ANTRENMAN -->
@@ -330,13 +345,55 @@ td.day { font-weight: 600; white-space: nowrap; }
   ];
   const HABIT_ALT = { p2: { adim: "Ayak dostu hareket (bisiklet, yüzme)" } };
   const MENU = [
-    ["Pazartesi", "Fırın tavuk + bulgur + sebze (pazar hazırlığı)", "番茄炒蛋 Domatesli yumurta + buharda brokoli + pirinç (15 dk)"],
+    ["Pazartesi", "Fırın tavuk + bulgur + sebze (pazar hazırlığı)", "番茄鸡蛋面 Domatesli yumurtalı noodle + brokoli (15 dk)"],
     ["Salı · antrenman", "Ton balıklı nohut salatası (sabah 5 dk)", "Hazır: fırın tavuk + mercimek çorbası (pazar hazırlığı)"],
     ["Çarşamba", "Mercimek çorbası + peynirli tam buğday wrap", "宫保鸡丁 Kung pao tavuk + pirinç (fazla yap: yarın öğle)"],
     ["Perşembe · antrenman", "Dünkü kung pao tavuk + pirinç", "Fırında somon + pak choi + pirinç (15 dk)"],
-    ["Cuma", "Somon-pirinç salatası (dünden)", "麻婆豆腐 Hafif mapo tofu (dana kıyma) + yeşillik + pirinç"],
+    ["Cuma", "Somon-pirinç salatası (dünden)", "鸡肉炒面 Tavuklu sebzeli noodle"],
     ["Cumartesi · antrenman", "Geç kahvaltı: menemen, beyaz peynir, zeytin, domates-salatalık, tam buğday ekmek", "Serbest öğün: dışarıda yiyin, porsiyonu paylaşın"],
     ["Pazar", "Geç kahvaltı: Nomadic + haşlanmış yumurta + meyve", "Izgara köfte + közlenmiş sebze + cacık. Ardından 1 saatlik hafta hazırlığı"],
+  ];
+  const RECIPES = [
+    { name: "Domatesli yumurtalı noodle", zh: "番茄鸡蛋面", when: "Pazartesi akşam", time: "15 dk",
+      ing: ["5 yumurta", "3 olgun domates (veya 1 kutu doğranmış domates)", "Yumurtalı noodle: 100 g + 60 g (kuru)", "2 taze soğan, 1 diş sarımsak", "1 yk az tuzlu soya sosu, 1 tk yağ", "1 baş brokoli"],
+      steps: ["Noodle ve brokoliyi kaynar suda paketteki süre kadar haşla, süz.", "Yumurtaları çırp, 1 tk yağda yumuşak pişir, tabağa al.", "Aynı tavada sarımsak ve doğranmış domatesi 5 dk sulanana kadar pişir; soya sosunu ekle.", "Yumurtayı geri koy, noodle ile karıştır, taze soğanla servis et."],
+      p1: "3 yumurta · 100 g kuru noodle · bol brokoli", p2: "2 yumurta · 60 g kuru noodle · bol brokoli", k1: 650, k2: 430 },
+    { name: "Fırın tavuk, sebze ve bulgur", zh: "", when: "Pazar hazırlığı → Pazartesi öğle, Salı akşam", time: "15 dk + 40 dk fırın",
+      ing: ["1,2 kg kemiksiz, derisiz tavuk but", "2 yk yoğurt, 1 yk biber salçası, 1 yk zeytinyağı", "Kimyon, pul biber, karabiber, 2 diş sarımsak", "2 kabak, 2 biber, 2 soğan", "2 su bardağı bulgur (4 kişilik)"],
+      steps: ["Tavuğu yoğurt, salça, yağ ve baharatla karıştır (akşamdan marine edersen daha iyi).", "Sebzeleri iri doğra, tavukla aynı tepsiye yay.", "200 °C fırında 40 dk pişir.", "Bulguru 1'e 2 su ile 15 dk pişir. 4 kutuya böl: 2'si sana, 2'si ona."],
+      p1: "200 g tavuk (çiğ ağırlık) · 1 kase pişmiş bulgur · sebze", p2: "130 g tavuk · ½ kase bulgur · bol sebze", k1: 640, k2: 420 },
+    { name: "Mercimek çorbası", zh: "", when: "Pazar hazırlığı → Salı akşam, Çarşamba öğle", time: "35 dk",
+      ing: ["2 su bardağı kırmızı mercimek", "1 soğan, 1 havuç", "1 yk salça, 1 yk zeytinyağı", "1,5 L su veya tavuk suyu", "Kimyon, nane, limon", "Servis: 1 yk yoğurt"],
+      steps: ["Soğan ve havucu yağda 5 dk kavur, salçayı ekle.", "Yıkanmış mercimeği ve suyu ekle, 25 dk kısık ateşte pişir.", "Blenderdan geçir, kimyon ve tuzla tatlandır.", "6 kaseye böl; buzdolabında 4 gün dayanır."],
+      p1: "1 büyük kase + 1 yk yoğurt (yanında tavuk veya peynirli wrap)", p2: "1 kase + 1 yk yoğurt (yanında tavuk veya peynirli wrap)", k1: 300, k2: 250 },
+    { name: "Ton balıklı nohut salatası", zh: "", when: "Salı öğle", time: "5 dk",
+      ing: ["2 kutu ton balığı (suda)", "1 kutu nohut, süzülmüş", "Domates, salatalık, roka, mısır", "Limon, 1 tk zeytinyağı, karabiber"],
+      steps: ["Sabah her şeyi iki kutuya paylaştır.", "Limonu ve yağı öğle yemeğinde ekle ki salata sulanmasın."],
+      p1: "1 kutu ton · ½ kutu nohut", p2: "½–1 kutu ton · ⅓ kutu nohut", k1: 450, k2: 320 },
+    { name: "Kung pao tavuk", zh: "宫保鸡丁", when: "Çarşamba akşam → Perşembe öğle", time: "20 dk",
+      ing: ["600 g tavuk göğsü, küp", "1 kırmızı biber, 1 kabak, 4 taze soğan", "2 diş sarımsak, 1 parmak zencefil", "4–6 kuru acı biber (isteğe bağlı Sichuan biberi)", "25 g çiğ yer fıstığı", "Sos: 2 yk soya sosu, 1 yk pirinç sirkesi, 1 tk bal, 1 tk mısır nişastası, 3 yk su", "1 yk yağ; pirinç"],
+      steps: ["Tavuğu 1 yk soya ve 1 tk nişastayla karıştır.", "Wok'ta 1 yk yağda kuru biber ve fıstığı 30 sn çevir, al.", "Tavuğu yüksek ateşte 5–6 dk pişir; sarımsak, zencefil ve sebzeleri ekle, 3 dk.", "Sosu dök, koyulaşınca fıstık ve taze soğanı ekle. Yarısını yarının öğle kutularına ayır."],
+      p1: "180 g tavuk · 1 kase pirinç · 15 g fıstık", p2: "120 g tavuk · ½ kase pirinç · 10 g fıstık", k1: 680, k2: 440 },
+    { name: "Ballı soyalı somon ve pak choi", zh: "", when: "Perşembe akşam → Cuma öğle", time: "15 dk",
+      ing: ["4 somon fileto (Dunnes/Tesco 2'li paket ×2)", "2 yk soya sosu, 1 tk bal, rendelenmiş zencefil, sarımsak", "4 baş pak choi", "Pazardan kalan pişmiş pirinç"],
+      steps: ["Somonları sosla kapla, 200 °C fırında 12–15 dk pişir.", "Pak choiyi ikiye böl, sarımsakla tavada 3 dk çevir.", "2 fileto yarının öğle kutusuna: pirinç, salatalık ve soya sosuyla salata."],
+      p1: "1 büyük fileto (~150 g) · 1 kase pirinç", p2: "1 fileto (~120 g) · ½ kase pirinç · bol pak choi", k1: 620, k2: 430 },
+    { name: "Tavuklu sebzeli noodle", zh: "鸡肉炒面", when: "Cuma akşam", time: "20 dk",
+      ing: ["250 g tavuk göğsü, ince şerit", "Yumurtalı noodle veya udon: 100 g + 60 g (kuru)", "Beyaz lahana, havuç, biber, fasulye filizi", "2 taze soğan, sarımsak, zencefil", "Sos: 2 yk soya, 1 yk istiridye sosu, 1 tk susam yağı", "1 yk yağ"],
+      steps: ["Noodle'ı haşla, soğuk sudan geçir.", "Tavuğu wok'ta yüksek ateşte 5 dk pişir.", "Sebzeleri ekle, 3 dk diri kalacak şekilde çevir.", "Noodle ve sosu ekle, 1 dk karıştır, taze soğanla servis et."],
+      p1: "150 g tavuk · 100 g kuru noodle", p2: "100 g tavuk · 60 g kuru noodle · fazla sebze", k1: 680, k2: 450 },
+    { name: "Menemen kahvaltısı", zh: "", when: "Cumartesi geç kahvaltı", time: "15 dk",
+      ing: ["5 yumurta", "2 domates, 2 sivri biber", "Beyaz peynir, zeytin, salatalık", "Tam buğday ekmek", "1 tk zeytinyağı"],
+      steps: ["Biberi yağda 3 dk sotele, domatesi ekle, suyunu çekene kadar pişir.", "Yumurtaları kır, hafifçe karıştırarak pişir.", "Peynir, zeytin ve salatalıkla servis et."],
+      p1: "3 yumurta · 30 g peynir · 2 dilim ekmek", p2: "2 yumurta · 20 g peynir · 1 dilim ekmek", k1: 600, k2: 400 },
+    { name: "Izgara köfte, közlenmiş sebze, cacık", zh: "", when: "Pazar akşam", time: "30 dk",
+      ing: ["500 g %5 yağlı dana kıyma", "1 rendelenmiş soğan, 1 yumurta, 2 yk yulaf", "Kimyon, karabiber, tuz", "Patlıcan, biber, domates", "Cacık: 300 g yoğurt, 1 salatalık, sarımsak, kuru nane veya dereotu"],
+      steps: ["Kıymayı soğan, yumurta, yulaf ve baharatla yoğur; 10 köfte yap.", "Köfte ve sebzeleri 220 °C fırında veya ızgarada 15–20 dk pişir.", "Cacığı hazırla."],
+      p1: "6 köfte · sebze · cacık · 1 dilim ekmek", p2: "4 köfte · bol sebze · cacık", k1: 650, k2: 420 },
+    { name: "Hafif mapo tofu (yedek tarif)", zh: "麻婆豆腐", when: "İstediğin akşamla değiştir", time: "20 dk",
+      ing: ["1 paket sert tofu (Tofoo, 280 g), küp", "150 g %5 yağlı dana kıyma", "1 yk doubanjiang (acı fasulye ezmesi)", "Sarımsak, zencefil, taze soğan", "1 yk soya sosu, 1 tk nişasta + 100 ml su", "Pirinç, yeşillik"],
+      steps: ["Kıymayı tavada suyunu çekene kadar pişir.", "Doubanjiang, sarımsak ve zencefili ekle, 1 dk.", "Tofu ve 150 ml su ekle, 5 dk pişir.", "Nişastalı suyla koyulaştır, taze soğanla servis et."],
+      p1: "Yarısı · 1 kase pirinç", p2: "Yarısından biraz az · ½ kase pirinç · yeşillik", k1: 620, k2: 420 },
   ];
   const WA = [
     ["Leg press", "3 × 10–12", "Makinede oturarak; dizler ayak uçlarıyla aynı yönde", "Hafif ağırlıkla; ayak tabanı platformda tam bassın, ayakta ağrı olursa atla"],
@@ -379,6 +436,19 @@ td.day { font-weight: 600; white-space: nowrap; }
   const exHtml = list => list.map(e => `<div class="ex"><b>${e[0]}</b><span class="reps">${e[1]}</span><span class="alt">${e[2]}</span>${e[3] ? `<span class="alt" style="color:var(--p2)"><span class="pname" data-p="p2">2. kişi</span>: ${e[3]}</span>` : ""}</div>`).join("");
   $("#wa").innerHTML = exHtml(WA);
   $("#wb").innerHTML = exHtml(WB);
+  $("#recipes").innerHTML = RECIPES.map(r => `<article class="card">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
+        <h3>${r.zh ? `<span lang="zh">${r.zh}</span> ` : ""}${r.name}</h3><span class="pill">${r.time}</span></div>
+      <p class="small muted">${r.when}</p>
+      <div class="lanes" style="gap:10px">
+        <div class="lane p1" style="padding:10px"><span class="label pname" data-p="p1">1. kişi</span><span class="small">${r.p1}</span><b class="small">≈ ${r.k1} kcal</b></div>
+        <div class="lane p2" style="padding:10px"><span class="label pname" data-p="p2">2. kişi</span><span class="small">${r.p2}</span><b class="small">≈ ${r.k2} kcal</b></div>
+      </div>
+      <div class="lanes" style="gap:14px">
+        <div><span class="label">Malzemeler</span><ul class="small">${r.ing.map(x => `<li>${x}</li>`).join("")}</ul></div>
+        <div><span class="label">Yapılışı</span><ol class="small" style="margin:0;padding-left:1.2em;display:grid;gap:4px">${r.steps.map(x => `<li>${x}</li>`).join("")}</ol></div>
+      </div>
+    </article>`).join("");
 
   // ---------- tabs ----------
   const showTab = t => {
@@ -388,7 +458,7 @@ td.day { font-weight: 600; white-space: nowrap; }
   };
   $$("nav.tabs button").forEach(b => b.addEventListener("click", () => showTab(b.dataset.tab)));
   const hashTab = location.hash.slice(1);
-  showTab(["bugun", "plan", "menu", "spor", "olcum"].includes(hashTab) ? hashTab : (store.get("bf-tab") || "bugun"));
+  showTab(["bugun", "plan", "menu", "tarif", "spor", "olcum"].includes(hashTab) ? hashTab : (store.get("bf-tab") || "bugun"));
 
   // ---------- calculator ----------
   const calc = () => {
