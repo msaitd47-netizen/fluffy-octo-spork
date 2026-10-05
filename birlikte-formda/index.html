@@ -235,8 +235,8 @@ td.day { font-weight: 600; white-space: nowrap; }
         <ul class="small">
           <li>Cut back on sugary drinks, packaged snacks and late-night snacking. Small changes like these make the quickest difference.
             <span class="zh" lang="zh">减少含糖饮料、包装零食和夜宵。这些小改变见效最快。</span></li>
-          <li>Your favourites are in the plan: Sait's salad and 2 boiled eggs with every dinner.
-            <span class="zh" lang="zh">你最爱的也在计划里：每顿晚餐都有 Sait 的沙拉和 2 个水煮蛋。</span></li>
+          <li>Your favourites are in the plan: Sait's salad and 2 boiled eggs with every dinner (no extra eggs when the dish already has egg in it).
+            <span class="zh" lang="zh">你最爱的也在计划里：每顿晚餐都有 Sait 的沙拉和 2 个水煮蛋（菜里已经有鸡蛋的晚上就不用另加）。</span></li>
           <li>Good sleep balances appetite and energy, which is why it's on the list.
             <span class="zh" lang="zh">良好的睡眠能平衡食欲和精力，所以它也在清单里。</span></li>
         </ul>
@@ -302,8 +302,8 @@ td.day { font-weight: 600; white-space: nowrap; }
       <h3>With every dinner <span lang="zh" class="zh-inline">每顿晚餐都有</span></h3>
       <ul class="small">
         <li><b>Sait's salad</b> on the table next to the main dish, for both of you.</li>
-        <li><b class="pname" data-p="p2" style="color:var(--p2)">Serena</b>: plus 2 boiled eggs, her favourite.
-          <span class="zh" lang="zh">每顿晚餐配 Sait 的沙拉，再加 2 个水煮蛋。</span></li>
+        <li><b class="pname" data-p="p2" style="color:var(--p2)">Serena</b>: plus 2 boiled eggs, her favourite. Skip the boiled eggs on nights when the dish already has egg (tomato &amp; egg noodles, prawn &amp; egg fried rice).
+          <span class="zh" lang="zh">每顿晚餐配 Sait 的沙拉，再加 2 个水煮蛋。菜里已经有鸡蛋的晚上（番茄鸡蛋面、虾仁蛋炒饭）就不用另加。</span></li>
       </ul>
       <p class="small muted">The salad and eggs are already counted in the plan: they add about 260 kcal and 13 g protein to Serena's dinner, which brings her day to a good total.</p>
     </div>
@@ -419,7 +419,7 @@ td.day { font-weight: 600; white-space: nowrap; }
       <h3>Portion rule</h3>
       <dl class="kv">
         <dt class="pname" data-p="p1" style="color:var(--p1)">Sait</dt><dd>1.5× protein, full portion of carbs (rice, noodles, bread)</dd>
-        <dt class="pname" data-p="p2" style="color:var(--p2)">Serena</dt><dd>Palm-sized protein, half portion of carbs, unlimited veg; at dinner also Sait's salad + 2 boiled eggs <span class="zh" lang="zh">蛋白质一掌心，主食半份，蔬菜不限量；晚餐再加 Sait 的沙拉和 2 个水煮蛋</span></dd>
+        <dt class="pname" data-p="p2" style="color:var(--p2)">Serena</dt><dd>Palm-sized protein, half portion of carbs, unlimited veg; at dinner also Sait's salad + 2 boiled eggs (not on egg-dish nights) <span class="zh" lang="zh">蛋白质一掌心，主食半份，蔬菜不限量；晚餐再加 Sait 的沙拉和 2 个水煮蛋（有鸡蛋菜的晚上除外）</span></dd>
       </dl>
     </div>
     <div id="recipes" style="display:grid;gap:14px"></div>
@@ -590,7 +590,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     { name: "Sait's salad + boiled eggs", zh: "Sait 的沙拉配水煮蛋", when: "With every dinner", time: "10 min",
       ing: ["2 tomatoes, ½ head of lettuce (little gem or romaine)", "1 cucumber, 1 pepper, a small piece of onion", "Dressing: 1 tbsp olive oil, 1 tbsp pomegranate molasses, 1 tsp vinegar, a pinch of salt, sumac", "Eggs: 2 for Serena (more if Sait wants some)"],
       steps: ["Lower the eggs into boiling water: 7 min for a soft, jammy yolk, 9 min for hard-boiled. Cool in cold water.", "Chop the tomatoes, lettuce, cucumber, pepper and onion.", "Whisk the dressing, toss, and finish with a pinch of sumac.", "Halve the eggs and serve on top."],
-      p1: "A big bowl of salad next to the main dish", p2: "A big bowl of salad + 2 boiled eggs, next to the main dish", p2zh: "一大碗沙拉 + 2 个水煮蛋，配主菜一起吃", k1: 120, k2: 260 },
+      p1: "A big bowl of salad next to the main dish", p2: "A big bowl of salad + 2 boiled eggs, next to the main dish (skip the eggs when the dish already has egg)", p2zh: "一大碗沙拉 + 2 个水煮蛋，配主菜一起吃（菜里已有鸡蛋时不用另加）", k1: 120, k2: 260 },
     { name: "Roast chicken, veg &amp; rice", zh: "烤鸡腿配蔬菜和米饭", when: "Lunch batch 1 · Sunday → Monday, Tuesday", time: "15 min + 40 min oven",
       ing: ["700 g boneless, skinless chicken thighs", "2 tbsp yoghurt, 1 tbsp red pepper paste (or tomato purée), 1 tbsp olive oil", "Cumin, chilli flakes, black pepper, 2 garlic cloves", "2 courgettes, 2 peppers, 2 onions", "200 g rice (dry)"],
       steps: ["Mix the chicken with the yoghurt, paste, oil and spices (marinate overnight if you can).", "Cut the veg into chunks and spread on the same tray as the chicken.", "Roast at 200 °C for 40 min.", "Cook the rice. Pack 4 boxes: 2 for each of you."],
@@ -603,7 +603,7 @@ td.day { font-weight: 600; white-space: nowrap; }
       ing: ["900 g chicken breast, diced", "2 red peppers, 2 courgettes, 6 spring onions", "3 garlic cloves, a thumb of ginger", "6–8 dried chillies (Sichuan pepper optional)", "40 g raw peanuts", "Sauce: 3 tbsp soy sauce, 1½ tbsp rice vinegar, 2 tsp honey, 2 tsp cornflour, 5 tbsp water", "1½ tbsp oil; 450 g rice (dry)"],
       steps: ["Toss the chicken with 1 tbsp soy sauce and 1 tsp cornflour; start the rice.", "Fry the dried chillies and peanuts in a little oil for 30 s; set aside.", "Cook the chicken in two batches over high heat so it sears, 5–6 min each; add the garlic, ginger and veg for 3 min.", "Pour in the sauce; once it thickens, add the peanuts and spring onion. Serve 2 portions and pack 4 boxes."],
       p1: "180 g chicken · 1 bowl rice · 15 g peanuts", p2: "120 g chicken · ½ bowl rice · 10 g peanuts", p2zh: "120 克鸡肉 · 半碗米饭 · 10 克花生", k1: 680, k2: 440 },
-    { name: "Tomato &amp; egg noodles", zh: "番茄鸡蛋面", when: "Monday dinner", time: "15 min",
+    { name: "Tomato &amp; egg noodles", egg: true, zh: "番茄鸡蛋面", when: "Monday dinner", time: "15 min",
       ing: ["5 eggs", "3 ripe tomatoes (or 1 tin chopped tomatoes)", "Egg noodles: 100 g + 60 g (dry)", "2 spring onions, 1 garlic clove", "1 tbsp reduced-salt soy sauce, 1 tsp oil", "1 head of broccoli"],
       steps: ["Boil the noodles and broccoli for the time on the pack, then drain.", "Beat the eggs and soft-scramble them in 1 tsp oil; set aside.", "In the same pan, cook the garlic and chopped tomatoes for 5 min until saucy; add the soy sauce.", "Return the eggs, toss with the noodles and serve topped with spring onion."],
       p1: "3 eggs · 100 g dry noodles · plenty of broccoli", p2: "2 eggs · 60 g dry noodles · plenty of broccoli", p2zh: "2 个鸡蛋 · 60 克干面 · 多吃西兰花", k1: 650, k2: 430 },
@@ -648,7 +648,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     { name: "Sait's salad + boiled eggs", zh: "Sait 的沙拉配水煮蛋", when: "With every dinner", time: "10 min",
       ing: ["2 tomatoes, ½ head of lettuce (little gem or romaine)", "1 cucumber, 1 pepper, a small piece of onion", "Dressing: 1 tbsp olive oil, 1 tbsp pomegranate molasses, 1 tsp vinegar, a pinch of salt, sumac", "Eggs: 2 for Serena (more if Sait wants some)"],
       steps: ["Lower the eggs into boiling water: 7 min for a soft, jammy yolk, 9 min for hard-boiled. Cool in cold water.", "Chop the tomatoes, lettuce, cucumber, pepper and onion.", "Whisk the dressing, toss, and finish with a pinch of sumac.", "Halve the eggs and serve on top."],
-      p1: "A big bowl of salad next to the main dish", p2: "A big bowl of salad + 2 boiled eggs, next to the main dish", p2zh: "一大碗沙拉 + 2 个水煮蛋，配主菜一起吃", k1: 120, k2: 260 },
+      p1: "A big bowl of salad next to the main dish", p2: "A big bowl of salad + 2 boiled eggs, next to the main dish (skip the eggs when the dish already has egg)", p2zh: "一大碗沙拉 + 2 个水煮蛋，配主菜一起吃（菜里已有鸡蛋时不用另加）", k1: 120, k2: 260 },
     { name: "Chicken &amp; chickpea stew", zh: "土耳其鹰嘴豆炖鸡", when: "Lunch batch 1 · Sunday → Monday, Tuesday", time: "45 min",
       ing: ["700 g boneless, skinless chicken thighs, diced", "2 tins chickpeas, drained", "1 onion, 2 peppers", "1 tbsp tomato purée + 1 tbsp red pepper paste", "1 tin chopped tomatoes, 400 ml water or stock", "1 tbsp olive oil; cumin, paprika, black pepper", "200 g rice (dry)"],
       steps: ["Brown the chicken in the oil for 5 min.", "Add the onion and peppers for 5 min, then the purées and spices.", "Add the tomatoes, chickpeas and water; simmer for 30 min until thick.", "Cook the rice. Pack 4 boxes: 2 larger for Sait, 2 smaller for Serena."],
@@ -661,7 +661,7 @@ td.day { font-weight: 600; white-space: nowrap; }
       ing: ["3 large aubergines, cut into batons", "600 g 5% lean beef mince", "4 garlic cloves, a thumb of ginger, 4 spring onions", "1½ tbsp doubanjiang", "Sauce: 3 tbsp soy sauce, 1½ tbsp rice vinegar, 2 tsp honey, 2 tsp cornflour, 150 ml water", "1 tbsp oil; 450 g rice (dry)"],
       steps: ["Start the rice. Steam or microwave the aubergine for 6–8 min until soft (far less oil than frying).", "Brown the mince in the oil until dry.", "Add the doubanjiang, garlic and ginger for 1 min.", "Add the aubergine and sauce and simmer for 3 min until glossy. Serve 2 portions and pack 4 boxes."],
       p1: "120 g beef mince · 1 bowl rice · plenty of aubergine", p2: "80 g beef mince · ½ bowl rice · plenty of aubergine", p2zh: "80 克牛肉末 · 半碗米饭 · 多吃茄子", k1: 600, k2: 400 },
-    { name: "Prawn &amp; egg fried rice", zh: "虾仁蛋炒饭", when: "Monday dinner", time: "15 min",
+    { name: "Prawn &amp; egg fried rice", egg: true, zh: "虾仁蛋炒饭", when: "Monday dinner", time: "15 min",
       ing: ["300 g cooked rice (from Sunday, cold)", "150 g raw king prawns", "3 eggs", "100 g frozen peas and sweetcorn", "2 spring onions", "1 tbsp soy sauce, 1 tsp sesame oil, 1 tbsp oil"],
       steps: ["Scramble the eggs in a hot wok and set aside.", "Cook the prawns for 2–3 min until pink; set aside.", "Stir-fry the rice and peas over high heat for 4 min.", "Return the eggs and prawns, add the soy sauce and sesame oil, and toss with spring onion."],
       p1: "180 g cooked rice · 2 eggs · 90 g prawns", p2: "120 g cooked rice · 1 egg · 60 g prawns · extra peas", p2zh: "120 克熟米饭 · 1 个鸡蛋 · 60 克虾仁 · 多加豌豆", k1: 560, k2: 360 },
@@ -904,6 +904,8 @@ td.day { font-weight: 600; white-space: nowrap; }
   const renderTonight = () => {
     const now = new Date(), d = now.getDay(), wk = currentWeek(), T = TONIGHT[wk];
     const dayName = now.toLocaleDateString(LOC, { weekday: "long" });
+    const single = d === 1 ? T.mon[0] : d === 4 ? T.thu[0] : d === 5 ? T.fri[0] : d === 6 ? T.sat[1] : d === 0 ? T.sun[1] : null;
+    const eggNight = !!(single && findRec(wk, single)?.egg);
     let body = "";
     if (d === 1) body = dishHtml(wk, T.mon[0]);
     else if (d === 2 || d === 3) body = dishHtml(wk, T.batch, d === 2 ? "If tonight is batch night (ready meal on Friday): cook ×3" : "If tonight is batch night (ready meal today): cook ×3")
@@ -915,7 +917,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     $("#tonight").innerHTML = `<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
         <h3>Tonight's dinner <span lang="zh" class="zh-inline">今晚吃什么</span></h3><span class="small muted">${dayName} · week ${wk}</span></div>
       <div style="display:grid;gap:8px">${body}</div>
-      <p class="small muted">With Sait's salad on the table, and 2 boiled eggs for ${esc(state.names.p2)}.<span class="zh" lang="zh">配 Sait 的沙拉，Serena 再加 2 个水煮蛋。</span></p>`;
+      <p class="small muted">${eggNight ? `With Sait's salad on the table. No boiled eggs tonight: there's already egg in the dish.<span class="zh" lang="zh">配 Sait 的沙拉。今晚的菜里已经有鸡蛋，不用另加水煮蛋。</span>` : `With Sait's salad on the table, and 2 boiled eggs for ${esc(state.names.p2)}.<span class="zh" lang="zh">配 Sait 的沙拉，Serena 再加 2 个水煮蛋。</span>`}</p>`;
     $$("[data-openrec]").forEach(b => b.addEventListener("click", () => {
       week = +b.dataset.recwk; renderWeek(); renderNames(); showTab("recipes");
       const el = document.getElementById(b.dataset.openrec); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
