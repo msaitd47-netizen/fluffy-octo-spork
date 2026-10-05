@@ -197,8 +197,8 @@ td.day { font-weight: 600; white-space: nowrap; }
         <ul class="small">
           <li>Cut back on sugary drinks, packaged snacks and late-night snacking. Small changes like these make the quickest difference.
             <span class="zh" lang="zh">减少含糖饮料、包装零食和夜宵。这些小改变见效最快。</span></li>
-          <li>Your favourite dinner plate works: Sait's salad + 2 boiled eggs, with a palm of the night's protein.
-            <span class="zh" lang="zh">你最爱的晚餐也在计划里：Sait 的沙拉 + 2 个水煮蛋，再加一掌心当晚的蛋白质。</span></li>
+          <li>Your favourites are in the plan: Sait's salad and 2 boiled eggs with every dinner.
+            <span class="zh" lang="zh">你最爱的也在计划里：每顿晚餐都有 Sait 的沙拉和 2 个水煮蛋。</span></li>
           <li>Good sleep balances appetite and energy, which is why it's on the list.
             <span class="zh" lang="zh">良好的睡眠能平衡食欲和精力，所以它也在清单里。</span></li>
         </ul>
@@ -261,11 +261,13 @@ td.day { font-weight: 600; white-space: nowrap; }
       </ul>
     </div>
     <div class="card">
-      <h3>Serena's favourite dinner plate <span lang="zh" class="zh-inline">Serena 最爱的晚餐</span></h3>
-      <p class="small">On any night, Serena can swap her rice or noodles for <b>Sait's salad + 2 boiled eggs</b>. Keep a palm-sized portion of that night's chicken, beef or fish on the plate too; it keeps her full until morning and helps her muscles recover after training.
-        <span class="zh" lang="zh">任何一晚，Serena 都可以把米饭或面条换成 <b>Sait 的沙拉 + 2 个水煮蛋</b>。盘子里再保留一掌心当晚的鸡肉、牛肉或鱼，这样能饱到第二天早上，也有助于训练后的肌肉恢复。</span></p>
-      <p class="small muted">No meat that night (e.g. tomato &amp; egg noodles)? Make it 3 eggs, or 2 eggs + 40 g white cheese.
-        <span class="zh" lang="zh">当晚没有肉（比如番茄鸡蛋面）？就吃 3 个鸡蛋，或 2 个鸡蛋加 40 克白奶酪。</span></p>
+      <h3>With every dinner <span lang="zh" class="zh-inline">每顿晚餐都有</span></h3>
+      <ul class="small">
+        <li><b>Sait's salad</b> on the table next to the main dish, for both of you.</li>
+        <li><b class="pname" data-p="p2" style="color:var(--p2)">Serena</b>: plus 2 boiled eggs, her favourite.
+          <span class="zh" lang="zh">每顿晚餐配 Sait 的沙拉，再加 2 个水煮蛋。</span></li>
+      </ul>
+      <p class="small muted">The salad and eggs are already counted in the plan: they add about 260 kcal and 13 g protein to Serena's dinner, which brings her day to a good total.</p>
     </div>
     <div class="card">
       <h3>Lunch boxes</h3>
@@ -296,7 +298,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     </div>
     <div class="card scroll" style="padding:0">
       <table>
-        <thead><tr><th>Day</th><th>Dinner (before 8 pm) and weekend brunch</th></tr></thead>
+        <thead><tr><th>Day</th><th>Dinner (before 8 pm, always with Sait's salad) and weekend brunch</th></tr></thead>
         <tbody id="menu-body"></tbody>
       </table>
     </div>
@@ -355,7 +357,7 @@ td.day { font-weight: 600; white-space: nowrap; }
       <h3>Portion rule</h3>
       <dl class="kv">
         <dt class="pname" data-p="p1" style="color:var(--p1)">Sait</dt><dd>1.5× protein, full portion of carbs (rice, noodles, bread)</dd>
-        <dt class="pname" data-p="p2" style="color:var(--p2)">Serena</dt><dd>Palm-sized protein, half portion of carbs, unlimited veg. Any night: salad + 2 boiled eggs instead of the carbs. <span class="zh" lang="zh">蛋白质一掌心，主食半份，蔬菜不限量。任何一晚都可以用沙拉 + 2 个水煮蛋代替主食。</span></dd>
+        <dt class="pname" data-p="p2" style="color:var(--p2)">Serena</dt><dd>Palm-sized protein, half portion of carbs, unlimited veg; at dinner also Sait's salad + 2 boiled eggs <span class="zh" lang="zh">蛋白质一掌心，主食半份，蔬菜不限量；晚餐再加 Sait 的沙拉和 2 个水煮蛋</span></dd>
       </dl>
     </div>
     <div id="recipes" style="display:grid;gap:14px"></div>
@@ -464,10 +466,10 @@ td.day { font-weight: 600; white-space: nowrap; }
     ["Sunday", "Brunch: oat &amp; banana pancakes · Dinner: 火锅 home hot pot, then prep batch 1 for next week"],
   ];
   const RECIPES = [
-    { name: "Sait's salad + boiled eggs", zh: "Sait 的沙拉配水煮蛋", when: "Any dinner · Serena's favourite", time: "10 min",
+    { name: "Sait's salad + boiled eggs", zh: "Sait 的沙拉配水煮蛋", when: "With every dinner", time: "10 min",
       ing: ["2 tomatoes, ½ head of lettuce (little gem or romaine)", "1 cucumber, 1 pepper, a small piece of onion", "Dressing: 1 tbsp olive oil, 1 tbsp pomegranate molasses, 1 tsp vinegar, a pinch of salt, sumac", "Eggs: 2 for Serena (more if Sait wants some)"],
       steps: ["Lower the eggs into boiling water: 7 min for a soft, jammy yolk, 9 min for hard-boiled. Cool in cold water.", "Chop the tomatoes, lettuce, cucumber, pepper and onion.", "Whisk the dressing, toss, and finish with a pinch of sumac.", "Halve the eggs and serve on top."],
-      p1: "A big bowl next to the dinner (≈ 120 kcal)", p2: "Big bowl + 2 eggs + a palm of the night's protein, instead of rice or noodles", p2zh: "一大碗沙拉 + 2 个鸡蛋 + 一掌心当晚的蛋白质，代替米饭或面条", k1: 120, k2: 420 },
+      p1: "A big bowl of salad next to the main dish", p2: "A big bowl of salad + 2 boiled eggs, next to the main dish", p2zh: "一大碗沙拉 + 2 个水煮蛋，配主菜一起吃", k1: 120, k2: 260 },
     { name: "Roast chicken, veg &amp; rice", zh: "烤鸡腿配蔬菜和米饭", when: "Lunch batch 1 · Sunday → Monday, Tuesday", time: "15 min + 40 min oven",
       ing: ["700 g boneless, skinless chicken thighs", "2 tbsp yoghurt, 1 tbsp red pepper paste (or tomato purée), 1 tbsp olive oil", "Cumin, chilli flakes, black pepper, 2 garlic cloves", "2 courgettes, 2 peppers, 2 onions", "200 g rice (dry)"],
       steps: ["Mix the chicken with the yoghurt, paste, oil and spices (marinate overnight if you can).", "Cut the veg into chunks and spread on the same tray as the chicken.", "Roast at 200 °C for 40 min.", "Cook the rice. Pack 4 boxes: 2 for each of you."],
@@ -518,10 +520,10 @@ td.day { font-weight: 600; white-space: nowrap; }
       p1: "1 large bowl", p2: "1 small bowl", p2zh: "1 小碗", k1: 300, k2: 200 },
   ];
   const RECIPES2 = [
-    { name: "Sait's salad + boiled eggs", zh: "Sait 的沙拉配水煮蛋", when: "Any dinner · Serena's favourite", time: "10 min",
+    { name: "Sait's salad + boiled eggs", zh: "Sait 的沙拉配水煮蛋", when: "With every dinner", time: "10 min",
       ing: ["2 tomatoes, ½ head of lettuce (little gem or romaine)", "1 cucumber, 1 pepper, a small piece of onion", "Dressing: 1 tbsp olive oil, 1 tbsp pomegranate molasses, 1 tsp vinegar, a pinch of salt, sumac", "Eggs: 2 for Serena (more if Sait wants some)"],
       steps: ["Lower the eggs into boiling water: 7 min for a soft, jammy yolk, 9 min for hard-boiled. Cool in cold water.", "Chop the tomatoes, lettuce, cucumber, pepper and onion.", "Whisk the dressing, toss, and finish with a pinch of sumac.", "Halve the eggs and serve on top."],
-      p1: "A big bowl next to the dinner (≈ 120 kcal)", p2: "Big bowl + 2 eggs + a palm of the night's protein, instead of rice or noodles", p2zh: "一大碗沙拉 + 2 个鸡蛋 + 一掌心当晚的蛋白质，代替米饭或面条", k1: 120, k2: 420 },
+      p1: "A big bowl of salad next to the main dish", p2: "A big bowl of salad + 2 boiled eggs, next to the main dish", p2zh: "一大碗沙拉 + 2 个水煮蛋，配主菜一起吃", k1: 120, k2: 260 },
     { name: "Chicken &amp; chickpea stew", zh: "土耳其鹰嘴豆炖鸡", when: "Lunch batch 1 · Sunday → Monday, Tuesday", time: "45 min",
       ing: ["700 g boneless, skinless chicken thighs, diced", "2 tins chickpeas, drained", "1 onion, 2 peppers", "1 tbsp tomato purée + 1 tbsp red pepper paste", "1 tin chopped tomatoes, 400 ml water or stock", "1 tbsp olive oil; cumin, paprika, black pepper", "200 g rice (dry)"],
       steps: ["Brown the chicken in the oil for 5 min.", "Add the onion and peppers for 5 min, then the purées and spices.", "Add the tomatoes, chickpeas and water; simmer for 30 min until thick.", "Cook the rice. Pack 4 boxes: 2 larger for Sait, 2 smaller for Serena."],
