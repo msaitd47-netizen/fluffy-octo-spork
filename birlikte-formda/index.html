@@ -114,6 +114,9 @@ td.day { font-weight: 600; white-space: nowrap; }
 .list-rows div { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-block: 4px; }
 @media (prefers-reduced-motion: no-preference) { .habit, .week .cell i { transition: background 0.2s, opacity 0.2s; } }
 [lang="zh"] { font-family: var(--font-zh); }
+.weeksw { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.weeksw button { font: inherit; font-weight: 600; font-size: 0.9rem; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.weeksw button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
 .zh { display: block; color: var(--muted); font-size: 0.92em; margin-top: 2px; }
 .zh-title { font-size: 0.5em; color: var(--muted); font-weight: 600; letter-spacing: 0.04em; }
 .zh-inline { color: var(--muted); font-weight: 500; font-size: 0.85em; }
@@ -242,6 +245,7 @@ td.day { font-weight: 600; white-space: nowrap; }
   <!-- MENU -->
   <section data-panel="menu" hidden class="wrap" style="padding:0">
     <h2>Shared weekly menu</h2>
+    <div class="weeksw" role="group" aria-label="Menu week"><button type="button" data-wk="1">Week 1</button><button type="button" data-wk="2">Week 2</button><span class="small muted">Alternate the two weeks.</span></div>
     <p class="muted small">A mix of Turkish and Chinese food. No pork, parsley or coriander; garnish Chinese dishes with spring onion. You both eat the same meal; only the portions differ. One free meal a week: eat out together on whichever day suits you.
       <b class="pname" data-p="p1" style="color:var(--p1)">Sait</b>: 1.5× protein and carbs.
       <b class="pname" data-p="p2" style="color:var(--p2)">Serena</b>: plate method, half portion of bread or rice <span class="zh" lang="zh" style="display:inline">（餐盘法，面包或米饭半份）</span>.</p>
@@ -260,12 +264,21 @@ td.day { font-weight: 600; white-space: nowrap; }
         <tbody id="menu-body"></tbody>
       </table>
     </div>
-    <div class="card">
-      <h3>Sunday prep (1 hour)</h3>
+    <div class="card" data-week="1">
+      <h3>Sunday prep for week 1 (1 hour)</h3>
       <ul class="small">
         <li>Tray-bake 1.2 kg chicken thighs with courgette, peppers and onion: 200 °C, 40 min. Covers Monday lunch and Tuesday dinner.</li>
         <li>A big pot of lentil soup: Tuesday dinner and Wednesday lunch.</li>
         <li>A pot of bulgur and a pot of rice: they keep 4 days in the fridge.</li>
+        <li>Wash and chop vegetables; weekday cooking drops to 15 minutes.</li>
+      </ul>
+    </div>
+    <div class="card" data-week="2" hidden>
+      <h3>Sunday prep for week 2 (1 hour)</h3>
+      <ul class="small">
+        <li>A big pot of chicken &amp; chickpea stew: Monday lunch and Tuesday dinner.</li>
+        <li>Poach 250 g chicken breast in water with ginger and spring onion for 12 min, then shred it: Wednesday's cold noodles.</li>
+        <li>A pot of rice (Monday's fried rice works best with day-old rice) and a pot of bulgur.</li>
         <li>Wash and chop vegetables; weekday cooking drops to 15 minutes.</li>
       </ul>
     </div>
@@ -279,8 +292,8 @@ td.day { font-weight: 600; white-space: nowrap; }
         <li>1 apple + 1 tsp peanut butter</li>
       </ul>
     </div>
-    <div class="card">
-      <h3>Weekly shopping list (for 2)</h3>
+    <div class="card" data-week="1">
+      <h3>Shopping list, week 1 (for 2)</h3>
       <p class="small muted">Big shop at Dunnes Stores at the weekend, top-ups at Tesco during the week. Doubanjiang and Sichuan pepper: Tesco's world foods aisle or an Asian supermarket.</p>
       <div class="lanes" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
         <div><span class="label">Protein</span><ul class="small"><li>30 eggs</li><li>1.2 kg chicken thighs + 500 g chicken breast</li><li>500 g 5% lean beef mince</li><li>2 tins tuna</li><li>4 salmon fillets</li><li>350 g lean beef steak</li><li>2 kg yoghurt (incl. Greek), 1 L kefir</li><li>Cottage cheese, feta-style white cheese</li><li>Firm tofu (Tofoo or Cauldron)</li><li>Red lentils, chickpeas</li></ul></div>
@@ -288,11 +301,21 @@ td.day { font-weight: 600; white-space: nowrap; }
         <div><span class="label">Grains &amp; other</span><ul class="small"><li>Nomadic Clusters (14)</li><li>Jasmine or brown rice</li><li>Egg noodles or udon</li><li>Oyster sauce, rice vinegar</li><li>Reduced-salt soy sauce, sesame oil, doubanjiang</li><li>Bulgur</li><li>Wholewheat bread and wraps</li><li>Olive oil, olives</li><li>Almonds, walnuts</li></ul></div>
       </div>
     </div>
+    <div class="card" data-week="2" hidden>
+      <h3>Shopping list, week 2 (for 2)</h3>
+      <p class="small muted">Big shop at Dunnes Stores at the weekend, top-ups at Tesco during the week. Wide rice noodles (ho fun) and Chinese cabbage: an Asian supermarket or Tesco's world foods aisle.</p>
+      <div class="lanes" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+        <div><span class="label">Protein</span><ul class="small"><li>30 eggs</li><li>700 g chicken thighs + 700 g chicken breast</li><li>400 g 5% lean beef mince</li><li>650 g lean beef steak</li><li>300 g raw king prawns</li><li>4 cod fillets</li><li>2 kg yoghurt (incl. 500 g Greek)</li><li>Feta-style white cheese</li><li>Firm tofu (Tofoo or Cauldron)</li><li>2 tins chickpeas</li></ul></div>
+        <div><span class="label">Veg &amp; fruit</span><ul class="small"><li>2 aubergines, 4 peppers, 1 courgette</li><li>Tomatoes, 3 cucumbers, carrots</li><li>Spinach, pak choi, Chinese cabbage, mushrooms</li><li>400 g beansprouts</li><li>Frozen peas &amp; sweetcorn</li><li>2 bunches spring onions, ginger, garlic, onions, red onion</li><li>Fresh mint and dill, lemons</li><li>2 ripe bananas, berries, seasonal fruit</li></ul></div>
+        <div><span class="label">Grains &amp; other</span><ul class="small"><li>Nomadic Clusters (14)</li><li>Jasmine or brown rice</li><li>Coarse and fine bulgur</li><li>Egg noodles; wide rice noodles (ho fun)</li><li>Porridge oats, baking powder</li><li>Chicken stock</li><li>Light and dark soy sauce, oyster sauce, rice vinegar, sesame oil, doubanjiang</li><li>Tahini or peanut butter</li><li>Wholewheat bread</li></ul></div>
+      </div>
+    </div>
   </section>
 
   <!-- RECIPES -->
   <section data-panel="recipes" hidden class="wrap" style="padding:0">
     <h2>Recipes &amp; portions</h2>
+    <div class="weeksw" role="group" aria-label="Menu week"><button type="button" data-wk="1">Week 1</button><button type="button" data-wk="2">Week 2</button><span class="small muted">Alternate the two weeks.</span></div>
     <p class="muted small">Quantities are for both of you. Calories per portion are approximate. Rice: 1 bowl ≈ 150 g cooked. No pork, parsley or coriander.</p>
     <div class="card">
       <h3>Portion rule</h3>
@@ -392,6 +415,61 @@ td.day { font-weight: 600; white-space: nowrap; }
     ["Friday", "Salmon rice salad (from yesterday)", "鸡肉炒面 Chicken &amp; veg chow mein"],
     ["Saturday · workout", "Brunch: menemen, white cheese, olives, tomato &amp; cucumber, wholewheat bread", "西兰花牛肉 Beef &amp; broccoli + rice (20 min)"],
     ["Sunday", "Brunch: çılbır (poached eggs on garlic yoghurt) + toast + tomato &amp; cucumber", "Grilled köfte + roasted veg + cacık, then 1 hour of prep for the week"],
+  ];
+  const MENU2 = [
+    ["Monday", "Chicken &amp; chickpea stew + bulgur (Sunday prep)", "虾仁蛋炒饭 Prawn &amp; egg fried rice (15 min, make extra)"],
+    ["Tuesday · workout", "Yesterday's prawn fried rice", "Ready: chicken &amp; chickpea stew + yoghurt (Sunday prep)"],
+    ["Wednesday", "鸡丝凉面 Cold sesame chicken noodles (Sunday-poached chicken)", "鱼香茄子 Fish-fragrant aubergine with beef + rice (make extra)"],
+    ["Thursday · workout", "Yesterday's aubergine + rice", "Baked cod parcels + bulgur (15 min)"],
+    ["Friday", "Kısır bulgur salad + cod (from yesterday)", "干炒牛河 Beef chow fun"],
+    ["Saturday · workout", "Brunch: spinach &amp; white cheese omelette + toast", "Chicken shish + bulgur pilaf + shepherd's salad"],
+    ["Sunday", "Brunch: oat &amp; banana pancakes + Greek yoghurt + berries", "火锅 Home hot pot, then 1 hour of prep for the week"],
+  ];
+  const RECIPES2 = [
+    { name: "Chicken &amp; chickpea stew", zh: "土耳其鹰嘴豆炖鸡", when: "Sunday prep → Monday lunch, Tuesday dinner", time: "45 min",
+      ing: ["700 g boneless, skinless chicken thighs, diced", "2 tins chickpeas, drained", "1 onion, 2 peppers", "1 tbsp tomato purée + 1 tbsp red pepper paste", "1 tin chopped tomatoes, 400 ml water or stock", "1 tbsp olive oil; cumin, paprika, black pepper", "350 g bulgur (4 portions)"],
+      steps: ["Brown the chicken in the oil for 5 min.", "Add the onion and peppers for 5 min, then the purées and spices.", "Add the tomatoes, chickpeas and water; simmer for 30 min until thick.", "Cook the bulgur. Split into 4 boxes: 2 large for Sait, 2 smaller for Serena."],
+      p1: "~210 g chicken · 1 bowl bulgur · chickpeas", p2: "~140 g chicken · ½ bowl bulgur · chickpeas", p2zh: "约 140 克鸡肉 · 半碗布格麦 · 鹰嘴豆", k1: 700, k2: 450 },
+    { name: "Prawn &amp; egg fried rice", zh: "虾仁蛋炒饭", when: "Monday dinner → Tuesday lunch", time: "15 min",
+      ing: ["600 g cooked rice (from Sunday, cold)", "300 g raw king prawns", "6 eggs", "200 g frozen peas and sweetcorn", "3 spring onions", "2 tbsp soy sauce, 1 tsp sesame oil, 1 tbsp oil"],
+      steps: ["Scramble the eggs in a hot wok and set aside.", "Cook the prawns for 2–3 min until pink; set aside.", "Stir-fry the rice and peas over high heat for 4 min.", "Return the eggs and prawns, add the soy sauce and sesame oil, toss with spring onion. Put half into tomorrow's lunch boxes."],
+      p1: "180 g cooked rice · 2 eggs · 90 g prawns", p2: "120 g cooked rice · 1 egg · 60 g prawns · extra peas", p2zh: "120 克熟米饭 · 1 个鸡蛋 · 60 克虾仁 · 多加豌豆", k1: 560, k2: 360 },
+    { name: "Cold sesame chicken noodles", zh: "鸡丝凉面", when: "Wednesday lunch", time: "10 min in the morning",
+      ing: ["250 g poached chicken breast, shredded (Sunday prep)", "Egg noodles: 100 g + 60 g (dry)", "1 cucumber and 1 carrot, in thin strips", "Sauce: 1 tbsp tahini or peanut butter, 1 tbsp soy sauce, 1 tsp rice vinegar, 1 tsp honey, 1 tsp sesame oil, 1 grated garlic clove", "Chilli oil (optional), spring onion"],
+      steps: ["Boil the noodles, rinse under cold water and drain well.", "Whisk the sauce with 1–2 tbsp warm water until smooth.", "Pack noodles, chicken, cucumber and carrot into two boxes; keep the sauce in a small pot and mix in at lunchtime."],
+      p1: "150 g chicken · 100 g dry noodles", p2: "100 g chicken · 60 g dry noodles · extra cucumber", p2zh: "100 克鸡丝 · 60 克干面 · 多加黄瓜丝", k1: 620, k2: 420 },
+    { name: "Fish-fragrant aubergine with beef", zh: "鱼香茄子", when: "Wednesday dinner → Thursday lunch", time: "25 min",
+      ing: ["2 large aubergines, cut into batons", "400 g 5% lean beef mince", "3 garlic cloves, a thumb of ginger, 3 spring onions", "1 tbsp doubanjiang", "Sauce: 2 tbsp soy sauce, 1 tbsp rice vinegar, 1 tsp honey, 1 tsp cornflour, 100 ml water", "1 tbsp oil; rice"],
+      steps: ["Steam or microwave the aubergine for 6–8 min until soft (far less oil than frying).", "Brown the mince in the oil until dry.", "Add the doubanjiang, garlic and ginger for 1 min.", "Add the aubergine and sauce and simmer for 3 min until glossy. Top with spring onion; put half into tomorrow's lunch boxes."],
+      p1: "120 g beef mince · 1 bowl rice · plenty of aubergine", p2: "80 g beef mince · ½ bowl rice · plenty of aubergine", p2zh: "80 克牛肉末 · 半碗米饭 · 多吃茄子", k1: 600, k2: 400 },
+    { name: "Baked cod parcels", zh: "纸包烤鳕鱼", when: "Thursday dinner → Friday lunch", time: "15 min",
+      ing: ["4 cod fillets", "2 tomatoes, 1 courgette, sliced", "1 lemon, 2 garlic cloves", "1 tbsp olive oil, paprika, dill", "Bulgur from Sunday"],
+      steps: ["Put each fillet on a sheet of baking paper or foil with the sliced veg, lemon and garlic.", "Drizzle with the oil, sprinkle with paprika and fold into parcels.", "Bake at 200 °C for 15 min. Keep 2 fillets for tomorrow's lunch with kısır."],
+      p1: "1 large fillet (~160 g) · 1 bowl bulgur", p2: "1 fillet (~120 g) · ½ bowl bulgur · plenty of veg", p2zh: "1 块鳕鱼（约 120 克）· 半碗布格麦 · 多吃蔬菜", k1: 450, k2: 320 },
+    { name: "Kısır bulgur salad", zh: "土耳其布格麦沙拉", when: "Friday lunch (make Thursday evening)", time: "10 min + 15 min soaking",
+      ing: ["200 g fine bulgur", "1 tbsp tomato purée + 1 tsp red pepper paste", "1 cucumber, 2 tomatoes, 4 spring onions", "Fresh mint and dill", "Juice of 1 lemon, 1 tbsp olive oil", "Pomegranate molasses (optional)"],
+      steps: ["Pour 300 ml boiling water over the bulgur and purées, cover and leave for 15 min.", "Fluff with a fork and let it cool.", "Mix in the chopped veg, herbs, lemon and oil. Pack with yesterday's cod."],
+      p1: "1 big bowl kısır + 1 cod fillet", p2: "½ bowl kısır + 1 cod fillet + extra cucumber", p2zh: "半碗布格麦沙拉 + 1 块鳕鱼 + 多加黄瓜", k1: 520, k2: 360 },
+    { name: "Beef chow fun", zh: "干炒牛河", when: "Friday dinner", time: "20 min",
+      ing: ["300 g lean beef steak, thinly sliced", "Wide rice noodles (ho fun): 100 g + 60 g dry, or fresh", "200 g beansprouts, 1 onion, 4 spring onions", "Sauce: 1 tbsp light soy, 1 tbsp dark soy, 1 tsp oyster sauce, 1 tsp sesame oil", "1 tsp cornflour, 1 tbsp oil"],
+      steps: ["Toss the beef with 1 tsp soy sauce and the cornflour.", "Soak or boil the noodles as on the pack; drain.", "Sear the beef in a very hot wok for 2 min; take it out.", "Stir-fry the onion and beansprouts for 1 min, add the noodles and sauce and toss, then return the beef with the spring onion."],
+      p1: "180 g beef · 100 g dry rice noodles", p2: "120 g beef · 60 g dry rice noodles · extra beansprouts", p2zh: "120 克牛肉 · 60 克干河粉 · 多加豆芽", k1: 650, k2: 430 },
+    { name: "Spinach &amp; white cheese omelette", zh: "菠菜奶酪煎蛋卷", when: "Saturday brunch", time: "10 min",
+      ing: ["5 eggs", "2 handfuls spinach", "50 g feta-style white cheese", "1 tsp butter", "Wholewheat toast, tomato, cucumber, olives"],
+      steps: ["Wilt the spinach in the butter for 1 min.", "Pour in the beaten eggs and cook gently.", "Crumble the cheese over one half, fold and serve with toast and salad."],
+      p1: "3 eggs · 30 g cheese · 2 slices toast", p2: "2 eggs · 20 g cheese · 1 slice toast", p2zh: "2 个鸡蛋 · 20 克奶酪 · 1 片吐司", k1: 580, k2: 380 },
+    { name: "Chicken shish, bulgur pilaf &amp; shepherd's salad", zh: "土耳其烤鸡肉串配布格麦饭", when: "Saturday dinner", time: "30 min (marinate in the morning)",
+      ing: ["450 g chicken breast, in cubes", "Marinade: 3 tbsp yoghurt, 1 tbsp tomato purée, 1 tbsp olive oil, garlic, cumin, paprika, lemon", "Pilaf: 150 g coarse bulgur, 1 tsp butter, 1 tbsp tomato purée, 1 pepper", "Salad: tomato, cucumber, pepper, red onion, lemon, dried mint", "Skewers"],
+      steps: ["Marinate the chicken in the morning before the gym.", "Thread onto skewers and grill at 220 °C for 15–18 min, turning once.", "Fry the pepper and purée in the butter, add the bulgur and 300 ml water, cover and simmer for 15 min.", "Chop the salad and dress with lemon and mint."],
+      p1: "~300 g chicken · 1 bowl pilaf · salad", p2: "~150 g chicken · ½ bowl pilaf · lots of salad", p2zh: "约 150 克鸡肉 · 半碗布格麦饭 · 多吃沙拉", k1: 700, k2: 450 },
+    { name: "Oat &amp; banana pancakes", zh: "燕麦香蕉松饼", when: "Sunday brunch", time: "20 min",
+      ing: ["120 g porridge oats", "2 ripe bananas", "4 eggs", "1 tsp baking powder, cinnamon", "1 tsp oil", "To serve: 250 g Greek yoghurt, berries, 1 tsp honey"],
+      steps: ["Blend the oats, bananas, eggs, baking powder and cinnamon into a batter.", "Cook small pancakes in a lightly oiled pan, 2 min each side (about 10).", "Serve with Greek yoghurt and berries."],
+      p1: "6 pancakes · 150 g Greek yoghurt · berries", p2: "4 pancakes · 100 g Greek yoghurt · berries", p2zh: "4 个松饼 · 100 克希腊酸奶 · 莓果", k1: 620, k2: 400 },
+    { name: "Home hot pot", zh: "家庭火锅", when: "Sunday dinner", time: "30 min",
+      ing: ["1.5 L chicken stock with ginger slices and spring onion", "350 g lean beef steak, sliced paper-thin (easier when half-frozen)", "1 pack firm tofu, cubed", "Mushrooms, pak choi, Chinese cabbage, spinach", "100 g dry noodles for the end", "Dip: soy sauce, garlic, spring onion, a little sesame oil and chilli"],
+      steps: ["Simmer the stock in a wide pot in the middle of the table (or on the hob).", "Cook the beef, tofu and veg a few pieces at a time; dip and eat.", "Finish with the noodles cooked in the rich broth."],
+      p1: "~210 g beef + tofu · 60 g noodles at the end", p2: "~140 g beef + tofu · 30 g noodles · lots of veg", p2zh: "约 140 克牛肉 + 豆腐 · 30 克面 · 多吃蔬菜", k1: 650, k2: 420 },
   ];
   const RECIPES = [
     { name: "Tomato &amp; egg noodles", zh: "番茄鸡蛋面", when: "Monday dinner", time: "15 min",
@@ -494,13 +572,20 @@ td.day { font-weight: 600; white-space: nowrap; }
 
   // ---------- static content ----------
   const zh = t => t ? `<span class="zh" lang="zh">${t}</span>` : "";
-  $("#menu-body").innerHTML = MENU.map(r => `<tr><td class="day">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join("");
+  let week = store.get("bf-week") === "2" ? 2 : 1;
+  const renderWeek = () => {
+    $("#menu-body").innerHTML = (week === 2 ? MENU2 : MENU).map(r => `<tr><td class="day">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join("");
+    $("#recipes").innerHTML = recipeHtml(week === 2 ? RECIPES2 : RECIPES);
+    $$("[data-week]").forEach(el => el.hidden = el.dataset.week !== String(week));
+    $$(".weeksw button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.wk === String(week))));
+  };
+  $$(".weeksw button").forEach(b => b.addEventListener("click", () => { week = +b.dataset.wk; store.set("bf-week", String(week)); renderWeek(); renderNames(); }));
   const exHtml = list => list.map(e => `<div class="ex"><b>${e[0]}</b><span class="reps">${e[1]}</span><span class="alt">${e[2]}</span>${e[3] ? `<span class="alt" style="color:var(--p2)"><span class="pname" data-p="p2">Serena</span>: ${e[3]}${zh(e[4])}</span>` : ""}</div>`).join("");
   $("#wa").innerHTML = exHtml(WA);
   $("#wb").innerHTML = exHtml(WB);
   $("#start-w").innerHTML = LIFTS.map(l => `<tr><td>${l[1]}</td><td>${l[2]}</td><td>${l[3]}</td></tr>`).join("");
   $("#l-ex").innerHTML = LIFTS.map(l => `<option value="${l[0]}">${l[1]}</option>`).join("");
-  $("#recipes").innerHTML = RECIPES.map(r => `<article class="card">
+  function recipeHtml(list) { return list.map(r => `<article class="card">
       <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
         <h3>${r.name} <span lang="zh" class="zh-inline">${r.zh}</span></h3><span class="pill">${r.time}</span></div>
       <p class="small muted">${r.when}</p>
@@ -512,7 +597,7 @@ td.day { font-weight: 600; white-space: nowrap; }
         <div><span class="label">Ingredients</span><ul class="small">${r.ing.map(x => `<li>${x}</li>`).join("")}</ul></div>
         <div><span class="label">Method</span><ol class="small" style="margin:0;padding-left:1.2em;display:grid;gap:4px">${r.steps.map(x => `<li>${x}</li>`).join("")}</ol></div>
       </div>
-    </article>`).join("");
+    </article>`).join(""); }
 
   // ---------- tabs ----------
   const TABS = ["today", "plan", "menu", "recipes", "training"];
@@ -651,6 +736,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     try { const n = JSON.parse(store.get("bf-names") || "null"); if (n) state.names = n; } catch {}
   }
 
+  renderWeek();
   renderAll();
 
   // ---------- shared store ----------
