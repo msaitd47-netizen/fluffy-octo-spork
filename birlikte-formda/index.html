@@ -332,7 +332,7 @@ td.day { font-weight: 600; white-space: nowrap; }
       <div class="lanes" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
         <div><span class="label">Protein</span><ul class="small"><li>30 eggs</li><li>700 g chicken thighs + 700 g chicken breast</li><li>600 g 5% lean beef mince</li><li>650 g lean beef steak</li><li>150 g raw king prawns</li><li>2 cod fillets</li><li>2 kg yoghurt (incl. 500 g Greek)</li><li>Feta-style white cheese</li><li>Firm tofu (Tofoo or Cauldron)</li><li>2 tins chickpeas</li></ul></div>
         <div><span class="label">Veg &amp; fruit</span><ul class="small"><li>3 aubergines, 4 peppers, 1 courgette</li><li>Tomatoes, 3 cucumbers, carrots</li><li>Spinach, pak choi, Chinese cabbage, mushrooms</li><li>400 g beansprouts</li><li>Frozen peas &amp; sweetcorn</li><li>2 bunches spring onions, ginger, garlic, onions, red onion</li><li>Dill, dried mint, lemons</li><li>2 ripe bananas, berries, seasonal fruit</li></ul></div>
-        <div><span class="label">Grains &amp; other</span><ul class="small"><li>Nomadic Clusters (14)</li><li>Jasmine or brown rice</li><li>Vermicelli (şehriye) for the pilaf</li><li>Egg noodles; wide rice noodles (ho fun)</li><li>Porridge oats, baking powder</li><li>Chicken stock</li><li>Light and dark soy sauce, oyster sauce, rice vinegar, sesame oil, doubanjiang</li><li>Tahini or peanut butter</li><li>Wholewheat bread</li></ul></div>
+        <div><span class="label">Grains &amp; other</span><ul class="small"><li>Nomadic Clusters (14)</li><li>Jasmine or brown rice</li><li>Fine bulgur (for kısır), vermicelli (şehriye) for the pilaf</li><li>Pomegranate molasses (optional)</li><li>Egg noodles; wide rice noodles (ho fun)</li><li>Porridge oats, baking powder</li><li>Chicken stock</li><li>Light and dark soy sauce, oyster sauce, rice vinegar, sesame oil, doubanjiang</li><li>Tahini or peanut butter</li><li>Wholewheat bread</li></ul></div>
       </div>
     </div>
   </section>
@@ -448,7 +448,7 @@ td.day { font-weight: 600; white-space: nowrap; }
   const MENU2 = [
     ["Monday", "虾仁蛋炒饭 Prawn &amp; egg fried rice (15 min)"],
     ["Batch night (Tue or Wed)", "鱼香茄子 Fish-fragrant aubergine with beef ×3 (dinner + 4 lunch boxes)"],
-    ["Other night (Tue or Wed)", "Baked cod parcels + rice + shepherd's salad (15 min)"],
+    ["Other night (Tue or Wed)", "Baked cod parcels + kısır (20 min)"],
     ["Thursday · workout", "鸡丝凉面 Sesame chicken noodles (20 min)"],
     ["Friday", "干炒牛河 Beef chow fun"],
     ["Saturday · workout", "Brunch: spinach &amp; white cheese omelette · Dinner: chicken shish + rice pilaf + shepherd's salad"],
@@ -517,10 +517,10 @@ td.day { font-weight: 600; white-space: nowrap; }
       ing: ["300 g cooked rice (from Sunday, cold)", "150 g raw king prawns", "3 eggs", "100 g frozen peas and sweetcorn", "2 spring onions", "1 tbsp soy sauce, 1 tsp sesame oil, 1 tbsp oil"],
       steps: ["Scramble the eggs in a hot wok and set aside.", "Cook the prawns for 2–3 min until pink; set aside.", "Stir-fry the rice and peas over high heat for 4 min.", "Return the eggs and prawns, add the soy sauce and sesame oil, and toss with spring onion."],
       p1: "180 g cooked rice · 2 eggs · 90 g prawns", p2: "120 g cooked rice · 1 egg · 60 g prawns · extra peas", p2zh: "120 克熟米饭 · 1 个鸡蛋 · 60 克虾仁 · 多加豌豆", k1: 560, k2: 360 },
-    { name: "Baked cod parcels, rice &amp; shepherd's salad", zh: "纸包烤鳕鱼配米饭和土耳其沙拉", when: "Other night (Tue or Wed)", time: "15 min",
-      ing: ["2 cod fillets", "1 tomato, ½ courgette, sliced; 1 lemon, 1 garlic clove", "1 tsp olive oil, paprika, dill", "Rice from Sunday", "Salad: 2 tomatoes, 1 cucumber, 1 pepper, ½ red onion, lemon, dried mint, 1 tsp olive oil"],
-      steps: ["Put each fillet on baking paper with the sliced veg, lemon and garlic, drizzle with oil, sprinkle with paprika and fold into parcels.", "Bake at 200 °C for 15 min.", "Meanwhile, chop the salad and dress it with lemon, mint and oil.", "Reheat the rice and serve."],
-      p1: "1 large fillet (~160 g) · 1 bowl rice · salad", p2: "1 fillet (~120 g) · ½ bowl rice · lots of salad", p2zh: "1 块鳕鱼（约 120 克）· 半碗米饭 · 多吃沙拉", k1: 500, k2: 340 },
+    { name: "Baked cod parcels with kısır", zh: "纸包烤鳕鱼配土耳其碎麦沙拉", when: "Other night (Tue or Wed)", time: "20 min",
+      ing: ["2 cod fillets", "1 tomato, ½ courgette, sliced; 1 lemon, 1 garlic clove", "1 tsp olive oil, paprika, dill", "Kısır: 150 g fine bulgur, 1 tbsp tomato purée + 1 tsp red pepper paste, 1 cucumber, 2 tomatoes, 4 spring onions, dill and dried mint, lemon juice, 1 tbsp olive oil, pomegranate molasses (optional)"],
+      steps: ["Pour 250 ml boiling water over the bulgur and purées, cover and leave for 15 min.", "Meanwhile, put each fillet on baking paper with the sliced veg, lemon and garlic, drizzle with oil, sprinkle with paprika and fold into parcels.", "Bake at 200 °C for 15 min.", "Fluff the bulgur and mix in the chopped veg, herbs, lemon and oil."],
+      p1: "1 large fillet (~160 g) · 1 bowl kısır", p2: "1 fillet (~120 g) · ½ bowl kısır · extra cucumber", p2zh: "1 块鳕鱼（约 120 克）· 半碗碎麦沙拉 · 多加黄瓜", k1: 520, k2: 360 },
     { name: "Sesame chicken noodles", zh: "鸡丝凉面", when: "Thursday dinner (after the gym)", time: "20 min",
       ing: ["250 g chicken breast", "Egg noodles: 100 g + 60 g (dry)", "1 cucumber and 1 carrot, in thin strips", "Sauce: 1 tbsp tahini or peanut butter, 1 tbsp soy sauce, 1 tsp rice vinegar, 1 tsp honey, 1 tsp sesame oil, 1 grated garlic clove", "Chilli oil (optional), spring onion"],
       steps: ["Poach the chicken in simmering water with ginger and spring onion for 12 min, then shred.", "Boil the noodles, rinse under cold water and drain well.", "Whisk the sauce with 1–2 tbsp warm water until smooth.", "Toss noodles, chicken, cucumber and carrot with the sauce."],
