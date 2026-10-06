@@ -177,6 +177,7 @@ td.day { font-weight: 600; white-space: nowrap; }
       <label class="small muted" style="display:flex;gap:6px;align-items:center">Day <input type="date" id="day" style="width:auto"></label>
     </div>
     <div class="card" id="tonight"></div>
+    <div class="card" id="workout"></div>
     <div class="celebrate" id="celebrate" role="status" aria-live="polite" hidden></div>
     <div class="card" id="goal-card">
       <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
@@ -504,6 +505,16 @@ td.day { font-weight: 600; white-space: nowrap; }
     </div>
 
     <div class="card">
+      <h3>Home workout <span lang="zh" class="zh-inline">居家训练</span></h3>
+      <p class="small">For days you train at home instead of the gym. About 35 minutes, no machines needed: a mat, a chair, a backpack or two big water bottles, and a resistance band if you have one. Do it on the gym day it replaces: Day A → Home A, Day B → Home B.
+        <span class="zh" lang="zh">在家代替健身房的日子用。约 35 分钟，只需瑜伽垫、椅子、背包或两大瓶水，有弹力带更好。A 日做居家 A，B 日做居家 B。</span></p>
+      <div class="lanes">
+        <div><h3>Home A</h3><div id="wha"></div></div>
+        <div><h3>Home B</h3><div id="whb"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
       <h3>Easy day <span lang="zh" class="zh-inline">轻松日</span></h3>
       <p class="small">20 minutes, all seated. For busy days, low-energy days or rest-your-feet days. It still counts as your workout box.
         <span class="zh" lang="zh">20 分钟，全程坐姿。适合忙碌、没精神或想让双脚休息的日子，同样算作当天的训练。</span></p>
@@ -774,6 +785,24 @@ td.day { font-weight: 600; white-space: nowrap; }
     ["Bulgarian split squat", "Sait 3 × 8 per leg", "Back foot on a bench, hold dumbbells", "Leg extension, 3 × 12", "腿屈伸，3 × 12"],
     ["Knee raises in the captain's chair", "3 × 10", "Back against the pad, lift your knees slowly", "", ""],
   ];
+  const WHA = [
+    ["Warm-up", "5 min", "March on the spot, arm circles, hip circles", "Seated marching and arm circles", "坐姿原地踏步和绕臂"],
+    ["Chair squat (sit down, stand up)", "3 × 12", "Hold a backpack for extra weight", "Lying glute bridge, 3 × 15", "仰卧臀桥，3 × 15"],
+    ["Push-ups", "3 × as many as you can", "On your knees or against the kitchen counter if needed", "", ""],
+    ["Backpack or band row", "3 × 12 per arm", "One hand on a chair, pull the bag to your hip", "", ""],
+    ["Glute bridge", "3 × 15", "Squeeze at the top for 2 s", "", ""],
+    ["Dead bug", "3 × 10 per side", "Lower back pressed into the mat", "", ""],
+    ["Cardio", "10–15 min", "Brisk walk outside or up and down the stairs", "Easy walk if your feet feel good, or 10 min seated band work", "双脚舒服就轻松散步，否则坐着做 10 分钟弹力带练习"],
+  ];
+  const WHB = [
+    ["Warm-up", "5 min", "March on the spot, arm circles, hip circles", "Seated marching and arm circles", "坐姿原地踏步和绕臂"],
+    ["Reverse lunge", "3 × 10 per leg", "Hold the backpack; hold a chair for balance", "Single-leg glute bridge, 3 × 10 per leg", "单腿臀桥，每侧 3 × 10"],
+    ["Seated water-bottle shoulder press", "3 × 12", "Sit tall on a chair", "", ""],
+    ["Chair dips", "3 × 10", "Hands on the chair edge, elbows back", "Band pull-aparts, 3 × 15", "弹力带拉开，3 × 15"],
+    ["Superman", "3 × 10", "Lift arms and legs slowly, pause 2 s", "", ""],
+    ["Side plank", "3 × 20–30 s per side", "Hips high", "On your knees", "跪姿侧平板"],
+    ["Cardio", "10–15 min", "Brisk walk outside or up and down the stairs", "Easy walk if your feet feel good, or 10 min seated band work", "双脚舒服就轻松散步，否则坐着做 10 分钟弹力带练习"],
+  ];
   const WEASY = [
     ["Bike, easy", "5 min", "Gentle pedalling to warm up", "", ""],
     ["Seated chest press machine", "2 × 12", "Light weight, smooth reps", "", ""],
@@ -816,6 +845,7 @@ td.day { font-weight: 600; white-space: nowrap; }
     days: {},      // `${date}_${p}` -> habits
     lifts: {},     // `${p}_${key}` -> {first, best, last}
     shop: {},      // item id -> {week, checked, by, text?, custom?}
+    plan: {},      // date -> {mode: "gym" | "home"}
     day: TODAY,
     db: null, local: false,
   };
@@ -849,6 +879,7 @@ td.day { font-weight: 600; white-space: nowrap; }
   $("#wa2").innerHTML = exHtml(WA2); $("#wb2").innerHTML = exHtml(WB2);
   $("#wa3").innerHTML = exHtml(WA3); $("#wb3").innerHTML = exHtml(WB3);
   $("#weasy").innerHTML = exHtml(WEASY);
+  $("#wha").innerHTML = exHtml(WHA); $("#whb").innerHTML = exHtml(WHB);
   let blk = ["1", "2", "3"].includes(store.get("bf-blk")) ? store.get("bf-blk") : "1";
   const renderBlock = () => {
     $$("[data-block]").forEach(el => el.hidden = el.dataset.block !== blk);
@@ -900,6 +931,40 @@ td.day { font-weight: 600; white-space: nowrap; }
       <span class="small"><span style="color:var(--p2)">${esc(state.names.p2)}</span>: ${r.p2}${zh(r.p2zh)}</span>
       <button type="button" class="btn ghost small" data-openrec="${recId(r)}" data-recwk="${wk}" style="justify-self:start;padding:4px 10px">Open recipe</button>
     </div>`;
+  };
+  const weekNo = () => {
+    const now = new Date(); now.setHours(12); now.setDate(now.getDate() - ((now.getDay() + 6) % 7));
+    return Math.floor((now - new Date(PROGRAM_START + "T12:00:00")) / 6048e5) + 1;
+  };
+  const renderWorkout = () => {
+    const d = new Date().getDay(), slot = { 2: 0, 4: 1, 6: 2 }[d];
+    const mode = state.plan[TODAY]?.mode || "gym";
+    const el = $("#workout");
+    if (slot === undefined && mode !== "home") {
+      el.innerHTML = `<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline"><h3>Today's workout <span lang="zh" class="zh-inline">今日训练</span></h3>
+        <button type="button" class="btn ghost small" data-mode="home" style="padding:4px 10px">Train at home today</button></div>
+        <p class="small">Rest day. A 20–30 minute walk or easy bike still ticks your workout box.<span class="zh" lang="zh">休息日。散步或轻松骑车 20–30 分钟也算完成训练。</span></p>`;
+    } else {
+      const wn = Math.max(1, weekNo()), wnc = ((wn - 1) % 12) + 1;
+      const order = wnc % 2 === 1 ? ["A", "B", "A"] : ["B", "A", "B"];
+      const day = order[slot === undefined ? 0 : slot];
+      const blk = wnc <= 4 ? 1 : wnc <= 8 ? 2 : 3;
+      const gymList = { 1: { A: WA, B: WB }, 2: { A: WA2, B: WB2 }, 3: { A: WA3, B: WB3 } }[blk][day];
+      const list = mode === "home" ? (day === "A" ? WHA : WHB) : gymList;
+      const title = mode === "home" ? `Home ${day}` : `Gym · Day ${day} (weeks ${blk === 1 ? "1–4" : blk === 2 ? "5–8" : "9–12"})`;
+      el.innerHTML = `<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
+          <h3>Today's workout <span lang="zh" class="zh-inline">今日训练</span></h3>
+          <div class="weeksw" role="group" aria-label="Where are you training today?"><button type="button" data-mode="gym" aria-pressed="${mode === "gym"}">Gym</button><button type="button" data-mode="home" aria-pressed="${mode === "home"}">Home</button></div></div>
+        <p class="small"><b>${title}</b>${slot === undefined ? " · extra session" : ""}${mode === "home" ? ` <span class="zh" lang="zh" style="display:inline">居家 ${day}</span>` : ""}</p>
+        <div>${exHtml(list)}</div>`;
+    }
+    $$("#workout [data-mode]").forEach(b => b.addEventListener("click", () => setMode(b.dataset.mode)));
+    renderNames();
+  };
+  const setMode = async mode => {
+    state.plan[TODAY] = { mode }; renderWorkout();
+    if (state.db) { try { await state.db.doc(`plan/${TODAY}`).set({ mode, by: state.me || "" }); } catch (err) { setStatus("Couldn't save today's workout choice.", true); } }
+    else saveLocal();
   };
   const renderTonight = () => {
     const now = new Date(), d = now.getDay(), wk = currentWeek(), T = TONIGHT[wk];
@@ -1174,11 +1239,11 @@ td.day { font-weight: 600; white-space: nowrap; }
       ? used.map(l => `<tr><td>${l[1]}</td><td style="font-variant-numeric:tabular-nums">${cell("p1", l[0])}</td><td style="font-variant-numeric:tabular-nums">${cell("p2", l[0])}</td></tr>`).join("")
       : '<tr><td colspan="3" class="muted small">After your first session, log the weights you used here; your progress will show up in this table.</td></tr>';
   }
-  function renderAll() { renderTonight(); renderNames(); renderToday(); renderLifts(); renderShop(); }
+  function renderAll() { renderTonight(); renderWorkout(); renderNames(); renderToday(); renderLifts(); renderShop(); }
   try { const g = JSON.parse(store.get("bf-goal") || "null"); if (g) state.goal = g; } catch {}
-  function saveLocal() { store.set("bf-local", JSON.stringify({ days: state.days, lifts: state.lifts, shop: state.shop })); }
+  function saveLocal() { store.set("bf-local", JSON.stringify({ days: state.days, lifts: state.lifts, shop: state.shop, plan: state.plan })); }
   function loadLocal() {
-    try { const d = JSON.parse(store.get("bf-local") || "{}"); Object.assign(state, { days: d.days || {}, lifts: d.lifts || {}, shop: d.shop || {} }); } catch {}
+    try { const d = JSON.parse(store.get("bf-local") || "{}"); Object.assign(state, { days: d.days || {}, lifts: d.lifts || {}, shop: d.shop || {}, plan: d.plan || {} }); } catch {}
     try { const n = JSON.parse(store.get("bf-names") || "null"); if (n) state.names = n; } catch {}
   }
 
@@ -1202,6 +1267,10 @@ td.day { font-weight: 600; white-space: nowrap; }
       snap.docs.forEach(d => { const v = d.data(); if (v && v.date && v.p) days[`${v.date}_${v.p}`] = v.habits || {}; });
       state.days = days; renderToday();
     }, () => setStatus("Couldn't load the daily records.", true));
+    db.collection("plan").onSnapshot(snap => {
+      const pl = {}; snap.docs.forEach(d => { const v = d.data(); if (v) pl[d.id] = v; });
+      state.plan = pl; renderWorkout();
+    });
     db.collection("shop").onSnapshot(snap => {
       const sh = {}; snap.docs.forEach(d => { const v = d.data(); if (v) sh[d.id] = v; });
       state.shop = sh; renderShop();
