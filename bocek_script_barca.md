@@ -26,8 +26,9 @@ Espri tekrarda: aynı cümle, biri ayakta ve kibirli, diğeri çimde ve kırık.
 > grass pitch, painted white lines, packed stands blurred in the background,
 > harsh stadium floodlights, drifting night haze.
 >
-> Shot 1, low angle close-up: YİĞİT, a neat cockroach in a yellow and red
-> halved football jersey, stands alone in defence adjusting his captain's
+> Shot 1, low angle close-up: YİĞİT, a cockroach with short neatly combed dark
+> hair, straight dark eyebrows, an oval face and light stubble, in a yellow and
+> red halved football jersey, stands alone in defence adjusting his captain's
 > posture, chin up, completely confident. He says to camera: "Bu sene farklıyız
 > abi."
 >
