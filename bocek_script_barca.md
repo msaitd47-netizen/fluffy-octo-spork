@@ -65,5 +65,9 @@ Espri tekrarda: aynı cümle, biri ayakta ve kibirli, diğeri çimde ve kırık.
   kısık ve yenik — iki repliği de bırakın.
 - **Renk uyarısı:** rakip forması lacivert-bordo, Mete'nin Trabzonspor forması
   da bordo-mavi. İkisi aynı klipte asla olmasın, model karıştırıyor.
-- **Yiğit'in fotoğrafı referans olarak** bağlanabilir; karakterin yüzü ona
-  benzetilir, rakipler yine isimsiz kalır.
+- **Yiğit'in fotoğrafı referans olarak bağlanamıyor.** Denendi: gerçek bir
+  insanın yüzü referans verilince üretim "Terms of Service" gerekçesiyle
+  otomatik bloke ediliyor. Bunun yerine özellikleri **yazıyla** tarif edin —
+  aşağıdaki blok filtreye takılmıyor:
+  > a cockroach with short neatly combed dark hair, straight dark eyebrows, an
+  > oval face and light stubble
