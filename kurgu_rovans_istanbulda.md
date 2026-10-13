@@ -1,11 +1,11 @@
-# Kurgu — "İlk yarı bizimdi"
+# Kurgu — "Rövanş İstanbul'da"
 
-Böcek evreninden bağımsız, düz mizah metni. Maç sonu saha kenarı.
+Düz mizah metni. Maç sonu saha kenarı.
 
 **Kişiler:** Yiğit (sarı-kırmızı formalı taraftar, sahaya inmiş).
 Rakip oyuncular — 1, 2 ve 3 numara; isimsiz, lacivert-bordo formalı.
 
-**Durum:** Maç 5-0 bitti. Yiğit maç öncesi herkese "bu sene farklıyız" demişti.
+**Durum:** Maç 5-0 bitti.
 
 ---
 
@@ -17,45 +17,39 @@ Rakip oyuncular gülüşerek yanından geçiyor. **1 NUMARA** Yiğit'i fark ediy
 durup arkadaşlarını dürtüyor.
 
 > **1 NUMARA** *(sırıtarak, beş parmağını açıp Yiğit'in suratına tutuyor)*
-> ¡Amigo! ¡Cinco!
+> Beş! Beş kardeşim, beş!
 
 Yiğit forma yakasını düzeltiyor. Onurunu toplamaya çalışıyor.
 
-> **YİĞİT** *(ciddi)* İlk yarı bizimdi.
+> **YİĞİT** *(gayet ciddi)* Rövanş İstanbul'da.
 
-Sessizlik. **2 NUMARA** anlamamış, 1 numaraya dönüyor.
+**2 NUMARA** selfie çekmekle meşguldü, duymadı.
 
-> **2 NUMARA** ¿Qué? ¿Qué dice?
+> **2 NUMARA** Ne dedi, ne dedi?
 >
-> **1 NUMARA** *(çevirir)* He says the first half was theirs.
+> **1 NUMARA** *(göğsünü şişirip Yiğit'in ciddi tonunu taklit ederek)*
+> Rövanş İstanbul'daymış!
 
-Üçü birden kahkahayı basıyor. 3 NUMARA dizlerine vuruyor. Biri telefonunu
-çıkarıp Yiğit'le selfie çekiyor, Yiğit mecburen gülümsüyor.
-
-> **YİĞİT** *(selfie biter bitmez, dimdik)* Rövanş var.
+Üçü birden kahkahayı basıyor. 3 NUMARA dizlerine vuruyor.
 
 1 NUMARA kahkahayı keser gibi yapıyor, yüzünü ciddileştiriyor. Yiğit'in
 omzuna elini koyuyor, sahiden içten bir tonla:
 
-> **1 NUMARA** Sí, sí. Revancha. Mucha suerte, hermano.
+> **1 NUMARA** Bol şans kardeşim.
 
-Yiğit başını sallıyor. İlk kez biraz rahatlıyor. 1 NUMARA dönüyor,
-arkadaşının omzuna giriyor ve soyunma odasına yürürken alçak sesle:
+Yiğit başını sallıyor. İlk kez biraz rahatlıyor, dönüp uzaklaşıyor. Sırtını
+döner dönmez 1 NUMARA arkadaşının omzuna giriyor ve sadece onların duyacağı
+bir sesle:
 
-> **1 NUMARA** *(fısıltıyla)* Otra vez cinco.
+> **1 NUMARA** Rövanşta yine beş.
 
-Üçü de gülerek uzaklaşıyor. Yiğit arkalarından bakıyor. Ne dediğini
-anlamadı ama tonundan anladı.
+Üçü arkasından kahkahayı basıyor. Yiğit yürümeye devam ediyor, duymuyor.
 
 **KARARMA.**
 
 ---
 
 # Üretim promptu — insan karakterler, hepsi Türkçe
-
-Böcek yok, gerçek oyuncu ismi ve yüzü yok; herkes insan ve herkes Türkçe
-konuşuyor. Dil farkı kalkınca espri "anlamıyor"dan "duymuyor"a taşındı:
-kapanış repliği Yiğit arkasını dönüp uzaklaşırken, alçak sesle söyleniyor.
 
 > A floodlit football stadium at night, two minutes after the final whistle.
 > The stands are emptying, music plays over the PA, floodlight haze hangs in
@@ -71,11 +65,11 @@ kapanış repliği Yiğit arkasını dönüp uzaklaşırken, alçak sesle söyle
 > fingers right in front of Yiğit's face, grinning: "Beş! Beş kardeşim, beş!"
 >
 > Yiğit straightens his collar and answers completely seriously, with total
-> conviction: "İlk yarı bizimdi."
+> conviction: "Rövanş İstanbul'da."
 >
 > PLAYER 2, who was busy taking a selfie and missed it, leans in: "Ne dedi, ne
 > dedi?" PLAYER 1 repeats it back mockingly, puffing out his chest and
-> imitating Yiğit's solemn tone: "İlk yarı bizimmiş!" All three burst out
+> imitating Yiğit's solemn tone: "Rövanş İstanbul'daymış!" All three burst out
 > laughing, one doubling over, slapping his knees.
 >
 > PLAYER 1 stops laughing, puts a hand on Yiğit's shoulder and says warmly and
@@ -99,15 +93,15 @@ sadece ilk iki replik sığıyor ve kapanış repliği düşer — espri de orad
 
 ## Notlar
 
-- **Esprinin çalıştığı yer:** Yiğit'in savunması giderek küçülüyor —
-  "ilk yarı bizimdi" → "rövanş var" — ama tonu hiç düşmüyor. Metni oynatacak
-  kişi Yiğit'i mahcup değil, sonuna kadar inançlı oynamalı.
-- **Taklit kahkahayı tetikliyor.** 1 numaranın Yiğit'i ciddi tonuyla
-  tekrarlaması ("İlk yarı bizimmiş!") esprinin patladığı yer; onu silmeyin.
+- **Kurulum ve final birbirine kilitli.** Yiğit "Rövanş İstanbul'da" diyor,
+  oyuncu arkasından "Rövanşta yine beş" diyor. İkisinden birini değiştirirseniz
+  diğerini de değiştirin, yoksa espri dağılıyor.
+- **Yiğit mahcup değil, inançlı oynamalı.** 5-0 yenilmiş ama repliği tok bir
+  sesle söylüyor; komik olan tam olarak bu.
+- **Taklit kahkahayı tetikliyor.** 1 numaranın Yiğit'in ciddi tonunu
+  tekrarlaması esprinin patladığı yer; onu silmeyin.
 - **Son replik Yiğit sırtını döndükten sonra.** İzleyici duyuyor, Yiğit
-  duymuyor — espri tam olarak bu boşlukta. Yüzüne karşı söylenirse kavga
-  olur, arkasından söylenince şaka olur.
+  duymuyor. Yüzüne karşı söylenirse kavga olur, arkasından söylenince şaka
+  olur.
 - **Oyuncular isimsiz.** Gerçek futbolcu ismi veya yüzü kullanmadım; şaka
   kimliğe değil duruma dayanıyor.
-- Altyazı kullanacaksanız İspanyolca replikleri çevirmeyin, sadece Türkçe
-  olanları yazın — seyirci Yiğit'in bilmediğini bilsin.
