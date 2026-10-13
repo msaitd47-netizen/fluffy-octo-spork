@@ -51,14 +51,15 @@ anlamadı ama tonundan anladı.
 
 ---
 
-# Üretim promptu — insan karakterler
+# Üretim promptu — insan karakterler, hepsi Türkçe
 
-Yukarıdaki metnin video üretimine verilebilir hâli. Böcek yok, gerçek
-oyuncu ismi ve yüzü yok; herkes insan.
+Böcek yok, gerçek oyuncu ismi ve yüzü yok; herkes insan ve herkes Türkçe
+konuşuyor. Dil farkı kalkınca espri "anlamıyor"dan "duymuyor"a taşındı:
+kapanış repliği Yiğit arkasını dönüp uzaklaşırken, alçak sesle söyleniyor.
 
 > A floodlit football stadium at night, two minutes after the final whistle.
 > The stands are emptying, music plays over the PA, floodlight haze hangs in
-> the air. Photorealistic live-action look.
+> the air. Photorealistic live-action look. All dialogue is spoken in Turkish.
 >
 > Pitchside, YİĞİT — a young Turkish man in his late twenties with short
 > neatly combed dark hair, straight dark eyebrows, an oval face and light
@@ -67,23 +68,24 @@ oyuncu ismi ve yüzü yok; herkes insan.
 >
 > Three opposition players in deep navy and claret striped kits walk past
 > laughing. PLAYER 1 spots him, stops, elbows his team-mates and holds up five
-> fingers right in front of Yiğit's face, grinning: "¡Amigo! ¡Cinco!"
+> fingers right in front of Yiğit's face, grinning: "Beş! Beş kardeşim, beş!"
 >
-> Yiğit straightens his collar and answers in Turkish, completely serious:
-> "İlk yarı bizimdi."
+> Yiğit straightens his collar and answers completely seriously, with total
+> conviction: "İlk yarı bizimdi."
 >
-> PLAYER 2 turns, baffled: "¿Qué? ¿Qué dice?" PLAYER 1 translates, delighted:
-> "He says the first half was theirs." All three burst out laughing, one
-> doubling over, one taking a selfie with Yiğit, who smiles stiffly.
+> PLAYER 2, who was busy taking a selfie and missed it, leans in: "Ne dedi, ne
+> dedi?" PLAYER 1 repeats it back mockingly, puffing out his chest and
+> imitating Yiğit's solemn tone: "İlk yarı bizimmiş!" All three burst out
+> laughing, one doubling over, slapping his knees.
 >
 > PLAYER 1 stops laughing, puts a hand on Yiğit's shoulder and says warmly and
-> sincerely: "Mucha suerte, hermano." Yiğit nods, finally relaxing. PLAYER 1
-> turns away, slings an arm round a team-mate and murmurs under his breath as
-> they walk off: "Otra vez cinco." The three of them laugh again. Yiğit watches
-> them go, not understanding the words but understanding the tone.
+> sincerely: "Bol şans kardeşim." Yiğit nods, finally relaxing, turns and walks
+> away. The moment his back is turned, PLAYER 1 slings an arm round a
+> team-mate and murmurs just loud enough for them: "Rövanşta yine beş." The
+> three of them crack up again behind him. Yiğit keeps walking, hears nothing.
 >
-> Camera: handheld, starts medium on Yiğit, drifts into the group, pushes in on
-> his face at the end.
+> Camera: handheld, starts medium on Yiğit, drifts into the group, ends wide
+> on him walking away with the three laughing behind him.
 >
 > SFX: distant crowd, PA music, studs on grass, overlapping laughter.
 >
@@ -91,7 +93,7 @@ oyuncu ismi ve yüzü yok; herkes insan.
 > flare, natural skin texture, film grain, 16:9 widescreen.
 
 **Süre:** beş replik var, arayüzden süreyi 12-15 saniyeye çekin. 5 saniyede
-sadece ilk iki replik sığıyor ve kapanış fısıltısı düşer — espri de orada.
+sadece ilk iki replik sığıyor ve kapanış repliği düşer — espri de orada.
 
 ---
 
@@ -100,11 +102,11 @@ sadece ilk iki replik sığıyor ve kapanış fısıltısı düşer — espri de
 - **Esprinin çalıştığı yer:** Yiğit'in savunması giderek küçülüyor —
   "ilk yarı bizimdi" → "rövanş var" — ama tonu hiç düşmüyor. Metni oynatacak
   kişi Yiğit'i mahcup değil, sonuna kadar inançlı oynamalı.
-- **Dil farkı esprinin motoru.** Yiğit Türkçe, oyuncular İspanyolca. Araya
-  giren İngilizce çeviri ("He says the first half was theirs") kahkahayı
-  tetikleyen cümle; onu silmeyin.
-- **Son replik çevrilmemeli.** "Otra vez cinco" = "yine beş". İzleyici
-  anlıyor, Yiğit anlamıyor — espri tam olarak bu boşlukta.
+- **Taklit kahkahayı tetikliyor.** 1 numaranın Yiğit'i ciddi tonuyla
+  tekrarlaması ("İlk yarı bizimmiş!") esprinin patladığı yer; onu silmeyin.
+- **Son replik Yiğit sırtını döndükten sonra.** İzleyici duyuyor, Yiğit
+  duymuyor — espri tam olarak bu boşlukta. Yüzüne karşı söylenirse kavga
+  olur, arkasından söylenince şaka olur.
 - **Oyuncular isimsiz.** Gerçek futbolcu ismi veya yüzü kullanmadım; şaka
   kimliğe değil duruma dayanıyor.
 - Altyazı kullanacaksanız İspanyolca replikleri çevirmeyin, sadece Türkçe
