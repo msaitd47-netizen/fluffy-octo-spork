@@ -1,11 +1,12 @@
-# Kurgu — "Deplasmanda farklı olur"
+# Kurgu — "Biz bu işlere alışkınız"
 
 Düz mizah metni. Maç sonu saha kenarı, İstanbul.
 
 **Kişiler:** Yiğit (sarı-kırmızı formalı ev sahibi taraftar, sahaya inmiş).
 Rakip oyuncular — 1, 2 ve 3 numara; isimsiz, lacivert-bordo formalı.
 
-**Durum:** Maç İstanbul'da oynandı ve 5-0 bitti. Yani hezimet kendi evinde.
+**Durum:** Maç İstanbul'da oynandı ve 5-0 bitti. Rövanş yok, tek maç.
+Yani tutunacak hiçbir dal kalmadı.
 
 ---
 
@@ -21,14 +22,14 @@ durup arkadaşlarını dürtüyor.
 
 Yiğit forma yakasını düzeltiyor. Onurunu toplamaya çalışıyor.
 
-> **YİĞİT** *(gayet ciddi)* Deplasmanda farklı olur.
+> **YİĞİT** *(gayet ciddi, hatta biraz gururlu)* Biz bu işlere alışkınız.
 
 **2 NUMARA** selfie çekmekle meşguldü, duymadı.
 
 > **2 NUMARA** Ne dedi, ne dedi?
 >
 > **1 NUMARA** *(göğsünü şişirip Yiğit'in ciddi tonunu taklit ederek)*
-> Deplasmanda farklı olurmuş!
+> Bu işlere alışkınmış!
 
 Üçü birden kahkahayı basıyor. 3 NUMARA dizlerine vuruyor.
 
@@ -41,7 +42,7 @@ Yiğit başını sallıyor. İlk kez biraz rahatlıyor, dönüp uzaklaşıyor. S
 döner dönmez 1 NUMARA arkadaşının omzuna giriyor ve sadece onların duyacağı
 bir sesle:
 
-> **1 NUMARA** Olur tabii. Orada altı atarız.
+> **1 NUMARA** Alışkın tabii. Her sene aynı.
 
 Üçü arkasından kahkahayı basıyor. Yiğit yürümeye devam ediyor, duymuyor.
 
@@ -59,25 +60,25 @@ bir sesle:
 > Pitchside, YİĞİT — a young Turkish man in his late twenties with short
 > neatly combed dark hair, straight dark eyebrows, an oval face and light
 > stubble, wearing a spotless yellow and red halved football shirt — stands
-> alone in the empty home end, trying to hold his composure.
+> alone in front of the empty home end, trying to hold his composure.
 >
 > Three visiting players in deep navy and claret striped kits walk past
 > laughing. PLAYER 1 spots him, stops, elbows his team-mates and holds up five
 > fingers right in front of Yiğit's face, grinning: "Beş! Beş kardeşim, beş!"
 >
-> Yiğit straightens his collar and answers completely seriously, with total
-> conviction: "Deplasmanda farklı olur."
+> Yiğit straightens his collar and answers completely seriously, almost
+> proudly: "Biz bu işlere alışkınız."
 >
 > PLAYER 2, who was busy taking a selfie and missed it, leans in: "Ne dedi, ne
 > dedi?" PLAYER 1 repeats it back mockingly, puffing out his chest and
-> imitating Yiğit's solemn tone: "Deplasmanda farklı olurmuş!" All three burst
-> out laughing, one doubling over, slapping his knees.
+> imitating Yiğit's solemn tone: "Bu işlere alışkınmış!" All three burst out
+> laughing, one doubling over, slapping his knees.
 >
 > PLAYER 1 stops laughing, puts a hand on Yiğit's shoulder and says warmly and
 > sincerely: "Bol şans kardeşim." Yiğit nods, finally relaxing, turns and walks
 > away. The moment his back is turned, PLAYER 1 slings an arm round a
-> team-mate and murmurs just loud enough for them: "Olur tabii. Orada altı
-> atarız." The three of them crack up again behind him. Yiğit keeps walking,
+> team-mate and murmurs just loud enough for them: "Alışkın tabii. Her sene
+> aynı." The three of them crack up again behind him. Yiğit keeps walking,
 > hears nothing.
 >
 > Camera: handheld, starts medium on Yiğit, drifts into the group, ends wide
@@ -97,15 +98,16 @@ sadece ilk iki replik sığıyor ve kapanış repliği düşer — espri de orad
 
 ## Notlar
 
-- **Kurulum ve final birbirine kilitli.** Yiğit "deplasmanda farklı olur"
-  diyor, oyuncu arkasından "orada altı atarız" diyor. Beşten altıya çıkması
-  esprinin tırmanışı; sayıyı düşürmeyin.
-- **Hezimet kendi evinde.** Boş tribünler ve ev sahibi olmanın utancı sahneye
-  çalışıyor; "empty home end" tarifini silmeyin.
-- **Yiğit mahcup değil, inançlı oynamalı.** 5-0 yenilmiş ama repliği tok bir
-  sesle söylüyor; komik olan tam olarak bu.
-- **Taklit kahkahayı tetikliyor.** 1 numaranın Yiğit'in ciddi tonunu
-  tekrarlaması esprinin patladığı yer; onu silmeyin.
+- **Kurulum ve final birbirine kilitli.** Yiğit "alışkınız" diyerek övünüyor,
+  oyuncu aynı kelimeyi alıp "her sene aynı" diye geri veriyor. Yiğit kendi
+  cümlesiyle vuruluyor — ikisinden birini değiştirirseniz diğerini de
+  değiştirin.
+- **Rövanş veya gelecek maç geçmiyor.** Tek maç olduğu için Yiğit'in
+  tutunacağı bir "gelecek sefer" yok; o yüzden gururunu geçmişe dayıyor.
+- **Hezimet kendi evinde.** Boş tribünler sahneye çalışıyor; "empty home end"
+  tarifini silmeyin.
+- **Yiğit mahcup değil, gururlu oynamalı.** 5-0 yenilmiş ama repliği neredeyse
+  övünerek söylüyor; komik olan tam olarak bu.
 - **Son replik Yiğit sırtını döndükten sonra.** İzleyici duyuyor, Yiğit
   duymuyor. Yüzüne karşı söylenirse kavga olur, arkasından söylenince şaka
   olur.
