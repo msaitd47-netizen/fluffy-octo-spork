@@ -29,20 +29,22 @@ gücüyle pazarlık ediyor.
 > advertising boards, half-empty stands still draining, floodlight haze. All
 > dialogue is spoken in Turkish.
 >
-> Kit rule: no club crests, badges, sponsor logos or lettering on any shirt —
-> the kits are identified by colour and pattern alone.
+> Kit rule: both shirts carry their real club crest on the left chest, clean
+> and sharp, correctly shaped and correctly coloured. No sponsor logos, no
+> shirt numbers on the front, no other lettering.
 >
 > Pitchside at the advertising boards, YİĞİT, a cockroach with short neatly
-> combed dark hair, straight dark eyebrows and light stubble, wearing a
-> football shirt split vertically into one solid yellow half and one solid red
-> half with red shorts, leans on the barrier with his front legs, voice
-> hoarse, antennae drooping, pleading at the pitch: "Atmayın olum lan! Daha ne
+> combed dark hair, straight dark eyebrows and light stubble, wearing the
+> Galatasaray home shirt — split vertically into one solid yellow half and one
+> solid red half, with the round red and yellow Galatasaray club crest and its
+> interlocking G and S monogram on the left chest — and red shorts, leans on
+> the barrier with his front legs, voice hoarse, antennae drooping, pleading at the pitch: "Atmayın olum lan! Daha ne
 > kadar atacaksınız vicdansızlar!"
 >
-> Three visiting cockroach players from a Spanish club jog back toward the
-> centre circle, laughing. They wear the classic Catalan blaugrana kit: broad
-> vertical stripes of deep royal blue and dark garnet red across the chest,
-> with deep blue shorts and deep blue socks.
+> Three visiting cockroach players from the Spanish side jog back toward the
+> centre circle, laughing. They wear the FC Barcelona home kit: broad vertical
+> stripes of deep royal blue and dark garnet red, deep blue shorts and deep
+> blue socks, with the FC Barcelona club crest on the left chest.
 >
 > PLAYER 1 slows, turns to look at him and answers completely casually, almost
 > kindly: "Daha dur olum, biz yeni başlıyoruz."
@@ -76,8 +78,12 @@ gücüyle pazarlık ediyor.
   yazınca model Trabzonspor formasına gidiyor — İstanbul'da geçen bir sahnede
   bu çok daha güçlü bir çağrışım. `Spanish club`, `Catalan` ve `blaugrana`
   kelimeleri modeli Barcelona'ya çekiyor; üçünü birden bırakın.
-- **Arma yok.** Gerçek kulüp armasını koymuyorum; zaten model armaları bozuk
-  üretiyor. Tanınırlık çizgilerden ve İspanyol bağlamından geliyor.
+- **Armalar prompta yazılı** ama modeller armaları sık sık bozuk üretiyor:
+  şekil kayıyor, harfler saçmalıyor, bazen iki kulübün armasını karıştırıyor
+  (ilk denemede bordo-mavi formaya Fenerbahçe arması basmıştı). Bozuk çıkarsa
+  iki seçenek var: prompta `crest clearly legible and correctly proportioned`
+  ekleyip tekrar denemek, ya da armayı tamamen çıkarıp sadece renklerle
+  gitmek. Bazı sağlayıcılar marka logosu içeren üretimi doğrudan reddedebilir.
 - **Tırmanma sırası önemli.** Yiğit yalvarıyor → "yeni başlıyoruz" → kayıp
   oyuncu aranıyor → hocaya laf. En büyük kahkaha sonda.
 - **Oyuncular bağırmamalı.** Yiğit bağırıyor, onlar sakin ve neşeli. Zıtlık
