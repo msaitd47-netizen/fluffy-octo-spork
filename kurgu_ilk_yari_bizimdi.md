@@ -51,6 +51,50 @@ anlamadı ama tonundan anladı.
 
 ---
 
+# Üretim promptu — insan karakterler
+
+Yukarıdaki metnin video üretimine verilebilir hâli. Böcek yok, gerçek
+oyuncu ismi ve yüzü yok; herkes insan.
+
+> A floodlit football stadium at night, two minutes after the final whistle.
+> The stands are emptying, music plays over the PA, floodlight haze hangs in
+> the air. Photorealistic live-action look.
+>
+> Pitchside, YİĞİT — a young Turkish man in his late twenties with short
+> neatly combed dark hair, straight dark eyebrows, an oval face and light
+> stubble, wearing a spotless yellow and red halved football shirt — stands
+> alone, trying to hold his composure.
+>
+> Three opposition players in deep navy and claret striped kits walk past
+> laughing. PLAYER 1 spots him, stops, elbows his team-mates and holds up five
+> fingers right in front of Yiğit's face, grinning: "¡Amigo! ¡Cinco!"
+>
+> Yiğit straightens his collar and answers in Turkish, completely serious:
+> "İlk yarı bizimdi."
+>
+> PLAYER 2 turns, baffled: "¿Qué? ¿Qué dice?" PLAYER 1 translates, delighted:
+> "He says the first half was theirs." All three burst out laughing, one
+> doubling over, one taking a selfie with Yiğit, who smiles stiffly.
+>
+> PLAYER 1 stops laughing, puts a hand on Yiğit's shoulder and says warmly and
+> sincerely: "Mucha suerte, hermano." Yiğit nods, finally relaxing. PLAYER 1
+> turns away, slings an arm round a team-mate and murmurs under his breath as
+> they walk off: "Otra vez cinco." The three of them laugh again. Yiğit watches
+> them go, not understanding the words but understanding the tone.
+>
+> Camera: handheld, starts medium on Yiğit, drifts into the group, pushes in on
+> his face at the end.
+>
+> SFX: distant crowd, PA music, studs on grass, overlapping laughter.
+>
+> Cinematic live-action, 35mm film look, shallow depth of field, floodlight
+> flare, natural skin texture, film grain, 16:9 widescreen.
+
+**Süre:** beş replik var, arayüzden süreyi 12-15 saniyeye çekin. 5 saniyede
+sadece ilk iki replik sığıyor ve kapanış fısıltısı düşer — espri de orada.
+
+---
+
 ## Notlar
 
 - **Esprinin çalıştığı yer:** Yiğit'in savunması giderek küçülüyor —
