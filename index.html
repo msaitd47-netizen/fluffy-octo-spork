@@ -57,7 +57,19 @@ button{font-family:inherit;color:inherit;border:0;cursor:pointer}
   box-shadow:0 3px 0 var(--purple-d);display:grid;place-items:center}
 .icon-btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--purple-d)}
 .pill{background:rgba(110,70,40,.18);padding:6px 16px;border-radius:14px;font-weight:700;font-size:18px;color:#5b3b26}
-.speed{width:auto;border-radius:14px;padding:0 12px;font-weight:700;font-size:16px}
+.coins{background:#fff6dc;border-radius:16px;padding:7px 14px;font-weight:700;font-size:17px;color:#7a4b00;box-shadow:0 3px 0 #e2b45a;min-width:74px;text-align:center}
+.coins.bump{animation:pop .4s}
+.boost b{position:relative}
+.boost em{position:absolute;right:-6px;top:-6px;min-width:22px;height:22px;padding:0 5px;border-radius:11px;background:#ff5f8f;color:#fff;
+  font-style:normal;font-size:12px;font-weight:700;display:grid;place-items:center;box-shadow:0 2px 0 #c9406a}
+.boost em.price{background:#ffcf3d;color:#6b4300;box-shadow:0 2px 0 #d39b12;font-size:11px}
+.boost.re b{background:radial-gradient(circle at 35% 30%,#ffd3a8,#e39a5a);box-shadow:0 4px 0 #b86f34}
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:8px 0 16px}
+.swatches .jar{width:100%;height:auto;aspect-ratio:1/1.08;cursor:pointer}
+.swatches .jar .bd span{font-size:16px}
+.fastpill{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom) + 96px);background:#4a3540;color:#ffd84a;
+  padding:6px 14px;border-radius:12px;font-weight:700;font-size:14px;z-index:30;display:none}
+.fastpill.on{display:block;animation:pop .3s}
 .board-card{margin-top:6px;background:var(--panel);border-radius:18px;padding:10px;
   box-shadow:inset 0 0 0 3px rgba(255,255,255,.6),0 6px 0 #d8ab7f,0 12px 22px rgba(90,50,20,.22);
   display:grid;place-items:center}
@@ -151,6 +163,7 @@ button{font-family:inherit;color:inherit;border:0;cursor:pointer}
     <path d="M72 84 Q80 92 88 84" stroke="#2b2230" stroke-width="4" fill="none" stroke-linecap="round"/>
   </svg>
   <h1 class="logo">Ant<small>Feast</small></h1>
+  <div class="coins" id="homeCoins">🪙 0</div>
   <button class="big-btn" id="playBtn">Play<small id="playLv">Level 1</small></button>
   <div class="row">
     <button class="soft-btn" id="galBtn">🖼️ Collection</button>
@@ -163,22 +176,24 @@ button{font-family:inherit;color:inherit;border:0;cursor:pointer}
   <div class="topbar">
     <button class="icon-btn" id="homeBtn" aria-label="Home">⌂</button>
     <div class="pill" id="lvPill">Level 1</div>
-    <button class="icon-btn speed" id="spdBtn">▶▶ 1x</button>
+    <div class="coins" id="coinPill">🪙 0</div>
   </div>
   <div class="board-card"><canvas id="board"></canvas></div>
   <div class="progress"><i id="prog"></i></div>
   <div class="queue" id="queue"></div>
   <div class="jars" id="jars"></div>
   <div class="boosters">
-    <button class="boost" id="bSlot"><b>＋</b>+1 Slot</button>
-    <button class="boost" id="bMix"><b>🔀</b>Shuffle</button>
-    <button class="boost" id="bRe"><b>↻</b>Restart</button>
+    <button class="boost" id="bSlot"><b>＋<em></em></b>+1 Slot</button>
+    <button class="boost" id="bMix"><b>🔀<em></em></b>Shuffle</button>
+    <button class="boost" id="bUfo"><b>🛸<em></em></b>UFO</button>
+    <button class="boost re" id="bRe"><b>↻</b>Restart</button>
   </div>
 </section>
 
 <canvas id="fx"></canvas>
 <div class="modal" id="modal"><div class="card" id="card"></div></div>
 <div class="toast" id="toast"></div>
+<div class="fastpill" id="fast">⚡ Speeding up</div>
 
 <script>
 'use strict';
@@ -346,6 +361,7 @@ const sfx={
   pop(){const n=performance.now();if(n-lastPop<45)return;lastPop=n;beep(600+Math.random()*500,.05,.03,'sine',1.4)},
   tap(){beep(420,.09,.07,'triangle',1.8)},
   bad(){beep(180,.18,.07,'square',.7)},
+  ufo(){beep(300,1.2,.05,'sine',3);setTimeout(()=>beep(900,.4,.04,'sine',.5),900)},
   done(){beep(700,.08,.05,'triangle',1.5)},
   win(){[523,659,784,1047].forEach((f,i)=>setTimeout(()=>beep(f,.18,.07,'triangle'),i*110))},
   lose(){[392,330,262].forEach((f,i)=>setTimeout(()=>beep(f,.22,.06,'triangle'),i*150))}
@@ -355,7 +371,18 @@ const buzz=ms=>{try{navigator.vibrate&&navigator.vibrate(ms)}catch(e){}};
 /* =========================================================
    Game state
    ========================================================= */
-let G=null, speed=store.get('speed',1), jarId=0;
+let G=null, jarId=0;
+const PRICE={slot:60,mix:40,ufo:120};
+let coins=store.get('coins',0), inv=store.get('inv',{slot:2,mix:2,ufo:2});
+function saveEco(){store.set('coins',coins);store.set('inv',inv);refreshEco()}
+function refreshEco(){
+  ['coinPill','homeCoins'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent='🪙 '+coins});
+  [['bSlot','slot'],['bMix','mix'],['bUfo','ufo']].forEach(([id,k])=>{const em=document.querySelector('#'+id+' em');
+    if(inv[k]>0){em.textContent=inv[k];em.className=''}else{em.textContent=PRICE[k]+'🪙';em.className='price'}});
+}
+function canAfford(k){return inv[k]>0||coins>=PRICE[k]}
+function pay(k){if(inv[k]>0)inv[k]--;else coins-=PRICE[k];saveEco()}
+function broke(k){sfx.bad();toast(`Not enough coins (${PRICE[k]} 🪙). Finish levels to earn more!`)}
 const board=$('#board'), bctx=board.getContext('2d');
 const fx=$('#fx'), fctx=fx.getContext('2d');
 let DPR=Math.min(window.devicePixelRatio||1,3), cell=10;
@@ -365,11 +392,11 @@ function startLevel(n){
   G={n,cfg,W:cfg.art.W,H:cfg.art.H,pal:cfg.art.pal,pixels:L.pixels,idx:L.idx,
      cols:L.cols.map(c=>c.map(j=>({id:++jarId,k:j.k,lk:j.link,c:j.c,n:j.n,hidden:j.hidden,inflight:0,cool:0,ready:0}))),
      Q:cfg.Q,queue:Array(cfg.Q).fill(null),ants:[],eaten:0,total:L.pixels.length,
-     over:false,usedSlot:false,usedMix:false,stuckSince:0};
+     over:false,usedSlot:false,stuckSince:0,spd:1,fast:false};
   const byK={};G.cols.flat().forEach(j=>byK[j.k]=j);
   G.cols.flat().forEach(j=>{j.link=j.lk>=0?byK[j.lk]:null});
   $('#lvPill').textContent='Level '+(n+1);
-  $('#bSlot').classList.remove('used');$('#bMix').classList.remove('used');
+  $('#bSlot').classList.remove('used');refreshEco();$('#fast').classList.remove('on');
   show('game'); layout(); renderQueue(); renderJars(); updateProg();
   if(G.cols.flat().some(j=>j.link)&&!store.get('seenLink',false)){store.set('seenLink',true);
     openModal(`<h2>Linked jars 🔗</h2><p>Some jars are chained together. They move to the queue <b>together</b>, so both must be at the front of their rows and you need 2 free slots.</p><button class="big-btn" id="mOk">Got it</button>`);
@@ -465,22 +492,42 @@ function sendJar(ci,el){
   requestAnimationFrame(()=>{gh.style.transform=`translate(${to.left-from.left}px,${to.top-from.top}px) scale(${to.width/from.width})`});
   setTimeout(()=>{gh.remove();j.flying=false;j.ready=performance.now();renderQueue()},270);
 }
-$('#bSlot').onclick=()=>{if(!G||G.over||G.usedSlot)return;addSlot()};
+$('#bSlot').onclick=()=>{if(!G||G.over||G.usedSlot)return;if(!canAfford('slot'))return broke('slot');pay('slot');addSlot()};
 function addSlot(){G.usedSlot=true;G.Q++;G.queue.push(null);$('#bSlot').classList.add('used');renderQueue();sfx.done();G.stuckSince=0}
-$('#bMix').onclick=()=>{if(!G||G.over||G.usedMix)return;G.usedMix=true;$('#bMix').classList.add('used');
+$('#bMix').onclick=()=>{if(!G||G.over)return;if(!G.cols.flat().length)return toast('No jars left to shuffle');if(!canAfford('mix'))return broke('mix');pay('mix');
   const all=G.cols.flat();all.forEach(j=>j.link=null);for(let i=all.length-1;i>0;i--){const k=Math.floor(Math.random()*(i+1));[all[i],all[k]]=[all[k],all[i]]}
   G.cols=G.cols.map(()=>[]);all.forEach((j,i)=>G.cols[i%G.cols.length].push(j));renderJars();sfx.done();toast('Jars shuffled, chains broken!')};
 $('#bRe').onclick=()=>{if(G)startLevel(G.n)};
 $('#homeBtn').onclick=()=>{G=null;goHome()};
-function setSpeedLabel(){$('#spdBtn').textContent='▶▶ '+speed+'x'}
-$('#spdBtn').onclick=()=>{speed=speed===1?2:speed===2?3:1;store.set('speed',speed);setSpeedLabel()};
-setSpeedLabel();
+$('#bUfo').onclick=()=>{if(!G||G.over)return;if(!canAfford('ufo'))return broke('ufo');openUfo()};
+function openUfo(after){
+  G.paused=true;
+  const left={};G.pixels.forEach(p=>{if(p.s!==2)left[p.c]=(left[p.c]||0)+1});
+  const cs=Object.keys(left).sort((a,b)=>left[b]-left[a]);
+  openModal(`<h2>🛸 UFO</h2><p>Pick a colour. The UFO beams up every pixel and every jar of that colour.</p>
+    <div class="swatches">${cs.map(c=>`<div class="jar" data-c="${c}" style="--c:${G.pal[c]}"><div class="lid"></div><div class="bd"><span>${left[c]}</span></div></div>`).join('')}</div>
+    <button class="soft-btn" id="mCancel">Cancel</button>`);
+  document.querySelectorAll('.swatches .jar').forEach(el=>el.onclick=()=>{closeModal();G.paused=false;pay('ufo');if(after)after();ufo(el.dataset.c)});
+  $('#mCancel').onclick=()=>{closeModal();G.paused=false;if(after==null)return;lose()};
+}
+function ufo(c){
+  const now=performance.now(), br=board.getBoundingClientRect(), span=br.width+80;
+  let removed=0;
+  G.pixels.forEach(p=>{if(p.c===c&&p.s!==2){p.s=2;const px=(p.x+.5)*cell+40;p.t=now+1300*px/span;removed++}});
+  G.ants=G.ants.filter(a=>a.j.c!==c);
+  G.queue=G.queue.map(j=>j&&j.c===c?null:j);
+  G.cols.flat().forEach(j=>{if(j.c===c&&j.link){j.link.link=null}});
+  G.cols=G.cols.map(col=>col.filter(j=>j.c!==c));
+  G.eaten+=removed;G.ufoAnim={t0:now};G.stuckSince=0;
+  renderQueue();renderJars();updateProg();sfx.ufo();buzz(30);
+  if(G.eaten>=G.total){G.over=true;setTimeout(win,1500)}
+}
 
 /* ---------- main loop ---------- */
 let last=performance.now();
 function loop(now){
   const dt=Math.min(50,now-last);last=now;
-  if(G&&!G.over)step(now,dt);
+  if(G&&!G.over&&!G.paused)step(now,dt);
   draw(now);
   requestAnimationFrame(loop);
 }
@@ -488,6 +535,11 @@ requestAnimationFrame(loop);
 
 function step(now,dt){
   const br=board.getBoundingClientRect();
+  // speed up when the player has nothing to decide: rows empty or every slot full
+  const idle=!G.cols.some(c=>c.length)||G.queue.every(s=>s);
+  const target=idle?3:1; G.spd+=(target-G.spd)*Math.min(1,dt/400);
+  if(idle!==G.fast){G.fast=idle;$('#fast').classList.toggle('on',idle)}
+  const speed=G.spd;
   let anyTarget=false;
   G.queue.forEach((j,si)=>{
     if(!j||j.flying||!j.ready)return;
@@ -498,16 +550,16 @@ function step(now,dt){
     const gx=(ox-br.left)/cell;
     while(j.n>0&&j.cool<=0){
       const p=findTarget(j.c,gx); if(!p){j.cool=0;break}
-      p.s=1; j.n--; j.inflight++; j.cool+=85;
+      p.s=1; j.n--; j.inflight++; j.cool+=150;
       const tx=br.left+(p.x+.5)*cell, ty=br.top+(p.y+.5)*cell;
       const dist=Math.hypot(tx-ox,ty-oy);
-      G.ants.push({x0:ox+(Math.random()-.5)*sr.width*.4,y0:oy,x1:tx,y1:ty,t0:now,dur:Math.max(260,dist/0.55),p,j,c:G.pal[j.c],ph:Math.random()*6});
+      G.ants.push({x0:ox+(Math.random()-.5)*sr.width*.4,y0:oy,x1:tx,y1:ty,t0:now,k:0,dur:Math.max(450,dist/0.28),p,j,c:G.pal[j.c],ph:Math.random()*6});
     }
     if(j.n>0&&findTargetExists(j.c))anyTarget=true;
   });
   // ants
   for(let i=G.ants.length-1;i>=0;i--){const a=G.ants[i];
-    a.t0-=0; const k=(now-a.t0)*speed/a.dur;
+    a.k+=dt*speed/a.dur; const k=a.k;
     if(k>=1){a.p.s=2;a.p.t=now;a.j.inflight--;G.eaten++;sfx.pop();G.ants.splice(i,1);
       if(a.j.n===0&&a.j.inflight===0)finishJar(a.j);else updateJarNum(a.j);
       if(G.eaten===G.total){win();return}}
@@ -533,7 +585,7 @@ function rr(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);
 function drawPixels(ctx,pixels,pal,cs,now,anim){
   for(const p of pixels){
     let sc=1;
-    if(p.s===2){if(!anim)continue;const k=(now-p.t)/180;if(k>=1)continue;sc=1-k}
+    if(p.s===2){if(!anim)continue;const k=(now-p.t)/180;if(k>=1)continue;sc=k<0?1:1-k}
     const col=pal[p.c], s=cs*sc, x=p.x*cs+(cs-s)/2, y=p.y*cs+(cs-s)/2, g=Math.max(.5,cs*.06);
     ctx.fillStyle=shade(col,-.28);rr(ctx,x+g,y+g,s-g*2,s-g*2,s*.22);ctx.fill();
     ctx.fillStyle=col;rr(ctx,x+g,y+g,s-g*2,s-g*2-cs*.12,s*.22);ctx.fill();
@@ -547,13 +599,26 @@ function draw(now){
   fctx.setTransform(DPR,0,0,DPR,0,0);fctx.clearRect(0,0,window.innerWidth,window.innerHeight);
   const sz=Math.max(5,Math.min(9,cell*.75));
   for(const a of G.ants){
-    let k=Math.min(1,(now-a.t0)*speed/a.dur); const e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
+    let k=Math.min(1,a.k); const e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
     const dx=a.x1-a.x0,dy=a.y1-a.y0,len=Math.hypot(dx,dy)||1,nx=-dy/len,ny=dx/len;
     const wob=Math.sin(k*Math.PI*4+a.ph)*6*Math.sin(k*Math.PI);
     const x=a.x0+dx*e+nx*wob,y=a.y0+dy*e+ny*wob, ang=Math.atan2(dy,dx);
     drawAnt(fctx,x,y,ang,sz,a.c,now+a.ph*100);
   }
+  if(G.ufoAnim){const t=now-G.ufoAnim.t0;if(t>1500)G.ufoAnim=null;else drawUfo(t)}
   if(confetti.length)drawConfetti(now);
+}
+function drawUfo(t){
+  const br=board.getBoundingClientRect(),c=fctx;
+  const x=br.left-40+(br.width+80)*Math.min(1,t/1300), y=br.top-6+Math.sin(t/120)*4;
+  c.save();c.globalAlpha=t>1300?1-(t-1300)/200:1;
+  const g=c.createLinearGradient(0,y,0,br.bottom);g.addColorStop(0,'rgba(255,240,120,.75)');g.addColorStop(1,'rgba(255,240,120,.05)');
+  c.fillStyle=g;c.beginPath();c.moveTo(x-10,y+8);c.lineTo(x+10,y+8);c.lineTo(x+cell*2.2,br.bottom);c.lineTo(x-cell*2.2,br.bottom);c.closePath();c.fill();
+  c.fillStyle='#bfe9ff';c.beginPath();c.ellipse(x,y-6,14,12,0,Math.PI,0);c.fill();
+  c.fillStyle='#8d97b3';c.beginPath();c.ellipse(x,y+2,34,10,0,0,7);c.fill();
+  c.fillStyle='#c3cadb';c.beginPath();c.ellipse(x,y-1,30,6,0,0,7);c.fill();
+  ['#ff5f8f','#ffd84a','#5bbf4a','#5aa9ff'].forEach((col,i)=>{c.fillStyle=Math.floor(t/150+i)%2?col:'#fff';c.beginPath();c.arc(x-21+i*14,y+3,3,0,7);c.fill()});
+  c.restore();
 }
 function drawAnt(c,x,y,ang,s,col,t){
   c.save();c.translate(x,y);c.rotate(ang);
@@ -586,10 +651,11 @@ function thumb(n,maxPx){const cfg=levelConfig(n),a=cfg.art;const cs=Math.max(4,M
   for(let y=0;y<a.H;y++)for(let x=0;x<a.W;x++)if(a.g[y][x])px.push({x,y,c:a.g[y][x],s:0});
   drawPixels(c,px,a.pal,cs,0,false);return cv}
 function win(){
-  G.over=true;sfx.win();buzz([20,40,20]);burst();updateProg();
+  G.over=true;$('#fast').classList.remove('on');sfx.win();buzz([20,40,20]);burst();updateProg();
   const n=G.n;store.set('level',Math.max(store.get('level',0),n+1));
   const done=store.get('done',[]);const key=n%LEVELS.length;if(!done.includes(key)){done.push(key);store.set('done',done)}
-  setTimeout(()=>{openModal(`<h2>Yum! 🐜</h2><p>The ${G.cfg.name} is all gone</p><div id="th"></div>
+  const reward=20+2*Math.floor(n/10);coins+=reward;saveEco();
+  setTimeout(()=>{openModal(`<h2>Yum! 🐜</h2><p>The ${G.cfg.name} is all gone<br><b>+${reward} 🪙</b></p><div id="th"></div>
     <button class="big-btn" id="mNext">Next level</button><button class="soft-btn" id="mHome">Home</button>`);
     $('#th').appendChild(thumb(n,170));
     $('#mNext').onclick=()=>{closeModal();startLevel(n+1)};
@@ -597,13 +663,16 @@ function win(){
   },700);
 }
 function lose(){
-  G.over=true;sfx.lose();buzz(80);
-  const canSlot=!G.usedSlot;
+  G.over=true;$('#fast').classList.remove('on');sfx.lose();buzz(80);
+  const lbl=k=>inv[k]>0?`(${inv[k]} left)`:`(${PRICE[k]} 🪙)`;
+  const canSlot=!G.usedSlot&&canAfford('slot'), canUfo=canAfford('ufo');
   openModal(`<h2>Stuck! 😵</h2><p>No jar can eat and no move is left.</p>
-    ${canSlot?'<button class="big-btn" id="mSlot">Continue with +1 slot</button>':''}
-    <button class="${canSlot?'soft-btn':'big-btn'}" id="mRetry">Try again</button>
+    ${canSlot?`<button class="big-btn" id="mSlot">+1 Slot ${lbl('slot')}</button>`:''}
+    ${canUfo?`<button class="${canSlot?'soft-btn':'big-btn'}" id="mUfo">🛸 UFO ${lbl('ufo')}</button>`:''}
+    <button class="${canSlot||canUfo?'soft-btn':'big-btn'}" id="mRetry">Try again</button>
     <button class="soft-btn" id="mHome">Home</button>`);
-  if(canSlot)$('#mSlot').onclick=()=>{closeModal();G.over=false;addSlot()};
+  if(canSlot)$('#mSlot').onclick=()=>{closeModal();G.over=false;pay('slot');addSlot()};
+  if(canUfo)$('#mUfo').onclick=()=>{closeModal();G.over=false;openUfo(()=>{})};
   $('#mRetry').onclick=()=>{closeModal();startLevel(G.n)};
   $('#mHome').onclick=()=>{closeModal();G=null;goHome()};
 }
@@ -613,7 +682,7 @@ function closeModal(){$('#modal').classList.remove('on')}
 /* ---------- screens ---------- */
 function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('on',s.id===id));
   if(id!=='game'){fctx.setTransform(1,0,0,1,0,0);fctx.clearRect(0,0,fx.width,fx.height)}}
-function goHome(){$('#playLv').textContent='Level '+(store.get('level',0)+1);$('#sndBtn').textContent=sound?'🔊 Sound on':'🔇 Sound off';show('home')}
+function goHome(){refreshEco();$('#fast').classList.remove('on');$('#playLv').textContent='Level '+(store.get('level',0)+1);$('#sndBtn').textContent=sound?'🔊 Sound on':'🔇 Sound off';show('home')}
 $('#playBtn').onclick=()=>{ac();startLevel(store.get('level',0))};
 $('#sndBtn').onclick=()=>{sound=!sound;store.set('sound',sound);goHome();if(sound)sfx.tap()};
 $('#galBtn').onclick=()=>{
