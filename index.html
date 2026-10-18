@@ -535,8 +535,8 @@ requestAnimationFrame(loop);
 
 function step(now,dt){
   const br=board.getBoundingClientRect();
-  // speed up when the player has nothing to decide: rows empty or every slot full
-  const idle=!G.cols.some(c=>c.length)||G.queue.every(s=>s);
+  // speed up only when no jars are left in the rows
+  const idle=!G.cols.some(c=>c.length);
   const target=idle?3:1; G.spd+=(target-G.spd)*Math.min(1,dt/400);
   if(idle!==G.fast){G.fast=idle;$('#fast').classList.toggle('on',idle)}
   const speed=G.spd;
@@ -550,10 +550,10 @@ function step(now,dt){
     const gx=(ox-br.left)/cell;
     while(j.n>0&&j.cool<=0){
       const p=findTarget(j.c,gx); if(!p){j.cool=0;break}
-      p.s=1; j.n--; j.inflight++; j.cool+=150;
+      p.s=1; j.n--; j.inflight++; j.cool+=260;
       const tx=br.left+(p.x+.5)*cell, ty=br.top+(p.y+.5)*cell;
       const dist=Math.hypot(tx-ox,ty-oy);
-      G.ants.push({x0:ox+(Math.random()-.5)*sr.width*.4,y0:oy,x1:tx,y1:ty,t0:now,k:0,dur:Math.max(450,dist/0.28),p,j,c:G.pal[j.c],ph:Math.random()*6});
+      G.ants.push({x0:ox+(Math.random()-.5)*sr.width*.4,y0:oy,x1:tx,y1:ty,t0:now,k:0,dur:Math.max(700,dist/0.17),p,j,c:G.pal[j.c],ph:Math.random()*6});
     }
     if(j.n>0&&findTargetExists(j.c))anyTarget=true;
   });
