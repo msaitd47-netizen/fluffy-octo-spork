@@ -103,6 +103,10 @@ button{font-family:inherit;color:inherit;border:0;cursor:pointer}
 .jar.hidden .lid{background:#523a96}
 .jar.hidden .bd span{font-size:calc(var(--js)*.45)}
 .slot .jar{position:absolute;inset:0;width:auto;height:auto}
+.jar.locked .bd{filter:grayscale(.6) brightness(.8)}
+.jar .lock{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);font-style:normal;font-size:calc(var(--js)*.38);filter:drop-shadow(0 1px 1px rgba(0,0,0,.4))}
+.pill .tag{font-size:11px;padding:2px 7px;border-radius:8px;color:#fff;vertical-align:middle;margin-left:4px}
+.pill .tag.hard{background:#ff7a2f}.pill .tag.super{background:#c21f4f}
 .jar .chain{position:absolute;right:-6px;top:-4px;font-style:normal;font-size:calc(var(--js)*.32);filter:drop-shadow(0 1px 1px rgba(0,0,0,.3))}
 .jars{position:relative}
 .jars svg.links{position:absolute;left:0;top:0;pointer-events:none;z-index:1}
@@ -279,49 +283,80 @@ function levelConfig(n){
   const L=LEVELS.length, base=LEVELS[n%L], tier=Math.floor(n/L), k=n%L;
   const art=parseArt(base);
   let px=0;art.g.forEach(r=>r.forEach(c=>{if(c)px++}));
-  const jarsWanted=Math.min(64,(n<3?6:12)+k*0.45+tier*8);
-  const avg=Math.max(4,Math.min(28,px/jarsWanted));
-  return {n,name:base.name,art,
+  const special=base.win||n<4?0:(n%10===9?2:(n%5===4?1:0));   // 1 = Hard, 2 = Super Hard
+  const jarsWanted=Math.min(80,((n<3?6:14)+k*0.7+tier*10)*(1+special*.12));
+  const avg=Math.max(4,Math.min(26,px/jarsWanted));
+  return {n,name:base.name,art,special,
     min:Math.max(3,Math.round(avg*0.6)), max:Math.max(5,Math.round(avg*1.4)),
-    hidden: n<2?0:Math.min(.5,.1+k*0.005+.12*tier),
-    links: n<4?0:Math.min(8,1+Math.floor((k-4)/9)+tier*2),
+    hidden: n<2?0:Math.min(.55,.12+k*.006+.12*tier+special*.08),
+    links: n<4?0:Math.min(6,1+Math.floor((k-4)/10)+tier+special),
+    locks: n<6?0:Math.min(2,1+(special?1:0)),
+    targetFail: n<3?0:Math.min(.85,.3+k*.01+tier*.15+special*.15),
     cols: n<3?3:4, Q:5};
 }
 
-/* build pixels + jars; ensure greedy-solvable */
+/* build pixels + jars; keep it solvable but hard for a casual player */
 function buildLevel(cfg){
   const {W,H,g}=cfg.art; const pixels=[]; const idx=[];
   for(let y=0;y<H;y++){idx.push([]);for(let x=0;x<W;x++){
     if(g[y][x]){idx[y].push(pixels.length);pixels.push({x,y,c:g[y][x],s:0,t:0})}else idx[y].push(-1)}}
   const counts={}; pixels.forEach(p=>counts[p.c]=(counts[p.c]||0)+1);
-  let best=null;
-  for(let attempt=0;attempt<200;attempt++){
+  // depth of every pixel from the open edge (for key placement)
+  const depth=new Int16Array(pixels.length).fill(-1);let fr=[];
+  pixels.forEach((p,i)=>{const e=(x,y)=>x<0||y<0||x>=W||y>=H||idx[y][x]<0;if(e(p.x-1,p.y)||e(p.x+1,p.y)||e(p.x,p.y-1)||e(p.x,p.y+1)){depth[i]=0;fr.push(i)}});
+  while(fr.length){const nx=[];for(const i of fr){const p=pixels[i];for(const [dx,dy] of [[1,0],[-1,0],[0,1],[0,-1]]){const j=(idx[p.y+dy]||[])[p.x+dx];if(j>=0&&depth[j]<0){depth[j]=depth[i]+1;nx.push(j)}}}fr=nx}
+  const maxD=Math.max(...depth);
+  let best=null,bestFail=-1,firstOk=null;
+  const t0=performance.now();
+  for(let attempt=0;attempt<40;attempt++){
     const R=rng(cfg.n*7919+attempt*104729+11);
     const ri=(a,b)=>a+Math.floor(R()*(b-a+1));
     let jars=[];
     for(const c in counts){let n=counts[c];
       while(n>0){let s=ri(cfg.min,cfg.max);if(n-s<cfg.min)s=n>cfg.max+cfg.min?n-cfg.min:n;s=Math.min(s,n);jars.push({c,n:s});n-=s}}
     for(let i=jars.length-1;i>0;i--){const j=Math.floor(R()*(i+1));[jars[i],jars[j]]=[jars[j],jars[i]]}
-    jars.forEach((j,i)=>{j.k=i;j.link=-1});
+    jars.forEach((j,i)=>{j.k=i;j.link=-1;j.locked=false});
     const cols=Array.from({length:cfg.cols},()=>[]);
     jars.forEach((j,i)=>{const col=cols[i%cfg.cols];j.hidden=col.length>0&&R()<cfg.hidden;col.push(j)});
-    // linked pairs between neighbouring columns
     let made=0;
     for(let t=0;t<200&&made<cfg.links;t++){
       const c=ri(0,cfg.cols-2), A=cols[c], B=cols[c+1];
       if(A.length<2||B.length<2)continue;
       const d=ri(1,Math.min(A.length-1,6)), d2=Math.max(0,Math.min(B.length-1,d+ri(-1,2)));
-      const a=A[d],b=B[d2]; if(a.link>=0||b.link>=0||d2===0&&d===0)continue;
+      const a=A[d],b=B[d2]; if(a.link>=0||b.link>=0)continue;
       a.link=b.k;b.link=a.k;a.hidden=b.hidden=false;made++;
     }
-    best=cols;
-    if(simulate(cols,pixels,idx,W,H,cfg.Q))break;
+    let key=-1;
+    if(cfg.locks&&maxD>1&&R()<.85){
+      const early=new Set();cols.forEach(c=>c.slice(0,2).forEach(j=>early.add(j.c)));
+      const cand=[];pixels.forEach((p,i)=>{if(p.c!=='K'&&early.has(p.c)&&depth[i]>=Math.max(1,maxD*.25)&&depth[i]<=Math.max(1,maxD*.6))cand.push(i)});
+      if(cand.length){key=cand[ri(0,cand.length-1)];
+        let lk=0;for(let t=0;t<100&&lk<cfg.locks;t++){const col=cols[ri(0,cfg.cols-1)];if(col.length<2)continue;
+          const j=col[ri(2,Math.min(col.length-1,6))];if(!j||j.locked||j.link>=0)continue;j.locked=true;j.hidden=false;lk++}}
+    }
+    let solvable=simulate(cols,pixels,idx,W,H,cfg.Q,null,key);
+    for(let r=0;!solvable&&r<24;r++)solvable=simulate(cols,pixels,idx,W,H,cfg.Q,rng(attempt*7+r*131+3),key,true);
+    if(!solvable)continue;
+    if(!firstOk)firstOk={cols,key};
+    if(!cfg.targetFail){best={cols,key};break}
+    const runs=8;let fails=0;
+    for(let r=0;r<runs;r++)if(!simulate(cols,pixels,idx,W,H,cfg.Q,rng(attempt*31+r*977+5),key))fails++;
+    const f=fails/runs;
+    if(f>bestFail){bestFail=f;best={cols,key}}
+    if(f>=cfg.targetFail||performance.now()-t0>1800)break;
   }
-  return {pixels,idx,cols:best};
+  best=best||firstOk;
+  if(!best){ // fallback: plain layout, no locks/links
+    const cols=Array.from({length:cfg.cols},()=>[]);let k=0;
+    for(const c in counts){let n=counts[c];while(n>0){const s=Math.min(n,cfg.max);cols[k%cfg.cols].push({c,n:s,k,link:-1,locked:false,hidden:false});k++;n-=s}}
+    best={cols,key:-1};
+  }
+  return {pixels,idx,cols:best.cols,key:best.key,fail:bestFail};
 }
-function simulate(cols0,pixels,idx,W,H,Q){
+/* R = null -> greedy smart player; R = rng -> casual player */
+function simulate(cols0,pixels,idx,W,H,Q,R,key,smart){
   const eaten=new Uint8Array(pixels.length); let left=pixels.length;
-  const cols=cols0.map(c=>c.map(j=>({c:j.c,n:j.n,k:j.k,link:j.link})));
+  const cols=cols0.map(c=>c.map(j=>({c:j.c,n:j.n,k:j.k,link:j.link,locked:j.locked})));
   const empty=(x,y)=>x<0||y<0||x>=W||y>=H||idx[y][x]<0||eaten[idx[y][x]];
   const exposed=i=>{const p=pixels[i];return empty(p.x-1,p.y)||empty(p.x+1,p.y)||empty(p.x,p.y-1)||empty(p.x,p.y+1)};
   const byColor={};pixels.forEach((p,i)=>(byColor[p.c]=byColor[p.c]||[]).push(i));
@@ -335,15 +370,20 @@ function simulate(cols0,pixels,idx,W,H,Q){
         if(f<0)break;eaten[f]=1;left--;q.n--;prog=true}}
       queue=queue.filter(q=>q.n>0)}
     if(left===0)return true;
+    const open=key<0||eaten[key];
     const free=Q-queue.length;
     if(free<=0)return false;
-    let best=null,bs=-1;
-    cols.forEach((c,i)=>{if(!c.length)return;const j=c[0];
-      if(j.link<0){const s=countExp(j.c);if(s>bs){bs=s;best=[i]}}
-      else if(free>=2){const pi=cols.findIndex(cc=>cc.length&&cc[0].k===j.link);
-        if(pi>=0){const s=countExp(j.c)+countExp(cols[pi][0].c)-1;if(s>bs){bs=s;best=[i,pi]}}}});
-    if(!best)return false;
-    best.map(i=>cols[i][0]).forEach((j,n)=>{cols[best[n]].shift();queue.push(j)});
+    const moves=[];
+    cols.forEach((c,i)=>{if(!c.length)return;const j=c[0];if(j.locked&&!open)return;
+      if(j.link<0)moves.push({s:countExp(j.c),cols:[i]});
+      else if(free>=2){const pi=cols.findIndex(cc=>cc.length&&cc[0].k===j.link&&(!cc[0].locked||open));
+        if(pi>=0)moves.push({s:countExp(j.c)+countExp(cols[pi][0].c)-1,cols:[i,pi]})}});
+    if(!moves.length)return false;
+    let m;
+    if(!R){m=moves.reduce((a,b)=>b.s>a.s?b:a)}
+    else if(smart){moves.sort((a,b)=>b.s-a.s);const top=moves.filter(x=>x.s>0).slice(0,3);const pool=top.length?top:moves;m=pool[Math.floor(R()*pool.length)]}
+    else{const good=moves.filter(x=>x.s>0);const pool=good.length&&R()<.75?good:moves;m=pool[Math.floor(R()*pool.length)]}
+    m.cols.map(i=>cols[i][0]).forEach((j,n)=>{cols[m.cols[n]].shift();queue.push(j)});
   }
   return false;
 }
@@ -391,15 +431,21 @@ let DPR=Math.min(window.devicePixelRatio||1,3), cell=10;
 function startLevel(n){
   const cfg=levelConfig(n); const L=buildLevel(cfg);
   G={n,cfg,W:cfg.art.W,H:cfg.art.H,pal:cfg.art.pal,pixels:L.pixels,idx:L.idx,
-     cols:L.cols.map(c=>c.map(j=>({id:++jarId,k:j.k,lk:j.link,c:j.c,n:j.n,hidden:j.hidden,inflight:0,cool:0,ready:0}))),
+     cols:L.cols.map(c=>c.map(j=>({id:++jarId,k:j.k,lk:j.link,locked:j.locked,c:j.c,n:j.n,hidden:j.hidden,inflight:0,cool:0,ready:0}))),keyPx:L.key>=0?L.pixels[L.key]:null,
      Q:cfg.Q,queue:Array(cfg.Q).fill(null),ants:[],eaten:0,total:L.pixels.length,
      over:false,usedSlot:false,stuckSince:0,spd:1,fast:false};
   const byK={};G.cols.flat().forEach(j=>byK[j.k]=j);
   G.cols.flat().forEach(j=>{j.link=j.lk>=0?byK[j.lk]:null});
-  $('#lvPill').textContent='Level '+(n+1);
+  const sp=cfg.special;
+  $('#lvPill').innerHTML='Level '+(n+1)+(sp===2?' <b class="tag super">SUPER HARD</b>':sp===1?' <b class="tag hard">HARD</b>':'');
   $('#bSlot').classList.remove('used');refreshEco();$('#fast').classList.remove('on');
   show('game'); layout(); renderQueue(); renderJars(); updateProg();
-  if(G.cols.flat().some(j=>j.link)&&!store.get('seenLink',false)){store.set('seenLink',true);
+  const intro=[];
+  if(sp)intro.push(`<h2>${sp===2?'Super Hard':'Hard'} level ${sp===2?'💀':'🔥'}</h2><p>Think before you tap. Reward: <b>×${sp+1} coins</b></p>`);
+  if(G.keyPx&&!store.get('seenLock',false)){store.set('seenLock',true);
+    intro.push(`<h2>Locked jars 🔒</h2><p>Locked jars can't be moved. Find the <b>🔑 key</b> hidden in the picture. When your ants eat that pixel, every lock opens.</p>`)}
+  if(intro.length){openModal(intro.join('<hr style="border:0;height:12px">')+`<button class="big-btn" id="mOk">Let's go</button>`);$('#mOk').onclick=closeModal}
+  else if(G.cols.flat().some(j=>j.link)&&!store.get('seenLink',false)){store.set('seenLink',true);
     openModal(`<h2>Linked jars 🔗</h2><p>Some jars are chained together. They move to the queue <b>together</b>, so both must be at the front of their rows and you need 2 free slots.</p><button class="big-btn" id="mOk">Got it</button>`);
     $('#mOk').onclick=closeModal}
 }
@@ -429,7 +475,8 @@ function findTarget(c,gx){let best=null,bd=1e9;
 
 /* ---------- rendering DOM ---------- */
 function jarHTML(j,cls){const col=G.pal[j.c];
-  return `<div class="jar ${cls}${j.link&&!cls.includes('inq')?' linked':''}" data-id="${j.id}" style="--c:${col}"><div class="lid"></div><div class="bd"><span>${cls.includes('hidden')?'?':j.n+j.inflight}</span></div>${j.link&&!cls.includes('inq')?'<i class="chain">🔗</i>':''}</div>`}
+  if(j.locked&&!cls.includes('inq'))cls+=' locked';
+  return `<div class="jar ${cls}${j.link&&!cls.includes('inq')?' linked':''}" data-id="${j.id}" style="--c:${col}"><div class="lid"></div><div class="bd"><span>${cls.includes('hidden')?'?':j.n+j.inflight}</span></div>${j.link&&!cls.includes('inq')?'<i class="chain">🔗</i>':''}${cls.includes('locked')?'<i class="lock">🔒</i>':''}</div>`}
 function renderJars(){
   const box=$('#jars');let h='';
   G.cols.forEach((col,ci)=>{h+=`<div class="col">`;
@@ -470,7 +517,9 @@ $('#jars').addEventListener('pointerdown',e=>{
   const nope=msg=>{sfx.bad();buzz(40);const q=$('#queue');q.classList.remove('shake');void q.offsetWidth;q.classList.add('shake');toast(msg)};
   const free=G.queue.filter(s=>s===null).length;
   const first=G.cols[ci][0];
+  if(first.locked){nope('Locked! Eat the 🔑 in the picture first');return}
   if(first.link){
+    if(first.link.locked){nope('Its partner is locked 🔒');return}
     const pi=G.cols.findIndex(c=>c[0]===first.link);
     if(pi<0){nope('Linked! Clear the jars in front of its partner first');
       const pe=document.querySelector(`#jars .jar[data-id="${first.link.id}"]`);if(pe){pe.classList.remove('wiggle');void pe.offsetWidth;pe.classList.add('wiggle')}return}
@@ -519,7 +568,7 @@ function ufo(c){
   G.queue=G.queue.map(j=>j&&j.c===c?null:j);
   G.cols.flat().forEach(j=>{if(j.c===c&&j.link){j.link.link=null}});
   G.cols=G.cols.map(col=>col.filter(j=>j.c!==c));
-  G.eaten+=removed;G.ufoAnim={t0:now};G.stuckSince=0;
+  G.eaten+=removed;G.ufoAnim={t0:now};G.stuckSince=0;if(G.keyPx&&G.keyPx.c===c)setTimeout(unlock,600);
   renderQueue();renderJars();updateProg();sfx.ufo();buzz(30);
   if(G.eaten>=G.total){G.over=true;setTimeout(win,1500)}
 }
@@ -561,7 +610,7 @@ function step(now,dt){
   // ants
   for(let i=G.ants.length-1;i>=0;i--){const a=G.ants[i];
     a.k+=dt*speed/a.dur; const k=a.k;
-    if(k>=1){a.p.s=2;a.p.t=now;a.j.inflight--;G.eaten++;sfx.pop();G.ants.splice(i,1);
+    if(k>=1){a.p.s=2;a.p.t=now;a.j.inflight--;G.eaten++;sfx.pop();G.ants.splice(i,1);if(a.p===G.keyPx)unlock();
       if(a.j.n===0&&a.j.inflight===0)finishJar(a.j);else updateJarNum(a.j);
       if(G.eaten===G.total){win();return}}
   }
@@ -570,10 +619,11 @@ function step(now,dt){
   const full=G.queue.every(s=>s);
   const busy=G.ants.length>0||G.queue.some(j=>j&&(j.flying||j.inflight>0));
   const free=G.queue.filter(s=>s===null).length;
-  const canMove=G.cols.some(c=>c.length&&(c[0].link?(free>=2&&G.cols.some(d=>d[0]===c[0].link)):free>=1));
+  const canMove=G.cols.some(c=>c.length&&!c[0].locked&&(c[0].link?(free>=2&&!c[0].link.locked&&G.cols.some(d=>d[0]===c[0].link)):free>=1));
   if(!busy&&!anyTarget&&!canMove){if(!G.stuckSince)G.stuckSince=now;else if(now-G.stuckSince>700)lose()}
   else G.stuckSince=0;
 }
+function unlock(){if(!G||G.unlocked)return;G.unlocked=true;G.cols.flat().forEach(j=>j.locked=false);renderJars();sfx.win();buzz(30);toast('🔑 All locks are open!')}
 function findTargetExists(c){for(const p of G.pixels)if(!p.s&&p.c===c&&exposed(p))return true;return false}
 function finishJar(j){const si=G.queue.indexOf(j);if(si<0)return;sfx.done();
   const el=document.querySelector(`#queue .jar[data-id="${j.id}"]`);
@@ -597,6 +647,11 @@ function draw(now){
   if(!G)return;
   bctx.setTransform(DPR,0,0,DPR,0,0);bctx.clearRect(0,0,G.W*cell,G.H*cell);
   drawPixels(bctx,G.pixels,G.pal,cell,now,true);
+  if(G.keyPx&&!(G.keyPx.s===2&&now-G.keyPx.t>150)){const p=G.keyPx,cx=(p.x+.5)*cell,cy=(p.y+.5)*cell,r=Math.max(5,cell*.9),pulse=1+Math.sin(now/200)*.08;
+    bctx.save();bctx.translate(cx,cy);bctx.scale(pulse,pulse);
+    bctx.fillStyle='#fff6d0';bctx.strokeStyle='#3b2f3a';bctx.lineWidth=1.5;bctx.beginPath();bctx.arc(0,0,r,0,7);bctx.fill();bctx.stroke();
+    bctx.fillStyle='#e0a412';bctx.beginPath();bctx.arc(-r*.3,0,r*.32,0,7);bctx.fill();bctx.fillRect(-r*.05,-r*.1,r*.65,r*.2);bctx.fillRect(r*.35,0,r*.12,r*.3);
+    bctx.fillStyle='#fff6d0';bctx.beginPath();bctx.arc(-r*.3,0,r*.12,0,7);bctx.fill();bctx.restore()}
   fctx.setTransform(DPR,0,0,DPR,0,0);fctx.clearRect(0,0,window.innerWidth,window.innerHeight);
   const sz=Math.max(5,Math.min(9,cell*.75));
   for(const a of G.ants){
@@ -655,7 +710,7 @@ function win(){
   G.over=true;$('#fast').classList.remove('on');sfx.win();buzz([20,40,20]);burst();updateProg();
   const n=G.n;store.set('level',Math.max(store.get('level',0),n+1));
   const done=store.get('done',[]);const key=n%LEVELS.length;if(!done.includes(key)){done.push(key);store.set('done',done)}
-  const reward=20+2*Math.floor(n/10);coins+=reward;saveEco();
+  const reward=(20+2*Math.floor(n/10))*(1+G.cfg.special);coins+=reward;saveEco();
   setTimeout(()=>{openModal(`<h2>Yum! 🐜</h2><p>${LEVELS[n%LEVELS.length].win||('The '+G.cfg.name+' is all gone')}<br><b>+${reward} 🪙</b></p><div id="th"></div>
     <button class="big-btn" id="mNext">Next level</button><button class="soft-btn" id="mHome">Home</button>`);
     $('#th').appendChild(thumb(n,170));
